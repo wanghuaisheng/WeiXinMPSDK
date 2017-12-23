@@ -12,6 +12,7 @@ using System.Web.Routing;
 using Senparc.Weixin.Cache;
 using Senparc.Weixin.Cache.Memcached;
 using Senparc.Weixin.Cache.Redis;
+using Senparc.Weixin.HttpUtility;
 using Senparc.Weixin.MP.Containers;
 using Senparc.Weixin.MP.Sample.CommonService;
 using Senparc.Weixin.MP.Sample.CommonService.MessageHandlers.WebSocket;
@@ -32,7 +33,7 @@ namespace Senparc.Weixin.MP.Sample
         {
             AreaRegistration.RegisterAllAreas();
 
-            RegisterWebSocket();        //微信注册WebSocket模块（按需，必须执行在RouteConfig.RegisterRoutes()之前）
+            ////RegisterWebSocket();        //微信注册WebSocket模块（按需，必须执行在RouteConfig.RegisterRoutes()之前）
 
             WebApiConfig.Register(GlobalConfiguration.Configuration);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
@@ -45,16 +46,22 @@ namespace Senparc.Weixin.MP.Sample
              * 建议按照以下顺序进行注册，尤其须将缓存放在第一位！
              */
 
-            RegisterWeixinCache();      //注册分布式缓存（按需，如果需要，必须放在第一个）
-            ConfigWeixinTraceLog();     //配置微信跟踪日志（按需）
+            ////RegisterWeixinCache();      //注册分布式缓存（按需，如果需要，必须放在第一个）
+            ////ConfigWeixinTraceLog();     //配置微信跟踪日志（按需）
             RegisterWeixinThreads();    //激活微信缓存及队列线程（必须）
             RegisterSenparcWeixin();    //注册Demo所用微信公众号的账号信息（按需）
-            //RegisterSenparcQyWeixin();  //注册Demo所用微信企业号的账号信息（已经移植到Work）
-            RegisterSenparcWorkWeixin();  //注册Demo所用企业微信的账号信息（按需）
-            RegisterWeixinPay();        //注册微信支付（按需）
-            RegisterWeixinThirdParty(); //注册微信第三方平台（按需）
+                                        //////RegisterSenparcQyWeixin();  //注册Demo所用微信企业号的账号信息（已经移植到Work）
+                                        ////RegisterSenparcWorkWeixin();  //注册Demo所用企业微信的账号信息（按需）
+                                        ////RegisterWeixinPay();        //注册微信支付（按需）
+            ////RegisterWeixinThirdParty(); //注册微信第三方平台（按需）
 
             /* 微信配置结束 */
+
+            ////代理设置：
+            ////在调用接口之前进行代理消息设置（全局只需一次）：  正常调用接口方法，此代理参数将会被自动应用。
+            //RequestUtility.SetHttpProxy("http://192.168.1.130", "8088", "username", "pwd");
+            ////当需要清除代理状态时，全局执行RemoveHttpProxy()方法：
+            //RequestUtility.RemoveHttpProxy();
         }
 
         /// <summary>

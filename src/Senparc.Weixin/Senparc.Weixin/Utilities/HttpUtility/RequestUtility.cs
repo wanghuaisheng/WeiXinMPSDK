@@ -84,11 +84,10 @@ namespace Senparc.Weixin.HttpUtility
         /// <param name="password"></param>
         public static void SetHttpProxy(string host, string port, string username, string password)
         {
-            ICredentials cred;
-            cred = new NetworkCredential(username, password);
+            ICredentials cred = new NetworkCredential(username, password);
             if (!string.IsNullOrEmpty(host))
             {
-                _webproxy = new System.Net.WebProxy(host + ":" + port ?? "80", true, null, cred);
+                _webproxy = new WebProxy(host + ":" + port ?? "80", true, null, cred);
             }
         }
 
