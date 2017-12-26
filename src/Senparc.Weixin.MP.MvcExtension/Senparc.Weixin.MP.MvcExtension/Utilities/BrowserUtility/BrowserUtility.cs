@@ -59,15 +59,8 @@ namespace Senparc.Weixin.MP.MvcExtension.BrowserUtility
    public static bool SideInWeixinBrowser(this HttpContextBase httpContext)
         {
             var userAgent = httpContext.Request.UserAgent;
-            if (userAgent != null
-                && (userAgent.Contains("MicroMessenger") || userAgent.Contains("Windows Phone")))
-            {
-                return true;//在微信内部
-            }
-            else
-            {
-                return false;//在微信外部
-            }
+            if (userAgent == null) return false;
+            return userAgent.Contains("MicroMessenger") || userAgent.Contains("Windows Phone");
         }
 #else
         public static bool SideInWeixinBrowser(this HttpContext httpContext)

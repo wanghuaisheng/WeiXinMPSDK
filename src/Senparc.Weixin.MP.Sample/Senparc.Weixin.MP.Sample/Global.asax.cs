@@ -53,13 +53,13 @@ namespace Senparc.Weixin.MP.Sample
                                         //////RegisterSenparcQyWeixin();  //注册Demo所用微信企业号的账号信息（已经移植到Work）
                                         ////RegisterSenparcWorkWeixin();  //注册Demo所用企业微信的账号信息（按需）
                                         ////RegisterWeixinPay();        //注册微信支付（按需）
-            ////RegisterWeixinThirdParty(); //注册微信第三方平台（按需）
+                                        ////RegisterWeixinThirdParty(); //注册微信第三方平台（按需）
 
             /* 微信配置结束 */
 
             ////代理设置：
             ////在调用接口之前进行代理消息设置（全局只需一次）：  正常调用接口方法，此代理参数将会被自动应用。
-            //RequestUtility.SetHttpProxy("http://192.168.1.130", "8088", "username", "pwd");
+            //RequestUtility.SetHttpProxy("http://home.huaisheng.wang", "12345", "username", "pwd");
             ////当需要清除代理状态时，全局执行RemoveHttpProxy()方法：
             //RequestUtility.RemoveHttpProxy();
         }

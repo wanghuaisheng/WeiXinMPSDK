@@ -47,6 +47,6 @@ namespace Senparc.Weixin.Entities
         /// errcode的
         /// </summary>
         public abstract int ErrorCodeValue { get; }
-        public virtual object P2PData { get; set; }
+        //public virtual object P2PData { get; set; }
     }
 }

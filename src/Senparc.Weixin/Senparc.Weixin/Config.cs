@@ -157,7 +157,7 @@ namespace Senparc.Weixin
         /// </summary>
         public static Func<string, PlatformType, bool> DefaultAppIdCheckFunc = (accessTokenOrAppId, platFormType) =>
         {
-            if (platFormType == PlatformType.QY || platFormType == PlatformType.Work)
+            if (platFormType == PlatformType.Work)
             {
                 /*
                  * 企业号（企业微信）AppKey（Length=84）：wx7618c00000000222@044ZI5s6-ACxpAuOcm4md410pZ460pQUmxO9hIoMd09kRaJ1iSqhPfmg3-aBFF7q

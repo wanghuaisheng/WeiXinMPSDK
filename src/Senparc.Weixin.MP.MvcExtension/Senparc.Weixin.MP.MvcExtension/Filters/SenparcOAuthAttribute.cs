@@ -74,15 +74,10 @@ namespace Senparc.Weixin.MP.MvcExtension
             //return true;
             if (httpContext == null)
             {
-                throw new ArgumentNullException("httpContext");
+                throw new ArgumentNullException(nameof(httpContext));
             }
 
-            if (!IsLogined(httpContext))
-            {
-                return false;//未登录
-            }
-
-            return true;
+            return IsLogined(httpContext);
         }
 
 

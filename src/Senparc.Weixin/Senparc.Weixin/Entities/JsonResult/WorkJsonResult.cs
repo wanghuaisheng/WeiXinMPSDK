@@ -50,6 +50,6 @@ namespace Senparc.Weixin.Entities
         /// <summary>
         /// 返回消息代码数字（同errcode枚举值）
         /// </summary>
-        public override int ErrorCodeValue { get { return (int)errcode; } }
+        public override int ErrorCodeValue => (int)errcode;
     }
 }

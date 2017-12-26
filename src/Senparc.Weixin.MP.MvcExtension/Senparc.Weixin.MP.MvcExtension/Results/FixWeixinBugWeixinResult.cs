@@ -47,36 +47,8 @@ namespace Senparc.Weixin.MP.MvcExtension
             get
             {
                 if (base.Content != null)
-                {
                     return base.Content;
-                }
-
-                if (_messageHandlerDocument != null)
-                {
-                    //var textResponseMessag = _messageHandlerDocument.TextResponseMessage;
-                    if (_messageHandlerDocument.TextResponseMessage != null)
-                    {
-                        return _messageHandlerDocument.TextResponseMessage.Replace("\r\n", "\n");
-                    }
-
-                    //if (_messageHandlerDocument.TextResponseMessage.Equals(String.Empty))
-                    //{
-                    //    //无需响应，开发者返回了ResponseNoResponse
-                    //    return null;
-                    //}
-
-                    //if (_messageHandlerDocument.ResponseDocument != null)
-                    //{
-                    //    //返回XML响应信息
-                    //    return _messageHandlerDocument.TextResponseMessage.Replace("\r\n", "\n");
-                    //}
-                    //else
-                    //{
-                    //    //返回XML响应信息或用户指定的文本内容
-                    //    return _messageHandlerDocument.TextResponseMessage;
-                    //}
-                }
-                return null;
+                return _messageHandlerDocument?.TextResponseMessage?.Replace("\r\n", "\n");
             }
             set { base.Content = value; }
         }

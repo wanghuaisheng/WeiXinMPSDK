@@ -30,7 +30,7 @@ namespace Senparc.Weixin.MP.MvcExtension
     public class WeixinResult : ContentResult
     {
         //private string _content;
-        protected IMessageHandlerDocument _messageHandlerDocument;
+        protected IMessageHandlerDocument MessageHandlerDocument;
 
         public WeixinResult(string content)
         {
@@ -40,7 +40,7 @@ namespace Senparc.Weixin.MP.MvcExtension
 
         public WeixinResult(IMessageHandlerDocument messageHandlerDocument)
         {
-            _messageHandlerDocument = messageHandlerDocument;
+            MessageHandlerDocument = messageHandlerDocument;
         }
 
         /// <summary>
@@ -51,18 +51,7 @@ namespace Senparc.Weixin.MP.MvcExtension
         {
             get
             {
-                if (base.Content != null)
-                {
-                    return base.Content;
-                }
-                else if (_messageHandlerDocument != null && _messageHandlerDocument.FinalResponseDocument != null)
-                {
-                    return _messageHandlerDocument.FinalResponseDocument.ToString();
-                }
-                else
-                {
-                    return null;
-                }
+                return base.Content ?? MessageHandlerDocument?.FinalResponseDocument?.ToString();
             }
             set { base.Content = value; }
         }
@@ -76,12 +65,12 @@ namespace Senparc.Weixin.MP.MvcExtension
             if (base.Content == null)
             {
                 //使用IMessageHandler输出
-                if (_messageHandlerDocument == null)
+                if (MessageHandlerDocument == null)
                 {
                     throw new Senparc.Weixin.Exceptions.WeixinException("执行WeixinResult时提供的MessageHandler不能为Null！", null);
                 }
 
-                if (_messageHandlerDocument.FinalResponseDocument == null)
+                if (MessageHandlerDocument.FinalResponseDocument == null)
                 {
                     //throw new Senparc.Weixin.MP.WeixinException("ResponseMessage不能为Null！", null);
                 }
@@ -90,7 +79,7 @@ namespace Senparc.Weixin.MP.MvcExtension
 #if NET35 || NET40 || NET45 || NET461
                     context.HttpContext.Response.ClearContent();
                     context.HttpContext.Response.ContentType = "text/xml";
-                    _messageHandlerDocument.FinalResponseDocument.Save(context.HttpContext.Response.OutputStream);
+                    MessageHandlerDocument.FinalResponseDocument.Save(context.HttpContext.Response.OutputStream);
 #else
                     //context.HttpContext.Response.ClearContent();
                     context.HttpContext.Response.ContentType = "text/xml";
