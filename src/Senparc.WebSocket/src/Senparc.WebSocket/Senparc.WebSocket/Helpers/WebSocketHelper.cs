@@ -41,11 +41,7 @@ namespace Senparc.WebSocket
         /// </summary>
         ///// <param name="webSocketContext"></param>
         /// <param name="cancellationToken"></param>
-#if NET45
         public WebSocketHelper(System.Net.WebSockets.WebSocket socket,/*AspNetWebSocketContext webSocketContext,*/ CancellationToken cancellationToken)
-#else
-         public WebSocketHelper(System.Net.WebSockets.WebSocket socket,/*AspNetWebSocketContext webSocketContext,*/ CancellationToken cancellationToken)
-#endif
         {
             //_webSocketContext = webSocketContext;
             //_webSocket = webSocketContext.WebSocket;

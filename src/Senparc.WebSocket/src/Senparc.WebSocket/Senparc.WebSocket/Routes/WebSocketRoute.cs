@@ -9,20 +9,10 @@
     创建标识：Senparc - 20170126
     创建描述：v0.1.2 
 ----------------------------------------------------------------*/
-
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-#if NET45
 using System.Web.Routing;
-#endif
 
 namespace Senparc.WebSocket
 {
-#if NET45
     /// <summary>
     /// WebSocketRoute
     /// </summary>
@@ -49,5 +39,4 @@ namespace Senparc.WebSocket
             return null;
         }
     }
-#endif
 }

@@ -24,7 +24,7 @@ namespace Senparc.Weixin.Cache.Memcached
 {
     public class MemcachedCacheLock : BaseCacheLock
     {
-        private MemcachedObjectCacheStrategy _mamcachedStrategy;
+        private readonly MemcachedObjectCacheStrategy _mamcachedStrategy;
         public MemcachedCacheLock(MemcachedObjectCacheStrategy strategy, string resourceName, string key, int retryCount, TimeSpan retryDelay)
             : base(strategy, resourceName, key, retryCount, retryDelay)
         {
@@ -32,11 +32,11 @@ namespace Senparc.Weixin.Cache.Memcached
             LockNow();//立即等待并抢夺锁
         }
 
-        private static Random _rnd = new Random();
+        private static readonly Random Rnd = new Random();
 
         private string GetLockKey(string resourceName)
         {
-            return string.Format("{0}:{1}", "Lock", resourceName);
+            return $"Lock:{resourceName}";
         }
 
         private bool RetryLock(string resourceName, int retryCount, TimeSpan retryDelay, Func<bool> action)
@@ -49,7 +49,7 @@ namespace Senparc.Weixin.Cache.Memcached
                 {
                     return true;//取得锁
                 }
-                Thread.Sleep(_rnd.Next(maxRetryDelay));
+                Thread.Sleep(Rnd.Next(maxRetryDelay));
             }
             return false;
         }
@@ -70,20 +70,7 @@ namespace Senparc.Weixin.Cache.Memcached
                     {
                         return true;//取得锁 
                     }
-                    else
-                    {
-                        return false;//已被别人锁住，没有取得锁
-                    }
-
-                    //if (_mamcachedStrategy._cache.Get(key) != null)
-                    //{
-                    //    return false;//已被别人锁住，没有取得锁
-                    //}
-                    //else
-                    //{
-                    //    _mamcachedStrategy._cache.Store(StoreMode.set, key, new object(), new TimeSpan(0, 0, 10));//创建锁
-                    //    return true;//取得锁
-                    //}
+                    return false;//已被别人锁住，没有取得锁
                 }
                 catch (Exception ex)
                 {

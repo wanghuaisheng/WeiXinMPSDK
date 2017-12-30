@@ -16,21 +16,12 @@ using System.Net.WebSockets;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-
-
-//using Microsoft.AspNetCore.Http;
-//using Microsoft.AspNetCore.Routing;
-//using Microsoft.AspNetCore.WebSockets;
-
-#if NET45
 using System.Web;
 using System.Web.Routing;
 using System.Web.WebSockets;
-#endif
 
 namespace Senparc.WebSocket
 {
-#if NET45
     /// <summary>
     /// WebSocket处理程序
     /// </summary>
@@ -99,10 +90,6 @@ namespace Senparc.WebSocket
 
         }
 
-        public bool IsReusable
-        {
-            get { return true; }
-        }
+        public bool IsReusable => true;
     }
-#endif
 }
