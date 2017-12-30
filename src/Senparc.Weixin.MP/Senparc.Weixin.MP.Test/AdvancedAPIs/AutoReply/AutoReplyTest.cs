@@ -42,7 +42,7 @@ namespace Senparc.Weixin.MP.Test.AdvancedAPIs
             var accessToken = AccessTokenContainer.GetAccessToken(_appId);
             var result = AutoReplyApi.GetCurrentAutoreplyInfo(accessToken);
             Assert.IsNotNull(result);
-            Assert.AreEqual(result.errcode, ReturnCode.请求成功);
+            Assert.AreEqual(result.errcode, ReturnCodeMp.请求成功);
         }
     }
 }

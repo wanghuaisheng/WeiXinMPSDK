@@ -75,7 +75,7 @@ Senparc.Weixin SDK官方教程《微信开发深度解析》已经出版，点�
                 }
                 catch (ErrorJsonResultException e)
                 {
-                    if (e.JsonResult.errcode == ReturnCode.api功能未授权)
+                    if (e.JsonResult.errcode == ReturnCodeMp.api功能未授权)
                     {
                         return Content("功能正常，由于微信官方（程序或文档）问题，返回错误：" + e.JsonResult.errcode + "。请等待微信官方更新！");
                     }

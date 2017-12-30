@@ -127,14 +127,14 @@ namespace Senparc.Weixin.MP.Sample.CommonService
                         //需要忽略的类型
                         var ignoreErrorCodes = new[]
                         {
-                                ReturnCode.获取access_token时AppSecret错误或者access_token无效,
-                                ReturnCode.template_id不正确,
-                                ReturnCode.缺少access_token参数,
-                                ReturnCode.api功能未授权,
-                                ReturnCode.用户未授权该api,
-                                ReturnCode.参数错误invalid_parameter,
-                                ReturnCode.接口调用超过限制,
-                                ReturnCode.需要接收者关注,//43004
+                                ReturnCodeMp.获取access_token时AppSecret错误或者access_token无效,
+                                ReturnCodeMp.template_id不正确,
+                                ReturnCodeMp.缺少access_token参数,
+                                ReturnCodeMp.api功能未授权,
+                                ReturnCodeMp.用户未授权该api,
+                                ReturnCodeMp.参数错误invalid_parameter,
+                                ReturnCodeMp.接口调用超过限制,
+                                ReturnCodeMp.需要接收者关注,//43004
 
                                 //其他更多可能的情况
                             };

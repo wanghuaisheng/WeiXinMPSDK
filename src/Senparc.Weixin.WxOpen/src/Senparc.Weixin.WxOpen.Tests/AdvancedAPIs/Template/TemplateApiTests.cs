@@ -91,7 +91,7 @@ namespace Senparc.Weixin.WxOpen.AdvancedAPIs.Template.Tests
            var result = TemplateApi.SendTemplateMessage(_appId, openId, data.TemplateId, data, "formSubmit", "pages/websocket",
                 "keyword3");
 
-            Assert.AreEqual(ReturnCode.请求成功,result.errcode);
+            Assert.AreEqual(ReturnCodeMp.请求成功,result.errcode);
         }
     }
 }

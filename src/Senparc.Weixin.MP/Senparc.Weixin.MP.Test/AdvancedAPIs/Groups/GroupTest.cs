@@ -73,7 +73,7 @@ namespace Senparc.Weixin.MP.Test.AdvancedAPIs
 
             var result = GroupsApi.Update(accessToken, 100, "测试组更新");
             Assert.IsNotNull(result);
-            Assert.IsTrue(result.errcode == ReturnCode.请求成功);
+            Assert.IsTrue(result.errcode == ReturnCodeMp.请求成功);
         }
 
         [TestMethod]
@@ -86,7 +86,7 @@ namespace Senparc.Weixin.MP.Test.AdvancedAPIs
             {
                 var result = GroupsApi.MemberUpdate(accessToken, _testOpenId, id);
                 Assert.IsNotNull(result);
-                Assert.IsTrue(result.errcode == ReturnCode.请求成功);
+                Assert.IsTrue(result.errcode == ReturnCodeMp.请求成功);
                 var newGroupIdResult = GroupsApi.GetId(accessToken, _testOpenId);
                 Assert.AreEqual(id, newGroupIdResult.groupid);
             }

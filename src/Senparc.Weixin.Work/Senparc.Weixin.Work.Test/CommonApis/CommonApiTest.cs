@@ -113,7 +113,7 @@ namespace Senparc.Weixin.Work.Test.CommonApis
             catch (ErrorJsonResultException ex)
             {
                 //实际返回的信息（错误信息）
-                Assert.AreEqual(ex.JsonResult.errcode, ReturnCode_Work.不合法的corpid);
+                Assert.AreEqual(ex.JsonResult.errcode, ReturnCodeWork.不合法的corpid);
             }
         }
 
@@ -124,7 +124,7 @@ namespace Senparc.Weixin.Work.Test.CommonApis
 
             var result = CommonApi.GetCallBackIp(accessToken);
             Assert.IsNotNull(result);
-            Assert.IsTrue(result.errcode == ReturnCode_Work.请求成功);
+            Assert.IsTrue(result.errcode == ReturnCodeWork.请求成功);
         }
     }
 }

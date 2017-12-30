@@ -44,7 +44,7 @@ namespace Senparc.Weixin.MP.Test.AdvancedAPIs
 
             var result = PoiApi.UploadImage(accessToken, file);
             Assert.IsNotNull(result);
-            Assert.AreEqual(result.errcode, ReturnCode.请求成功);
+            Assert.AreEqual(result.errcode, ReturnCodeMp.请求成功);
         }
 
         [TestMethod]
@@ -55,7 +55,7 @@ namespace Senparc.Weixin.MP.Test.AdvancedAPIs
             var result = PoiApi.GetPoiList(accessToken, 0);
 
             Assert.IsNotNull(result);
-            Assert.AreEqual(result.errcode, ReturnCode.请求成功);
+            Assert.AreEqual(result.errcode, ReturnCodeMp.请求成功);
         }
     }
 }

@@ -131,7 +131,7 @@ namespace Senparc.Weixin.MP.Sample.Controllers
                 return Content(ex.Message);
             }
 
-            if (result.errcode != ReturnCode.请求成功)
+            if (result.errcode != ReturnCodeMp.请求成功)
             {
                 return Content("错误：" + result.errmsg);
             }
@@ -177,7 +177,7 @@ namespace Senparc.Weixin.MP.Sample.Controllers
 
             var result = Open.OAuthAPIs.OAuthApi.GetAccessToken(appId, component_AppId, componentAccessToken, code);//TODO:使用Container
 
-            if (result.errcode != ReturnCode.请求成功)
+            if (result.errcode != ReturnCodeMp.请求成功)
             {
                 return Content("错误：" + result.errmsg);
             }

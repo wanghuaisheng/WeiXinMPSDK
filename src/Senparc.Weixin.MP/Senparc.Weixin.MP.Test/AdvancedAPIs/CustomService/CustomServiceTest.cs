@@ -67,7 +67,7 @@ namespace Senparc.Weixin.MP.Test.AdvancedAPIs
         {
             var accessToken = AccessTokenContainer.GetAccessToken(_appId);
             var result = CustomServiceApi.AddCustom(accessToken, "zcc@SenparcRobot", "zcc", _custonPassWord);
-            Assert.AreEqual(result.errcode,ReturnCode.请求成功);
+            Assert.AreEqual(result.errcode,ReturnCodeMp.请求成功);
         }
 
         [TestMethod]
@@ -75,7 +75,7 @@ namespace Senparc.Weixin.MP.Test.AdvancedAPIs
         {
             var accessToken = AccessTokenContainer.GetAccessToken(_appId);
             var result = CustomServiceApi.UpdateCustom(accessToken, "zcc@SenparcRobot", "zcc", _custonPassWord);
-            Assert.AreEqual(result.errcode, ReturnCode.请求成功);
+            Assert.AreEqual(result.errcode, ReturnCodeMp.请求成功);
         }
 
         [TestMethod]
@@ -85,7 +85,7 @@ namespace Senparc.Weixin.MP.Test.AdvancedAPIs
 
             var accessToken = AccessTokenContainer.GetAccessToken(_appId);
             var result = CustomServiceApi.UploadCustomHeadimg(accessToken, "zcc@SenparcRobot", file);
-            Assert.AreEqual(result.errcode, ReturnCode.请求成功);
+            Assert.AreEqual(result.errcode, ReturnCodeMp.请求成功);
         }
 
         [TestMethod]
@@ -93,7 +93,7 @@ namespace Senparc.Weixin.MP.Test.AdvancedAPIs
         {
             var accessToken = AccessTokenContainer.GetAccessToken(_appId);
             var result = CustomServiceApi.DeleteCustom(accessToken, "zcc@SenparcRobot");
-            Assert.AreEqual(result.errcode, ReturnCode.请求成功);
+            Assert.AreEqual(result.errcode, ReturnCodeMp.请求成功);
         }
 
         [TestMethod]
@@ -101,7 +101,7 @@ namespace Senparc.Weixin.MP.Test.AdvancedAPIs
         {
             var accessToken = AccessTokenContainer.GetAccessToken(_appId);
             var result = CustomServiceApi.CreateSession(accessToken, _testOpenId, "zcc@SenparcRobot");
-            Assert.AreEqual(result.errcode, ReturnCode.请求成功);
+            Assert.AreEqual(result.errcode, ReturnCodeMp.请求成功);
         }
 
         [TestMethod]
@@ -109,7 +109,7 @@ namespace Senparc.Weixin.MP.Test.AdvancedAPIs
         {
             var accessToken = AccessTokenContainer.GetAccessToken(_appId);
             var result = CustomServiceApi.CloseSession(accessToken, _testOpenId, "zcc@SenparcRobot");
-            Assert.AreEqual(result.errcode, ReturnCode.请求成功);
+            Assert.AreEqual(result.errcode, ReturnCodeMp.请求成功);
         }
 
         [TestMethod]
@@ -117,7 +117,7 @@ namespace Senparc.Weixin.MP.Test.AdvancedAPIs
         {
             var accessToken = AccessTokenContainer.GetAccessToken(_appId);
             var result = CustomServiceApi.GetSessionState(accessToken, _testOpenId);
-            Assert.AreEqual(result.errcode, ReturnCode.请求成功);
+            Assert.AreEqual(result.errcode, ReturnCodeMp.请求成功);
         }
 
         [TestMethod]
@@ -125,7 +125,7 @@ namespace Senparc.Weixin.MP.Test.AdvancedAPIs
         {
             var accessToken = AccessTokenContainer.GetAccessToken(_appId);
             var result = CustomServiceApi.GetSessionList(accessToken, _testOpenId);
-            Assert.AreEqual(result.errcode, ReturnCode.请求成功);
+            Assert.AreEqual(result.errcode, ReturnCodeMp.请求成功);
         }
 
         [TestMethod]
@@ -133,7 +133,7 @@ namespace Senparc.Weixin.MP.Test.AdvancedAPIs
         {
             var accessToken = AccessTokenContainer.GetAccessToken(_appId);
             var result = CustomServiceApi.GetWaitCase(accessToken);
-            Assert.AreEqual(result.errcode, ReturnCode.请求成功);
+            Assert.AreEqual(result.errcode, ReturnCodeMp.请求成功);
         }
 
         

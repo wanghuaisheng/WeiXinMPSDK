@@ -162,7 +162,7 @@ namespace Senparc.Weixin.MP.Sample.Controllers.WxOpen
         public ActionResult OnLogin(string code)
         {
             var jsonResult = SnsApi.JsCode2Json(AppId, AppSecret, code);
-            if (jsonResult.errcode == ReturnCode.请求成功)
+            if (jsonResult.errcode == ReturnCodeMp.请求成功)
             {
                 //Session["WxOpenUser"] = jsonResult;//使用Session保存登陆信息（不推荐）
                 //使用SessionContainer管理登录信息（推荐）

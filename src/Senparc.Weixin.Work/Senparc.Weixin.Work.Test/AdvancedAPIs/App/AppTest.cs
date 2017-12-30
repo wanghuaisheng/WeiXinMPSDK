@@ -133,7 +133,7 @@ namespace Senparc.Weixin.Work.Test.AdvancedAPIs
 
             var result = AppApi.SetApp(accessToken, date);
 
-            Assert.AreEqual(result.errcode, ReturnCode_Work.请求成功);
+            Assert.AreEqual(result.errcode, ReturnCodeWork.请求成功);
         }
     }
 }

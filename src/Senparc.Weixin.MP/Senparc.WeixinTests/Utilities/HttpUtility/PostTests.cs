@@ -50,7 +50,7 @@ namespace Senparc.Weixin.HttpUtility.Tests
             catch (ErrorJsonResultException ex)
             {
                 //实际返回的信息（错误信息）
-                Assert.AreEqual(ex.JsonResult.errcode, ReturnCode.获取access_token时AppSecret错误或者access_token无效);
+                Assert.AreEqual(ex.JsonResult.errcode, ReturnCodeMp.获取access_token时AppSecret错误或者access_token无效);
             }
         }
 
@@ -72,7 +72,7 @@ namespace Senparc.Weixin.HttpUtility.Tests
             catch (ErrorJsonResultException ex)
             {
                 //实际返回的信息（错误信息）
-                Assert.AreEqual(ex.JsonResult.errcode, ReturnCode.获取access_token时AppSecret错误或者access_token无效);
+                Assert.AreEqual(ex.JsonResult.errcode, ReturnCodeMp.获取access_token时AppSecret错误或者access_token无效);
                 Console.WriteLine("Success");
             }
         }

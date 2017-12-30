@@ -102,7 +102,7 @@ namespace Senparc.Weixin.HttpUtility
                     Newtonsoft.Json.JsonConvert.DeserializeObject<WxJsonResult>(returnText);
 #endif
 
-                if (errorResult.errcode != ReturnCode.请求成功)
+                if (errorResult.errcode != ReturnCodeMp.请求成功)
                 {
                     //发生错误
                     throw new ErrorJsonResultException(
@@ -233,7 +233,7 @@ namespace Senparc.Weixin.HttpUtility
                     Newtonsoft.Json.JsonConvert.DeserializeObject<WxJsonResult>(returnText);
 #endif
 
-                if (errorResult.errcode != ReturnCode.请求成功)
+                if (errorResult.errcode != ReturnCodeMp.请求成功)
                 {
                     //发生错误
                     throw new ErrorJsonResultException(

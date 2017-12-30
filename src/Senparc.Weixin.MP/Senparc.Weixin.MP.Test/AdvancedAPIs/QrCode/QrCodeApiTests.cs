@@ -67,7 +67,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs.Tests
                     (result.url)
                     , testData).Result;
 
-                if (result.errcode == ReturnCode.请求成功)
+                if (result.errcode == ReturnCodeMp.请求成功)
                 {
                     //下载并获得二维码
                     try

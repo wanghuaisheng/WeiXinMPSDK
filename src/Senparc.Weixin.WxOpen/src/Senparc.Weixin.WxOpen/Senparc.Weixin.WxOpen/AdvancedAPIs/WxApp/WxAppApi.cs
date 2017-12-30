@@ -82,7 +82,7 @@ namespace Senparc.Weixin.WxOpen.AdvancedAPIs.WxApp
 
                 return new WxJsonResult()
                 {
-                    errcode = ReturnCode.请求成功
+                    errcode = ReturnCodeMp.请求成功
                 };
             }, accessTokenOrAppId);
         }
@@ -138,7 +138,7 @@ namespace Senparc.Weixin.WxOpen.AdvancedAPIs.WxApp
 
                 return new WxJsonResult()
                 {
-                    errcode = ReturnCode.请求成功
+                    errcode = ReturnCodeMp.请求成功
                 };
             }, accessTokenOrAppId);
         }
@@ -193,7 +193,7 @@ namespace Senparc.Weixin.WxOpen.AdvancedAPIs.WxApp
 
                 return new WxJsonResult()
                 {
-                    errcode = ReturnCode.请求成功
+                    errcode = ReturnCodeMp.请求成功
                 };
             }, accessTokenOrAppId);
         }
@@ -281,7 +281,7 @@ namespace Senparc.Weixin.WxOpen.AdvancedAPIs.WxApp
 
                 return new WxJsonResult()
                 {
-                    errcode = ReturnCode.请求成功
+                    errcode = ReturnCodeMp.请求成功
                 };
             }, accessTokenOrAppId);
         }
@@ -337,7 +337,7 @@ namespace Senparc.Weixin.WxOpen.AdvancedAPIs.WxApp
 
                 return new WxJsonResult()
                 {
-                    errcode = ReturnCode.请求成功
+                    errcode = ReturnCodeMp.请求成功
                 };
             }, accessTokenOrAppId);
         }
@@ -364,7 +364,7 @@ namespace Senparc.Weixin.WxOpen.AdvancedAPIs.WxApp
 
                 return new WxJsonResult()
                 {
-                    errcode = ReturnCode.请求成功
+                    errcode = ReturnCodeMp.请求成功
                 };
             }, accessTokenOrAppId);
         }

@@ -84,7 +84,7 @@ namespace Senparc.Weixin.Open.WxaAPIs
             Get.Download(url, stream);
             return new CodeResultJson()
             {
-                errcode = ReturnCode.请求成功
+                errcode = ReturnCodeMp.请求成功
             };
             //CommonJsonSend.Send<CodeResultJson>(null, url, null, CommonJsonSendType.GET, timeOut);
         }
@@ -250,7 +250,7 @@ namespace Senparc.Weixin.Open.WxaAPIs
             await Get.DownloadAsync(url, stream);
             return new CodeResultJson()
             {
-                errcode = ReturnCode.请求成功
+                errcode = ReturnCodeMp.请求成功
             };
             //CommonJsonSend.Send<CodeResultJson>(null, url, null, CommonJsonSendType.GET, timeOut);
         }

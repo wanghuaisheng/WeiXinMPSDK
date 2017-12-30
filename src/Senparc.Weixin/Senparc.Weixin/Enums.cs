@@ -126,7 +126,7 @@ namespace Senparc.Weixin
     /// 公众号返回码（JSON）
     /// 应该更名为ReturnCode_MP，但为减少项目中的修改，此处依旧用ReturnCode命名
     /// </summary>
-    public enum ReturnCode
+    public enum ReturnCodeMp
     {
 #pragma warning disable CS1591 // 缺少对公共可见类型或成员的 XML 注释
         系统繁忙此时请开发者稍候再试 = -1,
@@ -279,7 +279,7 @@ namespace Senparc.Weixin
     /// <summary>
     /// 企业微信返回码
     /// </summary>
-    public enum ReturnCode_Work
+    public enum ReturnCodeWork
     {
 #pragma warning disable CS1591 // 缺少对公共可见类型或成员的 XML 注释
         系统繁忙 = -1,

@@ -41,7 +41,7 @@ namespace Senparc.Weixin.WxOpen.AdvancedAPIs.WxApp.Tests
             using (var ms = new MemoryStream())
             {
                 var result = WxAppApi.CreateWxQrCode(base._appId, ms, "pages/websocket", 100);
-                Assert.AreEqual(ReturnCode.请求成功, result.errcode);
+                Assert.AreEqual(ReturnCodeMp.请求成功, result.errcode);
 
                 ms.Seek(0, SeekOrigin.Begin);
                 //储存图片
@@ -79,7 +79,7 @@ namespace Senparc.Weixin.WxOpen.AdvancedAPIs.WxApp.Tests
             {
                 var ms = new MemoryStream();
                 var result = await WxAppApi.CreateWxQrCodeAsync(base._appId, ms, "pages/websocket", 100);
-                Assert.AreEqual(ReturnCode.请求成功, result.errcode);
+                Assert.AreEqual(ReturnCodeMp.请求成功, result.errcode);
 
                 ms.Seek(0, SeekOrigin.Begin);
                 //储存图片
@@ -111,7 +111,7 @@ namespace Senparc.Weixin.WxOpen.AdvancedAPIs.WxApp.Tests
             Task.Factory.StartNew(async () =>
             {
                 var result = await WxAppApi.CreateWxQrCodeAsync(base._appId, filePath, "pages/websocket", 100);
-                Assert.AreEqual(ReturnCode.请求成功, result.errcode);
+                Assert.AreEqual(ReturnCodeMp.请求成功, result.errcode);
                 Assert.IsTrue(File.Exists(filePath));
             });
             var dt2 = DateTime.Now;

@@ -230,7 +230,7 @@ namespace Senparc.Weixin.CommonAPIs.ApiHandlerWapper
             {
                 if (retryIfFaild
                     && appId != null
-                    && ex.JsonResult.errcode == ReturnCode.获取access_token时AppSecret错误或者access_token无效)
+                    && ex.JsonResult.errcode == ReturnCodeMp.获取access_token时AppSecret错误或者access_token无效)
                 {
                     //尝试重新验证（此处不能使用await关键字，VS2013不支持：无法在 catch 字句体中等待）
                     var accessTokenResult = accessTokenContainer_GetAccessTokenResultAsyncFunc(appId, true).Result;//AccessTokenContainer.GetAccessTokenResultAsync(appId, true);

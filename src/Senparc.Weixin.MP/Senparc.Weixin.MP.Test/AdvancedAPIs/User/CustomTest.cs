@@ -118,11 +118,11 @@ namespace Senparc.Weixin.MP.Test.AdvancedAPIs
             var accessToken = AccessTokenContainer.GetAccessToken(_appId);
             var result = UserApi.BatchGetUserInfo(accessToken, data);
 
-            Assert.AreEqual(result.errcode, ReturnCode.请求成功);
+            Assert.AreEqual(result.errcode, ReturnCodeMp.请求成功);
 
             var result2 = UserApi.BatchGetUserInfo(_appId, data);
 
-            Assert.AreEqual(result2.errcode, ReturnCode.请求成功);
+            Assert.AreEqual(result2.errcode, ReturnCodeMp.请求成功);
 
         }
     }

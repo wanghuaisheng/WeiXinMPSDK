@@ -113,7 +113,7 @@ namespace Senparc.Weixin.MP.Test.AdvancedAPIs.Template
             };
             var result = MP.AdvancedAPIs.TemplateApi.SendTemplateMessage(_appId, openId, templateId, "http://sdk.weixin.senparc.com", testData);
 
-            Assert.AreEqual(ReturnCode.请求成功, result.errcode);
+            Assert.AreEqual(ReturnCodeMp.请求成功, result.errcode);
         }
 
 
@@ -139,7 +139,7 @@ namespace Senparc.Weixin.MP.Test.AdvancedAPIs.Template
 
             var result = TemplateApi.SendTemplateMessage(_appId, openId, templateId, "http://sdk.weixin.senparc.com", data);
 
-            Assert.AreEqual(ReturnCode.请求成功, result.errcode);
+            Assert.AreEqual(ReturnCodeMp.请求成功, result.errcode);
         }
 
         [TestMethod]
@@ -158,7 +158,7 @@ namespace Senparc.Weixin.MP.Test.AdvancedAPIs.Template
 
             var result = TemplateApi.SendTemplateMessage(_appId, openId, data);
 
-            Assert.AreEqual(ReturnCode.请求成功, result.errcode);
+            Assert.AreEqual(ReturnCodeMp.请求成功, result.errcode);
         }
 
         [TestMethod]
@@ -183,7 +183,7 @@ Task.Factory.StartNew(async () =>
     //调用客服接口显示msgId
     finalResult = await CustomApi.SendTextAsync(_appId, openId, "上一条模板消息的MsgID：" + result.msgid);
 
-    Assert.AreEqual(ReturnCode.请求成功, result.errcode);
+    Assert.AreEqual(ReturnCodeMp.请求成功, result.errcode);
 
 });
             while (finalResult == null)
@@ -199,7 +199,7 @@ Task.Factory.StartNew(async () =>
             var result = TemplateApi.SetIndustry(_appId, IndustryCode.IT科技_互联网_电子商务, IndustryCode.IT科技_IT软件与服务);
 
             Assert.IsNotNull(result);
-            Assert.AreEqual(ReturnCode.请求成功, result.errcode);
+            Assert.AreEqual(ReturnCodeMp.请求成功, result.errcode);
         }
 
         #endregion
@@ -225,7 +225,7 @@ Task.Factory.StartNew(async () =>
         {
             var accessToken = AccessTokenContainer.GetAccessToken(_appId);
             var result = TemplateApi.Addtemplate(accessToken, "OPENTM207498902");
-            Assert.AreEqual(ReturnCode.请求成功, result.errcode);
+            Assert.AreEqual(ReturnCodeMp.请求成功, result.errcode);
             Assert.IsNotNull(result.template_id);
             Console.WriteLine(result.template_id);
         }
@@ -236,7 +236,7 @@ Task.Factory.StartNew(async () =>
             //var accessToken = AccessTokenContainer.GetAccessToken(_appId);
             var result = TemplateApi.GetPrivateTemplate(_appId);
 
-            Assert.AreEqual(ReturnCode.请求成功, result.errcode);
+            Assert.AreEqual(ReturnCodeMp.请求成功, result.errcode);
             Assert.IsNotNull(result.template_list);
             Assert.AreEqual("cCh2CTTJIbVZkcycDF08n96FP-oBwyMVrro8C2nfVo4", result.template_list[0].template_id);
         }
@@ -256,7 +256,7 @@ Task.Factory.StartNew(async () =>
 
             //删除模板
             var result = TemplateApi.DelPrivateTemplate(_appId, templateId);
-            Assert.AreEqual(ReturnCode.请求成功, result.errcode);
+            Assert.AreEqual(ReturnCodeMp.请求成功, result.errcode);
 
             //验证模板已删除
             templates = TemplateApi.GetPrivateTemplate(_appId).template_list;

@@ -55,7 +55,7 @@ namespace Senparc.Weixin.MP.Test.AdvancedAPIs
                    apply_reason = "test"
                };
             var result = ShakeAroundApi.Register(accessToken, testData, IndustryId.代运营商_代运营商);
-            Assert.AreEqual(result.errcode, ReturnCode.请求成功);
+            Assert.AreEqual(result.errcode, ReturnCodeMp.请求成功);
         }
 
         [TestMethod]
@@ -65,7 +65,7 @@ namespace Senparc.Weixin.MP.Test.AdvancedAPIs
 
             var result = ShakeAroundApi.DeviceApply(accessToken, 1, "测试", "测试");
             Assert.IsNotNull(result);
-            Assert.AreEqual(result.errcode, ReturnCode.请求成功);
+            Assert.AreEqual(result.errcode, ReturnCodeMp.请求成功);
         }
 
         [TestMethod]
@@ -77,7 +77,7 @@ namespace Senparc.Weixin.MP.Test.AdvancedAPIs
 
             var result = ShakeAroundApi.UploadImage(accessToken, file);
             Assert.IsNotNull(result);
-            Assert.AreEqual(result.errcode, ReturnCode.请求成功);
+            Assert.AreEqual(result.errcode, ReturnCodeMp.请求成功);
         }
     
        // [TestMethod]

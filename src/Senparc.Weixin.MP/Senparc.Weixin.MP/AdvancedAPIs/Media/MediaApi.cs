@@ -133,7 +133,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
             {
                 var url = string.Format(Config.ApiMpHost + "/cgi-bin/media/get?access_token={0}&media_id={1}", accessToken.AsUrlData(), mediaId.AsUrlData());
                 HttpUtility.Get.Download(url, stream);
-                return new WxJsonResult() { errcode = ReturnCode.请求成功, errmsg = "ok" };//无实际意义
+                return new WxJsonResult() { errcode = ReturnCodeMp.请求成功, errmsg = "ok" };//无实际意义
             }, accessTokenOrAppId);
         }
 
@@ -150,7 +150,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
             {
                 var url = string.Format(Config.ApiMpHost + "/cgi-bin/media/get?access_token={0}&media_id={1}", accessToken.AsUrlData(), mediaId.AsUrlData());
                 var str = HttpUtility.Get.Download(url, dir);
-                return new WxJsonResult() { errcode = ReturnCode.请求成功, errmsg = str };
+                return new WxJsonResult() { errcode = ReturnCodeMp.请求成功, errmsg = str };
             }, accessTokenOrAppId);
             return result.errmsg;
         }
@@ -474,7 +474,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
             {
                 var url = string.Format(Config.ApiMpHost + "/cgi-bin/media/get?access_token={0}&media_id={1}", accessToken.AsUrlData(), mediaId.AsUrlData());
                 await HttpUtility.Get.DownloadAsync(url, stream);
-                return new WxJsonResult() { errcode = ReturnCode.请求成功, errmsg = "ok" };//无实际意义
+                return new WxJsonResult() { errcode = ReturnCodeMp.请求成功, errmsg = "ok" };//无实际意义
             }, accessTokenOrAppId);
         }
 
@@ -491,7 +491,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
             {
                 var url = string.Format(Config.ApiMpHost + "/cgi-bin/media/get?access_token={0}&media_id={1}", accessToken.AsUrlData(), mediaId.AsUrlData());
                 var str = await HttpUtility.Get.DownloadAsync(url, dir);
-                return new WxJsonResult() { errcode = ReturnCode.请求成功, errmsg = str };
+                return new WxJsonResult() { errcode = ReturnCodeMp.请求成功, errmsg = str };
             }, accessTokenOrAppId);
             return result.errmsg;
         }

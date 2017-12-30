@@ -225,7 +225,7 @@ namespace Senparc.Weixin.MP.Test.CommonAPIs
             catch (ErrorJsonResultException ex)
             {
                 //实际返回的信息（错误信息）
-                Assert.AreEqual(ex.JsonResult.errcode, ReturnCode.不合法的APPID);
+                Assert.AreEqual(ex.JsonResult.errcode, ReturnCodeMp.不合法的APPID);
             }
         }
 

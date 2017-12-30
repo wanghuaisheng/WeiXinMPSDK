@@ -45,7 +45,7 @@ namespace Senparc.Weixin.Work.Test.AdvancedAPIs
             var accessToken = AccessTokenContainer.GetToken(_corpId, base._corpSecret);
             var result = MediaApi.Upload(accessToken, UploadMediaFileType.video, _media);
             Assert.IsNotNull(result);
-            Assert.IsTrue(result.errcode == ReturnCode_Work.请求成功);
+            Assert.IsTrue(result.errcode == ReturnCodeWork.请求成功);
         }
 
         [TestMethod]
@@ -55,7 +55,7 @@ namespace Senparc.Weixin.Work.Test.AdvancedAPIs
             var accessToken = AccessTokenContainer.GetToken(_corpId, base._corpSecret);
             var result = MediaApi.Upload(accessToken, UploadMediaFileType.image, _media);
             Assert.IsNotNull(result);
-            Assert.IsTrue(result.errcode == ReturnCode_Work.请求成功);
+            Assert.IsTrue(result.errcode == ReturnCodeWork.请求成功);
             return result.media_id;
         }
 
@@ -93,7 +93,7 @@ namespace Senparc.Weixin.Work.Test.AdvancedAPIs
         {
             var accessToken = AccessTokenContainer.GetToken(_corpId, base._corpSecret);
             var result = MediaApi.BatchGetMaterial(accessToken, UploadMediaFileType.image, 0, 0, 50);
-            Assert.IsTrue(result.errcode == ReturnCode_Work.请求成功);
+            Assert.IsTrue(result.errcode == ReturnCodeWork.请求成功);
         }
     }
 }

@@ -45,7 +45,7 @@ namespace Senparc.Weixin.Entities
         /// <summary>
         /// 返回代码
         /// </summary>
-        public ReturnCode_Work errcode { get; set; }
+        public ReturnCodeWork errcode { get; set; }
 
         /// <summary>
         /// 返回消息代码数字（同errcode枚举值）

@@ -71,7 +71,7 @@ namespace Senparc.Weixin.MP.Test.AdvancedAPIs
             }
             catch (ErrorJsonResultException ex)
             {
-                Assert.AreEqual(ReturnCode.api功能未授权, ex.JsonResult.errcode);
+                Assert.AreEqual(ReturnCodeMp.api功能未授权, ex.JsonResult.errcode);
             }
         }
 
@@ -87,7 +87,7 @@ namespace Senparc.Weixin.MP.Test.AdvancedAPIs
             }
             catch (ErrorJsonResultException ex)
             {
-                Assert.AreEqual(ReturnCode.api功能未授权, ex.JsonResult.errcode);
+                Assert.AreEqual(ReturnCodeMp.api功能未授权, ex.JsonResult.errcode);
             }
         }
 

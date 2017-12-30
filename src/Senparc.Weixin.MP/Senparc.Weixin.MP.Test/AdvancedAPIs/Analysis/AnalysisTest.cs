@@ -45,7 +45,7 @@ namespace Senparc.Weixin.MP.Test.AdvancedAPIs
             var accessToken = AccessTokenContainer.GetAccessToken(_appId);
             var result = AnalysisApi.GetArticleSummary(accessToken, beginData, endData);
             Assert.IsNotNull(result);
-            Assert.AreEqual(result.errcode, ReturnCode.请求成功);
+            Assert.AreEqual(result.errcode, ReturnCodeMp.请求成功);
         }
 
         [TestMethod]
@@ -55,7 +55,7 @@ namespace Senparc.Weixin.MP.Test.AdvancedAPIs
 
             var result = AnalysisApi.GetArticleTotal(accessToken, beginData, endData);
             Assert.IsNotNull(result);
-            Assert.AreEqual(result.errcode, ReturnCode.请求成功);
+            Assert.AreEqual(result.errcode, ReturnCodeMp.请求成功);
         }
 
         [TestMethod]
@@ -65,7 +65,7 @@ namespace Senparc.Weixin.MP.Test.AdvancedAPIs
 
             var result = AnalysisApi.GetUserRead(accessToken, beginData, endData);
             Assert.IsNotNull(result);
-            Assert.AreEqual(result.errcode, ReturnCode.请求成功);
+            Assert.AreEqual(result.errcode, ReturnCodeMp.请求成功);
         }
 
         [TestMethod]
@@ -75,7 +75,7 @@ namespace Senparc.Weixin.MP.Test.AdvancedAPIs
 
             var result = AnalysisApi.GetUserReadHour(accessToken, beginData, endData);
             Assert.IsNotNull(result);
-            Assert.AreEqual(result.errcode, ReturnCode.请求成功);
+            Assert.AreEqual(result.errcode, ReturnCodeMp.请求成功);
         }
 
         [TestMethod]
@@ -85,7 +85,7 @@ namespace Senparc.Weixin.MP.Test.AdvancedAPIs
 
             var result = AnalysisApi.GetUserShare(accessToken, beginData, endData);
             Assert.IsNotNull(result);
-            Assert.AreEqual(result.errcode, ReturnCode.请求成功);
+            Assert.AreEqual(result.errcode, ReturnCodeMp.请求成功);
         }
 
         [TestMethod]
@@ -95,7 +95,7 @@ namespace Senparc.Weixin.MP.Test.AdvancedAPIs
 
             var result = AnalysisApi.GetUserShareHour(accessToken, beginData, endData);
             Assert.IsNotNull(result);
-            Assert.AreEqual(result.errcode, ReturnCode.请求成功);
+            Assert.AreEqual(result.errcode, ReturnCodeMp.请求成功);
         }
 
         [TestMethod]
@@ -105,7 +105,7 @@ namespace Senparc.Weixin.MP.Test.AdvancedAPIs
 
             var result = AnalysisApi.GetInterfaceSummary(accessToken, beginData, endData);
             Assert.IsNotNull(result);
-            Assert.AreEqual(result.errcode, ReturnCode.请求成功);
+            Assert.AreEqual(result.errcode, ReturnCodeMp.请求成功);
         }
 
         [TestMethod]
@@ -115,7 +115,7 @@ namespace Senparc.Weixin.MP.Test.AdvancedAPIs
 
             var result = AnalysisApi.GetInterfaceSummaryHour(accessToken, beginData, endData);
             Assert.IsNotNull(result);
-            Assert.AreEqual(result.errcode, ReturnCode.请求成功);
+            Assert.AreEqual(result.errcode, ReturnCodeMp.请求成功);
         }
 
         [TestMethod]
@@ -125,7 +125,7 @@ namespace Senparc.Weixin.MP.Test.AdvancedAPIs
 
             var result = AnalysisApi.GetUpStreamMsg(accessToken, beginData, endData);
             Assert.IsNotNull(result);
-            Assert.AreEqual(result.errcode, ReturnCode.请求成功);
+            Assert.AreEqual(result.errcode, ReturnCodeMp.请求成功);
         }
 
         [TestMethod]
@@ -135,7 +135,7 @@ namespace Senparc.Weixin.MP.Test.AdvancedAPIs
 
             var result = AnalysisApi.GetUpStreamMsgHour(accessToken, beginData, endData);
             Assert.IsNotNull(result);
-            Assert.AreEqual(result.errcode, ReturnCode.请求成功);
+            Assert.AreEqual(result.errcode, ReturnCodeMp.请求成功);
         }
 
         [TestMethod]
@@ -145,7 +145,7 @@ namespace Senparc.Weixin.MP.Test.AdvancedAPIs
 
             var result = AnalysisApi.GetUpStreamMsgWeek(accessToken, beginData, endData);
             Assert.IsNotNull(result);
-            Assert.AreEqual(result.errcode, ReturnCode.请求成功);
+            Assert.AreEqual(result.errcode, ReturnCodeMp.请求成功);
         }
 
         [TestMethod]
@@ -155,7 +155,7 @@ namespace Senparc.Weixin.MP.Test.AdvancedAPIs
 
             var result = AnalysisApi.GetUpStreamMsgMonth(accessToken, beginData, endData);
             Assert.IsNotNull(result);
-            Assert.AreEqual(result.errcode, ReturnCode.请求成功);
+            Assert.AreEqual(result.errcode, ReturnCodeMp.请求成功);
         }
 
         [TestMethod]
@@ -165,7 +165,7 @@ namespace Senparc.Weixin.MP.Test.AdvancedAPIs
 
             var result = AnalysisApi.GetUpStreamMsgDist(accessToken, beginData, endData);
             Assert.IsNotNull(result);
-            Assert.AreEqual(result.errcode, ReturnCode.请求成功);
+            Assert.AreEqual(result.errcode, ReturnCodeMp.请求成功);
         }
 
         [TestMethod]
@@ -175,7 +175,7 @@ namespace Senparc.Weixin.MP.Test.AdvancedAPIs
 
             var result = AnalysisApi.GetUpStreamMsgDistWeek(accessToken, beginData, endData);
             Assert.IsNotNull(result);
-            Assert.AreEqual(result.errcode, ReturnCode.请求成功);
+            Assert.AreEqual(result.errcode, ReturnCodeMp.请求成功);
         }
 
         [TestMethod]
@@ -185,7 +185,7 @@ namespace Senparc.Weixin.MP.Test.AdvancedAPIs
 
             var result = AnalysisApi.GetUpStreamMsgDistMonth(accessToken, beginData, endData);
             Assert.IsNotNull(result);
-            Assert.AreEqual(result.errcode, ReturnCode.请求成功);
+            Assert.AreEqual(result.errcode, ReturnCodeMp.请求成功);
         }
 
         [TestMethod]

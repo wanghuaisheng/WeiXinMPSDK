@@ -269,7 +269,7 @@ namespace Senparc.Weixin.MP.Test.AdvancedAPIs
         {
             var result = MediaApi.DeleteForeverMedia(accessToken, mediaId);
 
-            Assert.AreEqual(result.errcode, ReturnCode.请求成功);
+            Assert.AreEqual(result.errcode, ReturnCodeMp.请求成功);
         }
 
         [TestMethod]
@@ -299,7 +299,7 @@ namespace Senparc.Weixin.MP.Test.AdvancedAPIs
 
             var result = MediaApi.GetNewsMediaList(accessToken, 0, 3);
 
-            Assert.AreEqual(result.errcode, ReturnCode.请求成功);
+            Assert.AreEqual(result.errcode, ReturnCodeMp.请求成功);
             Assert.AreEqual(result.item_count, 3);
         }
 
@@ -310,7 +310,7 @@ namespace Senparc.Weixin.MP.Test.AdvancedAPIs
 
             var result = MediaApi.GetOthersMediaList(accessToken, UploadMediaFileType.image, 0, 3);
 
-            Assert.AreEqual(result.errcode, ReturnCode.请求成功);
+            Assert.AreEqual(result.errcode, ReturnCodeMp.请求成功);
             Assert.AreEqual(result.item_count, 3);
         }
 

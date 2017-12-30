@@ -85,7 +85,7 @@ namespace Senparc.Weixin.Work.AdvancedAPIs
 
                 HttpUtility.Get.Download(url, stream);//todo 异常处理
 
-                return new WorkJsonResult() { errcode = ReturnCode_Work.请求成功, errmsg = "ok" };
+                return new WorkJsonResult() { errcode = ReturnCodeWork.请求成功, errmsg = "ok" };
             }, accessTokenOrAppKey);
 
 
@@ -103,7 +103,7 @@ namespace Senparc.Weixin.Work.AdvancedAPIs
            {
                var url = string.Format(Config.ApiWorkHost + "/cgi-bin/media/get?access_token={0}&media_id={1}", accessToken.AsUrlData(), mediaId.AsUrlData());
                var fileName = HttpUtility.Get.Download(url, dir);
-               return new WorkJsonResult() { errcode = ReturnCode_Work.请求成功, errmsg = fileName };
+               return new WorkJsonResult() { errcode = ReturnCodeWork.请求成功, errmsg = fileName };
            }, accessTokenOrAppKey);
             return result.errmsg;
         }
@@ -198,7 +198,7 @@ namespace Senparc.Weixin.Work.AdvancedAPIs
                     accessToken.AsUrlData(), mediaId.AsUrlData(), agentId);
 
                 HttpUtility.Get.Download(url, stream);//todo 异常处理
-                return new WorkJsonResult() { errcode = ReturnCode_Work.请求成功, errmsg = "ok" };
+                return new WorkJsonResult() { errcode = ReturnCodeWork.请求成功, errmsg = "ok" };
             }, accessTokenOrAppKey);
         }
 
@@ -368,7 +368,7 @@ namespace Senparc.Weixin.Work.AdvancedAPIs
                 var url = string.Format(Config.ApiWorkHost + "/cgi-bin/media/get?access_token={0}&media_id={1}",
                 accessToken.AsUrlData(), mediaId.AsUrlData());
                 await HttpUtility.Get.DownloadAsync(url, stream);//todo 异常处理
-                return new WorkJsonResult() { errcode = ReturnCode_Work.请求成功, errmsg = "ok" };
+                return new WorkJsonResult() { errcode = ReturnCodeWork.请求成功, errmsg = "ok" };
             }, accessTokenOrAppKey);
 
 
@@ -465,7 +465,7 @@ namespace Senparc.Weixin.Work.AdvancedAPIs
 
                 await HttpUtility.Get.DownloadAsync(url, stream);//todo 异常处理
 
-                return new WorkJsonResult() { errcode = ReturnCode_Work.请求成功, errmsg = "ok" };
+                return new WorkJsonResult() { errcode = ReturnCodeWork.请求成功, errmsg = "ok" };
             }, accessTokenOrAppKey);
 
 

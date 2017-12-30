@@ -58,7 +58,7 @@ namespace Senparc.Weixin.Entities
         /// <summary>
         /// 返回结果代码
         /// </summary>
-        ReturnCode errcode { get; set; }
+        ReturnCodeMp errcode { get; set; }
     }
 
     /// <summary>
@@ -73,7 +73,7 @@ namespace Senparc.Weixin.Entities
         //    get { return this; }
         //}
 
-        public ReturnCode errcode { get; set; }
+        public ReturnCodeMp errcode { get; set; }
 
         /// <summary>
         /// 返回消息代码数字（同errcode枚举值）
