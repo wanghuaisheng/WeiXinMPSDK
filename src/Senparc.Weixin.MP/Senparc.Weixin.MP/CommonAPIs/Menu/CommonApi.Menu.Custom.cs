@@ -53,7 +53,7 @@ using System.Linq;
 using System.Text;
 using Senparc.Weixin.Entities;
 using Senparc.Weixin.Exceptions;
-using Senparc.Weixin.HttpUtility;
+using Senparc.Weixin.HttpUtilities;
 using Senparc.Weixin.MP.Entities;
 using Senparc.Weixin.MP.Entities.Menu;
 

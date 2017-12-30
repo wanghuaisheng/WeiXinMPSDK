@@ -23,7 +23,7 @@
  */
 
 using System.Threading.Tasks;
-using Senparc.Weixin.HttpUtility;
+using Senparc.Weixin.HttpUtilities;
 using Senparc.Weixin.Work.AdvancedAPIs.Asynchronous;
 using Senparc.Weixin.Work.CommonAPIs;
 

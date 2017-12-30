@@ -1,5 +1,4 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Senparc.Weixin.HttpUtility;
 using Senparc.Weixin.Open.OAuthAPIs;
 using System;
 using System.Collections.Generic;

@@ -22,7 +22,7 @@
 using System.Linq;
 using System.Threading.Tasks;
 using Senparc.Weixin.Entities;
-using Senparc.Weixin.HttpUtility;
+using Senparc.Weixin.HttpUtilities;
 using Senparc.Weixin.Open.CommonAPIs;
 
 namespace Senparc.Weixin.Open.QRConnect

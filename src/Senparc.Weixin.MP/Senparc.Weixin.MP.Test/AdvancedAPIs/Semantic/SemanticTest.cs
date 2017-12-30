@@ -24,6 +24,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Senparc.Weixin.HttpUtilities;
 using Senparc.Weixin.MP.AdvancedAPIs;
 using Senparc.Weixin.MP.AdvancedAPIs.Semantic;
 using Senparc.Weixin.MP.CommonAPIs;
@@ -58,7 +59,7 @@ namespace Senparc.Weixin.MP.Test.AdvancedAPIs
         public void RestaurantResultTest()
         {
             string returnText = "{\"res\":0,\"query\":\" 附近有什么川菜馆\",\"type\":\"restaurant\",\"semantic\":{\"details\":{\"category\":\"川菜\"},\"intent\":\"SEARCH\"}}";
-            var result = Senparc.Weixin.HttpUtility.Post.GetResult<Semantic_RestaurantResult>(returnText);
+            var result = Post.GetResult<Semantic_RestaurantResult>(returnText);
             Assert.IsNotNull(result.semantic);
             Assert.AreEqual(" 附近有什么川菜馆", result.query);
             Assert.AreEqual("SEARCH", result.semantic.intent);

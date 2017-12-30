@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Senparc.Weixin.HttpUtilities;
 using Senparc.Weixin.HttpUtility;
 using Senparc.Weixin.MP.AdvancedAPIs;
 using Senparc.Weixin.MP.Test.CommonAPIs;
@@ -35,7 +36,7 @@ namespace Senparc.Weixin.MP.Test.Utilities
             //下载
             var url = "http://sdk.weixin.senparc.com/images/v2/ewm_01.png";
             var filePath = @"E:\Senparc项目\WeiXinMPSDK\src\Senparc.Weixin.MP\Senparc.Weixin.MP.Test\qr_" + DateTime.Now.ToString("HHmmss") + ".jpg";
-            var downloadResult = Senparc.Weixin.HttpUtility.Get.Download(url, filePath);
+            var downloadResult = Get.Download(url, filePath);
             Console.WriteLine(downloadResult);
         }
 

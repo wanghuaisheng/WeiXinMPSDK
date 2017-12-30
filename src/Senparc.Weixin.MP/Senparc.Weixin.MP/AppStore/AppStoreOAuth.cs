@@ -28,7 +28,7 @@ Detail: https://github.com/JeffreySu/WeiXinMPSDK/blob/master/license.md
     创建标识：Senparc - 20150319
 ----------------------------------------------------------------*/
 
-using Senparc.Weixin.HttpUtility;
+using Senparc.Weixin.HttpUtilities;
 using Senparc.Weixin.MP.CommonAPIs;
 
 namespace Senparc.Weixin.MP.AppStore

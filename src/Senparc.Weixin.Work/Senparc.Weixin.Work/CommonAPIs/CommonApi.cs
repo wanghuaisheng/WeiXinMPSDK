@@ -29,7 +29,7 @@
  */
 
 using System.Threading.Tasks;
-using Senparc.Weixin.HttpUtility;
+using Senparc.Weixin.HttpUtilities;
 using Senparc.Weixin.Work.Containers;
 using Senparc.Weixin.Work.Entities;
 

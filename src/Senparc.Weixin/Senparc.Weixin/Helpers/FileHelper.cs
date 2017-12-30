@@ -40,6 +40,7 @@ Detail: https://github.com/JeffreySu/WeiXinMPSDK/blob/master/license.md
 
 
 using System.IO;
+using Senparc.Weixin.HttpUtilities;
 
 namespace Senparc.Weixin.Helpers
 {
@@ -72,7 +73,7 @@ namespace Senparc.Weixin.Helpers
         {
             using (FileStream fs = new FileStream(fullFilePathAndName, FileMode.OpenOrCreate))
             {
-                HttpUtility.Get.Download(url, fs);
+                Get.Download(url, fs);
 #if NET35
                 fs.Flush();
 #else

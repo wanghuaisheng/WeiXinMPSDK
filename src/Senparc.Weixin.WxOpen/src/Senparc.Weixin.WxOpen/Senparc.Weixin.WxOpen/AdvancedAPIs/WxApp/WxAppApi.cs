@@ -40,7 +40,7 @@ using System.IO;
 using System.Threading.Tasks;
 using Senparc.Weixin.Entities;
 using Senparc.Weixin.Helpers;
-using Senparc.Weixin.HttpUtility;
+using Senparc.Weixin.HttpUtilities;
 using Senparc.Weixin.MP;
 using Senparc.Weixin.WxOpen.AdvancedAPIs.Template.TemplateJson;
 

@@ -35,13 +35,13 @@ Detail: https://github.com/JeffreySu/WeiXinMPSDK/blob/master/license.md
 ----------------------------------------------------------------*/
 
 using Senparc.Weixin.Open.WxaAPIs.Tester;
-using Senparc.Weixin.HttpUtility;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Senparc.Weixin.CommonAPIs;
+using Senparc.Weixin.HttpUtilities;
 
 namespace Senparc.Weixin.Open.WxaAPIs
 {

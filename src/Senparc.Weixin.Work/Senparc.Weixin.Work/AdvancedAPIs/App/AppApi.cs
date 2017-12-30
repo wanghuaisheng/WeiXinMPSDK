@@ -37,7 +37,7 @@ using System.Threading.Tasks;
 using Senparc.Weixin.CommonAPIs;
 using Senparc.Weixin.Entities;
 using Senparc.Weixin.Helpers;
-using Senparc.Weixin.HttpUtility;
+using Senparc.Weixin.HttpUtilities;
 using Senparc.Weixin.Work.AdvancedAPIs.App;
 
 namespace Senparc.Weixin.Work.AdvancedAPIs

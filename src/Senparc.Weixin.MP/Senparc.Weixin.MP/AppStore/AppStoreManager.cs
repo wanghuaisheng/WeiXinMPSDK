@@ -30,7 +30,7 @@ Detail: https://github.com/JeffreySu/WeiXinMPSDK/blob/master/license.md
 
 using System.Collections.Generic;
 using Senparc.Weixin.Exceptions;
-using Senparc.Weixin.HttpUtility;
+using Senparc.Weixin.HttpUtilities;
 using Senparc.Weixin.MP.AppStore.Api;
 
 namespace Senparc.Weixin.MP.AppStore

@@ -83,7 +83,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
             {
                 var urlFormat = Config.ApiMpHost + "/cgi-bin/tags/get?access_token={0}";
                 var url = string.Format(urlFormat, accessToken);
-                return HttpUtility.Get.GetJson<TagJson>(url);
+                return HttpUtilities.Get.GetJson<TagJson>(url);
 
             }, accessTokenOrAppId);
         }
@@ -258,7 +258,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
             {
                 var urlFormat = Config.ApiMpHost + "/cgi-bin/tags/get?access_token={0}";
                 var url = string.Format(urlFormat, accessToken);
-                return await HttpUtility.Get.GetJsonAsync<TagJson>(url);
+                return await HttpUtilities.Get.GetJsonAsync<TagJson>(url);
 
             }, accessTokenOrAppId);
         }

@@ -20,7 +20,6 @@
  */
 
 using System.Threading.Tasks;
-using Senparc.Weixin.HttpUtility;
 using Senparc.Weixin.Work.AdvancedAPIs.LoginAuth;
 using Senparc.Weixin.Work.CommonAPIs;
 

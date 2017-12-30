@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Web;
 using System.Web.Configuration;
 using System.Web.Mvc;
+using Senparc.Weixin.HttpUtilities;
 using Senparc.Weixin.MP.AdvancedAPIs;
 using Senparc.Weixin.MP.AdvancedAPIs.TemplateMessage;
 using Senparc.Weixin.MP.Helpers;
@@ -90,7 +91,7 @@ namespace Senparc.Weixin.MP.Sample.Controllers
         public ActionResult DeadLockTest()
         {
             var result =
-                Senparc.Weixin.HttpUtility.RequestUtility.HttpGetAsync("https://sdk.weixin.senparc.com",
+                RequestUtility.HttpGetAsync("https://sdk.weixin.senparc.com",
                     cookieContainer: null).Result;
             return Content(result);
         }
@@ -101,7 +102,7 @@ namespace Senparc.Weixin.MP.Sample.Controllers
         /// <returns></returns>
         public async Task<ActionResult> NoDeadLockTest()
         {
-            var result = await Senparc.Weixin.HttpUtility.RequestUtility.HttpGetAsync("https://sdk.weixin.senparc.com",
+            var result = await RequestUtility.HttpGetAsync("https://sdk.weixin.senparc.com",
                 cookieContainer: null);
             return Content(result);
         }

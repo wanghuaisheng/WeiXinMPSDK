@@ -46,7 +46,7 @@ Detail: https://github.com/JeffreySu/WeiXinMPSDK/blob/master/license.md
 
 using System.Threading.Tasks;
 using Senparc.Weixin.Entities;
-using Senparc.Weixin.HttpUtility;
+using Senparc.Weixin.HttpUtilities;
 using Senparc.Weixin.MP.AdvancedAPIs.Groups;
 using Senparc.Weixin.MP.CommonAPIs;
 
@@ -93,7 +93,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
             {
                 var urlFormat = Config.ApiMpHost + "/cgi-bin/groups/get?access_token={0}";
                 var url = string.Format(urlFormat, accessToken.AsUrlData());
-                return HttpUtility.Get.GetJson<GroupsJson>(url);
+                return HttpUtilities.Get.GetJson<GroupsJson>(url);
 
             }, accessTokenOrAppId);
         }
@@ -254,7 +254,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
            {
                var urlFormat = Config.ApiMpHost + "/cgi-bin/groups/get?access_token={0}";
                var url = string.Format(urlFormat, accessToken.AsUrlData());
-               return await HttpUtility.Get.GetJsonAsync<GroupsJson>(url);
+               return await HttpUtilities.Get.GetJsonAsync<GroupsJson>(url);
 
            }, accessTokenOrAppId);
         }

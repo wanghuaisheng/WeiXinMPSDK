@@ -36,8 +36,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Senparc.Weixin.CommonAPIs;
-using Senparc.Weixin.HttpUtility;
 using Senparc.Weixin.Entities;
+using Senparc.Weixin.HttpUtilities;
 
 namespace Senparc.Weixin.Open.WxaAPIs
 {

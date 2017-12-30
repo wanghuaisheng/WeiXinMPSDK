@@ -29,7 +29,7 @@ using System;
 using System.Threading.Tasks;
 using Senparc.Weixin.CommonAPIs;
 using Senparc.Weixin.Helpers.Extensions;
-using Senparc.Weixin.HttpUtility;
+using Senparc.Weixin.HttpUtilities;
 using Senparc.Weixin.Work.AdvancedAPIs.OAuth2;
 
 namespace Senparc.Weixin.Work.AdvancedAPIs

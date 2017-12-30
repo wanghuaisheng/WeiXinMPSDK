@@ -32,7 +32,7 @@ using System;
 using System.IO;
 using System.Threading.Tasks;
 using Senparc.Weixin.Entities;
-using Senparc.Weixin.HttpUtility;
+using Senparc.Weixin.HttpUtilities;
 
 namespace Senparc.Weixin.Open.WxaAPIs.Sns
 {

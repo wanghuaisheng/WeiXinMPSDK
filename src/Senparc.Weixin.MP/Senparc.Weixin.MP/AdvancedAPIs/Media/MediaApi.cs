@@ -64,7 +64,7 @@ using System.IO;
 using System.Threading.Tasks;
 using Senparc.Weixin.Entities;
 using Senparc.Weixin.Helpers;
-using Senparc.Weixin.HttpUtility;
+using Senparc.Weixin.HttpUtilities;
 using Senparc.Weixin.MP.AdvancedAPIs.GroupMessage;
 using Senparc.Weixin.MP.AdvancedAPIs.Media;
 using Senparc.Weixin.MP.CommonAPIs;
@@ -132,7 +132,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
             ApiHandlerWapper.TryCommonApi(accessToken =>
             {
                 var url = string.Format(Config.ApiMpHost + "/cgi-bin/media/get?access_token={0}&media_id={1}", accessToken.AsUrlData(), mediaId.AsUrlData());
-                HttpUtility.Get.Download(url, stream);
+                HttpUtilities.Get.Download(url, stream);
                 return new WxJsonResult() { errcode = ReturnCodeMp.请求成功, errmsg = "ok" };//无实际意义
             }, accessTokenOrAppId);
         }
@@ -149,7 +149,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
             var result = ApiHandlerWapper.TryCommonApi(accessToken =>
             {
                 var url = string.Format(Config.ApiMpHost + "/cgi-bin/media/get?access_token={0}&media_id={1}", accessToken.AsUrlData(), mediaId.AsUrlData());
-                var str = HttpUtility.Get.Download(url, dir);
+                var str = HttpUtilities.Get.Download(url, dir);
                 return new WxJsonResult() { errcode = ReturnCodeMp.请求成功, errmsg = str };
             }, accessTokenOrAppId);
             return result.errmsg;
@@ -332,7 +332,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
             {
                 string url = string.Format(Config.ApiMpHost + "/cgi-bin/material/get_materialcount?access_token={0}", accessToken.AsUrlData());
 
-                return HttpUtility.Get.GetJson<GetMediaCountResultJson>(url);
+                return HttpUtilities.Get.GetJson<GetMediaCountResultJson>(url);
 
             }, accessTokenOrAppId);
         }
@@ -473,7 +473,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
             await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
                 var url = string.Format(Config.ApiMpHost + "/cgi-bin/media/get?access_token={0}&media_id={1}", accessToken.AsUrlData(), mediaId.AsUrlData());
-                await HttpUtility.Get.DownloadAsync(url, stream);
+                await HttpUtilities.Get.DownloadAsync(url, stream);
                 return new WxJsonResult() { errcode = ReturnCodeMp.请求成功, errmsg = "ok" };//无实际意义
             }, accessTokenOrAppId);
         }
@@ -490,7 +490,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
             var result = await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
                 var url = string.Format(Config.ApiMpHost + "/cgi-bin/media/get?access_token={0}&media_id={1}", accessToken.AsUrlData(), mediaId.AsUrlData());
-                var str = await HttpUtility.Get.DownloadAsync(url, dir);
+                var str = await HttpUtilities.Get.DownloadAsync(url, dir);
                 return new WxJsonResult() { errcode = ReturnCodeMp.请求成功, errmsg = str };
             }, accessTokenOrAppId);
             return result.errmsg;
@@ -674,7 +674,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
            {
                string url = string.Format(Config.ApiMpHost + "/cgi-bin/material/get_materialcount?access_token={0}", accessToken.AsUrlData());
 
-               return await HttpUtility.Get.GetJsonAsync<GetMediaCountResultJson>(url);
+               return await HttpUtilities.Get.GetJsonAsync<GetMediaCountResultJson>(url);
 
            }, accessTokenOrAppId);
         }

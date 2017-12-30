@@ -57,7 +57,7 @@ Detail: https://github.com/JeffreySu/WeiXinMPSDK/blob/master/license.md
 using System;
 using System.IO;
 using System.Threading.Tasks;
-using Senparc.Weixin.HttpUtility;
+using Senparc.Weixin.HttpUtilities;
 using Senparc.Weixin.MP.AdvancedAPIs.QrCode;
 using Senparc.Weixin.MP.CommonAPIs;
 

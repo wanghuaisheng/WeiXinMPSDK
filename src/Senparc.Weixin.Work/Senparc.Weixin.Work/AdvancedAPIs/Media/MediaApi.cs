@@ -34,7 +34,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
 using Senparc.Weixin.Entities;
-using Senparc.Weixin.HttpUtility;
+using Senparc.Weixin.HttpUtilities;
 using Senparc.Weixin.Work.AdvancedAPIs.Media;
 using Senparc.Weixin.Work.CommonAPIs;
 using Senparc.Weixin.Work.Entities;
@@ -83,7 +83,7 @@ namespace Senparc.Weixin.Work.AdvancedAPIs
                 var url = string.Format(Config.ApiWorkHost + "/cgi-bin/media/get?access_token={0}&media_id={1}",
               accessToken.AsUrlData(), mediaId.AsUrlData());
 
-                HttpUtility.Get.Download(url, stream);//todo 异常处理
+                HttpUtilities.Get.Download(url, stream);//todo 异常处理
 
                 return new WorkJsonResult() { errcode = ReturnCodeWork.请求成功, errmsg = "ok" };
             }, accessTokenOrAppKey);
@@ -102,7 +102,7 @@ namespace Senparc.Weixin.Work.AdvancedAPIs
             var result = ApiHandlerWapper.TryCommonApi(accessToken =>
            {
                var url = string.Format(Config.ApiWorkHost + "/cgi-bin/media/get?access_token={0}&media_id={1}", accessToken.AsUrlData(), mediaId.AsUrlData());
-               var fileName = HttpUtility.Get.Download(url, dir);
+               var fileName = HttpUtilities.Get.Download(url, dir);
                return new WorkJsonResult() { errcode = ReturnCodeWork.请求成功, errmsg = fileName };
            }, accessTokenOrAppKey);
             return result.errmsg;
@@ -197,7 +197,7 @@ namespace Senparc.Weixin.Work.AdvancedAPIs
                     Config.ApiWorkHost + "/cgi-bin/material/get?access_token={0}&media_id={1}&agentid={2}",
                     accessToken.AsUrlData(), mediaId.AsUrlData(), agentId);
 
-                HttpUtility.Get.Download(url, stream);//todo 异常处理
+                HttpUtilities.Get.Download(url, stream);//todo 异常处理
                 return new WorkJsonResult() { errcode = ReturnCodeWork.请求成功, errmsg = "ok" };
             }, accessTokenOrAppKey);
         }
@@ -367,7 +367,7 @@ namespace Senparc.Weixin.Work.AdvancedAPIs
             {
                 var url = string.Format(Config.ApiWorkHost + "/cgi-bin/media/get?access_token={0}&media_id={1}",
                 accessToken.AsUrlData(), mediaId.AsUrlData());
-                await HttpUtility.Get.DownloadAsync(url, stream);//todo 异常处理
+                await HttpUtilities.Get.DownloadAsync(url, stream);//todo 异常处理
                 return new WorkJsonResult() { errcode = ReturnCodeWork.请求成功, errmsg = "ok" };
             }, accessTokenOrAppKey);
 
@@ -463,7 +463,7 @@ namespace Senparc.Weixin.Work.AdvancedAPIs
                     Config.ApiWorkHost + "/cgi-bin/material/get?access_token={0}&media_id={1}&agentid={2}",
                     accessToken.AsUrlData(), mediaId.AsUrlData(), agentId);
 
-                await HttpUtility.Get.DownloadAsync(url, stream);//todo 异常处理
+                await HttpUtilities.Get.DownloadAsync(url, stream);//todo 异常处理
 
                 return new WorkJsonResult() { errcode = ReturnCodeWork.请求成功, errmsg = "ok" };
             }, accessTokenOrAppKey);

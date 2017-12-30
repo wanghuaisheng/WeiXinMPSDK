@@ -29,6 +29,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Senparc.Weixin;
 using Senparc.Weixin.Entities;
 using Senparc.Weixin.Exceptions;
+using Senparc.Weixin.HttpUtilities;
 using Senparc.Weixin.HttpUtility;
 
 namespace Senparc.Weixin.HttpUtility.Tests

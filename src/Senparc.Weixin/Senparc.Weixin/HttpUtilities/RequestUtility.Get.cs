@@ -31,17 +31,13 @@ Detail: https://github.com/JeffreySu/WeiXinMPSDK/blob/master/license.md
 
 ----------------------------------------------------------------*/
 
-using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Net;
-using System.Net.Security;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
-using Senparc.Weixin.Helpers;
 #if NET35 || NET40 || NET45
-using System.Web;
+
 #else
 using System.Net.Http;
 using System.Net.Http.Headers;
@@ -51,7 +47,7 @@ using Microsoft.AspNetCore.Http;
 using Senparc.Weixin.WebProxy;
 #endif
 
-namespace Senparc.Weixin.HttpUtility
+namespace Senparc.Weixin.HttpUtilities
 {
     /// <summary>
     /// HTTP 请求工具类

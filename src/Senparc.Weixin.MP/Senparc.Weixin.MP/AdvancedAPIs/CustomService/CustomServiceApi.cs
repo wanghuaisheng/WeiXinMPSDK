@@ -59,7 +59,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using Senparc.Weixin.Entities;
 using Senparc.Weixin.Helpers;
-using Senparc.Weixin.HttpUtility;
+using Senparc.Weixin.HttpUtilities;
 using Senparc.Weixin.MP.AdvancedAPIs.CustomService;
 using Senparc.Weixin.MP.CommonAPIs;
 

@@ -65,10 +65,10 @@ using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Senparc.Weixin.Entities;
-using Senparc.Weixin.HttpUtility;
 using Senparc.Weixin.MP.AdvancedAPIs.ShakeAround;
 using Senparc.Weixin.MP.CommonAPIs;
 using System.Linq;
+using Senparc.Weixin.HttpUtilities;
 
 namespace Senparc.Weixin.MP.AdvancedAPIs
 {

@@ -53,10 +53,10 @@
 
 using System.Threading.Tasks;
 using Senparc.Weixin.Entities;
-using Senparc.Weixin.HttpUtility;
 using Senparc.Weixin.Work.AdvancedAPIs.MailList;
 using Senparc.Weixin.Work.CommonAPIs;
 using Senparc.Weixin.Helpers;
+using Senparc.Weixin.HttpUtilities;
 
 namespace Senparc.Weixin.Work.AdvancedAPIs
 {

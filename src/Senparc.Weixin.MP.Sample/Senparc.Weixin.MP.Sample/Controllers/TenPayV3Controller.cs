@@ -29,7 +29,6 @@ using System.Web.Configuration;
 using System.Web.Mvc;
 using System.Xml.Linq;
 using Senparc.Weixin.Helpers;
-using Senparc.Weixin.HttpUtility;
 using Senparc.Weixin.MP.AdvancedAPIs;
 using Senparc.Weixin.MP.AdvancedAPIs.OAuth;
 using Senparc.Weixin.MP.Helpers;
@@ -40,6 +39,7 @@ using ZXing.Common;
 using Senparc.Weixin.Exceptions;
 using Senparc.Weixin.MP.Sample.Filters;
 using System.Web.Security;
+using Senparc.Weixin.HttpUtilities;
 using Senparc.Weixin.MP.Sample.CommonService.TemplateMessage;
 using Senparc.Weixin.Utilities;
 

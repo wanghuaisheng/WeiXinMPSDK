@@ -14,6 +14,7 @@
 
 using System;
 using System.Diagnostics.CodeAnalysis;
+using Senparc.Weixin.HttpUtilities;
 using Senparc.Weixin.MP.AdvancedAPIs;
 #if NET35 || NET40 || NET45 || NET461
 using System.Web.Mvc;
@@ -130,7 +131,7 @@ namespace Senparc.Weixin.MP.MvcExtension
                 }
                 else
                 {
-                    var callbackUrl = Senparc.Weixin.HttpUtility.UrlUtility.GenerateOAuthCallbackUrl(filterContext.HttpContext, _oauthCallbackUrl);
+                    var callbackUrl = UrlUtility.GenerateOAuthCallbackUrl(filterContext.HttpContext, _oauthCallbackUrl);
                     var state = string.Format("{0}|{1}", "FromSenparc", DateTime.Now.Ticks);
                     var url = OAuthApi.GetAuthorizeUrl(_appId, callbackUrl, state, _oauthScope);
                     filterContext.Result = new RedirectResult(url);

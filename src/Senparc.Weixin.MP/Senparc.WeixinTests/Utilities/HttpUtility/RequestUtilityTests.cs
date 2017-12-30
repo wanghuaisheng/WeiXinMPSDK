@@ -27,6 +27,7 @@ using System.Linq;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
+using Senparc.Weixin.HttpUtilities;
 
 namespace Senparc.Weixin.HttpUtility.Tests
 {
@@ -55,7 +56,7 @@ namespace Senparc.Weixin.HttpUtility.Tests
 
             var cookieContainer = new CookieContainer();
             var url = "http://localhost:65395/ForTest/PostTest";//使用.NET 4.5的Sample
-            var result = Senparc.Weixin.HttpUtility.RequestUtility.HttpPost(url,
+            var result = RequestUtility.HttpPost(url,
                 cookieContainer, stream, useAjax: true);
 
             Console.WriteLine(result);
@@ -75,7 +76,7 @@ namespace Senparc.Weixin.HttpUtility.Tests
 
             var cookieContainer = new CookieContainer();
             var url = "http://localhost:65395/ForTest/PostTest";//使用.NET 4.5的Sample
-            var result = Senparc.Weixin.HttpUtility.RequestUtility.HttpResponsePost(url,
+            var result = RequestUtility.HttpResponsePost(url,
                 cookieContainer, stream, useAjax: true);
 
             Assert.IsNotNull(result);

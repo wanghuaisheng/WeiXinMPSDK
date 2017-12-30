@@ -12,7 +12,6 @@ using System.Web.Routing;
 using Senparc.Weixin.Cache;
 using Senparc.Weixin.Cache.Memcached;
 using Senparc.Weixin.Cache.Redis;
-using Senparc.Weixin.HttpUtility;
 using Senparc.Weixin.MP.Containers;
 using Senparc.Weixin.MP.Sample.CommonService;
 using Senparc.Weixin.MP.Sample.CommonService.MessageHandlers.WebSocket;

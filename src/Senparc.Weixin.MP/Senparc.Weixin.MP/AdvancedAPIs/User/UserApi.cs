@@ -51,9 +51,9 @@ Detail: https://github.com/JeffreySu/WeiXinMPSDK/blob/master/license.md
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Senparc.Weixin.Entities;
+using Senparc.Weixin.HttpUtilities;
 using Senparc.Weixin.MP.AdvancedAPIs.User;
 using Senparc.Weixin.MP.CommonAPIs;
-using Senparc.Weixin.HttpUtility;
 
 namespace Senparc.Weixin.MP.AdvancedAPIs
 {
@@ -77,7 +77,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
             {
                 string url = string.Format(Config.ApiMpHost + "/cgi-bin/user/info?access_token={0}&openid={1}&lang={2}",
                     accessToken.AsUrlData(), openId.AsUrlData(), lang.ToString("g").AsUrlData());
-                return HttpUtility.Get.GetJson<UserInfoJson>(url);
+                return HttpUtilities.Get.GetJson<UserInfoJson>(url);
 
                 //错误时微信会返回错误码等信息，JSON数据包示例如下（该示例为AppID无效错误）:
                 //{"errcode":40013,"errmsg":"invalid appid"}
@@ -100,7 +100,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
                 {
                     url += "&next_openid=" + nextOpenId;
                 }
-                return HttpUtility.Get.GetJson<OpenIdResultJson>(url);
+                return HttpUtilities.Get.GetJson<OpenIdResultJson>(url);
 
             }, accessTokenOrAppId);
         }
@@ -164,7 +164,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
            {
                string url = string.Format(Config.ApiMpHost + "/cgi-bin/user/info?access_token={0}&openid={1}&lang={2}",
                    accessToken.AsUrlData(), openId.AsUrlData(), lang.ToString("g").AsUrlData());
-               return await HttpUtility.Get.GetJsonAsync<UserInfoJson>(url);
+               return await HttpUtilities.Get.GetJsonAsync<UserInfoJson>(url);
 
                 //错误时微信会返回错误码等信息，JSON数据包示例如下（该示例为AppID无效错误）:
                 //{"errcode":40013,"errmsg":"invalid appid"}
@@ -187,7 +187,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
                {
                    url += "&next_openid=" + nextOpenId;
                }
-               return await HttpUtility.Get.GetJsonAsync<OpenIdResultJson>(url);
+               return await HttpUtilities.Get.GetJsonAsync<OpenIdResultJson>(url);
 
            }, accessTokenOrAppId);
         }

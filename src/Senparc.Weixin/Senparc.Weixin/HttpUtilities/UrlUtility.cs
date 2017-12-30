@@ -32,20 +32,16 @@ Detail: https://github.com/JeffreySu/WeiXinMPSDK/blob/master/license.md
 
 ----------------------------------------------------------------*/
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-#if NET35 || NET40 || NET45
 using System.Web;
+using Senparc.Weixin.Exceptions;
+#if NET35 || NET40 || NET45
 #else
 using System.Net.Http;
 using System.Net.Http.Headers;
 using Microsoft.AspNetCore.Http;
 #endif
-using Senparc.Weixin.Exceptions;
 
-namespace Senparc.Weixin.HttpUtility
+namespace Senparc.Weixin.HttpUtilities
 {
     /// <summary>
     /// URL工具类

@@ -17,7 +17,6 @@ using System.Text;
 using System.Threading.Tasks;
 using Senparc.Weixin.Entities;
 using Senparc.Weixin.Helpers;
-using Senparc.Weixin.HttpUtility;
 
 namespace Senparc.Weixin.Work.CommonAPIs
 {

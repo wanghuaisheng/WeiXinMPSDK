@@ -40,7 +40,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Senparc.Weixin.Entities;
 using Senparc.Weixin.Helpers;
-using Senparc.Weixin.HttpUtility;
+using Senparc.Weixin.HttpUtilities;
 
 namespace Senparc.Weixin.MP.CommonAPIs
 {

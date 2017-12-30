@@ -56,7 +56,7 @@ Detail: https://github.com/JeffreySu/WeiXinMPSDK/blob/master/license.md
  */
 
 using System.Threading.Tasks;
-using Senparc.Weixin.HttpUtility;
+using Senparc.Weixin.HttpUtilities;
 using Senparc.Weixin.MP.Containers;
 using Senparc.Weixin.MP.Entities;
 

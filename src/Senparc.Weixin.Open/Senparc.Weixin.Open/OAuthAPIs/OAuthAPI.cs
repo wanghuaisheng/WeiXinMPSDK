@@ -21,7 +21,7 @@
 
 using System.Linq;
 using System.Threading.Tasks;
-using Senparc.Weixin.HttpUtility;
+using Senparc.Weixin.HttpUtilities;
 using Senparc.Weixin.Open.CommonAPIs;
 
 namespace Senparc.Weixin.Open.OAuthAPIs

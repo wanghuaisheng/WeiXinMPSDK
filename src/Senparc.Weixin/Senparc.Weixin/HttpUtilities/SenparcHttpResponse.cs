@@ -31,20 +31,15 @@ Detail: https://github.com/JeffreySu/WeiXinMPSDK/blob/master/license.md
 
 ----------------------------------------------------------------*/
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net;
-using System.Text;
-using Senparc.Weixin.Helpers.Extensions;
 #if NET35 || NET40 || NET45
-using System.Web;
+
 #else
 using System.Net.Http;
 using System.Net.Http.Headers;
 #endif
 
-namespace Senparc.Weixin.HttpUtility
+namespace Senparc.Weixin.HttpUtilities
 {
     /// <summary>
     /// 统一封装HttpResonse请求，提供Http请求过程中的调试、跟踪等扩展能力

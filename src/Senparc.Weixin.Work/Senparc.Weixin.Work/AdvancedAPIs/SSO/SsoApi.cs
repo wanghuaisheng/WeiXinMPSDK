@@ -11,13 +11,13 @@
 ----------------------------------------------------------------*/
 
 using Senparc.Weixin.CommonAPIs;
-using Senparc.Weixin.HttpUtility;
 using Senparc.Weixin.Work.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Senparc.Weixin.HttpUtilities;
 
 namespace Senparc.Weixin.Work.AdvancedAPIs.SSO
 {

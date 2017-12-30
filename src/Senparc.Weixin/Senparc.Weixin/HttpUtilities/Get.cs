@@ -45,23 +45,21 @@ Detail: https://github.com/JeffreySu/WeiXinMPSDK/blob/master/license.md
 ----------------------------------------------------------------*/
 
 
-using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Net;
-#if !NET35 && !NET40
 using System.Net.Http;
-using System.Threading.Tasks;
-#endif
 using System.Text;
-#if NET35 || NET40 || NET45
+using System.Threading.Tasks;
 using System.Web.Script.Serialization;
-#endif
 using Senparc.Weixin.Entities;
 using Senparc.Weixin.Exceptions;
 using Senparc.Weixin.Utilities;
+#if !NET35 && !NET40
+#endif
+#if NET35 || NET40 || NET45
+#endif
 
-namespace Senparc.Weixin.HttpUtility
+namespace Senparc.Weixin.HttpUtilities
 {
     /// <summary>
     /// Get 请求处理
