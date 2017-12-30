@@ -41,8 +41,8 @@ namespace Senparc.Weixin.MessageHandlers
     /// <typeparam name="TRequest">IRequestMessageBase</typeparam>
     /// <typeparam name="TResponse">IResponseMessageBase</typeparam>
     public interface IMessageHandler<TRequest, TResponse> : IMessageHandlerDocument
-        where TRequest : IRequestMessageBase
-        where TResponse : IResponseMessageBase
+        where TRequest : IWxRequestMessageBase
+        where TResponse : IWxResponseMessageBase
     {
         /// <summary>
         /// 发送者用户名（OpenId）

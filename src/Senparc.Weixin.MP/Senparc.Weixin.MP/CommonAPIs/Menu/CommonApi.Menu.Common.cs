@@ -366,7 +366,7 @@ namespace Senparc.Weixin.MP.CommonAPIs
             GetMenuResult result = null;
             if (buttonGroupBase == null)
             {
-                throw new ArgumentNullException("buttonGroupBase不可以为空！");
+                throw new ArgumentNullException(nameof(buttonGroupBase));
             }
 
             try

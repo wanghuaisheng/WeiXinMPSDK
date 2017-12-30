@@ -43,8 +43,8 @@ namespace Senparc.Weixin.MP.Sample.Controllers
                     requestMessaage = new RequestMessageLocation()
                     {
                         Label = Request.Form["Label"],
-                        Location_X = double.Parse(Request.Form["Location_X"]),
-                        Location_Y = double.Parse(Request.Form["Location_Y"]),
+                        LocationX = double.Parse(Request.Form["Location_X"]),
+                        LocationY = double.Parse(Request.Form["Location_Y"]),
                         Scale = int.Parse(Request.Form["Scale"])
                     };
                     break;

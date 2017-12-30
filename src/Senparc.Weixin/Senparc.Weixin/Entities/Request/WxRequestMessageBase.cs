@@ -31,11 +31,9 @@ Detail: https://github.com/JeffreySu/WeiXinMPSDK/blob/master/license.md
     修改描述：整理接口
 ----------------------------------------------------------------*/
 
-
-
 namespace Senparc.Weixin.Entities
 {
-    public interface IRequestMessageBase : IMessageBase
+    public interface IWxRequestMessageBase : IWxMessageBase
     {
         //删除MsgType因为企业号和公众号的MsgType为两个独立的枚举类型
         //RequestMsgType MsgType { get; }
@@ -45,18 +43,8 @@ namespace Senparc.Weixin.Entities
     /// <summary>
     /// 接收到请求的消息基类
     /// </summary>
-    public abstract class RequestMessageBase : MessageBase, IRequestMessageBase
+    public abstract class WxRequestMessageBase : WxMessageBase, IWxRequestMessageBase
     {
-        public RequestMessageBase()
-        {
-
-        }
-
-        //public virtual RequestMsgType MsgType
-        //{
-        //    get { return RequestMsgType.Text; }
-        //}
-
         public long MsgId { get; set; }
     }
 }

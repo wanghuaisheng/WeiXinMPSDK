@@ -264,7 +264,7 @@ namespace Senparc.Weixin.MP.CommonAPIs
         /// <summary>
         /// 删除菜单
         /// </summary>
-        /// <param name="accessToken"></param>
+        /// <param name="accessTokenOrAppId"></param>
         /// <returns></returns>
         public static WxJsonResult DeleteMenu(string accessTokenOrAppId)
         {

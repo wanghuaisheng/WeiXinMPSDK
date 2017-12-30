@@ -62,8 +62,8 @@ namespace Senparc.Weixin.MessageHandlers
     /// </summary>
     public abstract class MessageHandler<TC, TRequest, TResponse> : IMessageHandler<TRequest, TResponse>
         where TC : class, IMessageContext<TRequest, TResponse>, new()
-        where TRequest : IRequestMessageBase
-        where TResponse : IResponseMessageBase
+        where TRequest : IWxRequestMessageBase
+        where TResponse : IWxResponseMessageBase
     {
         ///// <summary>
         ///// 上下文
@@ -240,7 +240,7 @@ namespace Senparc.Weixin.MessageHandlers
         /// <param name="requestMessageBase"></param>
         /// <param name="maxRecordCount"></param>
         /// <param name="postData">需要传入到Init的参数</param>
-        public MessageHandler(RequestMessageBase requestMessageBase, int maxRecordCount = 0, object postData = null)
+        public MessageHandler(WxRequestMessageBase requestMessageBase, int maxRecordCount = 0, object postData = null)
         {
             ////将requestMessageBase生成XML格式。
             //var xmlStr = XmlUtility.XmlUtility.Serializer(requestMessageBase);

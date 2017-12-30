@@ -35,10 +35,7 @@ namespace Senparc.Weixin.MP.Entities
 {
     public class RequestMessageLink : RequestMessageBase, IRequestMessageBase
     {
-        public override RequestMsgType MsgType
-        {
-            get { return RequestMsgType.Link; }
-        }
+        public override RequestMsgType MsgType => RequestMsgType.Link;
 
         /// <summary>
         /// 消息标题

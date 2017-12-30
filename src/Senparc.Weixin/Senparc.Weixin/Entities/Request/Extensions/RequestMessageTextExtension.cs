@@ -59,11 +59,11 @@ namespace Senparc.Weixin.Entities.Request
     {
         internal string Keyword { get; set; }
 
-        internal Func<ResponseMessageBase> DefaultMessage;
+        internal Func<WxResponseMessageBase> DefaultMessage;
 
         internal IRequestMessageText RequestMessage { get; set; }
 
-        public IResponseMessageBase ResponseMessage { get; set; }
+        public IWxResponseMessageBase ResponseMessage { get; set; }
 
         /// <summary>
         /// 是否已经匹配成功
@@ -106,7 +106,7 @@ namespace Senparc.Weixin.Entities.Request
         /// </summary>
         /// <param name="handler"></param>
         /// <returns></returns>
-        public static IResponseMessageBase GetResponseMessage(this RequestMessageTextKeywordHandler handler)
+        public static IWxResponseMessageBase GetResponseMessage(this RequestMessageTextKeywordHandler handler)
         {
             if (!handler.MatchSuccessed
                 && handler.DefaultMessage != null)
@@ -124,7 +124,7 @@ namespace Senparc.Weixin.Entities.Request
         /// <param name="keyword">关键词</param>
         /// <param name="func"></param>
         /// <returns></returns>
-        public static RequestMessageTextKeywordHandler Keyword(this RequestMessageTextKeywordHandler handler, string keyword, Func<IResponseMessageBase> func)
+        public static RequestMessageTextKeywordHandler Keyword(this RequestMessageTextKeywordHandler handler, string keyword, Func<IWxResponseMessageBase> func)
         {
             if (!handler.MatchSuccessed &&
                 ((handler.CaseSensitive && handler.Keyword == keyword) ||
@@ -143,7 +143,7 @@ namespace Senparc.Weixin.Entities.Request
         /// <param name="keywords">多个关键词</param>
         /// <param name="func"></param>
         /// <returns></returns>
-        public static RequestMessageTextKeywordHandler Keywords(this RequestMessageTextKeywordHandler handler, string[] keywords, Func<IResponseMessageBase> func)
+        public static RequestMessageTextKeywordHandler Keywords(this RequestMessageTextKeywordHandler handler, string[] keywords, Func<IWxResponseMessageBase> func)
         {
             foreach (var keyword in keywords)
             {
@@ -159,7 +159,7 @@ namespace Senparc.Weixin.Entities.Request
         /// <param name="pattern">正则表达式</param>
         /// <param name="func"></param>
         /// <returns></returns>
-        public static RequestMessageTextKeywordHandler Regex(this RequestMessageTextKeywordHandler handler, string pattern, Func<IResponseMessageBase> func)
+        public static RequestMessageTextKeywordHandler Regex(this RequestMessageTextKeywordHandler handler, string pattern, Func<IWxResponseMessageBase> func)
         {
             if (!handler.MatchSuccessed
                && System.Text.RegularExpressions.Regex.IsMatch(handler.Keyword, pattern,
@@ -177,7 +177,7 @@ namespace Senparc.Weixin.Entities.Request
         /// <param name="handler"></param>
         /// <param name="func"></param>
         /// <returns></returns>
-        public static RequestMessageTextKeywordHandler Default(this RequestMessageTextKeywordHandler handler, Func<IResponseMessageBase> func)
+        public static RequestMessageTextKeywordHandler Default(this RequestMessageTextKeywordHandler handler, Func<IWxResponseMessageBase> func)
         {
             if (!handler.MatchSuccessed)
             {

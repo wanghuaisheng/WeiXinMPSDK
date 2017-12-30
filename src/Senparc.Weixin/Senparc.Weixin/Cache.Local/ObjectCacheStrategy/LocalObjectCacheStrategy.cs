@@ -71,27 +71,14 @@ namespace Senparc.Weixin.Cache
     {
         #region 数据源
 
-        private IDictionary<string, object> _cache = LocalObjectCacheHelper.LocalObjectCache;
+        private readonly IDictionary<string, object> _cache = LocalObjectCacheHelper.LocalObjectCache;
 
         #endregion
 
         #region 单例
 
-        /// <summary>
-        /// LocalCacheStrategy的构造函数
-        /// </summary>
-        //LocalObjectCacheStrategy()
-        //{
-        //}
-
         //静态LocalCacheStrategy
-        public static LocalObjectCacheStrategy Instance
-        {
-            get
-            {
-                return Nested.instance;//返回Nested类中的静态成员instance
-            }
-        }
+        public static LocalObjectCacheStrategy Instance => Nested.instance;
 
         class Nested
         {
@@ -107,10 +94,7 @@ namespace Senparc.Weixin.Cache
 
         #region IObjectCacheStrategy 成员
 
-        public IContainerCacheStrategy ContainerCacheStrategy
-        {
-            get { return LocalContainerCacheStrategy.Instance; }
-        }
+        public IContainerCacheStrategy ContainerCacheStrategy => LocalContainerCacheStrategy.Instance;
 
         public void InsertToCache(string key, object value)
         {
@@ -119,7 +103,7 @@ namespace Senparc.Weixin.Cache
                 return;
             }
 
-            var finalKey = base.GetFinalKey(key);
+            var finalKey = GetFinalKey(key);
 
             _cache[finalKey] = value;
         }
@@ -146,20 +130,7 @@ namespace Senparc.Weixin.Cache
             var cacheKey = GetFinalKey(key, isFullKey);
             return _cache[cacheKey];
         }
-
-        //public IDictionary<string, TBag> GetAll<TBag>() where TBag : IBaseContainerBag
-        //{
-        //    var dic = new Dictionary<string, TBag>();
-        //    var cacheList = GetAll();
-        //    foreach (var baseContainerBag in cacheList)
-        //    {
-        //        if (baseContainerBag.Value is TBag)
-        //        {
-        //            dic[baseContainerBag.Key] = (TBag)baseContainerBag.Value;
-        //        }
-        //    }
-        //    return dic;
-        //}
+        
 
         public IDictionary<string, object> GetAll()
         {
@@ -191,6 +162,7 @@ namespace Senparc.Weixin.Cache
         #endregion
 
         #region ICacheLock
+
         public override ICacheLock BeginCacheLock(string resourceName, string key, int retryCount = 0, TimeSpan retryDelay = new TimeSpan())
         {
             return new LocalCacheLock(this, resourceName, key, retryCount, retryDelay);

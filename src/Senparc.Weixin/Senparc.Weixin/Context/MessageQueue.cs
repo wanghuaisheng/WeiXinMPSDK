@@ -46,8 +46,8 @@ namespace Senparc.Weixin.Context
     /// <typeparam name="TResponse">IResponseMessageBase</typeparam>
     public class MessageQueue<TM,TRequest, TResponse> : List<TM> 
         where TM : class, IMessageContext<TRequest, TResponse>, new()
-        where TRequest : IRequestMessageBase
-        where TResponse : IResponseMessageBase
+        where TRequest : IWxRequestMessageBase
+        where TResponse : IWxResponseMessageBase
     {
     }
 }

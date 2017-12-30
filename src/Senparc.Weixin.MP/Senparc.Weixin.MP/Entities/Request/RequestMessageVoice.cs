@@ -35,10 +35,7 @@ namespace Senparc.Weixin.MP.Entities
 {
     public class RequestMessageVoice : RequestMessageBase,IRequestMessageBase
     {
-        public override RequestMsgType MsgType
-        {
-            get { return RequestMsgType.Voice; }
-        }
+        public override RequestMsgType MsgType => RequestMsgType.Voice;
 
         /// <summary>
         /// 语音消息媒体id，可以调用多媒体文件下载接口拉取数据。

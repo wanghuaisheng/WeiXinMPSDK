@@ -28,18 +28,18 @@ namespace Senparc.Weixin.MP.Sample.CommonService
                 var markersList = new List<BaiduMarkers>();
                 markersList.Add(new BaiduMarkers()
                 {
-                    Longitude = requestMessage.Location_X,
-                    Latitude = requestMessage.Location_Y,
+                    Longitude = requestMessage.LocationX,
+                    Latitude = requestMessage.LocationY,
                     Color = "red",
                     Label = "S",
                     Size = BaiduMarkerSize.m
                 });
 
-                var mapUrl = BaiduMapHelper.GetBaiduStaticMap(requestMessage.Location_X, requestMessage.Location_Y, 1, 6, markersList);
+                var mapUrl = BaiduMapHelper.GetBaiduStaticMap(requestMessage.LocationX, requestMessage.LocationY, 1, 6, markersList);
                 responseMessage.Articles.Add(new Article()
                 {
                     Description = string.Format("【来自百度地图】您刚才发送了地理位置信息。Location_X：{0}，Location_Y：{1}，Scale：{2}，标签：{3}",
-                               requestMessage.Location_X, requestMessage.Location_Y,
+                               requestMessage.LocationX, requestMessage.LocationY,
                                requestMessage.Scale, requestMessage.Label),
                     PicUrl = mapUrl,
                     Title = "定位地点周边地图",
@@ -55,8 +55,8 @@ namespace Senparc.Weixin.MP.Sample.CommonService
                 var markersList = new List<GoogleMapMarkers>();
                 markersList.Add(new GoogleMapMarkers()
                 {
-                    X = requestMessage.Location_X,
-                    Y = requestMessage.Location_Y,
+                    X = requestMessage.LocationX,
+                    Y = requestMessage.LocationY,
                     Color = "red",
                     Label = "S",
                     Size = GoogleMapMarkerSize.Default,
@@ -67,7 +67,7 @@ namespace Senparc.Weixin.MP.Sample.CommonService
                 responseMessage.Articles.Add(new Article()
                 {
                     Description = string.Format("【来自GoogleMap】您刚才发送了地理位置信息。Location_X：{0}，Location_Y：{1}，Scale：{2}，标签：{3}",
-                                  requestMessage.Location_X, requestMessage.Location_Y,
+                                  requestMessage.LocationX, requestMessage.LocationY,
                                   requestMessage.Scale, requestMessage.Label),
                     PicUrl = mapUrl,
                     Title = "定位地点周边地图",

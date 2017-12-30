@@ -65,7 +65,7 @@ namespace Senparc.Weixin.Cache
     {
         #region 数据源
 
-        private IDictionary<string, object> _cache = LocalObjectCacheHelper.LocalObjectCache;
+        private readonly IDictionary<string, object> _cache = LocalObjectCacheHelper.LocalObjectCache;
 
         #endregion
 

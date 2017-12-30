@@ -91,117 +91,11 @@ namespace Senparc.Weixin.MP
                     invalidCredentialValue,
                     fun, accessTokenOrAppId, retryIfFaild);
             return result;
-
-
-            #region V1.0方法
-
-            //ApiHandlerWapperFactory.ApiHandlerWapperFactoryCollection["s"] = ()=> new Senparc.Weixin.MP.AdvancedAPIs.User.UserInfoJson();
-
-            //var platform = ApiHandlerWapperFactory.CurrentPlatform;//当前平台
-
-            //string appId = null;
-            //string accessToken = null;
-
-            //if (accessTokenOrAppId == null)
-            //{
-            //    appId = AccessTokenContainer.GetFirstOrDefaultAppId();
-            //    if (appId == null)
-            //    {
-            //        throw new UnRegisterAppIdException(null,
-            //            "尚无已经注册的AppId，请先使用AccessTokenContainer.Register完成注册（全局执行一次即可）！");
-            //    }
-            //}
-            //else if (ApiUtility.IsAppId(accessTokenOrAppId))
-            //{
-            //    if (!AccessTokenContainer.CheckRegistered(accessTokenOrAppId))
-            //    {
-            //        throw new UnRegisterAppIdException(accessTokenOrAppId, string.Format("此appId（{0}）尚未注册，请先使用AccessTokenContainer.Register完成注册（全局执行一次即可）！", accessTokenOrAppId));
-            //    }
-
-            //    appId = accessTokenOrAppId;
-            //}
-            //else
-            //{
-            //    accessToken = accessTokenOrAppId;//accessToken
-            //}
-
-            //T result = null;
-
-            //try
-            //{
-            //    if (accessToken == null)
-            //    {
-            //        var accessTokenResult = AccessTokenContainer.GetAccessTokenResult(appId, false);
-            //        accessToken = accessTokenResult.access_token;
-            //    }
-            //    result = fun(accessToken);
-            //}
-            //catch (ErrorJsonResultException ex)
-            //{
-            //    if (retryIfFaild
-            //        && appId != null
-            //        && ex.JsonResult.errcode == ReturnCode.获取access_token时AppSecret错误或者access_token无效)
-            //    {
-            //        //尝试重新验证
-            //        var accessTokenResult = AccessTokenContainer.GetAccessTokenResult(appId, true);
-            //        //强制获取并刷新最新的AccessToken
-            //        accessToken = accessTokenResult.access_token;
-            //        result = TryCommonApi(fun, appId, false);
-            //    }
-            //    else
-            //    {
-            //        ex.AccessTokenOrAppId = accessTokenOrAppId;
-            //        throw;
-            //    }
-            //}
-            //catch (WeixinException ex)
-            //{
-            //    ex.AccessTokenOrAppId = accessTokenOrAppId;
-            //    throw;
-            //}
-
-            //return result;
-
-            #endregion
+            
         }
-
-        #region 淘汰方法
-
-        ///// 使用AccessToken进行操作时，如果遇到AccessToken错误的情况，重新获取AccessToken一次，并重试
-        ///// </summary>
-        ///// <typeparam name="T"></typeparam>
-        ///// <param name="appId"></param>
-        ///// <param name="appSecret"></param>
-        ///// <param name="fun">第一个参数为accessToken</param>
-        ///// <param name="retryIfFaild"></param>
-        ///// <returns></returns>
-        //[Obsolete("请使用TryCommonApi()方法")]
-        //public static T Do<T>(Func<string, T> fun, string appId, string appSecret, bool retryIfFaild = true)
-        //    where T : WxJsonResult
-        //{
-        //    T result = null;
-        //    try
-        //    {
-        //        var accessToken = AccessTokenContainer.TryGetAccessToken(appId, appSecret, false);
-        //        result = fun(accessToken);
-        //    }
-        //    catch (ErrorJsonResultException ex)
-        //    {
-        //        if (retryIfFaild && ex.JsonResult.errcode == ReturnCode.获取access_token时AppSecret错误或者access_token无效)
-        //        {
-        //            //尝试重新验证
-        //            var accessToken = AccessTokenContainer.TryGetAccessToken(appId, appSecret, true);
-        //            result = Do(fun, appId, appSecret, false);
-        //        }
-        //    }
-        //    return result;
-        //}
-
+        
         #endregion
-
-        #endregion
-
-#if !NET35 && !NET40
+        
         #region 异步方法
 
         /// <summary>
@@ -271,6 +165,6 @@ namespace Senparc.Weixin.MP
         #endregion
 
         #endregion
-#endif
+
     }
 }

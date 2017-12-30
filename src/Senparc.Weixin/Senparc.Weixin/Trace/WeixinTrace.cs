@@ -61,28 +61,18 @@ namespace Senparc.Weixin
         /// <summary>
         /// TraceListener
         /// </summary>
-#if NET35 || NET40 || NET45 || NET461
-        private static TraceListener _traceListener = null;
-#elif NETSTANDARD2_0 || NETCOREAPP2_0 
-        private static TextWriterTraceListener _traceListener = null;
-#endif
+        private static TraceListener _traceListener;
+
 
         /// <summary>
         /// 统一日志锁名称
         /// </summary>
-        const string LockName = "WeixinTraceLock";
+        private const string LockName = "WeixinTraceLock";
 
         /// <summary>
         /// Senparc.Weixin全局统一的缓存策略
         /// </summary>
-        private static IObjectCacheStrategy Cache
-        {
-            get
-            {
-                //使用工厂模式或者配置进行动态加载
-                return CacheStrategyFactory.GetObjectCacheStrategyInstance();
-            }
-        }
+        private static IObjectCacheStrategy Cache => CacheStrategyFactory.GetObjectCacheStrategyInstance();
 
         /// <summary>
         /// 记录WeixinException日志时需要执行的任务
@@ -103,47 +93,17 @@ namespace Senparc.Weixin
 
             using (Cache.BeginCacheLock(LockName, ""))
             {
-                string logDir;
-#if NET35
-                logDir = Path.Combine(Path.Combine(System.AppDomain.CurrentDomain.BaseDirectory, "App_Data"), "WeixinTraceLog");
-#else
-
-#if NET40 || NET45 || NET461
-                logDir = System.IO.Path.Combine(System.AppDomain.CurrentDomain.BaseDirectory, "App_Data", "WeixinTraceLog");
-#else
-                //var logDir = Path.Combine(AppContext.BaseDirectory, "App_Data", "WeixinTraceLog");
-                logDir = Path.Combine(Senparc.Weixin.Config.RootDictionaryPath, "App_Data", "WeixinTraceLog");
-#endif
-#endif
-
+                var logDir = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "App_Data", "WeixinTraceLog");
                 if (!Directory.Exists(logDir))
                 {
                     Directory.CreateDirectory(logDir);
                 }
 
-                string logFile = Path.Combine(logDir, string.Format("SenparcWeixinTrace-{0}.log", DateTime.Now.ToString("yyyyMMdd")));
-
-#if NET35 || NET40 || NET45 || NET461
-
-                System.IO.TextWriter logWriter = new System.IO.StreamWriter(logFile, true);
-#elif NETSTANDARD2_0 || NETCOREAPP2_0
-                System.IO.TextWriter logWriter = new System.IO.StreamWriter(logFile, true);
-#endif
-
-
-#if NET35 || NET40 || NET45 || NET461
-                _traceListener = new TextWriterTraceListener(logWriter);
-                System.Diagnostics.Trace.Listeners.Add(_traceListener);
-                System.Diagnostics.Trace.AutoFlush = true;
-#elif NETSTANDARD2_0 || NETCOREAPP2_0
-                //TODO:如果这里不开通，netstandard1.6将无法使用日志记录功能
-                //ILoggerFactory loggerFactory = new LoggerFactory();
-
+                var logFile = Path.Combine(logDir, $"SenparcWeixinTrace-{DateTime.Now:yyyyMMdd}.log");
+var logWriter = new StreamWriter(logFile, true);
                 _traceListener = new TextWriterTraceListener(logWriter);
                 Trace.Listeners.Add(_traceListener);
                 Trace.AutoFlush = true;
-#endif
-
             }
         }
 
@@ -154,20 +114,9 @@ namespace Senparc.Weixin
         {
             using (Cache.BeginCacheLock(LockName, ""))
             {
-#if NET35 || NET40 || NET45 || NET461
-
-                if (_traceListener != null && System.Diagnostics.Trace.Listeners.Contains(_traceListener))
-                {
-                    _traceListener.Close();
-                    System.Diagnostics.Trace.Listeners.Remove(_traceListener);
-                }
-#elif NETSTANDARD2_0 || NETCOREAPP2_0
-                if (_traceListener != null && Trace.Listeners.Contains(_traceListener))
-                {
-                    _traceListener.Close();
-                    Trace.Listeners.Remove(_traceListener);
-                }
-#endif
+                if (_traceListener == null || !Trace.Listeners.Contains(_traceListener)) return;
+                _traceListener.Close();
+                Trace.Listeners.Remove(_traceListener);
             }
         }
 
@@ -197,11 +146,7 @@ namespace Senparc.Weixin
         {
             using (Cache.BeginCacheLock(LockName, ""))
             {
-#if NET35 || NET40 || NET45 || NET461
-                System.Diagnostics.Trace.Unindent();
-#elif NETSTANDARD2_0 || NETCOREAPP2_0
                 Trace.Unindent();
-#endif
             }
         }
 
@@ -212,11 +157,7 @@ namespace Senparc.Weixin
         {
             using (Cache.BeginCacheLock(LockName, ""))
             {
-#if NET35 || NET40 || NET45 || NET461
-                System.Diagnostics.Trace.Indent();
-#elif NETSTANDARD2_0 || NETCOREAPP2_0
                 Trace.Indent();
-#endif
             }
         }
 
@@ -227,11 +168,7 @@ namespace Senparc.Weixin
         {
             using (Cache.BeginCacheLock(LockName, ""))
             {
-#if NET35 || NET40 || NET45 || NET461
-                System.Diagnostics.Trace.Flush();
-#elif NETSTANDARD2_0 || NETCOREAPP2_0
                 Trace.Flush();
-#endif
             }
         }
 
@@ -261,11 +198,7 @@ namespace Senparc.Weixin
         {
             using (Cache.BeginCacheLock(LockName, ""))
             {
-#if NET35 || NET40 || NET45 || NET461
-                System.Diagnostics.Trace.WriteLine(string.Format(messageFormat, args));
-#elif NETSTANDARD2_0 || NETCOREAPP2_0
                 Trace.WriteLine(string.Format(messageFormat, args));
-#endif
             }
         }
 
@@ -302,11 +235,7 @@ namespace Senparc.Weixin
         {
             using (Cache.BeginCacheLock(LockName, ""))
             {
-#if NET35 || NET40 || NET45 || NET461
-                System.Diagnostics.Trace.WriteLine(message);
-#elif NETSTANDARD2_0 || NETCOREAPP2_0
                 Trace.WriteLine(message);
-#endif
             }
         }
 

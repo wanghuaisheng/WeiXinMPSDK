@@ -37,9 +37,6 @@ namespace Senparc.Weixin.MP.Entities
     /// </summary>
     public class SuccessResponseMessage : SuccessResponseMessageBase, IResponseMessageBase
     {
-        public ResponseMsgType MsgType
-        {
-            get { return ResponseMsgType.SuccessResponse; }
-        }
+        public ResponseMsgType MsgType => ResponseMsgType.SuccessResponse;
     }
 }

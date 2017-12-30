@@ -35,20 +35,17 @@ namespace Senparc.Weixin.MP.Entities
 {
     public class RequestMessageLocation : RequestMessageBase, IRequestMessageBase
     {
-        public override RequestMsgType MsgType
-        {
-            get { return RequestMsgType.Location; }
-        }
+        public override RequestMsgType MsgType => RequestMsgType.Location;
 
         /// <summary>
         /// 地理位置纬度
         /// </summary>
-        public double Location_X { get; set; }
+        public double LocationX { get; set; }
 
         /// <summary>
         /// 地理位置经度
         /// </summary>
-        public double Location_Y { get; set; }
+        public double LocationY { get; set; }
 
         /// <summary>
         /// 地图缩放大小

@@ -40,10 +40,7 @@ namespace Senparc.Weixin.MP.Entities
 {
     public class RequestMessageUnknownType : RequestMessageBase, IRequestMessageBase
     {
-        public override RequestMsgType MsgType
-        {
-            get { return RequestMsgType.Unknown; }
-        }
+        public override RequestMsgType MsgType => RequestMsgType.Unknown;
 
         /// <summary>
         /// 请求消息的XML对象（明文）

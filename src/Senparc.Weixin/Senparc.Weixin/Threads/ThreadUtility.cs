@@ -57,8 +57,9 @@ namespace Senparc.Weixin.Threads
             if (AsynThreadCollection.Count==0)
             {
                 {
-                    SenparcMessageQueueThreadUtility senparcMessageQueue = new SenparcMessageQueueThreadUtility();
-                    Thread senparcMessageQueueThread = new Thread(senparcMessageQueue.Run) { Name = "SenparcMessageQueue" };
+                    var senparcMessageQueue = new SenparcMessageQueueThreadUtility();
+                    var senparcMessageQueueThread = new Thread(senparcMessageQueue.Run) { Name = "SenparcMessageQueue" };
+                    // ReSharper disable once AssignNullToNotNullAttribute
                     AsynThreadCollection.Add(senparcMessageQueueThread.Name, senparcMessageQueueThread);
                 }
 

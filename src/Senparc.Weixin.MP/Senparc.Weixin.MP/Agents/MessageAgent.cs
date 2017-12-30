@@ -80,11 +80,11 @@ namespace Senparc.Weixin.MP.Agent
             {
                 messageHandler.UsedMessageAgent = true;
             }
-            string timestamp = DateTime.Now.Ticks.ToString();
-            string nonce = "GodBlessYou";
-            string signature = CheckSignature.GetSignature(timestamp, nonce, token);
-            url += string.Format("{0}signature={1}&timestamp={2}&nonce={3}",
-                    url.Contains("?") ? "&" : "?", signature.AsUrlData(), timestamp.AsUrlData(), nonce.AsUrlData());
+            var timestamp = DateTime.Now.Ticks.ToString();
+            var nonce = "GodBlessYou";
+            var signature = CheckSignature.GetSignature(timestamp, nonce, token);
+            url +=
+                $"{(url.Contains("?") ? "&" : "?")}signature={signature.AsUrlData()}&timestamp={timestamp.AsUrlData()}&nonce={nonce.AsUrlData()}";
 
             stream.Seek(0, SeekOrigin.Begin);
             var responseXml = RequestUtility.HttpPost(url, null, stream, timeOut: timeOut);
@@ -107,10 +107,10 @@ namespace Senparc.Weixin.MP.Agent
             {
                 messageHandler.UsedMessageAgent = true;
             }
-            using (MemoryStream ms = new MemoryStream())
+            using (var ms = new MemoryStream())
             {
                 //这里用ms模拟Request.InputStream
-                using (StreamWriter sw = new StreamWriter(ms))
+                using (var sw = new StreamWriter(ms))
                 {
                     sw.Write(xml);
                     sw.Flush();
@@ -137,10 +137,10 @@ namespace Senparc.Weixin.MP.Agent
                 messageHandler.UsedMessageAgent = true;
             }
             var url = "https://" + weiweihiDomainName + "/App/Weixin?weiweihiKey=" + weiweihiKey;//官方地址
-            using (MemoryStream ms = new MemoryStream())
+            using (var ms = new MemoryStream())
             {
                 //这里用ms模拟Request.InputStream
-                using (StreamWriter sw = new StreamWriter(ms))
+                using (var sw = new StreamWriter(ms))
                 {
                     sw.Write(xml);
                     sw.Flush();
@@ -231,12 +231,12 @@ namespace Senparc.Weixin.MP.Agent
         {
             try
             {
-                string timestamp = DateTime.Now.Ticks.ToString();
-                string nonce = "GodBlessYou";
-                string echostr = Guid.NewGuid().ToString("n");
-                string signature = CheckSignature.GetSignature(timestamp, nonce, token);
-                url += string.Format("{0}signature={1}&timestamp={2}&nonce={3}&echostr={4}",
-                        url.Contains("?") ? "&" : "?", signature.AsUrlData(), timestamp.AsUrlData(), nonce.AsUrlData(), echostr.AsUrlData());
+                var timestamp = DateTime.Now.Ticks.ToString();
+                var nonce = "GodBlessYou";
+                var echostr = Guid.NewGuid().ToString("n");
+                var signature = CheckSignature.GetSignature(timestamp, nonce, token);
+                url +=
+                    $"{(url.Contains("?") ? "&" : "?")}signature={signature.AsUrlData()}&timestamp={timestamp.AsUrlData()}&nonce={nonce.AsUrlData()}&echostr={echostr.AsUrlData()}";
 
                 var responseStr = RequestUtility.HttpGet(url, encoding: null, timeOut: timeOut);
                 return echostr == responseStr;

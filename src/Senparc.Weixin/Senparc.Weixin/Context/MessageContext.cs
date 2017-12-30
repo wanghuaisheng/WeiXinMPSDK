@@ -47,8 +47,8 @@ namespace Senparc.Weixin.Context
     /// <typeparam name="TRequest">请求消息类型</typeparam>
     /// <typeparam name="TResponse">响应消息类型</typeparam>
     public interface IMessageContext<TRequest, TResponse>
-        where TRequest : IRequestMessageBase
-        where TResponse : IResponseMessageBase
+        where TRequest : IWxRequestMessageBase
+        where TResponse : IWxResponseMessageBase
     {
         /// <summary>
         /// 用户名（OpenID）
@@ -78,7 +78,7 @@ namespace Senparc.Weixin.Context
         /// <summary>
         /// 用于覆盖WeixinContext所设置的默认过期时间
         /// </summary>
-        Double? ExpireMinutes { get; set; }
+        double? ExpireMinutes { get; set; }
 
         /// <summary>
         /// AppStore状态，系统属性，请勿操作
@@ -94,8 +94,8 @@ namespace Senparc.Weixin.Context
     /// 微信消息上下文（单个用户）
     /// </summary>
     public class MessageContext<TRequest, TResponse> : IMessageContext<TRequest, TResponse>
-        where TRequest : IRequestMessageBase
-        where TResponse : IResponseMessageBase
+        where TRequest : IWxRequestMessageBase
+        where TResponse : IWxResponseMessageBase
     {
         private int _maxRecordCount;
 
@@ -119,7 +119,7 @@ namespace Senparc.Weixin.Context
         }
         public object StorageData { get; set; }
 
-        public Double? ExpireMinutes { get; set; }
+        public double? ExpireMinutes { get; set; }
 
         /// <summary>
         /// AppStore状态，系统属性，请勿操作

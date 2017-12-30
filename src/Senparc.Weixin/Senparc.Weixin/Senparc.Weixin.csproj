@@ -99,7 +99,6 @@
     <Compile Include="Cache\ObjectCacheStrategy\IObjectCacheStrategy.cs" />
     <Compile Include="Cache.Local\ObjectCacheStrategy\LocalObjectCacheStrategy.cs" />
     <Compile Include="CommonAPIs\ApiHandlerWapper\ApiHandlerWapperBase.cs" />
-    <Compile Include="CommonAPIs\ApiHandlerWapper\ApiHandlerWapperFactory.cs" />
     <Compile Include="Config.cs" />
     <Compile Include="Containers\BaseContainer.cs" />
     <Compile Include="Containers\BaseContainerBag.cs" />
@@ -117,7 +116,7 @@
     <Compile Include="Entities\JsonResult\Interface\IJsonResultCallback.cs" />
     <Compile Include="Entities\JsonResult\QYJsonResult.cs" />
     <Compile Include="Entities\JsonResult\WorkJsonResult.cs" />
-    <Compile Include="Entities\MessageBase.cs">
+    <Compile Include="Entities\WxMessageBase.cs">
       <SubType>
       </SubType>
     </Compile>
@@ -149,7 +148,6 @@
     <Compile Include="Helpers\Test\MutipleCacheTestHelper.cs" />
     <Compile Include="MessageQueue\SenparcMessageQueue.cs" />
     <Compile Include="MessageQueue\SenparcMessageQueueItem.cs" />
-    <Compile Include="NET35\System.Threading.Tasks.cs" />
     <Compile Include="Threads\SenparcMessageQueueThreadUtility.cs" />
     <Compile Include="Properties\Annotations.cs" />
     <Compile Include="Threads\ThreadUtility.cs" />
@@ -172,7 +170,7 @@
     <Compile Include="MessageHandlers\IMessageHandlerDocument.cs" />
     <Compile Include="MessageHandlers\MessageHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Entities\Request\RequestMessageBase.cs" />
+    <Compile Include="Entities\Request\WxRequestMessageBase.cs" />
     <Compile Include="Entities\Response\ResponseMessageBase.cs" />
     <Compile Include="Utilities\StreamUtility\StreamUtility.cs" />
     <Compile Include="Trace\WeixinTrace.cs" />

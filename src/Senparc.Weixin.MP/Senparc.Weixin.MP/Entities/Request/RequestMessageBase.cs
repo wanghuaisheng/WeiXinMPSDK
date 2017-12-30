@@ -31,37 +31,26 @@ Detail: https://github.com/JeffreySu/WeiXinMPSDK/blob/master/license.md
     修改描述：整理接口
 ----------------------------------------------------------------*/
 
+using Senparc.Weixin.Entities;
+
 namespace Senparc.Weixin.MP.Entities
 {
-    public interface IRequestMessageBase : Weixin.Entities.IRequestMessageBase
+    public interface IRequestMessageBase : IWxRequestMessageBase
     {
         RequestMsgType MsgType { get; }
         string Encrypt { get; set; }
-        long MsgId { get; set; }
+        new long MsgId { get; set; }
     }
 
     /// <summary>
     /// 接收到请求的消息基类
     /// </summary>
-    public class RequestMessageBase : Weixin.Entities.RequestMessageBase, IRequestMessageBase
+    public class RequestMessageBase : WxRequestMessageBase, IRequestMessageBase
     {
-        public virtual RequestMsgType MsgType
-        {
-            get { return RequestMsgType.Text; }
-        }
+        public virtual RequestMsgType MsgType => RequestMsgType.Text;
 
         public string Encrypt { get; set; }
 
-        public RequestMessageBase()
-        {
-
-        }
-
-        //public override RequestMsgType MsgType
-        //{
-        //    get { return RequestMsgType.Text; }
-        //}
-
-        public long MsgId { get; set; }
+        public new long MsgId { get; set; }
     }
 }

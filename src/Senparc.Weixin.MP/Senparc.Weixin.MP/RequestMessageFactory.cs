@@ -68,12 +68,11 @@ namespace Senparc.Weixin.MP
         /// <returns></returns>
         public static IRequestMessageBase GetRequestEntity(XDocument doc, PostModel postModel = null)
         {
-            RequestMessageBase requestMessage = null;
-            RequestMsgType msgType;
+            RequestMessageBase requestMessage;
 
             try
             {
-                msgType = MsgTypeHelper.GetRequestMsgType(doc);
+                var msgType = MsgTypeHelper.GetRequestMsgType(doc);
                 switch (msgType)
                 {
                     case RequestMsgType.Text:
@@ -262,11 +261,11 @@ namespace Senparc.Weixin.MP
                             break;
                         }
                 }
-                EntityHelper.FillEntityWithXml(requestMessage, doc);
+                requestMessage.FillEntityWithXml(doc);
             }
             catch (ArgumentException ex)
             {
-                throw new WeixinException(string.Format("RequestMessage转换出错！可能是MsgType不存在！，XML：{0}", doc.ToString()), ex);
+                throw new WeixinException($"RequestMessage转换出错！可能是MsgType不存在！，XML：{doc}", ex);
             }
             return requestMessage;
         }
@@ -291,12 +290,9 @@ namespace Senparc.Weixin.MP
         /// <returns></returns>
         public static IRequestMessageBase GetRequestEntity(Stream stream)
         {
-            using (XmlReader xr = XmlReader.Create(stream))
+            using (var xr = XmlReader.Create(stream))
             {
                 var doc = XDocument.Load(xr);
-
-                //
-
                 return GetRequestEntity(doc);
             }
         }

@@ -66,11 +66,10 @@ namespace Senparc.Weixin.MP
         /// <returns></returns>
         public static IResponseMessageBase GetResponseEntity(XDocument doc)
         {
-            ResponseMessageBase responseMessage = null;
-            ResponseMsgType msgType;
+            ResponseMessageBase responseMessage;
             try
             {
-                msgType = MsgTypeHelper.GetResponseMsgType(doc);
+                var msgType = MsgTypeHelper.GetResponseMsgType(doc);
                 switch (msgType)
                 {
                     case ResponseMsgType.Text:
@@ -95,13 +94,14 @@ namespace Senparc.Weixin.MP
 						responseMessage = new ResponseMessageTransfer_Customer_Service();
 						break;
                     default:
-                        throw new UnknownRequestMsgTypeException(string.Format("MsgType：{0} 在ResponseMessageFactory中没有对应的处理程序！", msgType), new ArgumentOutOfRangeException());
+                        throw new UnknownRequestMsgTypeException(
+                            $"MsgType：{msgType} 在ResponseMessageFactory中没有对应的处理程序！", new ArgumentOutOfRangeException());
                 }
-                EntityHelper.FillEntityWithXml(responseMessage, doc);
+                responseMessage.FillEntityWithXml(doc);
             }
             catch (ArgumentException ex)
             {
-                throw new WeixinException(string.Format("ResponseMessage转换出错！可能是MsgType不存在！，XML：{0}", doc.ToString()), ex);
+                throw new WeixinException($"ResponseMessage转换出错！可能是MsgType不存在！，XML：{doc.ToString()}", ex);
             }
             return responseMessage;
         }
@@ -124,7 +124,7 @@ namespace Senparc.Weixin.MP
         /// <returns></returns>
         public static XDocument ConvertEntityToXml(ResponseMessageBase entity)
         {
-            return EntityHelper.ConvertEntityToXml(entity);
+            return entity.ConvertEntityToXml();
         }
     }
 }

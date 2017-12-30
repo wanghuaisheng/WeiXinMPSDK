@@ -22,7 +22,7 @@ using Senparc.Weixin.Work.Helpers;
 
 namespace Senparc.Weixin.Work.Entities
 {
-	public interface IResponseMessageBase : Weixin.Entities.IResponseMessageBase, IMessageBase
+	public interface IResponseMessageBase : Weixin.Entities.IWxResponseMessageBase, IWxMessageBase
 	{
 		ResponseMsgType MsgType { get; }
 		//string Content { get; set; }
@@ -32,7 +32,7 @@ namespace Senparc.Weixin.Work.Entities
 	/// <summary>
 	/// 响应回复消息
 	/// </summary>
-	public class ResponseMessageBase : MessageBase, IResponseMessageBase
+	public class ResponseMessageBase : WxMessageBase, IResponseMessageBase
 	{
 		public virtual ResponseMsgType MsgType
 		{

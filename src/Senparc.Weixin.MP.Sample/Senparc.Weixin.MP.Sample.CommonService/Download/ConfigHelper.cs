@@ -122,7 +122,7 @@ namespace Senparc.Weixin.MP.Sample.CommonService.Download
             //return fs;
 
 #if NET45
-            return _context.Server.MapPath(string.Format("~/App_Data/Document/Files/Senparc.Weixin{0}-v{1}.rar",isWebVersion?"-Web":"", version));
+            return _context.Server.MapPath($"~/App_Data/Document/Files/Senparc.Weixin{(isWebVersion ? "-Web" : "")}-v{version}.rar");
 #else
             return Server.GetMapPath(string.Format("~/App_Data/Document/Files/Senparc.Weixin{0}-v{1}.rar", isWebVersion ? "-Web" : "", version));
 #endif

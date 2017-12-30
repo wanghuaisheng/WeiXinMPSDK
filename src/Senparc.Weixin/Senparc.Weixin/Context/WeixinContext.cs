@@ -89,8 +89,8 @@ namespace Senparc.Weixin.Context
     /// </summary>
     public class WeixinContext<TM, TRequest, TResponse> /*: IWeixinContext<TM, TRequest, TResponse>*/
         where TM : class, IMessageContext<TRequest, TResponse>, new() //TODO:TRequest, TResponse直接写明基类类型
-        where TRequest : IRequestMessageBase
-        where TResponse : IResponseMessageBase
+        where TRequest : IWxRequestMessageBase
+        where TResponse : IWxResponseMessageBase
     {
         private int _maxRecordCount;
 

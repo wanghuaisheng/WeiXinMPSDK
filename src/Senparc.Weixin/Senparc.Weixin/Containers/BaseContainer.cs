@@ -88,59 +88,6 @@ namespace Senparc.Weixin.Containers
             }
         }
 
-        //2016.8.8注释掉
-        /// <summary>
-        /// 获取当前容器的数据项集合
-        /// </summary>
-        /// <returns></returns>
-        //protected static IContainerItemCollection ItemCollection
-        //{
-        //    get
-        //    {
-        //        var cacheKey = GetContainerCacheKey();
-        //        IContainerItemCollection itemCollection;
-        //        if (!Cache.CheckExisted(cacheKey))
-        //        {
-        //            itemCollection = new ContainerItemCollection();
-        //            //CollectionList[cacheKey] = newItemCollection;
-
-        //            //直接执行
-        //            //{
-        //            //}
-        //            //var containerCacheStrategy = CacheStrategyFactory.GetContainerCacheStrategyInstance();
-        //            //containerCacheStrategy.InsertToCache(cacheKey, itemCollection);//插入到缓存
-
-        //            //保存到缓存队列，等待执行
-        //            SenparcMessageQueue mq = new SenparcMessageQueue();
-        //            var mqKey = SenparcMessageQueue.GenerateKey("ContainerItemCollection", typeof(BaseContainer<TBag>), cacheKey, "InsertItemCollection");
-        //            mq.Add(mqKey, () =>
-        //            {
-        //                var containerCacheStrategy = CacheStrategyFactory.GetContainerCacheStrategyInstance();
-        //                containerCacheStrategy.InsertToCache(cacheKey, itemCollection);//插入到缓存
-        //            });
-        //        }
-        //        else
-        //        {
-        //            itemCollection = Cache.Get(cacheKey);
-        //        }
-
-        //        return itemCollection;
-        //    }
-        //}
-
-
-
-        ///// <summary>
-        ///// 获取Container缓存Key
-        ///// </summary>
-        ///// <returns></returns>
-        //public static string GetContainerCacheKey()
-        //{
-        //    return ContainerHelper.GetCacheKey(typeof(TBag));
-        //}
-
-
-
         /// <summary>
         /// 进行注册过程的委托
         /// </summary>
@@ -174,16 +121,6 @@ namespace Senparc.Weixin.Containers
         {
             return ContainerHelper.GetItemCacheKey(typeof(TBag), shortKey);
         }
-
-
-        ///// <summary>
-        ///// 获取完整的数据集合的列表，包括所有的Container数据在内（建议不要进行任何修改操作）
-        ///// </summary>
-        ///// <returns></returns>
-        //public static IDictionary<string, IContainerItemCollection> GetCollectionList()
-        //{
-        //    return CollectionList;
-        //}
 
         /// <summary>
         /// 获取所有容器内已经注册的项目
@@ -249,21 +186,7 @@ namespace Senparc.Weixin.Containers
                 {
                     bag.Key = shortKey;//确保Key有值，形如：wx669ef95216eef885，最底层的Key
                 }
-                //else
-                //{
-                //    cacheKey = bag.Key;//统一key
-                //}
-
-                //if (string.IsNullOrEmpty(cacheKey))
-                //{
-                //    throw new WeixinException("key和value,Key不可以同时为null或空字符串！");
-                //}
-
-                //var c1 = ItemCollection.GetCount();
-                //ItemCollection[key] = bag;
-                //var c2 = ItemCollection.GetCount();
             }
-            //var containerCacheKey = GetContainerCacheKey();
             Cache.Update(cacheKey, bag);//更新到缓存，TODO：有的缓存框架可一直更新Hash中的某个键值对
         }
 

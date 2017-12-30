@@ -35,10 +35,7 @@ namespace Senparc.Weixin.MP.Entities
 {
     public class RequestMessageImage : RequestMessageBase, IRequestMessageBase
     {
-        public override RequestMsgType MsgType
-        {
-            get { return RequestMsgType.Image; }
-        }
+        public override RequestMsgType MsgType => RequestMsgType.Image;
 
         /// <summary>
         /// 图片消息媒体id，可以调用多媒体文件下载接口拉取数据。

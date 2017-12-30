@@ -54,6 +54,7 @@ namespace Senparc.Weixin.MP.CommonAPIs
         /// </summary>
         /// <param name="accessTokenOrAppId">AccessToken或AppId。当为AppId时，如果AccessToken错误将自动获取一次。当为null时，获取当前注册的第一个AppId。</param>
         /// <param name="buttonData">菜单内容</param>
+        /// <param name="timeOut"></param>
         /// <returns></returns>
         public static CreateMenuConditionalResult CreateMenuConditional(string accessTokenOrAppId, ConditionalButtonGroup buttonData, int timeOut = Config.TIME_OUT)
         {
@@ -61,7 +62,7 @@ namespace Senparc.Weixin.MP.CommonAPIs
              {
                  var urlFormat = Config.ApiMpHost + "/cgi-bin/menu/addconditional?access_token={0}";
                  //var jsonSetting = new JsonSetting(true);//设置成true会导致发布失败
-                 var jsonSetting = new JsonSetting(false);
+                 var jsonSetting = new JsonSetting();//false
                  return CommonJsonSend.Send<CreateMenuConditionalResult>(accessToken, urlFormat, buttonData, timeOut: timeOut, jsonSetting: jsonSetting);
 
              }, accessTokenOrAppId);
@@ -89,7 +90,7 @@ namespace Senparc.Weixin.MP.CommonAPIs
                     user_id = userId
                 };
 
-                return CommonJsonSend.Send<MenuTryMatchResult>(accessToken, url, data, CommonJsonSendType.POST);
+                return CommonJsonSend.Send<MenuTryMatchResult>(accessToken, url, data);//, CommonJsonSendType.POST
 
             }, accessTokenOrAppId);
         }
@@ -113,7 +114,7 @@ namespace Senparc.Weixin.MP.CommonAPIs
                     menuid = menuId
                 };
 
-                return CommonJsonSend.Send(accessToken, url, data, CommonJsonSendType.POST);
+                return CommonJsonSend.Send(accessToken, url, data);//, CommonJsonSendType.POST
 
             }, accessTokenOrAppId);
 

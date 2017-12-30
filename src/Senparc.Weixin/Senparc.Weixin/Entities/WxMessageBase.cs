@@ -33,10 +33,6 @@ Detail: https://github.com/JeffreySu/WeiXinMPSDK/blob/master/license.md
     修改标识：Senparc - 20151205
     修改描述：v4.5.2 将MessageBase设为抽象类
 ----------------------------------------------------------------*/
-
-
-
-
 using System;
 
 namespace Senparc.Weixin.Entities
@@ -44,7 +40,7 @@ namespace Senparc.Weixin.Entities
     /// <summary>
     /// 所有Request和Response消息的接口
     /// </summary>
-    public interface IMessageBase : IEntityBase
+    public interface IWxMessageBase : IEntityBase
     {
         /// <summary>
         /// 接收人（在 Request 中为公众号的微信号，在 Response 中为 OpenId）
@@ -63,7 +59,7 @@ namespace Senparc.Weixin.Entities
     /// <summary>
     /// 所有Request和Response消息的基类
     /// </summary>
-    public abstract class MessageBase : /*EntityBase, */IMessageBase
+    public abstract class WxMessageBase : IWxMessageBase
     {
         /// <summary>
         /// 接收人（在 Request 中为公众号的微信号，在 Response 中为 OpenId）
@@ -78,16 +74,14 @@ namespace Senparc.Weixin.Entities
         /// </summary>
         public DateTime CreateTime { get; set; }
 
-        /// <summary>
-        /// ToString() 方法重写
-        /// </summary>
-        /// <returns></returns>
-        public override string ToString()
-        {
-            //TODO:直接输出XML
-
-
-            return base.ToString();
-        }
+        ///// <summary>
+        ///// ToString() 方法重写
+        ///// </summary>
+        ///// <returns></returns>
+        //public override string ToString()
+        //{
+        //    //TODO:直接输出XML
+        //    return base.ToString();
+        //}
     }
 }

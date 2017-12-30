@@ -155,8 +155,7 @@ namespace Senparc.Weixin.CommonAPIs.ApiHandlerWapper
 
 
         #endregion
-
-#if !NET35 && !NET40
+        
         #region 异步方法
 
 
@@ -257,7 +256,6 @@ namespace Senparc.Weixin.CommonAPIs.ApiHandlerWapper
 
 
         #endregion
-#endif
 
     }
 }

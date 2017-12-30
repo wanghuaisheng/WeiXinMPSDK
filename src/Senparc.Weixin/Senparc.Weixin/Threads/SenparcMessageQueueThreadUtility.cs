@@ -28,12 +28,7 @@ Detail: https://github.com/JeffreySu/WeiXinMPSDK/blob/master/license.md
     创建标识：Senparc - 20160210
 
 ----------------------------------------------------------------*/
-
-
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading;
 using Senparc.Weixin.MessageQueue;
 
@@ -60,21 +55,14 @@ namespace Senparc.Weixin.Threads
             try
             {
                 var mq = new SenparcMessageQueue();
-
-#if NET35 || NET40 || NET45
-                System.Diagnostics.Trace.WriteLine(string.Format("SenparcMessageQueueThreadUtility执行析构函数"));
-                System.Diagnostics.Trace.WriteLine(string.Format("当前队列数量：{0}", mq.GetCount()));
-#endif
-
+                System.Diagnostics.Trace.WriteLine("SenparcMessageQueueThreadUtility执行析构函数");
+                System.Diagnostics.Trace.WriteLine($"当前队列数量：{mq.GetCount()}");
                 SenparcMessageQueue.OperateQueue();//处理队列
             }
             catch (Exception ex)
             {
                 //此处可以添加日志
-#if NET35 || NET40 || NET45
-
-                System.Diagnostics.Trace.WriteLine(string.Format("SenparcMessageQueueThreadUtility执行析构函数错误：{0}", ex.Message));
-#endif
+                System.Diagnostics.Trace.WriteLine($"SenparcMessageQueueThreadUtility执行析构函数错误：{ex.Message}");
             }
         }
 

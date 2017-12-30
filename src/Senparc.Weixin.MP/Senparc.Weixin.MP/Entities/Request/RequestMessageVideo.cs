@@ -35,10 +35,7 @@ namespace Senparc.Weixin.MP.Entities
 {
     public class RequestMessageVideo : RequestMessageBase, IRequestMessageBase
     {
-        public override RequestMsgType MsgType
-        {
-            get { return RequestMsgType.Video; }
-        }
+        public override RequestMsgType MsgType => RequestMsgType.Video;
 
         /// <summary>
         /// 视频消息媒体id，可以调用多媒体文件下载接口拉取数据。
