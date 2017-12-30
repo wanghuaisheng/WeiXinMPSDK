@@ -9,6 +9,8 @@
  
 ----------------------------------------------------------------*/
 
+using Senparc.Weixin.Entities.Request;
+
 namespace Senparc.Weixin.Open.Entities.Request
 {
     /// <summary>

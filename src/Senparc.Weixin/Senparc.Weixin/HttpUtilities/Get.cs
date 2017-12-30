@@ -52,6 +52,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web.Script.Serialization;
 using Senparc.Weixin.Entities;
+using Senparc.Weixin.Entities.JsonResult;
 using Senparc.Weixin.Exceptions;
 using Senparc.Weixin.Utilities;
 #if !NET35 && !NET40

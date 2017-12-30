@@ -35,11 +35,9 @@ Detail: https://github.com/JeffreySu/WeiXinMPSDK/blob/master/license.md
 
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Senparc.Weixin.Containers;
+using Senparc.Weixin.Caches.Lock;
 
-namespace Senparc.Weixin.Cache
+namespace Senparc.Weixin.Caches.CacheStrategy
 {
     /// <summary>
     /// 最底层的缓存策略接口

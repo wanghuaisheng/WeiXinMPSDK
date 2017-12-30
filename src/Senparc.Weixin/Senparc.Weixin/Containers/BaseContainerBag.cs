@@ -38,7 +38,7 @@ Detail: https://github.com/JeffreySu/WeiXinMPSDK/blob/master/license.md
 using System;
 using System.Runtime.CompilerServices;
 using Senparc.Weixin.Annotations;
-using Senparc.Weixin.Cache;
+using Senparc.Weixin.Caches;
 using Senparc.Weixin.Entities;
 using Senparc.Weixin.Helpers;
 using Senparc.Weixin.MessageQueue;

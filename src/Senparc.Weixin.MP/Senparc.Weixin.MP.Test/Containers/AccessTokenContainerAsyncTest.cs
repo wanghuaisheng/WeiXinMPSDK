@@ -26,6 +26,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Threading.Tasks;
 using Senparc.Weixin.Cache;
 using Senparc.Weixin.Cache.Redis;
+using Senparc.Weixin.Caches;
 using Senparc.Weixin.MP.Containers;
 using Senparc.Weixin.MP.Test.CommonAPIs;
 

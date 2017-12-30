@@ -41,6 +41,7 @@ Detail: https://github.com/JeffreySu/WeiXinMPSDK/blob/master/license.md
 
 using System.Threading.Tasks;
 using Senparc.Weixin.Entities;
+using Senparc.Weixin.Entities.JsonResult;
 using Senparc.Weixin.MP;
 using Senparc.Weixin.MP.CommonAPIs;
 using Senparc.Weixin.WxOpen.AdvancedAPIs.Template.TemplateJson;

@@ -46,7 +46,8 @@ Copyright (C) 2017 Senparc
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Senparc.Weixin.Cache;
+using Senparc.Weixin.Caches;
+using Senparc.Weixin.Caches.ContainerCacheStrategy;
 using Senparc.Weixin.Exceptions;
 using Senparc.Weixin.Helpers;
 using Senparc.Weixin.MessageQueue;

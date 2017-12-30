@@ -39,7 +39,9 @@ Detail: https://github.com/JeffreySu/WeiXinMPSDK/blob/master/license.md
     API：http://mp.weixin.qq.com/wiki/0/c48ccd12b69ae023159b4bfaa7c39c20.html
  */
 
+using Senparc.Weixin.Conventers;
 using Senparc.Weixin.Entities;
+using Senparc.Weixin.Entities.JsonResult;
 using Senparc.Weixin.Helpers;
 using Senparc.Weixin.HttpUtilities;
 using Senparc.Weixin.MP.Entities;

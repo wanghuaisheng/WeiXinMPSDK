@@ -17,6 +17,7 @@ using System.Text.RegularExpressions;
 using System.Web;
 using System.Web.Mvc;
 using Senparc.Weixin.Entities;
+using Senparc.Weixin.Entities.JsonResult;
 using Senparc.Weixin.Exceptions;
 using Senparc.Weixin.Extensions;
 using Senparc.Weixin.HttpUtilities;

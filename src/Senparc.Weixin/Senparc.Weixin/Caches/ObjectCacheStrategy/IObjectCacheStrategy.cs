@@ -18,37 +18,16 @@ Detail: https://github.com/JeffreySu/WeiXinMPSDK/blob/master/license.md
 ----------------------------------------------------------------*/
 #endregion Apache License Version 2.0
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Senparc.Weixin.Containers;
+using Senparc.Weixin.Caches.CacheStrategy;
+using Senparc.Weixin.Caches.ContainerCacheStrategy;
 
-namespace Senparc.Weixin.Cache
+namespace Senparc.Weixin.Caches.ObjectCacheStrategy
 {
-    public class CacheStrategyFactory
+    /// <summary>
+    /// 所有以String类型为Key的缓存策略接口
+    /// </summary>
+    public interface IObjectCacheStrategy : IBaseCacheStrategy<string, object>
     {
-
-        //internal static Func<IContainerCacheStrategy> ContainerCacheStrateFunc;
-
-        internal static Func<IObjectCacheStrategy> ObjectCacheStrateFunc;
-
-        public static void RegisterObjectCacheStrategy(Func<IObjectCacheStrategy> func)
-        {
-            ObjectCacheStrateFunc = func;
-        }
-
-
-        public static IObjectCacheStrategy GetObjectCacheStrategyInstance()
-        {
-            if (ObjectCacheStrateFunc == null)
-            {
-                //默认状态
-                return LocalObjectCacheStrategy.Instance;
-            }
-            //自定义类型
-            var instance = ObjectCacheStrateFunc();
-            return instance;
-        }
+        IContainerCacheStrategy ContainerCacheStrategy { get; }
     }
 }

@@ -10,6 +10,7 @@
 
 
 using Senparc.Weixin.Entities;
+using Senparc.Weixin.Entities.Response;
 
 namespace Senparc.Weixin.Work.Entities
 {

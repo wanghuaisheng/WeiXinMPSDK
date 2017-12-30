@@ -27,6 +27,8 @@ using Senparc.Weixin.Cache.Redis;
 using Senparc.Weixin.MP.AdvancedAPIs;
 using Senparc.Weixin.MP.Test.CommonAPIs;
 using System.Threading;
+using Senparc.Weixin.Caches;
+using Senparc.Weixin.CachesLocal.ObjectCacheStrategy;
 
 namespace Senparc.Weixin.MP.Test.CacheTests
 {

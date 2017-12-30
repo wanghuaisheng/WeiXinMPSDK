@@ -10,6 +10,7 @@
 
 using System;
 using Senparc.Weixin.Entities;
+using Senparc.Weixin.Entities.JsonResult;
 
 namespace Senparc.Weixin.Open.Entities
 {

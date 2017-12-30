@@ -33,7 +33,7 @@ Detail: https://github.com/JeffreySu/WeiXinMPSDK/blob/master/license.md
 
 
 
-namespace Senparc.Weixin
+namespace Senparc.Weixin.Entities.Request
 {
     /// <summary>
     /// 接收加密信息统一接口

@@ -48,7 +48,8 @@ using System;
 using System.Diagnostics;
 using System.IO;
 using System.Threading;
-using Senparc.Weixin.Cache;
+using Senparc.Weixin.Caches;
+using Senparc.Weixin.Caches.ObjectCacheStrategy;
 using Senparc.Weixin.Exceptions;
 
 namespace Senparc.Weixin.Utilities

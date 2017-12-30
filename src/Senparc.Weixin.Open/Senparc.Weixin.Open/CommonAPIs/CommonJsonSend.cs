@@ -11,7 +11,9 @@
 using System;
 using System.IO;
 using System.Text;
+using Senparc.Weixin.Conventers;
 using Senparc.Weixin.Entities;
+using Senparc.Weixin.Entities.JsonResult;
 using Senparc.Weixin.Exceptions;
 using Senparc.Weixin.Helpers;
 

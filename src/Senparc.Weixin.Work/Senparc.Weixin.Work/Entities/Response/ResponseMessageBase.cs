@@ -17,12 +17,13 @@
 using System;
 using System.Xml.Linq;
 using Senparc.Weixin.Entities;
+using Senparc.Weixin.Entities.Response;
 using Senparc.Weixin.Exceptions;
 using Senparc.Weixin.Work.Helpers;
 
 namespace Senparc.Weixin.Work.Entities
 {
-	public interface IResponseMessageBase : Weixin.Entities.IWxResponseMessageBase, IWxMessageBase
+	public interface IResponseMessageBase : IWxResponseMessageBase, IWxMessageBase
 	{
 		ResponseMsgType MsgType { get; }
 		//string Content { get; set; }

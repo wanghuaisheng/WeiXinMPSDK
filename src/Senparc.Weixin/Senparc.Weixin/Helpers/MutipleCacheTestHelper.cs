@@ -34,7 +34,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Text;
-using Senparc.Weixin.Cache;
+using Senparc.Weixin.Caches;
+using Senparc.Weixin.Caches.ObjectCacheStrategy;
 
 namespace Senparc.Weixin.Helpers
 {

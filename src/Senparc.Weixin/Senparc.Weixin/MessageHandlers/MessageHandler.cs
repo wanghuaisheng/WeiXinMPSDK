@@ -53,6 +53,8 @@ using System.IO;
 using System.Xml.Linq;
 using Senparc.Weixin.Context;
 using Senparc.Weixin.Entities;
+using Senparc.Weixin.Entities.Request;
+using Senparc.Weixin.Entities.Response;
 using Senparc.Weixin.Utilities;
 
 namespace Senparc.Weixin.MessageHandlers

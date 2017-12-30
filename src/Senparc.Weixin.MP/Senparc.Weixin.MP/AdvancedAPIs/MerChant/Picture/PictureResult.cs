@@ -19,6 +19,7 @@ Detail: https://github.com/JeffreySu/WeiXinMPSDK/blob/master/license.md
 #endregion Apache License Version 2.0
 
 using Senparc.Weixin.Entities;
+using Senparc.Weixin.Entities.JsonResult;
 
 namespace Senparc.Weixin.MP.AdvancedAPIs.MerChant
 {

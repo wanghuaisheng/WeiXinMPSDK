@@ -32,6 +32,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Senparc.Weixin.Entities;
+using Senparc.Weixin.Entities.JsonResult;
 
 namespace Senparc.Weixin.MP.AdvancedAPIs.WiFi
 {

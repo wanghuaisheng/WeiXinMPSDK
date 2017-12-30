@@ -31,13 +31,7 @@ Detail: https://github.com/JeffreySu/WeiXinMPSDK/blob/master/license.md
 ----------------------------------------------------------------*/
 
 
-
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace Senparc.Weixin.Entities.TemplateMessage
+namespace Senparc.Weixin.Entities
 {
     /// <summary>
     /// 模板消息数据基础类接口

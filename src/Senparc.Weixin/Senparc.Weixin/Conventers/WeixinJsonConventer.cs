@@ -37,19 +37,16 @@ Detail: https://github.com/JeffreySu/WeiXinMPSDK/blob/master/license.md
 ----------------------------------------------------------------*/
 
 
-
 using System;
-using System.Linq;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Reflection;
-#if NET35 || NET40 || NET45
 using System.Web.Script.Serialization;
+using Senparc.Weixin.Entities;
+#if NET35 || NET40 || NET45
 #endif
 
-using Senparc.Weixin.Entities;
-
-namespace Senparc.Weixin.Helpers
+namespace Senparc.Weixin.Conventers
 {
     /// <summary>
     /// JSON输出设置

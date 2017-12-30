@@ -30,6 +30,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Senparc.Weixin.Conventers;
 using Senparc.Weixin.Helpers;
 using Senparc.Weixin.Work.AdvancedAPIs.Mass;
 using Senparc.Weixin.Work.CommonAPIs;

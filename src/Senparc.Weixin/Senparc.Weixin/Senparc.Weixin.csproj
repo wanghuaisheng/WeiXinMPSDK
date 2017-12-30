@@ -88,17 +88,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Cache\CacheStrategy\BaseCacheStrategy.cs" />
-    <Compile Include="Cache\ContainerCacheStrategy\IContainerCacheStragegy.cs" />
-    <Compile Include="Cache.Local\Lock\LocalCacheLock.cs" />
-    <Compile Include="Cache.Local\ContainerCacheStragegy\LocalContainerCacheStrategy.cs" />
-    <Compile Include="Cache\CacheStrategy\IBaseCacheStrategy.cs" />
-    <Compile Include="Cache\CacheStrategyFactory.cs" />
-    <Compile Include="Cache\Lock\BaseCacheLock.cs" />
-    <Compile Include="Cache\Lock\ICacheLock.cs" />
-    <Compile Include="Cache\ObjectCacheStrategy\IObjectCacheStrategy.cs" />
-    <Compile Include="Cache.Local\ObjectCacheStrategy\LocalObjectCacheStrategy.cs" />
-    <Compile Include="CommonAPIs\ApiHandlerWapper\ApiHandlerWapperBase.cs" />
+    <Compile Include="Caches\CacheStrategy\BaseCacheStrategy.cs" />
+    <Compile Include="Caches\ContainerCacheStrategy\IContainerCacheStragegy.cs" />
+    <Compile Include="CachesLocal\Lock\LocalCacheLock.cs" />
+    <Compile Include="CachesLocal\ContainerCacheStragegy\LocalContainerCacheStrategy.cs" />
+    <Compile Include="Caches\CacheStrategy\IBaseCacheStrategy.cs" />
+    <Compile Include="Caches\CacheStrategyFactory.cs" />
+    <Compile Include="Caches\Lock\BaseCacheLock.cs" />
+    <Compile Include="Caches\Lock\ICacheLock.cs" />
+    <Compile Include="Caches\ObjectCacheStrategy\IObjectCacheStrategy.cs" />
+    <Compile Include="CachesLocal\ObjectCacheStrategy\LocalObjectCacheStrategy.cs" />
+    <Compile Include="CommonAPIs\ApiHandlerWapperBase.cs" />
     <Compile Include="Config.cs" />
     <Compile Include="Containers\BaseContainer.cs" />
     <Compile Include="Containers\BaseContainerBag.cs" />
@@ -110,21 +110,18 @@
     <Compile Include="Entities\BindableBase.cs" />
     <Compile Include="Entities\EntityBase.cs" />
     <Compile Include="Entities\IAccessTokenResult.cs" />
-    <Compile Include="Entities\IApiData.cs" />
     <Compile Include="Entities\JsonResult\BaseJsonResult.cs" />
-    <Compile Include="Entities\JsonResult\Interface\IJsonResult.cs" />
-    <Compile Include="Entities\JsonResult\Interface\IJsonResultCallback.cs" />
-    <Compile Include="Entities\JsonResult\QYJsonResult.cs" />
+    <Compile Include="Entities\JsonResult\IJsonResult.cs" />
     <Compile Include="Entities\JsonResult\WorkJsonResult.cs" />
     <Compile Include="Entities\WxMessageBase.cs">
       <SubType>
       </SubType>
     </Compile>
     <Compile Include="Entities\Request\EncryptPostModel.cs" />
-    <Compile Include="Entities\Request\Extensions\RequestMessageTextExtension.cs" />
+    <Compile Include="Entities\Request\RequestMessageTextExtension.cs" />
     <Compile Include="Entities\Response\IResponseMessageNoResponse.cs" />
     <Compile Include="Entities\Response\SuccessResponseMessageBase.cs" />
-    <Compile Include="Entities\TemplateMessage\WeixinTemplateBase.cs" />
+    <Compile Include="Entities\WeixinTemplateBase.cs" />
     <Compile Include="Enums.cs" />
     <Compile Include="Exceptions\ErrorJsonResultException.cs" />
     <Compile Include="Exceptions\MessageHandlerException.cs" />

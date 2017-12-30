@@ -32,7 +32,7 @@ Detail: https://github.com/JeffreySu/WeiXinMPSDK/blob/master/license.md
 ----------------------------------------------------------------*/
 
 
-namespace Senparc.Weixin.Entities
+namespace Senparc.Weixin.Entities.Response
 {
     /// <summary>
     /// 响应回复消息基类接口

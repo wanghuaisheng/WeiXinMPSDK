@@ -37,10 +37,8 @@ Detail: https://github.com/JeffreySu/WeiXinMPSDK/blob/master/license.md
 
 
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
+using Senparc.Weixin.Entities.Response;
 
 namespace Senparc.Weixin.Entities.Request
 {

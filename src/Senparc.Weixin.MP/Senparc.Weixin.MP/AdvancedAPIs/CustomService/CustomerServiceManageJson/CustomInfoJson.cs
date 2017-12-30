@@ -38,6 +38,7 @@ Detail: https://github.com/JeffreySu/WeiXinMPSDK/blob/master/license.md
 
 using System.Collections.Generic;
 using Senparc.Weixin.Entities;
+using Senparc.Weixin.Entities.JsonResult;
 
 namespace Senparc.Weixin.MP.AdvancedAPIs.CustomService
 {

@@ -7,6 +7,7 @@ using System.Web;
 using System.Web.Mvc;
 using Senparc.Weixin.Cache;
 using Senparc.Weixin.Cache.Redis;
+using Senparc.Weixin.Caches;
 using Senparc.Weixin.Containers;
 using Senparc.Weixin.Helpers;
 using Senparc.Weixin.MessageQueue;

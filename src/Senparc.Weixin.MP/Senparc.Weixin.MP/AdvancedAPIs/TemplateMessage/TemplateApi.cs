@@ -55,7 +55,7 @@ using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Senparc.Weixin.Entities;
-using Senparc.Weixin.Entities.TemplateMessage;
+using Senparc.Weixin.Entities.JsonResult;
 using Senparc.Weixin.MP.AdvancedAPIs.TemplateMessage;
 using Senparc.Weixin.MP.CommonAPIs;
 

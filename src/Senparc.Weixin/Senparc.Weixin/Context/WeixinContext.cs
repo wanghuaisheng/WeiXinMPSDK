@@ -39,6 +39,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Senparc.Weixin.Entities;
+using Senparc.Weixin.Entities.Request;
+using Senparc.Weixin.Entities.Response;
 
 namespace Senparc.Weixin.Context
 {

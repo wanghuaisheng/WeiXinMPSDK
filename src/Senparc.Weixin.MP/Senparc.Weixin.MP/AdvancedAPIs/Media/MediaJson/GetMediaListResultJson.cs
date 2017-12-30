@@ -10,6 +10,7 @@
 
 using System.Collections.Generic;
 using Senparc.Weixin.Entities;
+using Senparc.Weixin.Entities.JsonResult;
 using Senparc.Weixin.MP.AdvancedAPIs.GroupMessage;
 
 namespace Senparc.Weixin.MP.AdvancedAPIs.Media

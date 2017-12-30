@@ -21,6 +21,7 @@ using System.Web.Mvc;
 using System.Xml.Linq;
 using Newtonsoft.Json.Linq;
 using Senparc.Weixin.Cache;
+using Senparc.Weixin.Caches;
 using Senparc.Weixin.MP.CommonAPIs;
 using Senparc.Weixin.MP.Containers;
 using Senparc.Weixin.MP.Sample.CommonService.Download;

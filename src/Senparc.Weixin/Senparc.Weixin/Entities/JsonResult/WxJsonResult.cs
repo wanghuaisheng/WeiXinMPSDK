@@ -48,7 +48,7 @@ Detail: https://github.com/JeffreySu/WeiXinMPSDK/blob/master/license.md
 
 using System;
 
-namespace Senparc.Weixin.Entities
+namespace Senparc.Weixin.Entities.JsonResult
 {
     /// <summary>
     /// 包含 errorcode 的 Json 返回结果接口

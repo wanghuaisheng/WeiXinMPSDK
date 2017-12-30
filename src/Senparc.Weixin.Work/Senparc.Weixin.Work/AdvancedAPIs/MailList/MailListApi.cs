@@ -52,7 +52,9 @@
  */
 
 using System.Threading.Tasks;
+using Senparc.Weixin.Conventers;
 using Senparc.Weixin.Entities;
+using Senparc.Weixin.Entities.JsonResult;
 using Senparc.Weixin.Work.AdvancedAPIs.MailList;
 using Senparc.Weixin.Work.CommonAPIs;
 using Senparc.Weixin.Helpers;

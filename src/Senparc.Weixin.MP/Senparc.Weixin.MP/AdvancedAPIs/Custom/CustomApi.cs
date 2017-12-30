@@ -60,7 +60,9 @@ Detail: https://github.com/JeffreySu/WeiXinMPSDK/blob/master/license.md
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Senparc.Weixin.Conventers;
 using Senparc.Weixin.Entities;
+using Senparc.Weixin.Entities.JsonResult;
 using Senparc.Weixin.Extensions;
 using Senparc.Weixin.Helpers;
 using Senparc.Weixin.MP.CommonAPIs;

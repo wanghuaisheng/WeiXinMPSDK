@@ -36,10 +36,11 @@ Detail: https://github.com/JeffreySu/WeiXinMPSDK/blob/master/license.md
  ----------------------------------------------------------------*/
 
 using System.Collections.Generic;
+using Senparc.Weixin.Caches.ContainerCacheStrategy;
+using Senparc.Weixin.CachesLocal.ObjectCacheStrategy;
 using Senparc.Weixin.Containers;
-using Senparc.Weixin.Cache;
 
-namespace Senparc.Weixin.Cache
+namespace Senparc.Weixin.CachesLocal.ContainerCacheStragegy
 {
     ///// <summary>
     ///// 全局静态数据源帮助类

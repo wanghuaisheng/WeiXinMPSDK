@@ -32,6 +32,8 @@ Detail: https://github.com/JeffreySu/WeiXinMPSDK/blob/master/license.md
 ----------------------------------------------------------------*/
 
 using Senparc.Weixin.Entities;
+using Senparc.Weixin.Entities.Request;
+using Senparc.Weixin.Entities.Response;
 
 namespace Senparc.Weixin.MessageHandlers
 {

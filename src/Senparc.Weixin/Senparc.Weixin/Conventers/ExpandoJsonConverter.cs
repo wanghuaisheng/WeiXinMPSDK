@@ -38,7 +38,7 @@ using System.Dynamic;
 using System.Web.Script.Serialization;
 using Senparc.Weixin.Extensions;
 
-namespace Senparc.Weixin.Helpers
+namespace Senparc.Weixin.Conventers
 {
     /// <summary>
     /// Allows JSON serialization of Expando objects into expected results (e.g., "x: 1, y: 2") instead of the default dictionary serialization.

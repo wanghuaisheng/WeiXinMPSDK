@@ -35,6 +35,7 @@ Detail: https://github.com/JeffreySu/WeiXinMPSDK/blob/master/license.md
 
 using System.Globalization;
 using System.Text.RegularExpressions;
+using Senparc.Weixin.Conventers;
 #if NET35 || NET40 || NET45
 using System.Web.Script.Serialization;
 #else

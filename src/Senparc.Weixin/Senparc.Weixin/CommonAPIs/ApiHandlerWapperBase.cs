@@ -35,15 +35,13 @@ Detail: https://github.com/JeffreySu/WeiXinMPSDK/blob/master/license.md
     修改描述：v4.13.5 完善AppId未注册提示
 ----------------------------------------------------------------*/
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using Senparc.Weixin.Entities;
+using Senparc.Weixin.Entities.JsonResult;
 using Senparc.Weixin.Exceptions;
 using Senparc.Weixin.Utilities;
 
-namespace Senparc.Weixin.CommonAPIs.ApiHandlerWapper
+namespace Senparc.Weixin.CommonAPIs
 {
     /// <summary>
     /// 所有子模块ApiHandlerWapper方法调用的基础方法

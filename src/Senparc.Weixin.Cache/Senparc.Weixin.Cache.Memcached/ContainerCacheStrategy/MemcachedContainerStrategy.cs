@@ -31,6 +31,7 @@ using System.Threading.Tasks;
 using Enyim.Caching;
 using Enyim.Caching.Configuration;
 using Enyim.Caching.Memcached;
+using Senparc.Weixin.Caches.ContainerCacheStrategy;
 using Senparc.Weixin.Containers;
 
 namespace Senparc.Weixin.Cache.Memcached

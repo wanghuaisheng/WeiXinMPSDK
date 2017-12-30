@@ -12,6 +12,8 @@
 ----------------------------------------------------------------*/
 
 
+using Senparc.Weixin.Entities.Request;
+
 namespace Senparc.Weixin.Work.Entities
 {
     /// <summary>

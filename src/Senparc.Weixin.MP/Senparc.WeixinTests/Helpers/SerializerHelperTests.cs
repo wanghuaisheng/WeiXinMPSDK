@@ -26,6 +26,7 @@ using System.Dynamic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Senparc.Weixin.Conventers;
 using Senparc.Weixin.Entities;
 
 namespace Senparc.Weixin.Helpers.Tests

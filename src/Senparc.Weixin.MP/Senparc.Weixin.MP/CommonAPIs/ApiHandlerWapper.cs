@@ -47,7 +47,7 @@ using Senparc.Weixin.Exceptions;
 using Senparc.Weixin.MP.CommonAPIs;
 using Senparc.Weixin.MP.Containers;
 using Senparc.Weixin.CommonAPIs;
-using Senparc.Weixin.CommonAPIs.ApiHandlerWapper;
+using Senparc.Weixin.Entities.JsonResult;
 
 namespace Senparc.Weixin.MP
 {

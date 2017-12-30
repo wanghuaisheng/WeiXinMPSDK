@@ -35,6 +35,8 @@ Detail: https://github.com/JeffreySu/WeiXinMPSDK/blob/master/license.md
  
 ----------------------------------------------------------------*/
 
+using Senparc.Weixin.Entities.Request;
+
 namespace Senparc.Weixin.MP.Entities.Request
 {
     /// <summary>

@@ -21,40 +21,44 @@ Detail: https://github.com/JeffreySu/WeiXinMPSDK/blob/master/license.md
 /*----------------------------------------------------------------
     Copyright (C) 2017 Senparc
 
-    文件名：IContainerCacheStrategy.cs
-    文件功能描述：容器缓存策略基类。
+    文件名：BaseCacheStrategy.cs
+    文件功能描述：泛型缓存策略基类。
 
 
-    创建标识：Senparc - 20160308
-
-    修改标识：Senparc - 20160812
-    修改描述：v4.7.4  解决Container无法注册的问题
+    创建标识：Senparc - 20160813 v4.7.7 
 
  ----------------------------------------------------------------*/
 
-using System.Collections.Generic;
-using Senparc.Weixin.Containers;
 
-namespace Senparc.Weixin.Cache
+using System;
+using Senparc.Weixin.Caches.Lock;
+
+namespace Senparc.Weixin.Caches.CacheStrategy
 {
     /// <summary>
-    /// 容器缓存策略接口
+    /// 泛型缓存策略基类
     /// </summary>
-    public interface IContainerCacheStrategy : IBaseCacheStrategy<string, IBaseContainerBag>
+    public abstract class BaseCacheStrategy : IBaseCacheStrategy
     {
         /// <summary>
-        /// 获取所有ContainerBag
+        /// 获取拼装后的FinalKey
         /// </summary>
-        /// <typeparam name="TBag"></typeparam>
+        /// <param name="key">键</param>
+        /// <param name="isFullKey">是否已经是经过拼接的FullKey</param>
         /// <returns></returns>
-        IDictionary<string, TBag> GetAll<TBag>() where TBag : IBaseContainerBag;
+        public string GetFinalKey(string key, bool isFullKey = false)
+        {
+            return isFullKey ? key : $"SenparcWeixin:{Config.DefaultCacheNamespace}:{key}";
+        }
 
         /// <summary>
-        /// 更新ContainerBag
+        /// 获取一个同步锁
         /// </summary>
+        /// <param name="resourceName"></param>
         /// <param name="key"></param>
-        /// <param name="containerBag"></param>
-        /// <param name="isFullKey">是否已经是完整的Key，如果不是，则会调用一次GetFinalKey()方法</param>
-        void UpdateContainerBag(string key, IBaseContainerBag containerBag, bool isFullKey = false);
+        /// <param name="retryCount"></param>
+        /// <param name="retryDelay"></param>
+        /// <returns></returns>
+        public abstract ICacheLock BeginCacheLock(string resourceName, string key, int retryCount = 0, TimeSpan retryDelay = new TimeSpan());
     }
 }

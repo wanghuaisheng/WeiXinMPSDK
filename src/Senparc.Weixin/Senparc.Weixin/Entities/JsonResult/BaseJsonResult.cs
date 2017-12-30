@@ -29,11 +29,8 @@ Detail: https://github.com/JeffreySu/WeiXinMPSDK/blob/master/license.md
 ----------------------------------------------------------------*/
 
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
-namespace Senparc.Weixin.Entities
+namespace Senparc.Weixin.Entities.JsonResult
 {
     [Serializable]
     public abstract class BaseJsonResult : IJsonResult

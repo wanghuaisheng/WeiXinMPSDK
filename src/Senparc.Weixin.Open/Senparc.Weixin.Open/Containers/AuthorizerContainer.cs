@@ -50,7 +50,6 @@
 
 using System;
 using System.Threading.Tasks;
-using Senparc.Weixin.Cache;
 using Senparc.Weixin.Containers;
 using Senparc.Weixin.Open.ComponentAPIs;
 using Senparc.Weixin.Open.Entities;

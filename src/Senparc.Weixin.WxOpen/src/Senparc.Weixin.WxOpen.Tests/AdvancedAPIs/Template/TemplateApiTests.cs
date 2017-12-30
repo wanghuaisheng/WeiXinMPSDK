@@ -25,7 +25,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Senparc.Weixin.Entities.TemplateMessage;
+using Senparc.Weixin.Entities;
 using Senparc.Weixin.MP.Test.CommonAPIs;
 
 namespace Senparc.Weixin.WxOpen.AdvancedAPIs.Template.Tests

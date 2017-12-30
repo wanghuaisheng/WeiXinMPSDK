@@ -37,12 +37,13 @@ Detail: https://github.com/JeffreySu/WeiXinMPSDK/blob/master/license.md
 using System;
 using System.Xml.Linq;
 using Senparc.Weixin.Entities;
+using Senparc.Weixin.Entities.Response;
 using Senparc.Weixin.Exceptions;
 using Senparc.Weixin.MP.Helpers;
 
 namespace Senparc.Weixin.MP.Entities
 {
-    public interface IResponseMessageBase : Weixin.Entities.IWxResponseMessageBase
+    public interface IResponseMessageBase : IWxResponseMessageBase
     {
         ResponseMsgType MsgType { get; }
         //string Content { get; set; }
@@ -52,7 +53,7 @@ namespace Senparc.Weixin.MP.Entities
     /// <summary>
     /// 微信公众号响应回复消息基类
     /// </summary>
-    public class ResponseMessageBase : Weixin.Entities.WxResponseMessageBase, IResponseMessageBase
+    public class ResponseMessageBase : WxResponseMessageBase, IResponseMessageBase
     {
         public virtual ResponseMsgType MsgType
         {

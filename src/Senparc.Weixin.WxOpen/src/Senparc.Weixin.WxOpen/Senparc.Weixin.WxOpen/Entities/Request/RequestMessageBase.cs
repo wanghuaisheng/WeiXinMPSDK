@@ -29,9 +29,11 @@ Detail: https://github.com/JeffreySu/WeiXinMPSDK/blob/master/license.md
     
 ----------------------------------------------------------------*/
 
+using Senparc.Weixin.Entities.Request;
+
 namespace Senparc.Weixin.WxOpen.Entities
 {
-    public interface IRequestMessageBase : Weixin.Entities.IWxRequestMessageBase
+    public interface IRequestMessageBase : IWxRequestMessageBase
     {
         RequestMsgType MsgType { get; }
         string Encrypt { get; set; }
@@ -41,7 +43,7 @@ namespace Senparc.Weixin.WxOpen.Entities
     /// <summary>
     /// 接收到请求的消息
     /// </summary>
-    public class RequestMessageBase : Weixin.Entities.WxRequestMessageBase, IRequestMessageBase
+    public class RequestMessageBase : WxRequestMessageBase, IRequestMessageBase
     {
         public virtual RequestMsgType MsgType
         {

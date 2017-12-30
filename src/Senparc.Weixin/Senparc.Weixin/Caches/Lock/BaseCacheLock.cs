@@ -33,8 +33,9 @@ Detail: https://github.com/JeffreySu/WeiXinMPSDK/blob/master/license.md
 ----------------------------------------------------------------*/
 
 using System;
+using Senparc.Weixin.Caches.CacheStrategy;
 
-namespace Senparc.Weixin.Cache
+namespace Senparc.Weixin.Caches.Lock
 {
     /// <summary>
     /// 缓存同步锁基类

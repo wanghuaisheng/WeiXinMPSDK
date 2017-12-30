@@ -18,12 +18,7 @@ Detail: https://github.com/JeffreySu/WeiXinMPSDK/blob/master/license.md
 ----------------------------------------------------------------*/
 #endregion Apache License Version 2.0
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace Senparc.Weixin.Entities
+namespace Senparc.Weixin.Entities.Response
 {
     /// <summary>
     /// 只返回"success"等指定字符串的响应信息基类

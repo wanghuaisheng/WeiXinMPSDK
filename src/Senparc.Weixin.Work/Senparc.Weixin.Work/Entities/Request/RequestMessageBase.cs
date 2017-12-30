@@ -11,9 +11,11 @@
     修改描述：整理接口
 ----------------------------------------------------------------*/
 
+using Senparc.Weixin.Entities.Request;
+
 namespace Senparc.Weixin.Work.Entities
 {
-    public interface IRequestMessageBase : Weixin.Entities.IWxRequestMessageBase
+    public interface IRequestMessageBase : IWxRequestMessageBase
     {
         RequestMsgType MsgType { get; }
         int AgentID { get; set; }
@@ -22,7 +24,7 @@ namespace Senparc.Weixin.Work.Entities
     /// <summary>
     /// 接收到请求的消息
     /// </summary>
-    public class RequestMessageBase : Weixin.Entities.WxRequestMessageBase, IRequestMessageBase
+    public class RequestMessageBase : WxRequestMessageBase, IRequestMessageBase
     {
         public RequestMessageBase()
         {

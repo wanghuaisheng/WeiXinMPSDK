@@ -31,11 +31,12 @@ Detail: https://github.com/JeffreySu/WeiXinMPSDK/blob/master/license.md
 using System;
 using System.Xml.Linq;
 using Senparc.Weixin.Entities;
+using Senparc.Weixin.Entities.Response;
 using Senparc.Weixin.Exceptions;
 
 namespace Senparc.Weixin.WxOpen.Entities
 {
-    public interface IResponseMessageBase : Weixin.Entities.IWxResponseMessageBase
+    public interface IResponseMessageBase : IWxResponseMessageBase
     {
         ResponseMsgType MsgType { get; }
         //string Content { get; set; }
@@ -45,7 +46,7 @@ namespace Senparc.Weixin.WxOpen.Entities
     /// <summary>
     /// 微信公众号响应回复消息
     /// </summary>
-    public class ResponseMessageBase : Weixin.Entities.WxResponseMessageBase, IResponseMessageBase
+    public class ResponseMessageBase : WxResponseMessageBase, IResponseMessageBase
     {
         public virtual ResponseMsgType MsgType
         {
