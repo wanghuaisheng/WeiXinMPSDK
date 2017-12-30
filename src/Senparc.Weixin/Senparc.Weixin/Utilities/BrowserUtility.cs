@@ -36,7 +36,7 @@ Detail: https://github.com/JeffreySu/WeiXinMPSDK/blob/master/license.md
 ----------------------------------------------------------------*/
 using System.Web;
 
-namespace Senparc.Weixin.BrowserUtility
+namespace Senparc.Weixin.Utilities
 {
     /// <summary>
     /// 浏览器公共类
@@ -52,15 +52,8 @@ namespace Senparc.Weixin.BrowserUtility
         public static bool SideInWeixinBrowser(this HttpContextBase httpContext)
         {
             var userAgent = httpContext.Request.UserAgent;
-            if (userAgent != null 
-                && (userAgent.Contains("MicroMessenger") || userAgent.Contains("Windows Phone")))
-            {
-                return true;//在微信内部
-            }
-            else
-            {
-                return false;//在微信外部
-            }
+            return userAgent != null 
+                   && (userAgent.Contains("MicroMessenger") || userAgent.Contains("Windows Phone"));
         }
     }
 }

@@ -61,7 +61,7 @@ namespace Senparc.Weixin.Work.AdvancedAPIs
         /// <returns></returns>
         public static MassResult SendText(string accessTokenOrAppKey, string agentId, string content,
             string toUser = null, string toParty = null, string toTag = null, int safe = 0,
-            int timeOut = Config.TIME_OUT)
+            int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -101,7 +101,7 @@ namespace Senparc.Weixin.Work.AdvancedAPIs
         /// <returns></returns>
         public static MassResult SendImage(string accessTokenOrAppKey, string agentId, string mediaId,
                         string toUser = null, string toParty = null, string toTag = null, int safe = 0,
-                        int timeOut = Config.TIME_OUT)
+                        int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -141,7 +141,7 @@ namespace Senparc.Weixin.Work.AdvancedAPIs
         /// <returns></returns>
         public static MassResult SendVoice(string accessTokenOrAppKey, string agentId, string mediaId,
              string toUser = null, string toParty = null, string toTag = null, int safe = 0,
-            int timeOut = Config.TIME_OUT)
+            int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -183,7 +183,7 @@ namespace Senparc.Weixin.Work.AdvancedAPIs
         /// <returns></returns>
         public static MassResult SendVideo(string accessTokenOrAppKey, string agentId, string mediaId,
             string toUser = null, string toParty = null, string toTag = null,
-            string title = null, string description = null, int safe = 0, int timeOut = Config.TIME_OUT)
+            string title = null, string description = null, int safe = 0, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -225,7 +225,7 @@ namespace Senparc.Weixin.Work.AdvancedAPIs
         /// <returns></returns>
         public static MassResult SendFile(string accessTokenOrAppKey, string agentId, string mediaId,
                 string toUser = null, string toParty = null, string toTag = null, int safe = 0,
-                int timeOut = Config.TIME_OUT)
+                int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -265,7 +265,7 @@ namespace Senparc.Weixin.Work.AdvancedAPIs
         /// <returns></returns>
         public static MassResult SendNews(string accessTokenOrAppKey, string agentId, List<Article> articles,
                 string toUser = null, string toParty = null, string toTag = null, int safe = 0,
-                int timeOut = Config.TIME_OUT)
+                int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -311,7 +311,7 @@ namespace Senparc.Weixin.Work.AdvancedAPIs
         /// <returns></returns>
         public static MassResult SendMpNews(string accessTokenOrAppKey, string agentId, List<MpNewsArticle> articles,
             string toUser = null, string toParty = null, string toTag = null, int safe = 0,
-            int timeOut = Config.TIME_OUT)
+            int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -361,7 +361,7 @@ namespace Senparc.Weixin.Work.AdvancedAPIs
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
         public static MassResult SendTextCard(string accessTokenOrAppKey, string agentId, string title, string description, string url, string btntxt = null,
-            string toUser = null, string toParty = null, string toTag = null, int timeOut = Config.TIME_OUT)
+            string toUser = null, string toParty = null, string toTag = null, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -402,7 +402,7 @@ namespace Senparc.Weixin.Work.AdvancedAPIs
         /// <param name="safe">表示是否是保密消息，0表示否，1表示是，默认0</param>
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
-        public static async Task<MassResult> SendTextAsync(string accessTokenOrAppKey, string agentId, string content, string toUser = null, string toParty = null, string toTag = null, int safe = 0, int timeOut = Config.TIME_OUT)
+        public static async Task<MassResult> SendTextAsync(string accessTokenOrAppKey, string agentId, string content, string toUser = null, string toParty = null, string toTag = null, int safe = 0, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -441,7 +441,7 @@ namespace Senparc.Weixin.Work.AdvancedAPIs
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
         public static async Task<MassResult> SendImageAsync(string accessTokenOrAppKey, string agentId, string mediaId, string toUser = null, string toParty = null, string toTag = null, int safe = 0,
-            int timeOut = Config.TIME_OUT)
+            int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -481,7 +481,7 @@ namespace Senparc.Weixin.Work.AdvancedAPIs
         /// <returns></returns>
         public static async Task<MassResult> SendVoiceAsync(string accessTokenOrAppKey, string agentId, string mediaId,
                         string toUser = null, string toParty = null, string toTag = null, int safe = 0,
-                        int timeOut = Config.TIME_OUT)
+                        int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -523,7 +523,7 @@ namespace Senparc.Weixin.Work.AdvancedAPIs
         /// <returns></returns>
         public static async Task<MassResult> SendVideoAsync(string accessTokenOrAppKey, string agentId, string mediaId,
                 string toUser = null, string toParty = null, string toTag = null,
-                string title = null, string description = null, int safe = 0, int timeOut = Config.TIME_OUT)
+                string title = null, string description = null, int safe = 0, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -565,7 +565,7 @@ namespace Senparc.Weixin.Work.AdvancedAPIs
         /// <returns></returns>
         public static async Task<MassResult> SendFileAsync(string accessTokenOrAppKey, string agentId, string mediaId,
                 string toUser = null, string toParty = null, string toTag = null, int safe = 0,
-                int timeOut = Config.TIME_OUT)
+                int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -605,7 +605,7 @@ namespace Senparc.Weixin.Work.AdvancedAPIs
         /// <returns></returns>
         public static async Task<MassResult> SendNewsAsync(string accessTokenOrAppKey, string agentId, List<Article> articles,
                 string toUser = null, string toParty = null, string toTag = null, int safe = 0,
-                int timeOut = Config.TIME_OUT)
+                int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -649,7 +649,7 @@ namespace Senparc.Weixin.Work.AdvancedAPIs
         /// <param name="safe">表示是否是保密消息，0表示否，1表示是，默认0</param>
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
-        public static async Task<MassResult> SendMpNewsAsync(string accessTokenOrAppKey, string toUser, string toParty, string toTag, string agentId, List<MpNewsArticle> articles, int safe = 0, int timeOut = Config.TIME_OUT)
+        public static async Task<MassResult> SendMpNewsAsync(string accessTokenOrAppKey, string toUser, string toParty, string toTag, string agentId, List<MpNewsArticle> articles, int safe = 0, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -696,7 +696,7 @@ namespace Senparc.Weixin.Work.AdvancedAPIs
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
         public static async Task<MassResult> SendTextCardAsync(string accessTokenOrAppKey, string agentId, string title, string description, string url, string btntxt = null,
-            string toUser = null, string toParty = null, string toTag = null, int timeOut = Config.TIME_OUT)
+            string toUser = null, string toParty = null, string toTag = null, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {

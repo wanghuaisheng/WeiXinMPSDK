@@ -47,11 +47,11 @@ Detail: https://github.com/JeffreySu/WeiXinMPSDK/blob/master/license.md
 using System;
 using System.Diagnostics;
 using System.IO;
+using System.Threading;
 using Senparc.Weixin.Cache;
 using Senparc.Weixin.Exceptions;
-using System.Threading;
 
-namespace Senparc.Weixin
+namespace Senparc.Weixin.Utilities
 {
     /// <summary>
     /// 微信日志跟踪

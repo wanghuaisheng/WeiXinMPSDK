@@ -41,7 +41,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Senparc.Weixin.Entities;
 using Senparc.Weixin.Exceptions;
-using Senparc.Weixin.Utilities.WeixinUtility;
+using Senparc.Weixin.Utilities;
 
 namespace Senparc.Weixin.CommonAPIs.ApiHandlerWapper
 {

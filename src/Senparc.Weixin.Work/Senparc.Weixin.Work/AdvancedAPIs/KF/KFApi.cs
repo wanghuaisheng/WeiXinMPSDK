@@ -51,7 +51,7 @@ namespace Senparc.Weixin.Work.AdvancedAPIs
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
         public static WorkJsonResult SendText(string accessTokenOrAppKey, KF_User_Type senderType, string senderId, KF_User_Type receiverType,
-            string receiverId, string content, int timeOut = Config.TIME_OUT)
+            string receiverId, string content, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -91,7 +91,7 @@ namespace Senparc.Weixin.Work.AdvancedAPIs
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
         public static WorkJsonResult SendImage(string accessTokenOrAppKey, KF_User_Type senderType, string senderId, KF_User_Type receiverType,
-            string receiverId, string mediaId, int timeOut = Config.TIME_OUT)
+            string receiverId, string mediaId, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -131,7 +131,7 @@ namespace Senparc.Weixin.Work.AdvancedAPIs
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
         public static WorkJsonResult SendFile(string accessTokenOrAppKey, KF_User_Type senderType, string senderId, KF_User_Type receiverType,
-            string receiverId, string mediaId, int timeOut = Config.TIME_OUT)
+            string receiverId, string mediaId, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -171,7 +171,7 @@ namespace Senparc.Weixin.Work.AdvancedAPIs
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
         public static WorkJsonResult SendVoice(string accessTokenOrAppKey, KF_User_Type senderType, string senderId, KF_User_Type receiverType,
-            string receiverId, string mediaId, int timeOut = Config.TIME_OUT)
+            string receiverId, string mediaId, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -206,7 +206,7 @@ namespace Senparc.Weixin.Work.AdvancedAPIs
         /// <param name="type">不填时，同时返回内部、外部客服列表</param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static GetKFListResult GetKFList(string accessTokenOrAppKey, KF_Type? type = null, int timeOut = Config.TIME_OUT)
+        public static GetKFListResult GetKFList(string accessTokenOrAppKey, KF_Type? type = null, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -233,7 +233,7 @@ namespace Senparc.Weixin.Work.AdvancedAPIs
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
         public static async Task<WorkJsonResult> SendTextAsync(string accessTokenOrAppKey, KF_User_Type senderType, string senderId, KF_User_Type receiverType,
-            string receiverId, string content, int timeOut = Config.TIME_OUT)
+            string receiverId, string content, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -273,7 +273,7 @@ namespace Senparc.Weixin.Work.AdvancedAPIs
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
         public static async Task<WorkJsonResult> SendImageAsync(string accessTokenOrAppKey, KF_User_Type senderType, string senderId, KF_User_Type receiverType,
-            string receiverId, string mediaId, int timeOut = Config.TIME_OUT)
+            string receiverId, string mediaId, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -313,7 +313,7 @@ namespace Senparc.Weixin.Work.AdvancedAPIs
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
         public static async Task<WorkJsonResult> SendFileAsync(string accessTokenOrAppKey, KF_User_Type senderType, string senderId, KF_User_Type receiverType,
-            string receiverId, string mediaId, int timeOut = Config.TIME_OUT)
+            string receiverId, string mediaId, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -353,7 +353,7 @@ namespace Senparc.Weixin.Work.AdvancedAPIs
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
         public static async Task<WorkJsonResult> SendVoiceAsync(string accessTokenOrAppKey, KF_User_Type senderType, string senderId, KF_User_Type receiverType,
-            string receiverId, string mediaId, int timeOut = Config.TIME_OUT)
+            string receiverId, string mediaId, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -388,7 +388,7 @@ namespace Senparc.Weixin.Work.AdvancedAPIs
         /// <param name="type">不填时，同时返回内部、外部客服列表</param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static async Task<GetKFListResult> GetKFListAsync(string accessTokenOrAppKey, KF_Type? type = null, int timeOut = Config.TIME_OUT)
+        public static async Task<GetKFListResult> GetKFListAsync(string accessTokenOrAppKey, KF_Type? type = null, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {

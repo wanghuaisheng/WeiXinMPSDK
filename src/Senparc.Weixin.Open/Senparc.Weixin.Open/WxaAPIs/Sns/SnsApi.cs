@@ -53,7 +53,7 @@ namespace Senparc.Weixin.Open.WxaAPIs.Sns
         /// <param name="grantType">保持默认：authorization_code</param>
         /// <param name="timeOut">请求超时时间</param>
         /// <returns></returns>
-        public static JsCode2JsonResult JsCode2Json(string appId, string componentAppId, string componentAccessToken, string jsCode, string grantType = "authorization_code", int timeOut = Config.TIME_OUT)
+        public static JsCode2JsonResult JsCode2Json(string appId, string componentAppId, string componentAccessToken, string jsCode, string grantType = "authorization_code", int timeOut = Config.TimeOut)
         {
             string urlFormat =
                 Config.ApiMpHost + "/sns/component/jscode2session?appid={0}&js_code={1}&grant_type={2}&component_appid={3}&component_access_token={4}";
@@ -78,7 +78,7 @@ namespace Senparc.Weixin.Open.WxaAPIs.Sns
         /// <param name="grantType">保持默认：authorization_code</param>
         /// <param name="timeOut">请求超时时间</param>
         /// <returns></returns>
-        public static async Task<JsCode2JsonResult> JsCode2JsonAsync(string appId, string componentAppId, string componentAccessToken, string jsCode, string grantType = "authorization_code", int timeOut = Config.TIME_OUT)
+        public static async Task<JsCode2JsonResult> JsCode2JsonAsync(string appId, string componentAppId, string componentAccessToken, string jsCode, string grantType = "authorization_code", int timeOut = Config.TimeOut)
         {
             string urlFormat =
                 Config.ApiMpHost + "/sns/component/jscode2session?appid={0}&js_code={1}&grant_type={2}&component_appid={3}&component_access_token={4}";

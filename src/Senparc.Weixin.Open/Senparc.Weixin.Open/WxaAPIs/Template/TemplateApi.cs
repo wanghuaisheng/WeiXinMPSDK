@@ -56,7 +56,7 @@ namespace Senparc.Weixin.Open.WxaAPIs.Template
         /// <param name="count">offset和count用于分页，表示从offset开始，拉取count条记录，offset从0开始，count最大为20。</param>
         /// <param name="timeOut">请求超时时间</param>
         /// <returns></returns>
-        public static LibraryListJsonResult LibraryList(string accessToken, int offset, int count, int timeOut = Config.TIME_OUT)
+        public static LibraryListJsonResult LibraryList(string accessToken, int offset, int count, int timeOut = Config.TimeOut)
         {
             string urlFormat = Config.ApiMpHost + "/cgi-bin/wxopen/template/library/list?access_token={0}";
             var data = new
@@ -74,7 +74,7 @@ namespace Senparc.Weixin.Open.WxaAPIs.Template
         /// <param name="id">模板标题id，可通过接口获取，也可登录小程序后台查看获取</param>
         /// <param name="timeOut">请求超时时间</param>
         /// <returns></returns>
-        public static LibraryGetJsonResult LibraryGet(string accessToken, string id, int timeOut = Config.TIME_OUT)
+        public static LibraryGetJsonResult LibraryGet(string accessToken, string id, int timeOut = Config.TimeOut)
         {
             string urlFormat = Config.ApiMpHost + "/cgi-bin/wxopen/template/library/list?access_token={0}";
             var data = new
@@ -93,7 +93,7 @@ namespace Senparc.Weixin.Open.WxaAPIs.Template
         /// <param name="keywordIdList">开发者自行组合好的模板关键词列表，关键词顺序可以自由搭配（例如[3,5,4]或[4,5,3]），最多支持10个关键词组合</param>
         /// <param name="timeOut">请求超时时间</param>
         /// <returns></returns>
-        public static LibraryGetJsonResult Add(string accessToken, string id, int[] keywordIdList, int timeOut = Config.TIME_OUT)
+        public static LibraryGetJsonResult Add(string accessToken, string id, int[] keywordIdList, int timeOut = Config.TimeOut)
         {
             string urlFormat = Config.ApiMpHost + "/cgi-bin/wxopen/template/add?access_token={0}";
             var data = new
@@ -117,7 +117,7 @@ namespace Senparc.Weixin.Open.WxaAPIs.Template
         /// <param name="count">offset和count用于分页，表示从offset开始，拉取count条记录，offset从0开始，count最大为20。最后一页的list长度可能小于请求的count</param>
         /// <param name="timeOut">请求超时时间</param>
         /// <returns></returns>
-        public static ListJsonResult List(string accessToken, int offset, int count, int timeOut = Config.TIME_OUT)
+        public static ListJsonResult List(string accessToken, int offset, int count, int timeOut = Config.TimeOut)
         {
             string urlFormat = Config.ApiMpHost + "/cgi-bin/wxopen/template/list?access_token={0}";
             var data = new
@@ -135,7 +135,7 @@ namespace Senparc.Weixin.Open.WxaAPIs.Template
         /// <param name="templateId">要删除的模板id</param>
         /// <param name="timeOut">请求超时时间</param>
         /// <returns></returns>
-        public static WxJsonResult Del(string accessToken, string templateId, int timeOut = Config.TIME_OUT)
+        public static WxJsonResult Del(string accessToken, string templateId, int timeOut = Config.TimeOut)
         {
             string urlFormat = Config.ApiMpHost + "/cgi-bin/wxopen/template/del?access_token={0}";
             var data = new
@@ -164,7 +164,7 @@ namespace Senparc.Weixin.Open.WxaAPIs.Template
         /// <param name="count">offset和count用于分页，表示从offset开始，拉取count条记录，offset从0开始，count最大为20。</param>
         /// <param name="timeOut">请求超时时间</param>
         /// <returns></returns>
-        public static async Task<LibraryListJsonResult> LibraryListAsync(string accessToken, int offset, int count, int timeOut = Config.TIME_OUT)
+        public static async Task<LibraryListJsonResult> LibraryListAsync(string accessToken, int offset, int count, int timeOut = Config.TimeOut)
         {
             string urlFormat = Config.ApiMpHost + "/cgi-bin/wxopen/template/library/list?access_token={0}";
             var data = new
@@ -182,7 +182,7 @@ namespace Senparc.Weixin.Open.WxaAPIs.Template
         /// <param name="id">模板标题id，可通过接口获取，也可登录小程序后台查看获取</param>
         /// <param name="timeOut">请求超时时间</param>
         /// <returns></returns>
-        public static async Task<LibraryGetJsonResult> LibraryGetAsync(string accessToken, string id, int timeOut = Config.TIME_OUT)
+        public static async Task<LibraryGetJsonResult> LibraryGetAsync(string accessToken, string id, int timeOut = Config.TimeOut)
         {
             string urlFormat = Config.ApiMpHost + "/cgi-bin/wxopen/template/library/list?access_token={0}";
             var data = new
@@ -201,7 +201,7 @@ namespace Senparc.Weixin.Open.WxaAPIs.Template
         /// <param name="keywordIdList">开发者自行组合好的模板关键词列表，关键词顺序可以自由搭配（例如[3,5,4]或[4,5,3]），最多支持10个关键词组合</param>
         /// <param name="timeOut">请求超时时间</param>
         /// <returns></returns>
-        public static async Task<LibraryGetJsonResult> AddAsync(string accessToken, string id, int[] keywordIdList, int timeOut = Config.TIME_OUT)
+        public static async Task<LibraryGetJsonResult> AddAsync(string accessToken, string id, int[] keywordIdList, int timeOut = Config.TimeOut)
         {
             string urlFormat = Config.ApiMpHost + "/cgi-bin/wxopen/template/add?access_token={0}";
             var data = new
@@ -225,7 +225,7 @@ namespace Senparc.Weixin.Open.WxaAPIs.Template
         /// <param name="count">offset和count用于分页，表示从offset开始，拉取count条记录，offset从0开始，count最大为20。最后一页的list长度可能小于请求的count</param>
         /// <param name="timeOut">请求超时时间</param>
         /// <returns></returns>
-        public static async Task<ListJsonResult> ListAsync(string accessToken, int offset, int count, int timeOut = Config.TIME_OUT)
+        public static async Task<ListJsonResult> ListAsync(string accessToken, int offset, int count, int timeOut = Config.TimeOut)
         {
             string urlFormat = Config.ApiMpHost + "/cgi-bin/wxopen/template/list?access_token={0}";
             var data = new
@@ -243,7 +243,7 @@ namespace Senparc.Weixin.Open.WxaAPIs.Template
         /// <param name="templateId">要删除的模板id</param>
         /// <param name="timeOut">请求超时时间</param>
         /// <returns></returns>
-        public static async Task<WxJsonResult> DelAsync(string accessToken, string templateId, int timeOut = Config.TIME_OUT)
+        public static async Task<WxJsonResult> DelAsync(string accessToken, string templateId, int timeOut = Config.TimeOut)
         {
             string urlFormat = Config.ApiMpHost + "/cgi-bin/wxopen/template/del?access_token={0}";
             var data = new

@@ -90,7 +90,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="sendIgnoreReprint">待群发的文章被判定为转载时，是否继续群发</param>
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
-        private static SendResult SendGroupMessageByFilter(string accessTokenOrAppId, string groupId, string tagId, string value, GroupMessageType type, bool isToAll = false, bool sendIgnoreReprint = false, int timeOut = Config.TIME_OUT)
+        private static SendResult SendGroupMessageByFilter(string accessTokenOrAppId, string groupId, string tagId, string value, GroupMessageType type, bool isToAll = false, bool sendIgnoreReprint = false, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -214,7 +214,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
         public static SendResult SendGroupMessageByGroupId(string accessTokenOrAppId, string groupId, string value, GroupMessageType type, bool isToAll = false, bool sendIgnoreReprint = false,
-            int timeOut = Config.TIME_OUT)
+            int timeOut = Config.TimeOut)
         {
             return SendGroupMessageByFilter(accessTokenOrAppId, groupId, null, value, type, isToAll, sendIgnoreReprint,
                 timeOut);
@@ -239,7 +239,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
         public static SendResult SendGroupMessageByTagId(string accessTokenOrAppId, string tagId, string value, GroupMessageType type, bool isToAll = false, bool sendIgnoreReprint = false,
-            int timeOut = Config.TIME_OUT)
+            int timeOut = Config.TimeOut)
         {
             return SendGroupMessageByFilter(accessTokenOrAppId, null, tagId, value, type, isToAll, sendIgnoreReprint,
                 timeOut);
@@ -257,7 +257,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="openIds">openId字符串数组</param>
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
-        public static SendResult SendGroupMessageByOpenId(string accessTokenOrAppId, GroupMessageType type, string value, int timeOut = Config.TIME_OUT, params string[] openIds)
+        public static SendResult SendGroupMessageByOpenId(string accessTokenOrAppId, GroupMessageType type, string value, int timeOut = Config.TimeOut, params string[] openIds)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -344,7 +344,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="description"></param>
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
-        public static SendResult SendVideoGroupMessageByOpenId(string accessTokenOrAppId, string title, string description, string mediaId, int timeOut = Config.TIME_OUT, params string[] openIds)
+        public static SendResult SendVideoGroupMessageByOpenId(string accessTokenOrAppId, string title, string description, string mediaId, int timeOut = Config.TimeOut, params string[] openIds)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -374,7 +374,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="msgId">发送出去的消息ID</param>
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
-        public static WxJsonResult DeleteSendMessage(string accessTokenOrAppId, string msgId, int timeOut = Config.TIME_OUT)
+        public static WxJsonResult DeleteSendMessage(string accessTokenOrAppId, string msgId, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -401,7 +401,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="wxName">接收消息用户的微信号</param>
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
-        public static SendResult SendGroupMessagePreview(string accessTokenOrAppId, GroupMessageType type, string value, string openId, string wxName = null, int timeOut = Config.TIME_OUT)
+        public static SendResult SendGroupMessagePreview(string accessTokenOrAppId, GroupMessageType type, string value, string openId, string wxName = null, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -493,7 +493,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="timeOut"></param>
         /// <returns></returns>
         public static SendResult WxCardGroupMessagePreview(string accessTokenOrAppId, string cardId, string code,
-            string openId, string wxName, string timestamp, string signature, int timeOut = Config.TIME_OUT)
+            string openId, string wxName, string timestamp, string signature, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -523,7 +523,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="msgId">群发消息后返回的消息id</param>
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
-        public static GetSendResult GetGroupMessageResult(string accessTokenOrAppId, string msgId, int timeOut = Config.TIME_OUT)
+        public static GetSendResult GetGroupMessageResult(string accessTokenOrAppId, string msgId, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -549,7 +549,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="timeOut"></param>
         /// <returns></returns>
         public static VideoMediaIdResult GetVideoMediaIdResult(string accessTokenOrAppId, string mediaId, string title,
-            string description, int timeOut = Config.TIME_OUT)
+            string description, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -592,7 +592,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="sendIgnoreReprint">待群发的文章被判定为转载时，是否继续群发</param>
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
-        private static async Task<SendResult> SendGroupMessageByFilterAsync(string accessTokenOrAppId, string groupId, string tagId, string value, GroupMessageType type, bool isToAll = false, bool sendIgnoreReprint = false, int timeOut = Config.TIME_OUT)
+        private static async Task<SendResult> SendGroupMessageByFilterAsync(string accessTokenOrAppId, string groupId, string tagId, string value, GroupMessageType type, bool isToAll = false, bool sendIgnoreReprint = false, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -706,7 +706,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="openIds">openId字符串数组</param>
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
-        public static async Task<SendResult> SendGroupMessageByOpenIdAsync(string accessTokenOrAppId, GroupMessageType type, string value, int timeOut = Config.TIME_OUT, params string[] openIds)
+        public static async Task<SendResult> SendGroupMessageByOpenIdAsync(string accessTokenOrAppId, GroupMessageType type, string value, int timeOut = Config.TimeOut, params string[] openIds)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -801,7 +801,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
         public static async Task<SendResult> SendGroupMessageByGroupIdAsync(string accessTokenOrAppId, string groupId, string value, GroupMessageType type, bool isToAll = false, bool sendIgnoreReprint = false,
-            int timeOut = Config.TIME_OUT)
+            int timeOut = Config.TimeOut)
         {
             return await SendGroupMessageByFilterAsync(accessTokenOrAppId, groupId, null, value, type, isToAll, sendIgnoreReprint,
                 timeOut);
@@ -826,7 +826,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
         public static async Task<SendResult> SendGroupMessageByTagIdAsync(string accessTokenOrAppId, string tagId, string value, GroupMessageType type, bool isToAll = false, bool sendIgnoreReprint = false,
-            int timeOut = Config.TIME_OUT)
+            int timeOut = Config.TimeOut)
         {
             return await SendGroupMessageByFilterAsync(accessTokenOrAppId, null, tagId, value, type, isToAll, sendIgnoreReprint,
                 timeOut);
@@ -846,7 +846,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="description"></param>
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
-        public static async Task<SendResult> SendVideoGroupMessageByOpenIdAsync(string accessTokenOrAppId, string title, string description, string mediaId, int timeOut = Config.TIME_OUT, params string[] openIds)
+        public static async Task<SendResult> SendVideoGroupMessageByOpenIdAsync(string accessTokenOrAppId, string title, string description, string mediaId, int timeOut = Config.TimeOut, params string[] openIds)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -876,7 +876,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="msgId">发送出去的消息ID</param>
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
-        public static async Task<WxJsonResult> DeleteSendMessageAsync(string accessTokenOrAppId, string msgId, int timeOut = Config.TIME_OUT)
+        public static async Task<WxJsonResult> DeleteSendMessageAsync(string accessTokenOrAppId, string msgId, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -903,7 +903,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="wxName">接收消息用户的微信号</param>
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
-        public static async Task<SendResult> SendGroupMessagePreviewAsync(string accessTokenOrAppId, GroupMessageType type, string value, string openId, string wxName = null, int timeOut = Config.TIME_OUT)
+        public static async Task<SendResult> SendGroupMessagePreviewAsync(string accessTokenOrAppId, GroupMessageType type, string value, string openId, string wxName = null, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -995,7 +995,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="timeOut"></param>
         /// <returns></returns>
         public static async Task<SendResult> WxCardGroupMessagePreviewAsync(string accessTokenOrAppId, string cardId, string code,
-            string openId, string wxName, string timestamp, string signature, int timeOut = Config.TIME_OUT)
+            string openId, string wxName, string timestamp, string signature, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -1025,7 +1025,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="msgId">群发消息后返回的消息id</param>
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
-        public static async Task<GetSendResult> GetGroupMessageResultAsync(string accessTokenOrAppId, string msgId, int timeOut = Config.TIME_OUT)
+        public static async Task<GetSendResult> GetGroupMessageResultAsync(string accessTokenOrAppId, string msgId, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -1051,7 +1051,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="timeOut"></param>
         /// <returns></returns>
         public static async Task<VideoMediaIdResult> GetVideoMediaIdResultAsync(string accessTokenOrAppId, string mediaId, string title,
-            string description, int timeOut = Config.TIME_OUT)
+            string description, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {

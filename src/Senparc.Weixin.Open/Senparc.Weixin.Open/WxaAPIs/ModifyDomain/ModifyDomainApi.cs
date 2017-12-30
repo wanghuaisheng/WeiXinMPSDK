@@ -63,7 +63,7 @@ namespace Senparc.Weixin.Open.WxaAPIs
             List<string> wsrequestdomain,
             List<string> uploaddomain,
             List<string> downloaddomain,
-            int timeOut = Config.TIME_OUT)
+            int timeOut = Config.TimeOut)
         {
             var url = string.Format(Config.ApiMpHost + "/wxa/modify_domain?access_token={0}", accessToken.AsUrlData());
 
@@ -113,7 +113,7 @@ namespace Senparc.Weixin.Open.WxaAPIs
             List<string> wsrequestdomain,
             List<string> uploaddomain,
             List<string> downloaddomain,
-            int timeOut = Config.TIME_OUT)
+            int timeOut = Config.TimeOut)
         {
             var url = string.Format(Config.ApiMpHost + "/wxa/modify_domain?access_token={0}", accessToken.AsUrlData());
 

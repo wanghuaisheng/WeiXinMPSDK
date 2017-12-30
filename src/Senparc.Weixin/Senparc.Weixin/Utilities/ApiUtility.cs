@@ -37,7 +37,7 @@ Detail: https://github.com/JeffreySu/WeiXinMPSDK/blob/master/license.md
 
 using System;
 
-namespace Senparc.Weixin.Utilities.WeixinUtility
+namespace Senparc.Weixin.Utilities
 {
     /// <summary>
     /// 微信 API 工具类

@@ -24,7 +24,7 @@ using System.Xml;
 using System.Xml.Linq;
 using System.Xml.Serialization;
 
-namespace Senparc.Weixin.XmlUtility
+namespace Senparc.Weixin.Utilities
 {
     /// <summary>
     /// XML 工具类

@@ -42,7 +42,7 @@ namespace Senparc.Weixin.Work.AdvancedAPIs
         /// <param name="timeOut"></param>
         /// <returns></returns>
         [Obsolete("请使用Senparc.Weixin.MP.TenPayLibV3.Transfers()")]
-        public static string Transfers(string data, int timeOut = Config.TIME_OUT)
+        public static string Transfers(string data, int timeOut = Config.TimeOut)
         {
             var urlFormat = "https://api.mch.weixin.qq.com/mmpaymkttransfers/promotion/transfers";
 
@@ -60,7 +60,7 @@ namespace Senparc.Weixin.Work.AdvancedAPIs
         /// <param name="timeOut"></param>
         /// <returns></returns>
         [Obsolete("请使用Senparc.Weixin.MP.TenPayLibV3.GetTransferInfo()")]
-        public static string GetTransferInfo(string data, int timeOut = Config.TIME_OUT)
+        public static string GetTransferInfo(string data, int timeOut = Config.TimeOut)
         {
             var urlFormat = "https://api.mch.weixin.qq.com/mmpaymkttransfers/gettransferinfo";
 
@@ -82,7 +82,7 @@ namespace Senparc.Weixin.Work.AdvancedAPIs
         /// <param name="timeOut"></param>
         /// <returns></returns>
         [Obsolete("请使用Senparc.Weixin.MP.TenPayLibV3.TransfersAsync()")]
-        public static async Task<string> TransfersAsync(string data, int timeOut = Config.TIME_OUT)
+        public static async Task<string> TransfersAsync(string data, int timeOut = Config.TimeOut)
         {
             var urlFormat = "https://api.mch.weixin.qq.com/mmpaymkttransfers/promotion/transfers";
 
@@ -100,7 +100,7 @@ namespace Senparc.Weixin.Work.AdvancedAPIs
         /// <param name="timeOut"></param>
         /// <returns></returns>
         [Obsolete("请使用Senparc.Weixin.MP.TenPayLibV3.GetTransferInfoAsync()")]
-        public static async Task<string> GetTransferInfoAsync(string data, int timeOut = Config.TIME_OUT)
+        public static async Task<string> GetTransferInfoAsync(string data, int timeOut = Config.TimeOut)
         {
             var urlFormat = "https://api.mch.weixin.qq.com/mmpaymkttransfers/gettransferinfo";
 

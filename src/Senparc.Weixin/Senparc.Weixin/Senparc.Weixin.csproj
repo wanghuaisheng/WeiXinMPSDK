@@ -151,17 +151,16 @@
     <Compile Include="Threads\SenparcMessageQueueThreadUtility.cs" />
     <Compile Include="Properties\Annotations.cs" />
     <Compile Include="Threads\ThreadUtility.cs" />
-    <Compile Include="Utilities\BrowserUtility\BrowserUtility.cs" />
+    <Compile Include="Utilities\BrowserUtility.cs" />
     <Compile Include="CommonAPIs\CommonJsonSend.cs" />
-    <Compile Include="Utilities\CacheUtility\CacheUtility.cs" />
-    <Compile Include="Utilities\CacheUtility\FlushCache.cs" />
-    <Compile Include="Utilities\EntityUtility\EntityUtility.cs" />
+    <Compile Include="Utilities\FlushCache.cs" />
+    <Compile Include="Utilities\EntityUtility.cs" />
     <Compile Include="Utilities\HttpUtility\RequestUtility.Get.cs" />
     <Compile Include="Utilities\HttpUtility\RequestUtility.Post.cs" />
     <Compile Include="Utilities\HttpUtility\SenparcHttpResponse.cs" />
     <Compile Include="Utilities\HttpUtility\UrlUtility.cs" />
-    <Compile Include="Utilities\WeixinUtility\ApiUtility.cs" />
-    <Compile Include="Utilities\XmlUtility\XmlUtility.cs" />
+    <Compile Include="Utilities\ApiUtility.cs" />
+    <Compile Include="Utilities\XmlUtility.cs" />
     <Compile Include="Utilities\HttpUtility\Get.cs" />
     <Compile Include="Utilities\HttpUtility\Post.cs" />
     <Compile Include="Utilities\HttpUtility\RequestUtility.cs" />
@@ -172,13 +171,21 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Entities\Request\WxRequestMessageBase.cs" />
     <Compile Include="Entities\Response\ResponseMessageBase.cs" />
-    <Compile Include="Utilities\StreamUtility\StreamUtility.cs" />
-    <Compile Include="Trace\WeixinTrace.cs" />
+    <Compile Include="Utilities\StreamUtility.cs" />
+    <Compile Include="Utilities\WeixinTrace.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Trace\" />
+    <Folder Include="Utilities\BrowserUtility\" />
+    <Folder Include="Utilities\CacheUtility\" />
+    <Folder Include="Utilities\EntityUtility\" />
+    <Folder Include="Utilities\StreamUtility\" />
+    <Folder Include="Utilities\WeixinUtility\" />
+    <Folder Include="Utilities\XmlUtility\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

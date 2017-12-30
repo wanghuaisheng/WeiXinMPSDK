@@ -56,24 +56,12 @@ namespace Senparc.Weixin
         /// 请求超时设置（以毫秒为单位），默认为10秒。
         /// 说明：此处常量专为提供给方法的参数的默认值，不是方法内所有请求的默认超时时间。
         /// </summary>
-        public const int TIME_OUT = 10000;
-
-        private static bool _isDebug = false;//TODO:需要考虑分布式的情况，后期需要储存在缓存中
+        public const int TimeOut = 10000;
 
         /// <summary>
         /// 指定是否是Debug状态，如果是，系统会自动输出日志
         /// </summary>
-        public static bool IsDebug
-        {
-            get
-            {
-                return _isDebug;
-            }
-            set
-            {
-                _isDebug = value;
-            }
-        }
+        public static bool IsDebug { get; set; } = false;
 
         /// <summary>
         /// JavaScriptSerializer 类接受的 JSON 字符串的最大长度
@@ -85,14 +73,6 @@ namespace Senparc.Weixin
         /// </summary>
         public static string DefaultCacheNamespace = "DefaultCache";//TODO:需要考虑分布式的情况，后期需要储存在缓存中,或进行全局配置
 
-#if !NET45
-        /// <summary>
-        /// 默认微信配置
-        /// </summary>
-        public static SenparcWeixinSetting DefaultSenparcWeixinSetting { get; set; }
-#endif
-
-
         /// <summary>
         /// 微信支付使用沙箱模式
         /// </summary>
@@ -103,45 +83,15 @@ namespace Senparc.Weixin
         /// </summary>
         public static string RootDictionaryPath { get; set; }
 
-        #region API地址（前缀）设置
-
-        #region  公众号（小程序）、开放平台 API 的服务器地址（默认为：https://api.weixin.qq.com）
-
         /// <summary>
         /// 公众号（小程序）、开放平台 API 的服务器地址（默认为：https://api.weixin.qq.com）
         /// </summary>
-        private static string _apiMpHost = "https://api.weixin.qq.com";
-        /// <summary>
-        /// 公众号（小程序）、开放平台 API 的服务器地址（默认为：https://api.weixin.qq.com）
-        /// </summary>
-        public static string ApiMpHost
-        {
-            get { return _apiMpHost; }
-            set { _apiMpHost = value; }
-        }
-
-        #endregion
-
-        #region 企业微信API的服务器地址（默认为：https://qyapi.weixin.qq.com）
+        public static string ApiMpHost { get; set; } = "https://api.weixin.qq.com";
 
         /// <summary>
         /// 企业微信API的服务器地址（默认为：https://qyapi.weixin.qq.com）
         /// </summary>
-        private static string _apiWorkHost = "https://qyapi.weixin.qq.com";
-        /// <summary>
-        /// 企业微信API的服务器地址（默认为：https://qyapi.weixin.qq.com）
-        /// </summary>
-        public static string ApiWorkHost
-        {
-            get { return _apiWorkHost; }
-            set { _apiWorkHost = value; }
-        }
-
-        #endregion
-
-        #endregion
-
-
+        public static string ApiWorkHost { get; set; } = "https://qyapi.weixin.qq.com";
 
         /// <summary>
         /// 默认的AppId检查规则
@@ -164,15 +114,12 @@ namespace Senparc.Weixin
 
                 return accessTokenOrAppId != null && accessTokenOrAppId.Contains("@");
             }
-            else
-            {
-                /*
+            /*
                  * 公众号AppId：wxe273c3a02e09ff8c
                  * 公众号AccessToken：ga0wJ5ZmdB1Ef1gMMxmps6Uz1a9TXoutQtRqgYTbIqHfTm4Ssfoj0DjMLp1_KkG7FkaqS7m7f9rrYbqBQMBizRBQjHFG5ZIov8Wb0FBnHDq5fGpCu0S2H2j2aM8c6KDqGGEiAIAJJH
                  */
-                return accessTokenOrAppId != null && accessTokenOrAppId.Length <= 32 /*wxc3c90837b0e76080*/
-                ;
-            }
+            return accessTokenOrAppId != null && accessTokenOrAppId.Length <= 32;/*wxc3c90837b0e76080*/
+
         };
     }
 }

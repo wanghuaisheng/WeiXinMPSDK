@@ -52,7 +52,7 @@ namespace Senparc.Weixin.Work.CommonAPIs
         /// <param name="buttonData">菜单内容</param>
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
-        public static WorkJsonResult CreateMenu(string accessToken, int agentId, ButtonGroup buttonData, int timeOut = Config.TIME_OUT)
+        public static WorkJsonResult CreateMenu(string accessToken, int agentId, ButtonGroup buttonData, int timeOut = Config.TimeOut)
         {
             var urlFormat = string.Format(Config.ApiWorkHost + "/cgi-bin/menu/create?access_token={0}&agentid={1}", accessToken.AsUrlData(), agentId);
             ////对特殊符号进行URL转义

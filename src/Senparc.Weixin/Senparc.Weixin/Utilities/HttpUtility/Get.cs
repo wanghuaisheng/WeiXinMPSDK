@@ -59,6 +59,7 @@ using System.Web.Script.Serialization;
 #endif
 using Senparc.Weixin.Entities;
 using Senparc.Weixin.Exceptions;
+using Senparc.Weixin.Utilities;
 
 namespace Senparc.Weixin.HttpUtility
 {

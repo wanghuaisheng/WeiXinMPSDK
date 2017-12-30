@@ -40,6 +40,7 @@ using Senparc.Weixin.Entities;
 using Senparc.Weixin.Exceptions;
 using Senparc.Weixin.Helpers;
 using Senparc.Weixin.HttpUtility;
+using Senparc.Weixin.Utilities;
 
 namespace Senparc.Weixin.CommonAPIs
 {
@@ -61,7 +62,7 @@ namespace Senparc.Weixin.CommonAPIs
         /// <param name="checkValidationResult"></param>
         /// <param name="jsonSetting"></param>
         /// <returns></returns>
-        public static WxJsonResult Send(string accessToken, string urlFormat, object data, CommonJsonSendType sendType = CommonJsonSendType.POST, int timeOut = Config.TIME_OUT, bool checkValidationResult = false, JsonSetting jsonSetting = null)
+        public static WxJsonResult Send(string accessToken, string urlFormat, object data, CommonJsonSendType sendType = CommonJsonSendType.POST, int timeOut = Config.TimeOut, bool checkValidationResult = false, JsonSetting jsonSetting = null)
         {
             return Send<WxJsonResult>(accessToken, urlFormat, data, sendType, timeOut, checkValidationResult, jsonSetting);
         }
@@ -77,7 +78,7 @@ namespace Senparc.Weixin.CommonAPIs
         /// <param name="checkValidationResult">验证服务器证书回调自动验证</param>
         /// <param name="jsonSetting"></param>
         /// <returns></returns>
-        public static T Send<T>(string accessToken, string urlFormat, object data, CommonJsonSendType sendType = CommonJsonSendType.POST, int timeOut = Config.TIME_OUT, bool checkValidationResult = false, JsonSetting jsonSetting = null)
+        public static T Send<T>(string accessToken, string urlFormat, object data, CommonJsonSendType sendType = CommonJsonSendType.POST, int timeOut = Config.TimeOut, bool checkValidationResult = false, JsonSetting jsonSetting = null)
         {
             //TODO:此方法可以设定一个日志记录开关
 
@@ -132,7 +133,7 @@ namespace Senparc.Weixin.CommonAPIs
         /// <param name="checkValidationResult">验证服务器证书回调自动验证</param>
         /// <param name="jsonSetting"></param>
         /// <returns></returns>
-        public static async Task<WxJsonResult> SendAsync(string accessToken, string urlFormat, object data, CommonJsonSendType sendType = CommonJsonSendType.POST, int timeOut = Config.TIME_OUT, bool checkValidationResult = false, JsonSetting jsonSetting = null)
+        public static async Task<WxJsonResult> SendAsync(string accessToken, string urlFormat, object data, CommonJsonSendType sendType = CommonJsonSendType.POST, int timeOut = Config.TimeOut, bool checkValidationResult = false, JsonSetting jsonSetting = null)
         {
             return await SendAsync<WxJsonResult>(accessToken, urlFormat, data, sendType, timeOut, checkValidationResult, jsonSetting);
         }
@@ -149,7 +150,7 @@ namespace Senparc.Weixin.CommonAPIs
         /// <param name="jsonSetting">JSON字符串生成设置</param>
         /// <returns></returns>
         public static async Task<T> SendAsync<T>(string accessToken, string urlFormat, object data,
-            CommonJsonSendType sendType = CommonJsonSendType.POST, int timeOut = Config.TIME_OUT,
+            CommonJsonSendType sendType = CommonJsonSendType.POST, int timeOut = Config.TimeOut,
             bool checkValidationResult = false, JsonSetting jsonSetting = null)
         {
             try

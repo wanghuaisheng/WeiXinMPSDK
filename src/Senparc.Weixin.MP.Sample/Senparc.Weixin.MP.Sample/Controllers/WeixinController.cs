@@ -13,6 +13,7 @@ using System.IO;
 using System.Web.Configuration;
 using System.Web.Mvc;
 using Senparc.Weixin.MP.Entities.Request;
+using Senparc.Weixin.Utilities;
 
 namespace Senparc.Weixin.MP.Sample.Controllers
 {

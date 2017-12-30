@@ -69,7 +69,7 @@ namespace Senparc.Weixin.WxOpen.AdvancedAPIs.WxApp
         /// <param name="auto_color">自动配置线条颜色</param>
         /// <param name="timeOut">请求超时时间</param>
         /// <returns></returns>
-        public static WxJsonResult GetWxaCode(string accessTokenOrAppId, Stream stream, string path, int width = 430, bool auto_color = false, int timeOut = Config.TIME_OUT)
+        public static WxJsonResult GetWxaCode(string accessTokenOrAppId, Stream stream, string path, int width = 430, bool auto_color = false, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -97,7 +97,7 @@ namespace Senparc.Weixin.WxOpen.AdvancedAPIs.WxApp
         /// <param name="auto_color">自动配置线条颜色</param>
         /// <param name="timeOut">请求超时时间</param>
         /// <returns></returns>
-        public static WxJsonResult GetWxaCode(string accessTokenOrAppId, string filePath, string path, int width = 430, bool auto_color = false, int timeOut = Config.TIME_OUT)
+        public static WxJsonResult GetWxaCode(string accessTokenOrAppId, string filePath, string path, int width = 430, bool auto_color = false, int timeOut = Config.TimeOut)
         {
             using (var ms = new MemoryStream())
             {
@@ -125,7 +125,7 @@ namespace Senparc.Weixin.WxOpen.AdvancedAPIs.WxApp
         /// <param name="auto_color">自动配置线条颜色</param>
         /// <param name="timeOut">请求超时时间</param>
         /// <returns></returns>
-        public static WxJsonResult GetWxaCodeUnlimit(string accessTokenOrAppId, Stream stream, string scene, string page, int width = 430, bool auto_color = false, int timeOut = Config.TIME_OUT)
+        public static WxJsonResult GetWxaCodeUnlimit(string accessTokenOrAppId, Stream stream, string scene, string page, int width = 430, bool auto_color = false, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -154,7 +154,7 @@ namespace Senparc.Weixin.WxOpen.AdvancedAPIs.WxApp
         /// <param name="auto_color">自动配置线条颜色</param>
         /// <param name="timeOut">请求超时时间</param>
         /// <returns></returns>
-        public static WxJsonResult GetWxaCodeUnlimit(string accessTokenOrAppId, string filePath, string scene, string page, int width = 430, bool auto_color = false, int timeOut = Config.TIME_OUT)
+        public static WxJsonResult GetWxaCodeUnlimit(string accessTokenOrAppId, string filePath, string scene, string page, int width = 430, bool auto_color = false, int timeOut = Config.TimeOut)
         {
             using (var ms = new MemoryStream())
             {
@@ -180,7 +180,7 @@ namespace Senparc.Weixin.WxOpen.AdvancedAPIs.WxApp
         /// <param name="width">二维码的宽度</param>
         /// <param name="timeOut">请求超时时间</param>
         /// <returns></returns>
-        public static WxJsonResult CreateWxQrCode(string accessTokenOrAppId, Stream stream, string path, int width = 430, int timeOut = Config.TIME_OUT)
+        public static WxJsonResult CreateWxQrCode(string accessTokenOrAppId, Stream stream, string path, int width = 430, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -207,7 +207,7 @@ namespace Senparc.Weixin.WxOpen.AdvancedAPIs.WxApp
         /// <param name="width">二维码的宽度</param>
         /// <param name="timeOut">请求超时时间</param>
         /// <returns></returns>
-        public static WxJsonResult CreateWxQrCode(string accessTokenOrAppId, string filePath, string path, int width = 430, int timeOut = Config.TIME_OUT)
+        public static WxJsonResult CreateWxQrCode(string accessTokenOrAppId, string filePath, string path, int width = 430, int timeOut = Config.TimeOut)
         {
             using (var ms = new MemoryStream())
             {
@@ -239,7 +239,7 @@ namespace Senparc.Weixin.WxOpen.AdvancedAPIs.WxApp
         /// <param name="auto_color">自动配置线条颜色</param>
         /// <param name="timeOut">请求超时时间</param>
         /// <returns></returns>
-        public static async Task<WxJsonResult> GetWxaCodeAsync(string accessTokenOrAppId, string filePath, string path, int width = 430, bool auto_color = false, int timeOut = Config.TIME_OUT)
+        public static async Task<WxJsonResult> GetWxaCodeAsync(string accessTokenOrAppId, string filePath, string path, int width = 430, bool auto_color = false, int timeOut = Config.TimeOut)
         {
             using (var ms = new MemoryStream())
             {
@@ -268,7 +268,7 @@ namespace Senparc.Weixin.WxOpen.AdvancedAPIs.WxApp
         /// <param name="auto_color">自动配置线条颜色</param>
         /// <param name="timeOut">请求超时时间</param>
         /// <returns></returns>
-        public static async Task<WxJsonResult> GetWxaCodeUnlimitAsync(string accessTokenOrAppId, Stream stream, string scene, string page, int width = 430, bool auto_color = false, int timeOut = Config.TIME_OUT)
+        public static async Task<WxJsonResult> GetWxaCodeUnlimitAsync(string accessTokenOrAppId, Stream stream, string scene, string page, int width = 430, bool auto_color = false, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -297,7 +297,7 @@ namespace Senparc.Weixin.WxOpen.AdvancedAPIs.WxApp
         /// <param name="auto_color">自动配置线条颜色</param>
         /// <param name="timeOut">请求超时时间</param>
         /// <returns></returns>
-        public static async Task<WxJsonResult> GetWxaCodeUnlimitAsync(string accessTokenOrAppId, string filePath, string scene, string page, int width = 430, bool auto_color = false, int timeOut = Config.TIME_OUT)
+        public static async Task<WxJsonResult> GetWxaCodeUnlimitAsync(string accessTokenOrAppId, string filePath, string scene, string page, int width = 430, bool auto_color = false, int timeOut = Config.TimeOut)
         {
             using (var ms = new MemoryStream())
             {
@@ -324,7 +324,7 @@ namespace Senparc.Weixin.WxOpen.AdvancedAPIs.WxApp
         /// <param name="auto_color">自动配置线条颜色</param>
         /// <param name="timeOut">请求超时时间</param>
         /// <returns></returns>
-        public static async Task<WxJsonResult> GetWxaCodeAsync(string accessTokenOrAppId, Stream stream, string path, int width = 430, bool auto_color = false, int timeOut = Config.TIME_OUT)
+        public static async Task<WxJsonResult> GetWxaCodeAsync(string accessTokenOrAppId, Stream stream, string path, int width = 430, bool auto_color = false, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -351,7 +351,7 @@ namespace Senparc.Weixin.WxOpen.AdvancedAPIs.WxApp
         /// <param name="width">二维码的宽度</param>
         /// <param name="timeOut">请求超时时间</param>
         /// <returns></returns>
-        public static async Task<WxJsonResult> CreateWxQrCodeAsync(string accessTokenOrAppId, Stream stream, string path, int width = 430, int timeOut = Config.TIME_OUT)
+        public static async Task<WxJsonResult> CreateWxQrCodeAsync(string accessTokenOrAppId, Stream stream, string path, int width = 430, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -378,7 +378,7 @@ namespace Senparc.Weixin.WxOpen.AdvancedAPIs.WxApp
         /// <param name="width">二维码的宽度</param>
         /// <param name="timeOut">请求超时时间</param>
         /// <returns></returns>
-        public static async Task<WxJsonResult> CreateWxQrCodeAsync(string accessTokenOrAppId, string filePath, string path, int width = 430, int timeOut = Config.TIME_OUT)
+        public static async Task<WxJsonResult> CreateWxQrCodeAsync(string accessTokenOrAppId, string filePath, string path, int width = 430, int timeOut = Config.TimeOut)
         {
             using (var ms = new MemoryStream())
             {

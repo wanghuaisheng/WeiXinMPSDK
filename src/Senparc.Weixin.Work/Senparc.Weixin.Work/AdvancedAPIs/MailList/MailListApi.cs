@@ -92,7 +92,7 @@ namespace Senparc.Weixin.Work.AdvancedAPIs
             long[] department = null, int[] order = null, string gender = null,
             string position = null, string email = null, string telephone = null, string avatarMediaid = null,
             int? isLeader = null, int? enable = null,
-            Extattr extattr = null, int timeOut = Config.TIME_OUT)
+            Extattr extattr = null, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -166,7 +166,7 @@ namespace Senparc.Weixin.Work.AdvancedAPIs
             long[] department = null, int[] order = null, string gender = null,
             string position = null, string email = null, string telephone = null, string avatarMediaid = null,
             int? isLeader = null, int? enable = null,
-            Extattr extattr = null, int timeOut = Config.TIME_OUT)
+            Extattr extattr = null, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -224,7 +224,7 @@ namespace Senparc.Weixin.Work.AdvancedAPIs
         /// <param name="useridlist">成员UserID列表。对应管理端的帐号</param>
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
-        public static WorkJsonResult BatchDeleteMember(string accessTokenOrAppKey, string[] useridlist, int timeOut = Config.TIME_OUT)
+        public static WorkJsonResult BatchDeleteMember(string accessTokenOrAppKey, string[] useridlist, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -308,7 +308,7 @@ namespace Senparc.Weixin.Work.AdvancedAPIs
         /// <param name="id">部门ID。用指定部门ID新建部门，不指定此参数时，则自动生成</param>
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
-        public static CreateDepartmentResult CreateDepartment(string accessTokenOrAppKey, string name, long parentId, int order = 1, long? id = null, int timeOut = Config.TIME_OUT)
+        public static CreateDepartmentResult CreateDepartment(string accessTokenOrAppKey, string name, long parentId, int order = 1, long? id = null, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -340,7 +340,7 @@ namespace Senparc.Weixin.Work.AdvancedAPIs
         /// <param name="order">在父部门中的次序。从1开始，数字越大排序越靠后</param>
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
-        public static WorkJsonResult UpdateDepartment(string accessTokenOrAppKey, long id, string name, long parentId, int order = 1, int timeOut = Config.TIME_OUT)
+        public static WorkJsonResult UpdateDepartment(string accessTokenOrAppKey, long id, string name, long parentId, int order = 1, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -415,7 +415,7 @@ namespace Senparc.Weixin.Work.AdvancedAPIs
         /// <param name="tagId">标签id，非负整型，指定此参数时新增的标签会生成对应的标签id，不指定时则以目前最大的id自增。</param>
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
-        public static CreateTagResult CreateTag(string accessTokenOrAppKey, string tagName, int? tagId = null, int timeOut = Config.TIME_OUT)
+        public static CreateTagResult CreateTag(string accessTokenOrAppKey, string tagName, int? tagId = null, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -444,7 +444,7 @@ namespace Senparc.Weixin.Work.AdvancedAPIs
         /// <param name="tagName">标签名称。长度为0~64个字符</param>
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
-        public static WorkJsonResult UpdateTag(string accessTokenOrAppKey, int tagId, string tagName, int timeOut = Config.TIME_OUT)
+        public static WorkJsonResult UpdateTag(string accessTokenOrAppKey, int tagId, string tagName, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -507,7 +507,7 @@ namespace Senparc.Weixin.Work.AdvancedAPIs
         /// <param name="partyList">企业部门ID列表，注意：userlist、partylist不能同时为空</param>
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
-        public static AddTagMemberResult AddTagMember(string accessTokenOrAppKey, int tagId, string[] userList = null, long[] partyList = null, int timeOut = Config.TIME_OUT)
+        public static AddTagMemberResult AddTagMember(string accessTokenOrAppKey, int tagId, string[] userList = null, long[] partyList = null, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -537,7 +537,7 @@ namespace Senparc.Weixin.Work.AdvancedAPIs
         /// <param name="partylist">企业部门ID列表，注意：userlist、partylist不能同时为空</param>
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
-        public static DelTagMemberResult DelTagMember(string accessTokenOrAppKey, int tagId, string[] userList = null, long[] partylist = null, int timeOut = Config.TIME_OUT)
+        public static DelTagMemberResult DelTagMember(string accessTokenOrAppKey, int tagId, string[] userList = null, long[] partylist = null, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -586,7 +586,7 @@ namespace Senparc.Weixin.Work.AdvancedAPIs
         /// <param name="inviteTips">推送到微信上的提示语（只有认证号可以使用）。当使用微信推送时，该字段默认为“请关注XXX企业号”，邮件邀请时，该字段无效。</param>
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
-        public static InviteMemberResult InviteMember(string accessTokenOrAppKey, string userId, int timeOut = Config.TIME_OUT)
+        public static InviteMemberResult InviteMember(string accessTokenOrAppKey, string userId, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -639,7 +639,7 @@ namespace Senparc.Weixin.Work.AdvancedAPIs
             long[] department = null, int[] order = null, string gender = null,
             string position = null, string email = null, string telephone = null, string avatarMediaid = null,
             int? isLeader = null, int? enable = null,
-            Extattr extattr = null, int timeOut = Config.TIME_OUT)
+            Extattr extattr = null, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -713,7 +713,7 @@ namespace Senparc.Weixin.Work.AdvancedAPIs
             long[] department = null, int[] order = null, string gender = null,
             string position = null, string email = null, string telephone = null, string avatarMediaid = null,
             int? isLeader = null, int? enable = null,
-            Extattr extattr = null, int timeOut = Config.TIME_OUT)
+            Extattr extattr = null, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -769,7 +769,7 @@ namespace Senparc.Weixin.Work.AdvancedAPIs
         /// <param name="useridlist"></param>
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
-        public static async Task<WorkJsonResult> BatchDeleteMemberAsync(string accessTokenOrAppKey, string[] useridlist, int timeOut = Config.TIME_OUT)
+        public static async Task<WorkJsonResult> BatchDeleteMemberAsync(string accessTokenOrAppKey, string[] useridlist, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -855,7 +855,7 @@ namespace Senparc.Weixin.Work.AdvancedAPIs
         /// <param name="id">部门ID。用指定部门ID新建部门，不指定此参数时，则自动生成</param>
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
-        public static async Task<CreateDepartmentResult> CreateDepartmentAsync(string accessTokenOrAppKey, string name, long parentId, int order = 1, long? id = null, int timeOut = Config.TIME_OUT)
+        public static async Task<CreateDepartmentResult> CreateDepartmentAsync(string accessTokenOrAppKey, string name, long parentId, int order = 1, long? id = null, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -887,7 +887,7 @@ namespace Senparc.Weixin.Work.AdvancedAPIs
         /// <param name="order">在父部门中的次序。从1开始，数字越大排序越靠后</param>
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
-        public static async Task<WorkJsonResult> UpdateDepartmentAsync(string accessTokenOrAppKey, long id, string name, long parentId, int order = 1, int timeOut = Config.TIME_OUT)
+        public static async Task<WorkJsonResult> UpdateDepartmentAsync(string accessTokenOrAppKey, long id, string name, long parentId, int order = 1, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -962,7 +962,7 @@ namespace Senparc.Weixin.Work.AdvancedAPIs
         /// <param name="tagId">标签id，整型，指定此参数时新增的标签会生成对应的标签id，不指定时则以目前最大的id自增。</param>
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
-        public static async Task<CreateTagResult> CreateTagAsync(string accessTokenOrAppKey, string tagName, int? tagId = null, int timeOut = Config.TIME_OUT)
+        public static async Task<CreateTagResult> CreateTagAsync(string accessTokenOrAppKey, string tagName, int? tagId = null, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -991,7 +991,7 @@ namespace Senparc.Weixin.Work.AdvancedAPIs
         /// <param name="tagName">标签名称。长度为0~64个字符</param>
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
-        public static async Task<WorkJsonResult> UpdateTagAsync(string accessTokenOrAppKey, int tagId, string tagName, int timeOut = Config.TIME_OUT)
+        public static async Task<WorkJsonResult> UpdateTagAsync(string accessTokenOrAppKey, int tagId, string tagName, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -1055,7 +1055,7 @@ namespace Senparc.Weixin.Work.AdvancedAPIs
         /// <param name="partyList">企业部门ID列表，注意：userlist、partylist不能同时为空</param>
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
-        public static async Task<AddTagMemberResult> AddTagMemberAsync(string accessTokenOrAppKey, int tagId, string[] userList = null, long[] partyList = null, int timeOut = Config.TIME_OUT)
+        public static async Task<AddTagMemberResult> AddTagMemberAsync(string accessTokenOrAppKey, int tagId, string[] userList = null, long[] partyList = null, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -1084,7 +1084,7 @@ namespace Senparc.Weixin.Work.AdvancedAPIs
         /// <param name="partylist">企业部门ID列表，注意：userlist、partylist不能同时为空</param>
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
-        public static async Task<DelTagMemberResult> DelTagMemberAsync(string accessTokenOrAppKey, int tagId, string[] userList, long[] partylist = null, int timeOut = Config.TIME_OUT)
+        public static async Task<DelTagMemberResult> DelTagMemberAsync(string accessTokenOrAppKey, int tagId, string[] userList, long[] partylist = null, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -1135,7 +1135,7 @@ namespace Senparc.Weixin.Work.AdvancedAPIs
         /// <param name="inviteTips">推送到微信上的提示语（只有认证号可以使用）。当使用微信推送时，该字段默认为“请关注XXX企业号”，邮件邀请时，该字段无效。</param>
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
-        public static async Task<InviteMemberResult> InviteMemberAsync(string accessTokenOrAppKey, string userId, int timeOut = Config.TIME_OUT)
+        public static async Task<InviteMemberResult> InviteMemberAsync(string accessTokenOrAppKey, string userId, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {

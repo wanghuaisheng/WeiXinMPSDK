@@ -21,6 +21,7 @@ using Senparc.Weixin.MP.TenPayLibV3;
 using Senparc.Weixin.Open.ComponentAPIs;
 using Senparc.Weixin.Open.Containers;
 using Senparc.Weixin.Threads;
+using Senparc.Weixin.Utilities;
 
 namespace Senparc.Weixin.MP.Sample
 {
@@ -252,16 +253,16 @@ namespace Senparc.Weixin.MP.Sample
         {
             //这里设为Debug状态时，/App_Data/WeixinTraceLog/目录下会生成日志文件记录所有的API请求日志，正式发布版本建议关闭
             Senparc.Weixin.Config.IsDebug = true;
-            Senparc.Weixin.WeixinTrace.SendCustomLog("系统日志", "系统启动");//只在Senparc.Weixin.Config.IsDebug = true的情况下生效
+            WeixinTrace.SendCustomLog("系统日志", "系统启动");//只在Senparc.Weixin.Config.IsDebug = true的情况下生效
 
             //自定义日志记录回调
-            Senparc.Weixin.WeixinTrace.OnLogFunc = () =>
+            WeixinTrace.OnLogFunc = () =>
             {
                 //加入每次触发Log后需要执行的代码
             };
 
             //当发生基于WeixinException的异常时触发
-            Senparc.Weixin.WeixinTrace.OnWeixinExceptionFunc = ex =>
+            WeixinTrace.OnWeixinExceptionFunc = ex =>
             {
                 //加入每次触发WeixinExceptionLog后需要执行的代码
 

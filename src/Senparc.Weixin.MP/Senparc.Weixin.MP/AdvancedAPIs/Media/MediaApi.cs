@@ -87,7 +87,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="file"></param>
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
-        public static UploadTemporaryMediaResult UploadTemporaryMedia(string accessTokenOrAppId, UploadMediaFileType type, string file, int timeOut = Config.TIME_OUT)
+        public static UploadTemporaryMediaResult UploadTemporaryMedia(string accessTokenOrAppId, UploadMediaFileType type, string file, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -106,7 +106,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="news">图文消息组</param>
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
-        public static UploadTemporaryMediaResult UploadTemporaryNews(string accessTokenOrAppId, int timeOut = Config.TIME_OUT, params NewsModel[] news)
+        public static UploadTemporaryMediaResult UploadTemporaryNews(string accessTokenOrAppId, int timeOut = Config.TimeOut, params NewsModel[] news)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -170,7 +170,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="news">图文消息组</param>
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
-        public static UploadForeverMediaResult UploadNews(string accessTokenOrAppId, int timeOut = Config.TIME_OUT, params NewsModel[] news)
+        public static UploadForeverMediaResult UploadNews(string accessTokenOrAppId, int timeOut = Config.TimeOut, params NewsModel[] news)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -192,7 +192,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="file">文件路径</param>
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
-        public static UploadForeverMediaResult UploadForeverMedia(string accessTokenOrAppId, string file, int timeOut = Config.TIME_OUT)
+        public static UploadForeverMediaResult UploadForeverMedia(string accessTokenOrAppId, string file, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -240,7 +240,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="mediaId"></param>
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
-        public static GetNewsResultJson GetForeverNews(string accessTokenOrAppId, string mediaId, int timeOut = Config.TIME_OUT)
+        public static GetNewsResultJson GetForeverNews(string accessTokenOrAppId, string mediaId, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -279,7 +279,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="mediaId"></param>
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
-        public static WxJsonResult DeleteForeverMedia(string accessTokenOrAppId, string mediaId, int timeOut = Config.TIME_OUT)
+        public static WxJsonResult DeleteForeverMedia(string accessTokenOrAppId, string mediaId, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -302,7 +302,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <param name="news">图文素材</param>
         /// <returns></returns>
-        public static WxJsonResult UpdateForeverNews(string accessTokenOrAppId, string mediaId, int? index, NewsModel news, int timeOut = Config.TIME_OUT)
+        public static WxJsonResult UpdateForeverNews(string accessTokenOrAppId, string mediaId, int? index, NewsModel news, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -345,7 +345,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="count">返回素材的数量，取值在1到20之间</param>
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
-        public static MediaList_NewsResult GetNewsMediaList(string accessTokenOrAppId, int offset, int count, int timeOut = Config.TIME_OUT)
+        public static MediaList_NewsResult GetNewsMediaList(string accessTokenOrAppId, int offset, int count, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -374,7 +374,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="timeOut"></param>
         /// <returns></returns>
         public static MediaList_OthersResult GetOthersMediaList(string accessTokenOrAppId, UploadMediaFileType type, int offset,
-                                                           int count, int timeOut = Config.TIME_OUT)
+                                                           int count, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -399,7 +399,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="file"></param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static UploadImgResult UploadImg(string accessTokenOrAppId, string file, int timeOut = Config.TIME_OUT)
+        public static UploadImgResult UploadImg(string accessTokenOrAppId, string file, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -428,7 +428,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="file"></param>
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
-        public static async Task<UploadTemporaryMediaResult> UploadTemporaryMediaAsync(string accessTokenOrAppId, UploadMediaFileType type, string file, int timeOut = Config.TIME_OUT)
+        public static async Task<UploadTemporaryMediaResult> UploadTemporaryMediaAsync(string accessTokenOrAppId, UploadMediaFileType type, string file, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
            {
@@ -447,7 +447,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="news">图文消息组</param>
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
-        public static async Task<UploadTemporaryMediaResult> UploadTemporaryNewsAsync(string accessTokenOrAppId, int timeOut = Config.TIME_OUT, params NewsModel[] news)
+        public static async Task<UploadTemporaryMediaResult> UploadTemporaryNewsAsync(string accessTokenOrAppId, int timeOut = Config.TimeOut, params NewsModel[] news)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
            {
@@ -512,7 +512,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="news">图文消息组</param>
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
-        public static async Task<UploadForeverMediaResult> UploadNewsAsync(string accessTokenOrAppId, int timeOut = Config.TIME_OUT, params NewsModel[] news)
+        public static async Task<UploadForeverMediaResult> UploadNewsAsync(string accessTokenOrAppId, int timeOut = Config.TimeOut, params NewsModel[] news)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
            {
@@ -534,7 +534,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="file">文件路径</param>
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
-        public static async Task<UploadForeverMediaResult> UploadForeverMediaAsync(string accessTokenOrAppId, string file, int timeOut = Config.TIME_OUT)
+        public static async Task<UploadForeverMediaResult> UploadForeverMediaAsync(string accessTokenOrAppId, string file, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
            {
@@ -582,7 +582,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="mediaId"></param>
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
-        public static async Task<GetNewsResultJson> GetForeverNewsAsync(string accessTokenOrAppId, string mediaId, int timeOut = Config.TIME_OUT)
+        public static async Task<GetNewsResultJson> GetForeverNewsAsync(string accessTokenOrAppId, string mediaId, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
            {
@@ -621,7 +621,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="mediaId"></param>
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
-        public static async Task<WxJsonResult> DeleteForeverMediaAsync(string accessTokenOrAppId, string mediaId, int timeOut = Config.TIME_OUT)
+        public static async Task<WxJsonResult> DeleteForeverMediaAsync(string accessTokenOrAppId, string mediaId, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
            {
@@ -644,7 +644,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <param name="news">图文素材</param>
         /// <returns></returns>
-        public static async Task<WxJsonResult> UpdateForeverNewsAsync(string accessTokenOrAppId, string mediaId, int? index, NewsModel news, int timeOut = Config.TIME_OUT)
+        public static async Task<WxJsonResult> UpdateForeverNewsAsync(string accessTokenOrAppId, string mediaId, int? index, NewsModel news, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
            {
@@ -687,7 +687,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="count">返回素材的数量，取值在1到20之间</param>
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
-        public static async Task<MediaList_NewsResult> GetNewsMediaListAsync(string accessTokenOrAppId, int offset, int count, int timeOut = Config.TIME_OUT)
+        public static async Task<MediaList_NewsResult> GetNewsMediaListAsync(string accessTokenOrAppId, int offset, int count, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
            {
@@ -716,7 +716,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="timeOut"></param>
         /// <returns></returns>
         public static async Task<MediaList_OthersResult> GetOthersMediaListAsync(string accessTokenOrAppId, UploadMediaFileType type, int offset,
-                                                           int count, int timeOut = Config.TIME_OUT)
+                                                           int count, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
            {
@@ -741,7 +741,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="file"></param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static async Task<UploadImgResult> UploadImgAsync(string accessTokenOrAppId, string file, int timeOut = Config.TIME_OUT)
+        public static async Task<UploadImgResult> UploadImgAsync(string accessTokenOrAppId, string file, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
            {

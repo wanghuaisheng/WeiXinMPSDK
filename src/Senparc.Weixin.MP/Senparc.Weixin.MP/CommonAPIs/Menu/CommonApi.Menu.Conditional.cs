@@ -56,7 +56,7 @@ namespace Senparc.Weixin.MP.CommonAPIs
         /// <param name="buttonData">菜单内容</param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static CreateMenuConditionalResult CreateMenuConditional(string accessTokenOrAppId, ConditionalButtonGroup buttonData, int timeOut = Config.TIME_OUT)
+        public static CreateMenuConditionalResult CreateMenuConditional(string accessTokenOrAppId, ConditionalButtonGroup buttonData, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
              {

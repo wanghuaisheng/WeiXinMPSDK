@@ -71,7 +71,7 @@ namespace Senparc.Weixin.Open.WxaAPIs
         /// <param name="wechatid">微信号</param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static TesterResultJson BindTester(string accessToken, string wechatid, int timeOut = Config.TIME_OUT)
+        public static TesterResultJson BindTester(string accessToken, string wechatid, int timeOut = Config.TimeOut)
         {
             var url = string.Format(Config.ApiMpHost + "/wxa/bind_tester?access_token={0}", accessToken.AsUrlData());
 
@@ -92,7 +92,7 @@ namespace Senparc.Weixin.Open.WxaAPIs
         /// <param name="wechatid">微信号</param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static TesterResultJson UnBindTester(string accessToken, string wechatid, int timeOut = Config.TIME_OUT)
+        public static TesterResultJson UnBindTester(string accessToken, string wechatid, int timeOut = Config.TimeOut)
         {
             var url = string.Format(Config.ApiMpHost + "/wxa/unbind_tester?access_token={0}", accessToken.AsUrlData());
 
@@ -147,7 +147,7 @@ namespace Senparc.Weixin.Open.WxaAPIs
         /// <param name="wechatid">微信号</param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static async Task<TesterResultJson> BindTesterSync(string accessToken, string wechatid, int timeOut = Config.TIME_OUT)
+        public static async Task<TesterResultJson> BindTesterSync(string accessToken, string wechatid, int timeOut = Config.TimeOut)
         {
             var url = string.Format(Config.ApiMpHost + "/wxa/bind_tester?access_token={0}", accessToken.AsUrlData());
 
@@ -167,7 +167,7 @@ namespace Senparc.Weixin.Open.WxaAPIs
         /// <param name="wechatid">微信号</param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static async Task<TesterResultJson> UnBindTesterSync(string accessToken, string wechatid, int timeOut = Config.TIME_OUT)
+        public static async Task<TesterResultJson> UnBindTesterSync(string accessToken, string wechatid, int timeOut = Config.TimeOut)
         {
             var url = string.Format(Config.ApiMpHost + "/wxa/unbind_tester?access_token={0}", accessToken.AsUrlData());
 

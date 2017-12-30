@@ -66,7 +66,7 @@ namespace Senparc.Weixin.HttpUtility
         /// </summary>
         /// <returns></returns>
         private static HttpWebRequest HttpGet_Common_Net45(string url, CookieContainer cookieContainer = null, Encoding encoding = null, X509Certificate2 cer = null,
-            string refererUrl = null, bool useAjax = false, int timeOut = Config.TIME_OUT)
+            string refererUrl = null, bool useAjax = false, int timeOut = Config.TimeOut)
         {
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
             request.Method = "GET";
@@ -152,7 +152,7 @@ namespace Senparc.Weixin.HttpUtility
         /// <param name="timeOut"></param>
         /// <returns></returns>
         public static string HttpGet(string url, CookieContainer cookieContainer = null, Encoding encoding = null, X509Certificate2 cer = null,
-            string refererUrl = null, bool useAjax = false, int timeOut = Config.TIME_OUT)
+            string refererUrl = null, bool useAjax = false, int timeOut = Config.TimeOut)
         {
 #if NET35 || NET40 || NET45
             HttpWebRequest request = HttpGet_Common_Net45(url, cookieContainer, encoding, cer, refererUrl, useAjax, timeOut);
@@ -195,7 +195,7 @@ namespace Senparc.Weixin.HttpUtility
         /// <param name="timeOut"></param>
         /// <returns></returns>
         public static HttpWebResponse HttpResponseGet(string url, CookieContainer cookieContainer = null, Encoding encoding = null, X509Certificate2 cer = null,
-    string refererUrl = null, bool useAjax = false, int timeOut = Config.TIME_OUT)
+    string refererUrl = null, bool useAjax = false, int timeOut = Config.TimeOut)
         {
             HttpWebRequest request = HttpGet_Common_Net45(url, cookieContainer, encoding, cer, refererUrl, useAjax, timeOut);
 
@@ -269,7 +269,7 @@ namespace Senparc.Weixin.HttpUtility
         /// <param name="refererUrl">referer参数</param>
         /// <returns></returns>
         public static async Task<string> HttpGetAsync(string url, CookieContainer cookieContainer = null, Encoding encoding = null, X509Certificate2 cer = null,
-            string refererUrl = null, bool useAjax = false, int timeOut = Config.TIME_OUT)
+            string refererUrl = null, bool useAjax = false, int timeOut = Config.TimeOut)
         {
 #if NET35 || NET40 || NET45
             HttpWebRequest request = HttpGet_Common_Net45(url, cookieContainer, encoding, cer, refererUrl, useAjax, timeOut);

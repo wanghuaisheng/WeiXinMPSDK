@@ -42,14 +42,13 @@
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using Senparc.Weixin.CacheUtility;
 using Senparc.Weixin.Containers;
 using Senparc.Weixin.Entities;
 using Senparc.Weixin.Exceptions;
+using Senparc.Weixin.Utilities;
 using Senparc.Weixin.Work.CommonAPIs;
 using Senparc.Weixin.Work.Entities;
 using Senparc.Weixin.Work.Exceptions;
-using Senparc.Weixin.Utilities.WeixinUtility;
 
 namespace Senparc.Weixin.Work.Containers
 {

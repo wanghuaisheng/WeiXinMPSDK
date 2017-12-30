@@ -30,12 +30,11 @@ Detail: https://github.com/JeffreySu/WeiXinMPSDK/blob/master/license.md
 ----------------------------------------------------------------*/
 
 
-
 using System;
 using System.IO;
 using System.Threading.Tasks;
 
-namespace Senparc.Weixin.StreamUtility
+namespace Senparc.Weixin.Utilities
 {
     /// <summary>
     /// 流工具类

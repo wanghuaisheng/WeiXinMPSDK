@@ -54,7 +54,7 @@ namespace Senparc.Weixin.Work.AdvancedAPIs.SSO
         /// <param name="providerSecret"></param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static ProviderTokenResult GetProviderToken(string corpId, string providerSecret, int timeOut = Config.TIME_OUT)
+        public static ProviderTokenResult GetProviderToken(string corpId, string providerSecret, int timeOut = Config.TimeOut)
         {
                 var url = Config.ApiWorkHost + "/cgi-bin/service/get_provider_token";
 
@@ -79,7 +79,7 @@ namespace Senparc.Weixin.Work.AdvancedAPIs.SSO
         /// <param name="authCode">oauth2.0授权企业号管理员登录产生的code</param>
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
-        public static GetLoginInfoResult GetLoginInfo(string providerAccessToken, string authCode, int timeOut = Config.TIME_OUT)
+        public static GetLoginInfoResult GetLoginInfo(string providerAccessToken, string authCode, int timeOut = Config.TimeOut)
         {
                 string url = Config.ApiWorkHost + "/cgi-bin/service/get_login_info?provider_access_token={0}";
 
@@ -105,7 +105,7 @@ namespace Senparc.Weixin.Work.AdvancedAPIs.SSO
         /// <param name="authCode">oauth2.0授权企业号管理员登录产生的code</param>
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
-        public static async Task<GetLoginInfoResult> GetLoginInfoAsync(string providerAccessToken, string authCode, int timeOut = Config.TIME_OUT)
+        public static async Task<GetLoginInfoResult> GetLoginInfoAsync(string providerAccessToken, string authCode, int timeOut = Config.TimeOut)
         {
                 string url = Config.ApiWorkHost + "/cgi-bin/service/get_login_info?provider_access_token={0}";
 
@@ -126,7 +126,7 @@ namespace Senparc.Weixin.Work.AdvancedAPIs.SSO
         /// <param name="providerSecret"></param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static async Task<ProviderTokenResult> GetProviderTokenAsync(string corpId, string providerSecret, int timeOut = Config.TIME_OUT)
+        public static async Task<ProviderTokenResult> GetProviderTokenAsync(string corpId, string providerSecret, int timeOut = Config.TimeOut)
         {
                 var url = Config.ApiWorkHost + "/cgi-bin/service/get_provider_token";
 

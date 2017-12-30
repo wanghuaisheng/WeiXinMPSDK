@@ -16,7 +16,7 @@ using System.Threading.Tasks;
 using Senparc.Weixin.Exceptions;
 using Senparc.Weixin.MP.Entities;
 using Senparc.Weixin.MP.Helpers;
-
+using Senparc.Weixin.Utilities;
 #if NET45
 using System.Web;
 using System.Configuration;
@@ -172,7 +172,7 @@ namespace Senparc.Weixin.MP.Sample.CommonService
             }
             catch (Exception e)
             {
-                Senparc.Weixin.WeixinTrace.SendCustomLog("OnWeixinExceptionFunc过程错误", e.Message);
+                WeixinTrace.SendCustomLog("OnWeixinExceptionFunc过程错误", e.Message);
             }
         }
     }

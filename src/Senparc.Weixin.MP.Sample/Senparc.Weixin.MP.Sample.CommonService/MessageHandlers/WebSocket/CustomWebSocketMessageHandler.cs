@@ -3,6 +3,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Senparc.WebSocket;
 using Senparc.Weixin.MP.AdvancedAPIs.TemplateMessage;
+using Senparc.Weixin.Utilities;
 using Senparc.Weixin.WxOpen.Containers;
 
 #if NET45

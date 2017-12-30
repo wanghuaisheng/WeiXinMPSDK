@@ -29,7 +29,7 @@ Detail: https://github.com/JeffreySu/WeiXinMPSDK/blob/master/license.md
 ----------------------------------------------------------------*/
 
 using System;
-using Senparc.Weixin.Utilities.WeixinUtility;
+using Senparc.Weixin.Utilities;
 
 namespace Senparc.Weixin.MP.AppStore
 {

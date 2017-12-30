@@ -31,7 +31,7 @@ using System.Xml.Linq;
 using Senparc.Weixin.MP.AdvancedAPIs;
 using System.Threading.Tasks;
 using Senparc.Weixin.Entities.Request;
-
+using Senparc.Weixin.Utilities;
 #if NET45
 using System.Web;
 using System.Configuration;

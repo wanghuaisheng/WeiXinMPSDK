@@ -51,7 +51,7 @@ namespace Senparc.Weixin.Work.AdvancedAPIs.OaDataOpen
         /// <param name="userIdList">需要获取打卡记录的用户列表</param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static GetCheckinDataJsonResult GetCheckinData(string accessTokenOrAppKey, OpenCheckinDataType openCheckinDataType, DateTime startTime, DateTime endTime, string[] userIdList, int timeOut = Config.TIME_OUT)
+        public static GetCheckinDataJsonResult GetCheckinData(string accessTokenOrAppKey, OpenCheckinDataType openCheckinDataType, DateTime startTime, DateTime endTime, string[] userIdList, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -77,7 +77,7 @@ namespace Senparc.Weixin.Work.AdvancedAPIs.OaDataOpen
         /// <param name="userIdList">需要获取打卡规则的用户列表</param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static GetCheckinOptionJsonResult GetCheckinOption(string accessTokenOrAppKey, DateTime datetime, string[] userIdList, int timeOut = Config.TIME_OUT)
+        public static GetCheckinOptionJsonResult GetCheckinOption(string accessTokenOrAppKey, DateTime datetime, string[] userIdList, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -101,7 +101,7 @@ namespace Senparc.Weixin.Work.AdvancedAPIs.OaDataOpen
         /// <param name="endTime">获取打卡记录的结束时间</param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static GetApprovalDataJsonResult GetApprovalData(string accessTokenOrAppKey, DateTime startTime, DateTime endTime, long next_spnum, int timeOut = Config.TIME_OUT)
+        public static GetApprovalDataJsonResult GetApprovalData(string accessTokenOrAppKey, DateTime startTime, DateTime endTime, long next_spnum, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -135,7 +135,7 @@ namespace Senparc.Weixin.Work.AdvancedAPIs.OaDataOpen
         /// <param name="userIdList">需要获取打卡规则的用户列表</param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static async Task<GetCheckinOptionJsonResult> GetCheckinOptionAsync(string accessTokenOrAppKey, DateTime datetime, string[] userIdList, int timeOut = Config.TIME_OUT)
+        public static async Task<GetCheckinOptionJsonResult> GetCheckinOptionAsync(string accessTokenOrAppKey, DateTime datetime, string[] userIdList, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -161,7 +161,7 @@ namespace Senparc.Weixin.Work.AdvancedAPIs.OaDataOpen
         /// <param name="userIdList">需要获取打卡记录的用户列表</param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static async Task<GetCheckinDataJsonResult> GetCheckinDataAsync(string accessTokenOrAppKey, OpenCheckinDataType openCheckinDataType, DateTime startTime, DateTime endTime, string[] userIdList, int timeOut = Config.TIME_OUT)
+        public static async Task<GetCheckinDataJsonResult> GetCheckinDataAsync(string accessTokenOrAppKey, OpenCheckinDataType openCheckinDataType, DateTime startTime, DateTime endTime, string[] userIdList, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -190,7 +190,7 @@ namespace Senparc.Weixin.Work.AdvancedAPIs.OaDataOpen
         /// <param name="userIdList">需要获取打卡记录的用户列表</param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static async Task<GetApprovalDataJsonResult> GetApprovalDataAsync(string accessTokenOrAppKey, DateTime startTime, DateTime endTime, long next_spnum, int timeOut = Config.TIME_OUT)
+        public static async Task<GetApprovalDataJsonResult> GetApprovalDataAsync(string accessTokenOrAppKey, DateTime startTime, DateTime endTime, long next_spnum, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {

@@ -83,10 +83,9 @@ using Senparc.Weixin.Cache;
 using Senparc.Weixin.Containers;
 using Senparc.Weixin.Exceptions;
 using Senparc.Weixin.MP.Entities;
-using Senparc.Weixin.CacheUtility;
 using Senparc.Weixin.Entities;
 using Senparc.Weixin.MP.CommonAPIs;
-using Senparc.Weixin.Utilities.WeixinUtility;
+using Senparc.Weixin.Utilities;
 
 namespace Senparc.Weixin.MP.Containers
 {

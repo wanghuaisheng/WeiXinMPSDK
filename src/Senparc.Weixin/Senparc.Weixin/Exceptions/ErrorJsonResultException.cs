@@ -38,6 +38,7 @@
 
 using System;
 using Senparc.Weixin.Entities;
+using Senparc.Weixin.Utilities;
 
 namespace Senparc.Weixin.Exceptions
 {

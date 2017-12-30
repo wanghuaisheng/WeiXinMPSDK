@@ -94,7 +94,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="cardInfo">创建卡券需要的数据，格式可以看CardCreateData.cs</param>
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
-        public static CardCreateResultJson CreateCard(string accessTokenOrAppId, BaseCardInfo cardInfo, int timeOut = Config.TIME_OUT)
+        public static CardCreateResultJson CreateCard(string accessTokenOrAppId, BaseCardInfo cardInfo, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -251,7 +251,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
 
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static PayActiveResultJson PayActive(string accessTokenOrAppId, int timeOut = Config.TIME_OUT)
+        public static PayActiveResultJson PayActive(string accessTokenOrAppId, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -269,7 +269,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="quantity">本次需要兑换的库存数目</param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static GetpayPriceResultJson GetpayPrice(string accessTokenOrAppId, string cardId, int quantity, int timeOut = Config.TIME_OUT)
+        public static GetpayPriceResultJson GetpayPrice(string accessTokenOrAppId, string cardId, int quantity, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -291,7 +291,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
 
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static GetCoinsInfoResultJson GetCoinsInfo(string accessTokenOrAppId, int timeOut = Config.TIME_OUT)
+        public static GetCoinsInfoResultJson GetCoinsInfo(string accessTokenOrAppId, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -310,7 +310,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="orderId">仅可以使用上面得到的订单号，保证批价有效性</param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static WxJsonResult PayConfirm(string accessTokenOrAppId, string cardId, int quantity, string orderId, int timeOut = Config.TIME_OUT)
+        public static WxJsonResult PayConfirm(string accessTokenOrAppId, string cardId, int quantity, string orderId, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -333,7 +333,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="coinCount">需要充值的券点数目，1点=1元</param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static PayRechargeResultJson PayRecharge(string accessTokenOrAppId, int coinCount, int timeOut = Config.TIME_OUT)
+        public static PayRechargeResultJson PayRecharge(string accessTokenOrAppId, int coinCount, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -355,7 +355,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="orderId">上一步中获得的订单号，作为一次交易的唯一凭证</param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static PayGetOrderResultJson PayGetOrder(string accessTokenOrAppId, int orderId, int timeOut = Config.TIME_OUT)
+        public static PayGetOrderResultJson PayGetOrder(string accessTokenOrAppId, int orderId, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -383,7 +383,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         ///  <param name="endTime">批量查询订单的结束事件，为时间戳，默认为当前时间</param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static GetOrderListResultJson GetOrderList(string accessTokenOrAppId, int offset, int count, string orderType, NorFilter norFilter, SortInfo sortInfo, int beginTime, int endTime, int timeOut = Config.TIME_OUT)
+        public static GetOrderListResultJson GetOrderList(string accessTokenOrAppId, int offset, int count, string orderType, NorFilter norFilter, SortInfo sortInfo, int beginTime, int endTime, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -421,7 +421,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         public static CreateQRResultJson CreateQR(string accessTokenOrAppId, string cardId, string code = null,
             string openId = null, string expireSeconds = null,
             bool isUniqueCode = false, string outer_id = null,
-            int timeOut = Config.TIME_OUT)
+            int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -468,7 +468,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="data"></param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static ShelfCreateResultJson ShelfCreate(string accessTokenOrAppId, ShelfCreateData data, int timeOut = Config.TIME_OUT)
+        public static ShelfCreateResultJson ShelfCreate(string accessTokenOrAppId, ShelfCreateData data, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -498,7 +498,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="codeList">需导入微信卡券后台的自定义code，上限为100个。</param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static WxJsonResult CodeDeposit(string accessTokenOrAppId, string cardId, string[] codeList, int timeOut = Config.TIME_OUT)
+        public static WxJsonResult CodeDeposit(string accessTokenOrAppId, string cardId, string[] codeList, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -522,7 +522,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="cardId">进行导入code的卡券ID。</param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static GetDepositCountResultJson GetDepositCount(string accessTokenOrAppId, string cardId, int timeOut = Config.TIME_OUT)
+        public static GetDepositCountResultJson GetDepositCount(string accessTokenOrAppId, string cardId, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -546,7 +546,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="codeList">已经微信卡券后台的自定义code，上限为100个。</param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static CheckCodeResultJson CheckCode(string accessTokenOrAppId, string cardId, string[] codeList, int timeOut = Config.TIME_OUT)
+        public static CheckCodeResultJson CheckCode(string accessTokenOrAppId, string cardId, string[] codeList, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -570,7 +570,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="cardId"></param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static GetHtmlResult GetHtml(string accessTokenOrAppId, string cardId, int timeOut = Config.TIME_OUT)
+        public static GetHtmlResult GetHtml(string accessTokenOrAppId, string cardId, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -595,7 +595,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="isMark">是否要mark（占用）这个code，填写true或者false，表示占用或解除占用。</param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static WxJsonResult CodeMark(string accessTokenOrAppId, string code, string cardId, string openId, string isMark, int timeOut = Config.TIME_OUT)
+        public static WxJsonResult CodeMark(string accessTokenOrAppId, string code, string cardId, string openId, string isMark, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -622,7 +622,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="cardId">要消耗序列号所述的card_id，创建卡券时use_custom_code 填写true 时必填。非自定义code不必填写。</param>
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
-        public static CardConsumeResultJson CardConsume(string accessTokenOrAppId, string code, string cardId = null, int timeOut = Config.TIME_OUT)
+        public static CardConsumeResultJson CardConsume(string accessTokenOrAppId, string code, string cardId = null, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -649,7 +649,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="encryptCode">通过choose_card_info 获取的加密字符串</param>
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
-        public static CardDecryptResultJson CardDecrypt(string accessTokenOrAppId, string encryptCode, int timeOut = Config.TIME_OUT)
+        public static CardDecryptResultJson CardDecrypt(string accessTokenOrAppId, string encryptCode, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -672,7 +672,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="cardId">卡券ID</param>
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
-        public static CardDeleteResultJson CardDelete(string accessTokenOrAppId, string cardId, int timeOut = Config.TIME_OUT)
+        public static CardDeleteResultJson CardDelete(string accessTokenOrAppId, string cardId, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -696,7 +696,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="cardId"></param>
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
-        public static CardGetResultJson CardGet(string accessTokenOrAppId, string code, string cardId = null, int timeOut = Config.TIME_OUT)
+        public static CardGetResultJson CardGet(string accessTokenOrAppId, string code, string cardId = null, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -722,7 +722,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="statusList">状态列表</param>
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
-        public static CardBatchGetResultJson CardBatchGet(string accessTokenOrAppId, int offset, int count, List<string> statusList, int timeOut = Config.TIME_OUT)
+        public static CardBatchGetResultJson CardBatchGet(string accessTokenOrAppId, int offset, int count, List<string> statusList, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -747,7 +747,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="cardId"></param>
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
-        public static CardDetailGetResultJson CardDetailGet(string accessTokenOrAppId, string cardId, int timeOut = Config.TIME_OUT)
+        public static CardDetailGetResultJson CardDetailGet(string accessTokenOrAppId, string cardId, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -772,7 +772,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="newCode">新的卡券code 编码</param>
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
-        public static WxJsonResult CardChangeCode(string accessTokenOrAppId, string code, string cardId, string newCode, int timeOut = Config.TIME_OUT)
+        public static WxJsonResult CardChangeCode(string accessTokenOrAppId, string code, string cardId, string newCode, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -798,7 +798,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="cardId">自定义code 的卡券必填。非自定义code 的卡券不填。</param>
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
-        public static WxJsonResult CardUnavailable(string accessTokenOrAppId, string code, string cardId = null, int timeOut = Config.TIME_OUT)
+        public static WxJsonResult CardUnavailable(string accessTokenOrAppId, string code, string cardId = null, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -822,7 +822,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="endDate">查询数据的截至时间。</param>
         /// <param name="condSource">卡券来源，0为公众平台创建的卡券数据、1是API创建的卡券数据</param>
         /// <returns></returns>
-        public static GetCardBizuinInfoResultJson GetCardBizuinInfo(string accessTokenOrAppId, string beginDate, string endDate, int condSource, int timeOut = Config.TIME_OUT)
+        public static GetCardBizuinInfoResultJson GetCardBizuinInfo(string accessTokenOrAppId, string beginDate, string endDate, int condSource, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -849,7 +849,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="condSource">卡券来源，0为公众平台创建的卡券数据、1是API创建的卡券数据</param>
         /// <param name="cardId">卡券ID。填写后，指定拉出该卡券的相关数据。</param>
         /// <returns></returns>
-        public static GetCardInfoResultJson GetCardInfo(string accessTokenOrAppId, string beginDate, string endDate, int condSource, string cardId, int timeOut = Config.TIME_OUT)
+        public static GetCardInfoResultJson GetCardInfo(string accessTokenOrAppId, string beginDate, string endDate, int condSource, string cardId, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -876,7 +876,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="endDate">查询数据的截至时间。</param>
         /// <param name="condSource">卡券来源，0为公众平台创建的卡券数据、1是API创建的卡券数据</param>
         /// <returns></returns>
-        public static GetCardMemberCardInfoResultJson GetCardMemberCardInfo(string accessTokenOrAppId, string beginDate, string endDate, int condSource, int timeOut = Config.TIME_OUT)
+        public static GetCardMemberCardInfoResultJson GetCardMemberCardInfo(string accessTokenOrAppId, string beginDate, string endDate, int condSource, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -907,7 +907,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="cardId"></param>
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
-        public static WxJsonResult CardUpdate(string accessTokenOrAppId, CardType cardType, object data, string cardId = null, int timeOut = Config.TIME_OUT)
+        public static WxJsonResult CardUpdate(string accessTokenOrAppId, CardType cardType, object data, string cardId = null, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -968,7 +968,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="userNames">测试的微信号列表</param>
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
-        public static WxJsonResult AuthoritySet(string accessTokenOrAppId, string[] openIds, string[] userNames, int timeOut = Config.TIME_OUT)
+        public static WxJsonResult AuthoritySet(string accessTokenOrAppId, string[] openIds, string[] userNames, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -1002,7 +1002,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="activateBeginTime">激活后的有效起始时间。若不填写默认以创建时的 data_info 为准。Unix时间戳格式。</param>
         ///  <returns></returns>
         public static WxJsonResult MemberCardActivate(string accessTokenOrAppId, string membershipNumber, string code, string cardId, string activateBeginTime = null, string activateEndTime = null, string initBonus = null,
-            string initBalance = null, string initCustomFieldValue1 = null, string initCustomFieldValue2 = null, string initCustomFieldValue3 = null, int timeOut = Config.TIME_OUT)
+            string initBalance = null, string initCustomFieldValue1 = null, string initCustomFieldValue2 = null, string initCustomFieldValue3 = null, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -1034,7 +1034,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="data"></param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static WxJsonResult ActivateUserFormSet(string accessTokenOrAppId, ActivateUserFormSetData data, int timeOut = Config.TIME_OUT)
+        public static WxJsonResult ActivateUserFormSet(string accessTokenOrAppId, ActivateUserFormSetData data, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -1056,7 +1056,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="code">Code</param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static UserinfoGetResult UserinfoGet(string accessTokenOrAppId, string cardId, string code, int timeOut = Config.TIME_OUT)
+        public static UserinfoGetResult UserinfoGet(string accessTokenOrAppId, string cardId, string code, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -1078,7 +1078,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="urlCellData">使用消息配置URL数据</param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static WxJsonResult RecommendSet(string accessTokenOrAppId, string cardId, CardCell cardCellData = null, UrlCell urlCellData = null, int timeOut = Config.TIME_OUT)
+        public static WxJsonResult RecommendSet(string accessTokenOrAppId, string cardId, CardCell cardCellData = null, UrlCell urlCellData = null, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -1115,7 +1115,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="isOpen">是否开启买单功能，填true/false</param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static WxJsonResult PayCellSet(string accessTokenOrAppId, string cardId, bool isOpen, int timeOut = Config.TIME_OUT)
+        public static WxJsonResult PayCellSet(string accessTokenOrAppId, string cardId, bool isOpen, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -1141,7 +1141,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="isOpen">是否开启自助核销功能，填true/false</param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static WxJsonResult SelfConsumecellSet(string accessTokenOrAppId, string cardId, bool isOpen, int timeOut = Config.TIME_OUT)
+        public static WxJsonResult SelfConsumecellSet(string accessTokenOrAppId, string cardId, bool isOpen, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -1200,7 +1200,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         ///  <returns></returns>
         public static UpdateUserResult UpdateUser(string accessTokenOrAppId, string code, string cardId, int addBonus, int addBalance, string backgroundPicUrl = null,
             int? bonus = null, int? balance = null, string recordBonus = null, string recordBalance = null, string customFieldValue1 = null,
-            string customFieldValue2 = null, string customFieldValue3 = null, int timeOut = Config.TIME_OUT)
+            string customFieldValue2 = null, string customFieldValue3 = null, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -1244,7 +1244,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="recordBalance">商家自定义金额消耗记录，不超过14 个汉字</param>
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
-        public static MemberCardDealResultJson MemberCardDeal(string accessTokenOrAppId, string code, string cardId, string recordBonus, decimal addBonus, decimal addBalance, string recordBalance, int timeOut = Config.TIME_OUT)
+        public static MemberCardDealResultJson MemberCardDeal(string accessTokenOrAppId, string code, string cardId, string recordBonus, decimal addBonus, decimal addBalance, string recordBalance, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -1278,7 +1278,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="seatNumbers">座位号</param>
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
-        public static WxJsonResult MovieCardUpdate(string accessTokenOrAppId, string code, string cardId, string ticketClass, string showTime, int duration, string screeningRoom, string[] seatNumbers, int timeOut = Config.TIME_OUT)
+        public static WxJsonResult MovieCardUpdate(string accessTokenOrAppId, string code, string cardId, string ticketClass, string showTime, int duration, string screeningRoom, string[] seatNumbers, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -1314,7 +1314,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="isCancel">是否取消值机。填写true 或false。true 代表取消，如填写true 上述字段（如calss 等）均不做判断，机票返回未值机状态，乘客可重新值机。默认填写false</param>
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
-        public static WxJsonResult BoardingPassCheckIn(string accessTokenOrAppId, string code, string cardId, string passengerName, string classType, string seat, string etktBnr, string qrcodeData, bool isCancel = false, int timeOut = Config.TIME_OUT)
+        public static WxJsonResult BoardingPassCheckIn(string accessTokenOrAppId, string code, string cardId, string passengerName, string classType, string seat, string etktBnr, string qrcodeData, bool isCancel = false, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -1346,7 +1346,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="balance">红包余额</param>
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
-        public static WxJsonResult UpdateUserBalance(string accessTokenOrAppId, string code, string cardId, decimal balance, int timeOut = Config.TIME_OUT)
+        public static WxJsonResult UpdateUserBalance(string accessTokenOrAppId, string code, string cardId, decimal balance, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -1375,7 +1375,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="seatNumber">座位号</param>
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
-        public static WxJsonResult UpdateMeetingTicket(string accessTokenOrAppId, string code, string cardId = null, string zone = null, string entrance = null, string seatNumber = null, int timeOut = Config.TIME_OUT)
+        public static WxJsonResult UpdateMeetingTicket(string accessTokenOrAppId, string code, string cardId = null, string zone = null, string entrance = null, string seatNumber = null, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -1401,7 +1401,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="info">json结构</param>
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
-        public static SubmerChantSubmitJsonResult SubmerChantSubmit(string accessTokenOrAppId, InfoList info, int timeOut = Config.TIME_OUT)
+        public static SubmerChantSubmitJsonResult SubmerChantSubmit(string accessTokenOrAppId, InfoList info, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -1424,7 +1424,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
 
-        public static GetApplyProtocolJsonResult GetApplyProtocol(string accessTokenOrAppId, int timeOut = Config.TIME_OUT)
+        public static GetApplyProtocolJsonResult GetApplyProtocol(string accessTokenOrAppId, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -1442,7 +1442,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
 
-        public static GetCardMerchantJsonResult GetCardMerchant(string accessTokenOrAppId, string appid, int timeOut = Config.TIME_OUT)
+        public static GetCardMerchantJsonResult GetCardMerchant(string accessTokenOrAppId, string appid, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -1464,7 +1464,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
 
-        public static BatchGetCardMerchantJsonResult BatchGetCardMerchant(string accessTokenOrAppId, string nextGet, int timeOut = Config.TIME_OUT)
+        public static BatchGetCardMerchantJsonResult BatchGetCardMerchant(string accessTokenOrAppId, string nextGet, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -1486,7 +1486,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="info">json结构</param>
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
-        public static SubmerChantSubmitJsonResult SubmerChantUpdate(string accessTokenOrAppId, InfoList info, int timeOut = Config.TIME_OUT)
+        public static SubmerChantSubmitJsonResult SubmerChantUpdate(string accessTokenOrAppId, InfoList info, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -1509,7 +1509,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="merchantId">子商户id，一个母商户公众号下唯一。</param>
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
-        public static SubmerChantSubmitJsonResult SubmerChantGet(string accessTokenOrAppId, string merchantId, int timeOut = Config.TIME_OUT)
+        public static SubmerChantSubmitJsonResult SubmerChantGet(string accessTokenOrAppId, string merchantId, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -1534,7 +1534,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="status">json结构</param>
         /// <param name="timeOut">子商户审核状态，填入后，只会拉出当前状态的子商户</param>
         /// <returns></returns>
-        public static SubmerChantBatchGetJsonResult SubmerChantBatchGet(string accessTokenOrAppId, string beginId, int limit, string status, int timeOut = Config.TIME_OUT)
+        public static SubmerChantBatchGetJsonResult SubmerChantBatchGet(string accessTokenOrAppId, string beginId, int limit, string status, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -1561,7 +1561,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="lastQuarterTaxListingMediaid">上个季度纳税清单扫描件media_id</param>
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
-        public static WxJsonResult AgentQualification(string accessTokenOrAppId, string registerCapital, string businessLicenseMediaid, string taxRegistRationCertificateMediaid, string lastQuarterTaxListingMediaid, int timeOut = Config.TIME_OUT)
+        public static WxJsonResult AgentQualification(string accessTokenOrAppId, string registerCapital, string businessLicenseMediaid, string taxRegistRationCertificateMediaid, string lastQuarterTaxListingMediaid, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -1587,7 +1587,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
 
-        public static CheckQualificationJsonResult CheckAgentQualification(string accessTokenOrAppId, int timeOut = Config.TIME_OUT)
+        public static CheckQualificationJsonResult CheckAgentQualification(string accessTokenOrAppId, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -1611,7 +1611,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="secondaryCategoryId">二级类目id</param>
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
-        public static WxJsonResult MerchantQualification(string accessTokenOrAppId, string appid, string name, string logoMediaid, string businessLicenseMediaid, string operatorIdCardMediaid, string agreementFileMediaid, string primaryCategoryId, string secondaryCategoryId, int timeOut = Config.TIME_OUT)
+        public static WxJsonResult MerchantQualification(string accessTokenOrAppId, string appid, string name, string logoMediaid, string businessLicenseMediaid, string operatorIdCardMediaid, string agreementFileMediaid, string primaryCategoryId, string secondaryCategoryId, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -1641,7 +1641,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
 
-        public static CheckQualificationJsonResult CheckMerchantQualification(string accessTokenOrAppId, string appid, int timeOut = Config.TIME_OUT)
+        public static CheckQualificationJsonResult CheckMerchantQualification(string accessTokenOrAppId, string appid, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -1664,7 +1664,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="cardId">卡券ID。不填写时默认查询当前appid下的卡券。</param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static GetCardListResult GetCardList(string accessTokenOrAppId, string openId, string cardId = null, int timeOut = Config.TIME_OUT)
+        public static GetCardListResult GetCardList(string accessTokenOrAppId, string openId, string cardId = null, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -1690,7 +1690,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="reduceStockValue">减少多少库存，可以不填或填0</param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static WxJsonResult ModifyStock(string accessTokenOrAppId, string cardId, int increaseStockValue = 0, int reduceStockValue = 0, int timeOut = Config.TIME_OUT)
+        public static WxJsonResult ModifyStock(string accessTokenOrAppId, string cardId, int increaseStockValue = 0, int reduceStockValue = 0, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -1719,7 +1719,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="cardInfo">创建卡券需要的数据，格式可以看CardCreateData.cs</param>
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
-        public static async Task<CardCreateResultJson> CreateCardAsync(string accessTokenOrAppId, BaseCardInfo cardInfo, int timeOut = Config.TIME_OUT)
+        public static async Task<CardCreateResultJson> CreateCardAsync(string accessTokenOrAppId, BaseCardInfo cardInfo, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -1875,7 +1875,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="accessTokenOrAppId">AccessToken或AppId（推荐使用AppId，需要先注册）</param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static async Task<PayActiveResultJson> PayActiveAsync(string accessTokenOrAppId, int timeOut = Config.TIME_OUT)
+        public static async Task<PayActiveResultJson> PayActiveAsync(string accessTokenOrAppId, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -1893,7 +1893,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="quantity">本次需要兑换的库存数目</param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static async Task<GetpayPriceResultJson> GetpayPriceAsync(string accessTokenOrAppId, string cardId, int quantity, int timeOut = Config.TIME_OUT)
+        public static async Task<GetpayPriceResultJson> GetpayPriceAsync(string accessTokenOrAppId, string cardId, int quantity, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -1915,7 +1915,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
 
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static async Task<GetCoinsInfoResultJson> GetCoinsInfoAsync(string accessTokenOrAppId, int timeOut = Config.TIME_OUT)
+        public static async Task<GetCoinsInfoResultJson> GetCoinsInfoAsync(string accessTokenOrAppId, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -1934,7 +1934,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="orderId">仅可以使用上面得到的订单号，保证批价有效性</param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static async Task<WxJsonResult> PayConfirmAsync(string accessTokenOrAppId, string cardId, int quantity, string orderId, int timeOut = Config.TIME_OUT)
+        public static async Task<WxJsonResult> PayConfirmAsync(string accessTokenOrAppId, string cardId, int quantity, string orderId, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -1957,7 +1957,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="coinCount">需要充值的券点数目，1点=1元</param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static async Task<PayRechargeResultJson> PayRechargeAsync(string accessTokenOrAppId, int coinCount, int timeOut = Config.TIME_OUT)
+        public static async Task<PayRechargeResultJson> PayRechargeAsync(string accessTokenOrAppId, int coinCount, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -1979,7 +1979,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="orderId">上一步中获得的订单号，作为一次交易的唯一凭证</param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static async Task<PayGetOrderResultJson> PayGetOrderAsync(string accessTokenOrAppId, int orderId, int timeOut = Config.TIME_OUT)
+        public static async Task<PayGetOrderResultJson> PayGetOrderAsync(string accessTokenOrAppId, int orderId, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -2007,7 +2007,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         ///  <param name="endTime">批量查询订单的结束事件，为时间戳，默认为当前时间</param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static async Task<GetOrderListResultJson> GetOrderListAsync(string accessTokenOrAppId, int offset, int count, string orderType, NorFilter norFilter, SortInfo sortInfo, int beginTime, int endTime, int timeOut = Config.TIME_OUT)
+        public static async Task<GetOrderListResultJson> GetOrderListAsync(string accessTokenOrAppId, int offset, int count, string orderType, NorFilter norFilter, SortInfo sortInfo, int beginTime, int endTime, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -2045,7 +2045,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         public static async Task<CreateQRResultJson> CreateQRAsync(string accessTokenOrAppId, string cardId, string code = null,
             string openId = null, string expireSeconds = null,
             bool isUniqueCode = false, string outer_id = null,
-            int timeOut = Config.TIME_OUT)
+            int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -2092,7 +2092,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="data"></param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static async Task<ShelfCreateResultJson> ShelfCreateAsync(string accessTokenOrAppId, ShelfCreateData data, int timeOut = Config.TIME_OUT)
+        public static async Task<ShelfCreateResultJson> ShelfCreateAsync(string accessTokenOrAppId, ShelfCreateData data, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -2122,7 +2122,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="codeList">需导入微信卡券后台的自定义code，上限为100个。</param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static async Task<WxJsonResult> CodeDepositAsync(string accessTokenOrAppId, string cardId, string[] codeList, int timeOut = Config.TIME_OUT)
+        public static async Task<WxJsonResult> CodeDepositAsync(string accessTokenOrAppId, string cardId, string[] codeList, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -2146,7 +2146,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="cardId">进行导入code的卡券ID。</param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static async Task<GetDepositCountResultJson> GetDepositCountAsync(string accessTokenOrAppId, string cardId, int timeOut = Config.TIME_OUT)
+        public static async Task<GetDepositCountResultJson> GetDepositCountAsync(string accessTokenOrAppId, string cardId, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -2170,7 +2170,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="codeList">已经微信卡券后台的自定义code，上限为100个。</param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static async Task<CheckCodeResultJson> CheckCodeAsync(string accessTokenOrAppId, string cardId, string[] codeList, int timeOut = Config.TIME_OUT)
+        public static async Task<CheckCodeResultJson> CheckCodeAsync(string accessTokenOrAppId, string cardId, string[] codeList, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -2194,7 +2194,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="cardId"></param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static async Task<GetHtmlResult> GetHtmlAsync(string accessTokenOrAppId, string cardId, int timeOut = Config.TIME_OUT)
+        public static async Task<GetHtmlResult> GetHtmlAsync(string accessTokenOrAppId, string cardId, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -2219,7 +2219,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="isMark">是否要mark（占用）这个code，填写true或者false，表示占用或解除占用。</param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static async Task<WxJsonResult> CodeMarkAsync(string accessTokenOrAppId, string code, string cardId, string openId, string isMark, int timeOut = Config.TIME_OUT)
+        public static async Task<WxJsonResult> CodeMarkAsync(string accessTokenOrAppId, string code, string cardId, string openId, string isMark, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -2246,7 +2246,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="cardId">要消耗序列号所述的card_id，创建卡券时use_custom_code 填写true 时必填。非自定义code不必填写。</param>
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
-        public static async Task<CardConsumeResultJson> CardConsumeAsync(string accessTokenOrAppId, string code, string cardId = null, int timeOut = Config.TIME_OUT)
+        public static async Task<CardConsumeResultJson> CardConsumeAsync(string accessTokenOrAppId, string code, string cardId = null, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -2273,7 +2273,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="encryptCode">通过choose_card_info 获取的加密字符串</param>
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
-        public static async Task<CardDecryptResultJson> CardDecryptAsync(string accessTokenOrAppId, string encryptCode, int timeOut = Config.TIME_OUT)
+        public static async Task<CardDecryptResultJson> CardDecryptAsync(string accessTokenOrAppId, string encryptCode, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -2296,7 +2296,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="cardId">卡券ID</param>
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
-        public static async Task<CardDeleteResultJson> CardDeleteAsync(string accessTokenOrAppId, string cardId, int timeOut = Config.TIME_OUT)
+        public static async Task<CardDeleteResultJson> CardDeleteAsync(string accessTokenOrAppId, string cardId, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -2320,7 +2320,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="cardId"></param>
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
-        public static async Task<CardGetResultJson> CardGetAsync(string accessTokenOrAppId, string code, string cardId = null, int timeOut = Config.TIME_OUT)
+        public static async Task<CardGetResultJson> CardGetAsync(string accessTokenOrAppId, string code, string cardId = null, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -2345,7 +2345,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="count">需要查询的卡片的数量（数量最大50）</param>
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
-        public static async Task<CardBatchGetResultJson> CardBatchGetAsync(string accessTokenOrAppId, int offset, int count, List<string> statusList, int timeOut = Config.TIME_OUT)
+        public static async Task<CardBatchGetResultJson> CardBatchGetAsync(string accessTokenOrAppId, int offset, int count, List<string> statusList, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -2370,7 +2370,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="cardId"></param>
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
-        public static async Task<CardDetailGetResultJson> CardDetailGetAsync(string accessTokenOrAppId, string cardId, int timeOut = Config.TIME_OUT)
+        public static async Task<CardDetailGetResultJson> CardDetailGetAsync(string accessTokenOrAppId, string cardId, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -2395,7 +2395,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="newCode">新的卡券code 编码</param>
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
-        public static async Task<WxJsonResult> CardChangeCodeAsync(string accessTokenOrAppId, string code, string cardId, string newCode, int timeOut = Config.TIME_OUT)
+        public static async Task<WxJsonResult> CardChangeCodeAsync(string accessTokenOrAppId, string code, string cardId, string newCode, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -2421,7 +2421,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="cardId">自定义code 的卡券必填。非自定义code 的卡券不填。</param>
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
-        public static async Task<WxJsonResult> CardUnavailableAsync(string accessTokenOrAppId, string code, string cardId = null, int timeOut = Config.TIME_OUT)
+        public static async Task<WxJsonResult> CardUnavailableAsync(string accessTokenOrAppId, string code, string cardId = null, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -2445,7 +2445,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="endDate">查询数据的截至时间。</param>
         /// <param name="condSource">卡券来源，0为公众平台创建的卡券数据、1是API创建的卡券数据</param>
         /// <returns></returns>
-        public static async Task<GetCardBizuinInfoResultJson> GetCardBizuinInfoAsync(string accessTokenOrAppId, string beginDate, string endDate, int condSource, int timeOut = Config.TIME_OUT)
+        public static async Task<GetCardBizuinInfoResultJson> GetCardBizuinInfoAsync(string accessTokenOrAppId, string beginDate, string endDate, int condSource, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -2472,7 +2472,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="condSource">卡券来源，0为公众平台创建的卡券数据、1是API创建的卡券数据</param>
         /// <param name="cardId">卡券ID。填写后，指定拉出该卡券的相关数据。</param>
         /// <returns></returns>
-        public static async Task<GetCardInfoResultJson> GetCardInfoAsync(string accessTokenOrAppId, string beginDate, string endDate, int condSource, string cardId, int timeOut = Config.TIME_OUT)
+        public static async Task<GetCardInfoResultJson> GetCardInfoAsync(string accessTokenOrAppId, string beginDate, string endDate, int condSource, string cardId, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -2499,7 +2499,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="endDate">查询数据的截至时间。</param>
         /// <param name="condSource">卡券来源，0为公众平台创建的卡券数据、1是API创建的卡券数据</param>
         /// <returns></returns>
-        public static async Task<GetCardMemberCardInfoResultJson> GetCardMemberCardInfoAsync(string accessTokenOrAppId, string beginDate, string endDate, int condSource, int timeOut = Config.TIME_OUT)
+        public static async Task<GetCardMemberCardInfoResultJson> GetCardMemberCardInfoAsync(string accessTokenOrAppId, string beginDate, string endDate, int condSource, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -2530,7 +2530,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="cardId"></param>
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
-        public static async Task<WxJsonResult> CardUpdateAsync(string accessTokenOrAppId, CardType cardType, object data, string cardId = null, int timeOut = Config.TIME_OUT)
+        public static async Task<WxJsonResult> CardUpdateAsync(string accessTokenOrAppId, CardType cardType, object data, string cardId = null, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -2592,7 +2592,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="userNames">测试的微信号列表</param>
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
-        public static async Task<WxJsonResult> AuthoritySetAsync(string accessTokenOrAppId, string[] openIds, string[] userNames, int timeOut = Config.TIME_OUT)
+        public static async Task<WxJsonResult> AuthoritySetAsync(string accessTokenOrAppId, string[] openIds, string[] userNames, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -2626,7 +2626,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="activateBeginTime">激活后的有效起始时间。若不填写默认以创建时的 data_info 为准。Unix时间戳格式。</param>
         ///  <returns></returns>
         public static async Task<WxJsonResult> MemberCardActivateAsync(string accessTokenOrAppId, string membershipNumber, string code, string cardId, string activateBeginTime = null, string activateEndTime = null, string initBonus = null,
-            string initBalance = null, string initCustomFieldValue1 = null, string initCustomFieldValue2 = null, string initCustomFieldValue3 = null, int timeOut = Config.TIME_OUT)
+            string initBalance = null, string initCustomFieldValue1 = null, string initCustomFieldValue2 = null, string initCustomFieldValue3 = null, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -2658,7 +2658,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="data"></param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static async Task<WxJsonResult> ActivateUserFormSetAsync(string accessTokenOrAppId, ActivateUserFormSetData data, int timeOut = Config.TIME_OUT)
+        public static async Task<WxJsonResult> ActivateUserFormSetAsync(string accessTokenOrAppId, ActivateUserFormSetData data, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -2677,7 +2677,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="code">Code</param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static async Task<UserinfoGetResult> UserinfoGetAsync(string accessTokenOrAppId, string cardId, string code, int timeOut = Config.TIME_OUT)
+        public static async Task<UserinfoGetResult> UserinfoGetAsync(string accessTokenOrAppId, string cardId, string code, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -2699,7 +2699,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="urlCellData">使用消息配置URL数据</param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static async Task<WxJsonResult> RecommendSetAsync(string accessTokenOrAppId, string cardId, CardCell cardCellData = null, UrlCell urlCellData = null, int timeOut = Config.TIME_OUT)
+        public static async Task<WxJsonResult> RecommendSetAsync(string accessTokenOrAppId, string cardId, CardCell cardCellData = null, UrlCell urlCellData = null, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -2736,7 +2736,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="isOpen">是否开启买单功能，填true/false</param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static async Task<WxJsonResult> PayCellSetAsync(string accessTokenOrAppId, string cardId, bool isOpen, int timeOut = Config.TIME_OUT)
+        public static async Task<WxJsonResult> PayCellSetAsync(string accessTokenOrAppId, string cardId, bool isOpen, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -2762,7 +2762,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="isOpen">是否开启自助核销功能，填true/false</param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static async Task<WxJsonResult> SelfConsumecellSetAsync(string accessTokenOrAppId, string cardId, bool isOpen, int timeOut = Config.TIME_OUT)
+        public static async Task<WxJsonResult> SelfConsumecellSetAsync(string accessTokenOrAppId, string cardId, bool isOpen, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -2821,7 +2821,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         ///  <returns></returns>
         public static async Task<UpdateUserResult> UpdateUserAsync(string accessTokenOrAppId, string code, string cardId, int addBonus, int addBalance, string backgroundPicUrl = null,
             int? bonus = null, int? balance = null, string recordBonus = null, string recordBalance = null, string customFieldValue1 = null,
-            string customFieldValue2 = null, string customFieldValue3 = null, int timeOut = Config.TIME_OUT)
+            string customFieldValue2 = null, string customFieldValue3 = null, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -2860,7 +2860,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="recordBalance">商家自定义金额消耗记录，不超过14 个汉字</param>
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
-        public static async Task<MemberCardDealResultJson> MemberCardDealAsync(string accessTokenOrAppId, string code, string cardId, string recordBonus, decimal addBonus, decimal addBalance, string recordBalance, int timeOut = Config.TIME_OUT)
+        public static async Task<MemberCardDealResultJson> MemberCardDealAsync(string accessTokenOrAppId, string code, string cardId, string recordBonus, decimal addBonus, decimal addBalance, string recordBalance, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -2894,7 +2894,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="seatNumbers">座位号</param>
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
-        public static async Task<WxJsonResult> MovieCardUpdateAsync(string accessTokenOrAppId, string code, string cardId, string ticketClass, string showTime, int duration, string screeningRoom, string[] seatNumbers, int timeOut = Config.TIME_OUT)
+        public static async Task<WxJsonResult> MovieCardUpdateAsync(string accessTokenOrAppId, string code, string cardId, string ticketClass, string showTime, int duration, string screeningRoom, string[] seatNumbers, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -2930,7 +2930,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="isCancel">是否取消值机。填写true 或false。true 代表取消，如填写true 上述字段（如calss 等）均不做判断，机票返回未值机状态，乘客可重新值机。默认填写false</param>
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
-        public static async Task<WxJsonResult> BoardingPassCheckInAsync(string accessTokenOrAppId, string code, string cardId, string passengerName, string classType, string seat, string etktBnr, string qrcodeData, bool isCancel = false, int timeOut = Config.TIME_OUT)
+        public static async Task<WxJsonResult> BoardingPassCheckInAsync(string accessTokenOrAppId, string code, string cardId, string passengerName, string classType, string seat, string etktBnr, string qrcodeData, bool isCancel = false, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -2962,7 +2962,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="balance">红包余额</param>
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
-        public static async Task<WxJsonResult> UpdateUserBalanceAsync(string accessTokenOrAppId, string code, string cardId, decimal balance, int timeOut = Config.TIME_OUT)
+        public static async Task<WxJsonResult> UpdateUserBalanceAsync(string accessTokenOrAppId, string code, string cardId, decimal balance, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -2991,7 +2991,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="seatNumber">座位号</param>
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
-        public static async Task<WxJsonResult> UpdateMeetingTicketAsync(string accessTokenOrAppId, string code, string cardId = null, string zone = null, string entrance = null, string seatNumber = null, int timeOut = Config.TIME_OUT)
+        public static async Task<WxJsonResult> UpdateMeetingTicketAsync(string accessTokenOrAppId, string code, string cardId = null, string zone = null, string entrance = null, string seatNumber = null, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -3017,7 +3017,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="info">json结构</param>
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
-        public static async Task<SubmerChantSubmitJsonResult> SubmerChantSubmitAsync(string accessTokenOrAppId, InfoList info, int timeOut = Config.TIME_OUT)
+        public static async Task<SubmerChantSubmitJsonResult> SubmerChantSubmitAsync(string accessTokenOrAppId, InfoList info, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -3040,7 +3040,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
 
-        public static async Task<GetApplyProtocolJsonResult> GetApplyProtocolAsync(string accessTokenOrAppId, int timeOut = Config.TIME_OUT)
+        public static async Task<GetApplyProtocolJsonResult> GetApplyProtocolAsync(string accessTokenOrAppId, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -3058,7 +3058,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
 
-        public static async Task<GetCardMerchantJsonResult> GetCardMerchantAsync(string accessTokenOrAppId, string appid, int timeOut = Config.TIME_OUT)
+        public static async Task<GetCardMerchantJsonResult> GetCardMerchantAsync(string accessTokenOrAppId, string appid, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -3080,7 +3080,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
 
-        public static async Task<BatchGetCardMerchantJsonResult> BatchGetCardMerchantAsync(string accessTokenOrAppId, string nextGet, int timeOut = Config.TIME_OUT)
+        public static async Task<BatchGetCardMerchantJsonResult> BatchGetCardMerchantAsync(string accessTokenOrAppId, string nextGet, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -3102,7 +3102,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="info">json结构</param>
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
-        public static async Task<SubmerChantSubmitJsonResult> SubmerChantUpdateAsync(string accessTokenOrAppId, InfoList info, int timeOut = Config.TIME_OUT)
+        public static async Task<SubmerChantSubmitJsonResult> SubmerChantUpdateAsync(string accessTokenOrAppId, InfoList info, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -3125,7 +3125,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="merchantId">子商户id，一个母商户公众号下唯一。</param>
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
-        public static async Task<SubmerChantSubmitJsonResult> SubmerChantGetAsync(string accessTokenOrAppId, string merchantId, int timeOut = Config.TIME_OUT)
+        public static async Task<SubmerChantSubmitJsonResult> SubmerChantGetAsync(string accessTokenOrAppId, string merchantId, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -3150,7 +3150,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="status">json结构</param>
         /// <param name="timeOut">子商户审核状态，填入后，只会拉出当前状态的子商户</param>
         /// <returns></returns>
-        public static async Task<SubmerChantBatchGetJsonResult> SubmerChantBatchGetAsync(string accessTokenOrAppId, string beginId, int limit, string status, int timeOut = Config.TIME_OUT)
+        public static async Task<SubmerChantBatchGetJsonResult> SubmerChantBatchGetAsync(string accessTokenOrAppId, string beginId, int limit, string status, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -3177,7 +3177,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="lastQuarterTaxListingMediaid">上个季度纳税清单扫描件media_id</param>
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
-        public static async Task<WxJsonResult> AgentQualificationAsync(string accessTokenOrAppId, string registerCapital, string businessLicenseMediaid, string taxRegistRationCertificateMediaid, string lastQuarterTaxListingMediaid, int timeOut = Config.TIME_OUT)
+        public static async Task<WxJsonResult> AgentQualificationAsync(string accessTokenOrAppId, string registerCapital, string businessLicenseMediaid, string taxRegistRationCertificateMediaid, string lastQuarterTaxListingMediaid, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -3203,7 +3203,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
 
-        public static async Task<CheckQualificationJsonResult> CheckAgentQualificationAsync(string accessTokenOrAppId, int timeOut = Config.TIME_OUT)
+        public static async Task<CheckQualificationJsonResult> CheckAgentQualificationAsync(string accessTokenOrAppId, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -3227,7 +3227,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="secondaryCategoryId">二级类目id</param>
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
-        public static async Task<WxJsonResult> MerchantQualificationAsync(string accessTokenOrAppId, string appid, string name, string logoMediaid, string businessLicenseMediaid, string operatorIdCardMediaid, string agreementFileMediaid, string primaryCategoryId, string secondaryCategoryId, int timeOut = Config.TIME_OUT)
+        public static async Task<WxJsonResult> MerchantQualificationAsync(string accessTokenOrAppId, string appid, string name, string logoMediaid, string businessLicenseMediaid, string operatorIdCardMediaid, string agreementFileMediaid, string primaryCategoryId, string secondaryCategoryId, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -3257,7 +3257,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
 
-        public static async Task<CheckQualificationJsonResult> CheckMerchantQualificationAsync(string accessTokenOrAppId, string appid, int timeOut = Config.TIME_OUT)
+        public static async Task<CheckQualificationJsonResult> CheckMerchantQualificationAsync(string accessTokenOrAppId, string appid, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -3280,7 +3280,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="cardId">卡券ID。不填写时默认查询当前appid下的卡券。</param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static async Task<GetCardListResult> GetCardListAsync(string accessTokenOrAppId, string openId, string cardId = null, int timeOut = Config.TIME_OUT)
+        public static async Task<GetCardListResult> GetCardListAsync(string accessTokenOrAppId, string openId, string cardId = null, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -3306,7 +3306,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="reduceStockValue">减少多少库存，可以不填或填0</param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static async Task<WxJsonResult> ModifyStockAsync(string accessTokenOrAppId, string cardId, int increaseStockValue = 0, int reduceStockValue = 0, int timeOut = Config.TIME_OUT)
+        public static async Task<WxJsonResult> ModifyStockAsync(string accessTokenOrAppId, string cardId, int increaseStockValue = 0, int reduceStockValue = 0, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {

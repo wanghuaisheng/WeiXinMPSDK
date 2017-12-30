@@ -30,13 +30,9 @@ Detail: https://github.com/JeffreySu/WeiXinMPSDK/blob/master/license.md
 ----------------------------------------------------------------*/
 
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using Senparc.Weixin.MessageQueue;
-using Senparc.Weixin.Threads;
 
-namespace Senparc.Weixin.CacheUtility
+namespace Senparc.Weixin.Utilities
 {
     /// <summary>
     /// 缓存立即生效方法

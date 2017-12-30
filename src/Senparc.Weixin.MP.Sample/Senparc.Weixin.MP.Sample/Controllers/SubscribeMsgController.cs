@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using Senparc.Weixin.Exceptions;
 using Senparc.Weixin.HttpUtility;
 using Senparc.Weixin.MP.AdvancedAPIs;
+using Senparc.Weixin.Utilities;
 
 namespace Senparc.Weixin.MP.Sample.Controllers
 {

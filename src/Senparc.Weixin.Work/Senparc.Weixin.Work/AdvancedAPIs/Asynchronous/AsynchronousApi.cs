@@ -77,7 +77,7 @@ namespace Senparc.Weixin.Work.AdvancedAPIs
         ///    }
         /// }
         /// <returns></returns>
-        public static AsynchronousJobId BatchSyncUser(string accessTokenOrAppKey, string mediaId, Asynchronous_CallBack callBack, int timeOut = Config.TIME_OUT)
+        public static AsynchronousJobId BatchSyncUser(string accessTokenOrAppKey, string mediaId, Asynchronous_CallBack callBack, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -119,7 +119,7 @@ namespace Senparc.Weixin.Work.AdvancedAPIs
         ///    }
         /// }
         /// <returns></returns>
-        public static AsynchronousJobId BatchReplaceUser(string accessTokenOrAppKey, string mediaId, Asynchronous_CallBack callBack, int timeOut = Config.TIME_OUT)
+        public static AsynchronousJobId BatchReplaceUser(string accessTokenOrAppKey, string mediaId, Asynchronous_CallBack callBack, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -161,7 +161,7 @@ namespace Senparc.Weixin.Work.AdvancedAPIs
         ///    }
         /// }
         /// <returns></returns>
-        public static AsynchronousJobId BatchReplaceParty(string accessTokenOrAppKey, string mediaId, Asynchronous_CallBack callBack, int timeOut = Config.TIME_OUT)
+        public static AsynchronousJobId BatchReplaceParty(string accessTokenOrAppKey, string mediaId, Asynchronous_CallBack callBack, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -264,7 +264,7 @@ namespace Senparc.Weixin.Work.AdvancedAPIs
         ///    }
         /// }
         /// <returns></returns>
-        public static async Task<AsynchronousJobId> BatchSyncUserAsync(string accessTokenOrAppKey, string mediaId, Asynchronous_CallBack callBack, int timeOut = Config.TIME_OUT)
+        public static async Task<AsynchronousJobId> BatchSyncUserAsync(string accessTokenOrAppKey, string mediaId, Asynchronous_CallBack callBack, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -306,7 +306,7 @@ namespace Senparc.Weixin.Work.AdvancedAPIs
         ///    }
         /// }
         /// <returns></returns>
-        public static async Task<AsynchronousJobId> BatchReplaceUserAsync(string accessTokenOrAppKey, string mediaId, Asynchronous_CallBack callBack, int timeOut = Config.TIME_OUT)
+        public static async Task<AsynchronousJobId> BatchReplaceUserAsync(string accessTokenOrAppKey, string mediaId, Asynchronous_CallBack callBack, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -348,7 +348,7 @@ namespace Senparc.Weixin.Work.AdvancedAPIs
         ///    }
         /// }
         /// <returns></returns>
-        public static async Task<AsynchronousJobId> BatchReplacePartyAsync(string accessTokenOrAppKey, string mediaId, Asynchronous_CallBack callBack, int timeOut = Config.TIME_OUT)
+        public static async Task<AsynchronousJobId> BatchReplacePartyAsync(string accessTokenOrAppKey, string mediaId, Asynchronous_CallBack callBack, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {

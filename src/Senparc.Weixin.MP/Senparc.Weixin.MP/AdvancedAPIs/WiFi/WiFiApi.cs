@@ -73,7 +73,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="pageSize">每页的个数，默认10个，最大20个</param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static WiFiShopListJsonResult ShopList(string accessTokenOrAppId, int pageIndex = 1, int pageSize = 10, int timeOut = Config.TIME_OUT)
+        public static WiFiShopListJsonResult ShopList(string accessTokenOrAppId, int pageIndex = 1, int pageSize = 10, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -97,7 +97,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="pagesize">每页的个数，默认10个，最大20个</param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static WiFiShopGetJsonResult ShopGet(string accessTokenOrAppId, long shopId, int pageindex = 1, int pagesize = 10, int timeOut = Config.TIME_OUT)
+        public static WiFiShopGetJsonResult ShopGet(string accessTokenOrAppId, long shopId, int pageindex = 1, int pagesize = 10, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -122,7 +122,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="ssid">无线网络设备的ssid。32个字符以内；ssid支持中文，但可能因设备兼容性问题导致显示乱码，或无法连接等问题，相关风险自行承担！当门店下是portal型设备时，ssid必填；当门店下是密码型设备时，ssid选填，且ssid和密码必须有一个以大写字母“WX”开头</param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static WxJsonResult ShopUpdate(string accessTokenOrAppId, long shopId, string oldSsid, string ssid, int timeOut = Config.TIME_OUT)
+        public static WxJsonResult ShopUpdate(string accessTokenOrAppId, long shopId, string oldSsid, string ssid, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -147,7 +147,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="ssid">无线网络设备的ssid。若不填写ssid，默认为清空门店下所有设备；填写ssid则为清空该ssid下的所有设备</param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static WxJsonResult ShopClean(string accessTokenOrAppId, long shopId, string ssid, int timeOut = Config.TIME_OUT)
+        public static WxJsonResult ShopClean(string accessTokenOrAppId, long shopId, string ssid, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -186,7 +186,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="timeOut"></param>
         /// <returns></returns>
         public static WxJsonResult AddDevice(string accessTokenOrAppId, long shopId, string ssid, string password,
-            /*string bssid,*/ int timeOut = Config.TIME_OUT)
+            /*string bssid,*/ int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -213,7 +213,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="timeOut"></param>
         /// <returns></returns>
         public static WiFiRegisterJsonResult WifeRegister(string accessTokenOrAppId, long shopId, string ssid, string reset,
-           int timeOut = Config.TIME_OUT)
+           int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -241,7 +241,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="timeOut"></param>
         /// <returns></returns>
         public static GetDeviceListResult GetDeviceList(string accessTokenOrAppId, int pageIndex = 1, int pageSize = 10,
-            long? shopId = null, int timeOut = Config.TIME_OUT)
+            long? shopId = null, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -279,7 +279,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="bssid">需要删除的无线网络设备无线mac地址，格式冒号分隔，字符长度17个，并且字母小写，例如：00:1f:7a:ad:5c:a8</param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static WxJsonResult DeleteDevice(string accessTokenOrAppId, string bssid, int timeOut = Config.TIME_OUT)
+        public static WxJsonResult DeleteDevice(string accessTokenOrAppId, string bssid, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -304,7 +304,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="timeOut"></param>
         /// <returns></returns>
         public static GetQrcodeResult GetQrcode(string accessTokenOrAppId, long shopId, int imgId,
-            int timeOut = Config.TIME_OUT)
+            int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -331,7 +331,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="timeOut"></param>
         /// <returns></returns>
         public static WxJsonResult SetHomePage(string accessTokenOrAppId, long shopId, string url = null,
-            int timeOut = Config.TIME_OUT)
+            int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -373,7 +373,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="timeOut"></param>
         /// <returns></returns>
         public static GetHomePageResult GetHomePage(string accessTokenOrAppId, long shopId,
-            int timeOut = Config.TIME_OUT)
+            int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -398,7 +398,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="timeOut"></param>
         /// <returns></returns>
         public static WxJsonResult SetBar(string accessTokenOrAppId, long shopId, int barType,
-            int timeOut = Config.TIME_OUT)
+            int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -424,7 +424,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="timeOut"></param>
         /// <returns></returns>
         public static WxJsonResult SetFinishpage(string accessTokenOrAppId, long shopId, string finishPageUrl,
-            int timeOut = Config.TIME_OUT)
+            int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -453,7 +453,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <returns></returns>
         public static GetStatisticsResult GetStatistics(string accessTokenOrAppId, string beginDate, string endDate,
             long shopId = -1,
-            int timeOut = Config.TIME_OUT)
+            int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -484,7 +484,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="timeOut"></param>
         /// <returns></returns>
         public static WxJsonResult SetCouponPut(string accessTokenOrAppId, long shopId, string cardId, string cardDescribe, string starTime, string endTime, int cardQuantity,
-            int timeOut = Config.TIME_OUT)
+            int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -512,7 +512,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="shopId">门店ID，可设置为0，表示所有门店</param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static WiFiGetCouponPutJsonResult GetCouponPut(string accessTokenOrAppId, long shopId, int timeOut = Config.TIME_OUT)
+        public static WiFiGetCouponPutJsonResult GetCouponPut(string accessTokenOrAppId, long shopId, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -551,7 +551,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="callBackUrl">回调URL，开通插件成功后的跳转页面。注：该参数域名必须与跳转进开通插件页面的页面域名保持一致，建议均采用第三方平台域名。</param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static WiFiOpenPluginTokenJsonResult OpenPluginToken(string accessTokenOrAppId, string callBackUrl, int timeOut = Config.TIME_OUT)
+        public static WiFiOpenPluginTokenJsonResult OpenPluginToken(string accessTokenOrAppId, string callBackUrl, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -579,7 +579,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="pageSize">每页的个数，默认10个，最大20个</param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static async Task<WiFiShopListJsonResult> ShopListAsync(string accessTokenOrAppId, int pageIndex = 1, int pageSize = 10, int timeOut = Config.TIME_OUT)
+        public static async Task<WiFiShopListJsonResult> ShopListAsync(string accessTokenOrAppId, int pageIndex = 1, int pageSize = 10, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -603,7 +603,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="pagesize">每页的个数，默认10个，最大20个</param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static async Task<WiFiShopGetJsonResult> ShopGetAsync(string accessTokenOrAppId, long shopId, int pageindex = 1, int pagesize = 10, int timeOut = Config.TIME_OUT)
+        public static async Task<WiFiShopGetJsonResult> ShopGetAsync(string accessTokenOrAppId, long shopId, int pageindex = 1, int pagesize = 10, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -628,7 +628,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="ssid">无线网络设备的ssid。32个字符以内；ssid支持中文，但可能因设备兼容性问题导致显示乱码，或无法连接等问题，相关风险自行承担！当门店下是portal型设备时，ssid必填；当门店下是密码型设备时，ssid选填，且ssid和密码必须有一个以大写字母“WX”开头</param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static async Task<WxJsonResult> ShopUpdateAsync(string accessTokenOrAppId, long shopId, string oldSsid, string ssid, int timeOut = Config.TIME_OUT)
+        public static async Task<WxJsonResult> ShopUpdateAsync(string accessTokenOrAppId, long shopId, string oldSsid, string ssid, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -653,7 +653,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="ssid">无线网络设备的ssid。若不填写ssid，默认为清空门店下所有设备；填写ssid则为清空该ssid下的所有设备</param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static async Task<WxJsonResult> ShopCleanAsync(string accessTokenOrAppId, long shopId, string ssid, int timeOut = Config.TIME_OUT)
+        public static async Task<WxJsonResult> ShopCleanAsync(string accessTokenOrAppId, long shopId, string ssid, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -692,7 +692,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="timeOut"></param>
         /// <returns></returns>
         public static async Task<WxJsonResult> AddDeviceAsync(string accessTokenOrAppId, long shopId, string ssid, string password,
-            /*string bssid,*/ int timeOut = Config.TIME_OUT)
+            /*string bssid,*/ int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -719,7 +719,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="timeOut"></param>
         /// <returns></returns>
         public static async Task<WiFiRegisterJsonResult> WifeRegisterAsync(string accessTokenOrAppId, long shopId, string ssid, string reset,
-           int timeOut = Config.TIME_OUT)
+           int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -747,7 +747,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="timeOut"></param>
         /// <returns></returns>
         public static async Task<GetDeviceListResult> GetDeviceListAsync(string accessTokenOrAppId, int pageIndex = 1, int pageSize = 10,
-            long? shopId = null, int timeOut = Config.TIME_OUT)
+            long? shopId = null, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -785,7 +785,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="bssid">需要删除的无线网络设备无线mac地址，格式冒号分隔，字符长度17个，并且字母小写，例如：00:1f:7a:ad:5c:a8</param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static async Task<WxJsonResult> DeleteDeviceAsync(string accessTokenOrAppId, string bssid, int timeOut = Config.TIME_OUT)
+        public static async Task<WxJsonResult> DeleteDeviceAsync(string accessTokenOrAppId, string bssid, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -810,7 +810,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="timeOut"></param>
         /// <returns></returns>
         public static async Task<GetQrcodeResult> GetQrcodeAsync(string accessTokenOrAppId, long shopId, int imgId,
-            int timeOut = Config.TIME_OUT)
+            int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -837,7 +837,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="timeOut"></param>
         /// <returns></returns>
         public static async Task<WxJsonResult> SetHomePageAsync(string accessTokenOrAppId, long shopId, string url = null,
-            int timeOut = Config.TIME_OUT)
+            int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -879,7 +879,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="timeOut"></param>
         /// <returns></returns>
         public static async Task<GetHomePageResult> GetHomePageaAsync(string accessTokenOrAppId, long shopId,
-            int timeOut = Config.TIME_OUT)
+            int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -904,7 +904,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="timeOut"></param>
         /// <returns></returns>
         public static async Task<WxJsonResult> SetBarAsync(string accessTokenOrAppId, long shopId, int barType,
-            int timeOut = Config.TIME_OUT)
+            int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -931,7 +931,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="timeOut"></param>
         /// <returns></returns>
         public static async Task<WxJsonResult> SetFinishpageAsync(string accessTokenOrAppId, long shopId, string finishPageUrl,
-            int timeOut = Config.TIME_OUT)
+            int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -960,7 +960,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <returns></returns>
         public static async Task<GetStatisticsResult> GetStatisticsAsync(string accessTokenOrAppId, string beginDate, string endDate,
             long shopId = -1,
-            int timeOut = Config.TIME_OUT)
+            int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -991,7 +991,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="timeOut"></param>
         /// <returns></returns>
         public static async Task<WxJsonResult> SetCouponPutAsync(string accessTokenOrAppId, long shopId, string cardId, string cardDescribe, string starTime, string endTime, int cardQuantity,
-            int timeOut = Config.TIME_OUT)
+            int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -1019,7 +1019,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="shopId">门店ID，可设置为0，表示所有门店</param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static async Task<WiFiGetCouponPutJsonResult> GetCouponPutAsync(string accessTokenOrAppId, long shopId, int timeOut = Config.TIME_OUT)
+        public static async Task<WiFiGetCouponPutJsonResult> GetCouponPutAsync(string accessTokenOrAppId, long shopId, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -1058,7 +1058,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="callBackUrl">回调URL，开通插件成功后的跳转页面。注：该参数域名必须与跳转进开通插件页面的页面域名保持一致，建议均采用第三方平台域名。</param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static async Task<WiFiOpenPluginTokenJsonResult> OpenPluginTokenAsync(string accessTokenOrAppId, string callBackUrl, int timeOut = Config.TIME_OUT)
+        public static async Task<WiFiOpenPluginTokenJsonResult> OpenPluginTokenAsync(string accessTokenOrAppId, string callBackUrl, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {

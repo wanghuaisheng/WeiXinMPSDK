@@ -41,7 +41,7 @@ namespace Senparc.Weixin.Work.CommonAPIs
         /// <param name="checkValidationResult"></param>
         /// <param name="jsonSetting"></param>
         /// <returns></returns>
-        public static WorkJsonResult Send(string accessToken, string urlFormat, object data, CommonJsonSendType sendType = CommonJsonSendType.POST, int timeOut = Config.TIME_OUT, bool checkValidationResult = false, JsonSetting jsonSetting = null)
+        public static WorkJsonResult Send(string accessToken, string urlFormat, object data, CommonJsonSendType sendType = CommonJsonSendType.POST, int timeOut = Config.TimeOut, bool checkValidationResult = false, JsonSetting jsonSetting = null)
         {
             return Senparc.Weixin.CommonAPIs.CommonJsonSend.Send<WorkJsonResult>(accessToken, urlFormat, data, sendType, timeOut,checkValidationResult,jsonSetting);
         }
@@ -58,7 +58,7 @@ namespace Senparc.Weixin.Work.CommonAPIs
         /// <param name="jsonSetting"></param>
         /// <returns></returns>
         [Obsolete("此方法已过期，请使用Senparc.Weixin.CommonAPIs.CommonJsonSend.Send<T>()方法")]
-        public static T Send<T>(string accessToken, string urlFormat, object data, CommonJsonSendType sendType = CommonJsonSendType.POST, int timeOut = Config.TIME_OUT, bool checkValidationResult = false, JsonSetting jsonSetting = null)
+        public static T Send<T>(string accessToken, string urlFormat, object data, CommonJsonSendType sendType = CommonJsonSendType.POST, int timeOut = Config.TimeOut, bool checkValidationResult = false, JsonSetting jsonSetting = null)
         {
             return Senparc.Weixin.CommonAPIs.CommonJsonSend.Send<T>(accessToken, urlFormat, data, sendType, timeOut, checkValidationResult, jsonSetting);
         }

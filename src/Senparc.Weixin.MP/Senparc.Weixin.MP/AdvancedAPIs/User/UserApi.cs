@@ -113,7 +113,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="remark">新的备注名，长度必须小于30字符</param>
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
-        public static WxJsonResult UpdateRemark(string accessTokenOrAppId, string openId, string remark, int timeOut = Config.TIME_OUT)
+        public static WxJsonResult UpdateRemark(string accessTokenOrAppId, string openId, string remark, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -135,7 +135,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="userList"></param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static BatchGetUserInfoJsonResult BatchGetUserInfo(string accessTokenOrAppId, List<BatchGetUserInfoData> userList, int timeOut = Config.TIME_OUT)
+        public static BatchGetUserInfoJsonResult BatchGetUserInfo(string accessTokenOrAppId, List<BatchGetUserInfoData> userList, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -200,7 +200,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="remark">新的备注名，长度必须小于30字符</param>
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
-        public static async Task<WxJsonResult> UpdateRemarkAsync(string accessTokenOrAppId, string openId, string remark, int timeOut = Config.TIME_OUT)
+        public static async Task<WxJsonResult> UpdateRemarkAsync(string accessTokenOrAppId, string openId, string remark, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
            {
@@ -222,7 +222,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="userList"></param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static async Task<BatchGetUserInfoJsonResult> BatchGetUserInfoAsync(string accessTokenOrAppId, List<BatchGetUserInfoData> userList, int timeOut = Config.TIME_OUT)
+        public static async Task<BatchGetUserInfoJsonResult> BatchGetUserInfoAsync(string accessTokenOrAppId, List<BatchGetUserInfoData> userList, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {

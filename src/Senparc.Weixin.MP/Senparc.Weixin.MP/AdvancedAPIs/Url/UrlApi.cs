@@ -61,7 +61,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         ///  <param name="action">此处填long2short，代表长链接转短链接</param>
         ///  <param name="longUrl">需要转换的长链接，支持http://、https://、weixin://wxpay 格式的url</param>
         /// <param name="timeOut">请求超时时间</param>
-        public static ShortUrlResult ShortUrl(string accessTokenOrAppId, string action, string longUrl, int timeOut = Config.TIME_OUT)
+        public static ShortUrlResult ShortUrl(string accessTokenOrAppId, string action, string longUrl, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -86,7 +86,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         ///  <param name="action">此处填long2short，代表长链接转短链接</param>
         ///  <param name="longUrl">需要转换的长链接，支持http://、https://、weixin://wxpay 格式的url</param>
         /// <param name="timeOut">请求超时时间</param>
-        public static async Task<ShortUrlResult> ShortUrlAsync(string accessTokenOrAppId, string action, string longUrl, int timeOut = Config.TIME_OUT)
+        public static async Task<ShortUrlResult> ShortUrlAsync(string accessTokenOrAppId, string action, string longUrl, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {

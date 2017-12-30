@@ -119,7 +119,7 @@ namespace Senparc.Weixin.Work.CommonAPIs
         /// <param name="agentId">需要发送红包的应用ID，若只是使用微信支付和企业转账，则无需该参数</param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static ConvertToOpenIdResult ConvertToOpenId(string accessToken, string userId, string agentId = null, int timeOut = Config.TIME_OUT)
+        public static ConvertToOpenIdResult ConvertToOpenId(string accessToken, string userId, string agentId = null, int timeOut = Config.TimeOut)
         {
             var url = string.Format(Config.ApiWorkHost + "/cgi-bin/user/convert_to_openid?access_token={0}",
                 accessToken.AsUrlData());
@@ -140,7 +140,7 @@ namespace Senparc.Weixin.Work.CommonAPIs
         /// <param name="openId"></param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static ConvertToUserIdResult ConvertToUserId(string accessToken, string openId, int timeOut = Config.TIME_OUT)
+        public static ConvertToUserIdResult ConvertToUserId(string accessToken, string openId, int timeOut = Config.TimeOut)
         {
             var url = string.Format(Config.ApiWorkHost + "/cgi-bin/user/convert_to_userid?access_token={0}",
                 accessToken.AsUrlData());
@@ -230,7 +230,7 @@ namespace Senparc.Weixin.Work.CommonAPIs
         /// <param name="agentId">需要发送红包的应用ID，若只是使用微信支付和企业转账，则无需该参数</param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static async Task<ConvertToOpenIdResult> ConvertToOpenIdAsync(string accessToken, string userId, string agentId = null, int timeOut = Config.TIME_OUT)
+        public static async Task<ConvertToOpenIdResult> ConvertToOpenIdAsync(string accessToken, string userId, string agentId = null, int timeOut = Config.TimeOut)
         {
             var url = string.Format(Config.ApiWorkHost + "/cgi-bin/user/convert_to_openid?access_token={0}",
                 accessToken.AsUrlData());
@@ -251,7 +251,7 @@ namespace Senparc.Weixin.Work.CommonAPIs
         /// <param name="openId"></param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static async Task<ConvertToUserIdResult> ConvertToUserIdAsync(string accessToken, string openId, int timeOut = Config.TIME_OUT)
+        public static async Task<ConvertToUserIdResult> ConvertToUserIdAsync(string accessToken, string openId, int timeOut = Config.TimeOut)
         {
             var url = string.Format(Config.ApiWorkHost + "/cgi-bin/user/convert_to_userid?access_token={0}",
                 accessToken.AsUrlData());

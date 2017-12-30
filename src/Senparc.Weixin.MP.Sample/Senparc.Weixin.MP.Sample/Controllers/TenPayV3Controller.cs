@@ -28,7 +28,6 @@ using System.Text;
 using System.Web.Configuration;
 using System.Web.Mvc;
 using System.Xml.Linq;
-using Senparc.Weixin.BrowserUtility;
 using Senparc.Weixin.Helpers;
 using Senparc.Weixin.HttpUtility;
 using Senparc.Weixin.MP.AdvancedAPIs;
@@ -42,6 +41,7 @@ using Senparc.Weixin.Exceptions;
 using Senparc.Weixin.MP.Sample.Filters;
 using System.Web.Security;
 using Senparc.Weixin.MP.Sample.CommonService.TemplateMessage;
+using Senparc.Weixin.Utilities;
 
 namespace Senparc.Weixin.MP.Sample.Controllers
 {
@@ -420,13 +420,13 @@ namespace Senparc.Weixin.MP.Sample.Controllers
                     string openId = resHandler.GetParameter("openid");
                     var templateData = new WeixinTemplate_PaySuccess("https://weixin.senparc.com", "购买商品", "状态：" + return_code);
 
-                    Senparc.Weixin.WeixinTrace.SendCustomLog("支付成功模板消息参数", appId+" , "+openId);
+                    WeixinTrace.SendCustomLog("支付成功模板消息参数", appId+" , "+openId);
 
                     var result = AdvancedAPIs.TemplateApi.SendTemplateMessage(appId, openId, templateData);
                 }
                 catch(Exception ex)
                 {
-                    Senparc.Weixin.WeixinTrace.SendCustomLog("支付成功模板消息",ex.ToString());
+                    WeixinTrace.SendCustomLog("支付成功模板消息",ex.ToString());
                 }
 
                 #region 记录日志
@@ -787,7 +787,7 @@ namespace Senparc.Weixin.MP.Sample.Controllers
             }
 
             //判断是否正在微信端
-            if (BrowserUtility.BrowserUtility.SideInWeixinBrowser(HttpContext))
+            if (BrowserUtility.SideInWeixinBrowser(HttpContext))
             {
                 //正在微信端，直接跳转到微信支付页面
                 return RedirectToAction("JsApi", new { productId = productId, hc = hc });

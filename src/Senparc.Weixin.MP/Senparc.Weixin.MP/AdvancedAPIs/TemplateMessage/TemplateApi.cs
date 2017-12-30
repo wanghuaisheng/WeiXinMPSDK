@@ -98,7 +98,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="miniProgram">跳小程序所需数据，不需跳小程序可不用传该数据</param>
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
-        public static SendTemplateMessageResult SendTemplateMessage(string accessTokenOrAppId, string openId, string templateId, string url, object data, TempleteModel_MiniProgram miniProgram = null, int timeOut = Config.TIME_OUT)
+        public static SendTemplateMessageResult SendTemplateMessage(string accessTokenOrAppId, string openId, string templateId, string url, object data, TempleteModel_MiniProgram miniProgram = null, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -126,7 +126,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="miniProgram">跳小程序所需数据，不需跳小程序可不用传该数据</param>
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
-        public static SendTemplateMessageResult SendTemplateMessage(string accessTokenOrAppId, string openId, ITemplateMessageBase templateMessageData, TempleteModel_MiniProgram miniProgram = null, int timeOut = Config.TIME_OUT)
+        public static SendTemplateMessageResult SendTemplateMessage(string accessTokenOrAppId, string openId, ITemplateMessageBase templateMessageData, TempleteModel_MiniProgram miniProgram = null, int timeOut = Config.TimeOut)
         {
             return SendTemplateMessage(accessTokenOrAppId, openId, templateMessageData.TemplateId,
                 templateMessageData.Url, templateMessageData, miniProgram, timeOut);
@@ -140,7 +140,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="industry_id2">公众号模板消息所属行业编号</param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static WxJsonResult SetIndustry(string accessTokenOrAppId, IndustryCode industry_id1, IndustryCode industry_id2, int timeOut = Config.TIME_OUT)
+        public static WxJsonResult SetIndustry(string accessTokenOrAppId, IndustryCode industry_id1, IndustryCode industry_id2, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -162,7 +162,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="timeOut"></param>
         /// <returns></returns>
 
-        public static GetIndustryJsonResult GetIndustry(string accessTokenOrAppId, int timeOut = Config.TIME_OUT)
+        public static GetIndustryJsonResult GetIndustry(string accessTokenOrAppId, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -178,7 +178,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="template_id_short">模板库中模板的编号，有“TM**”和“OPENTMTM**”等形式</param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static AddtemplateJsonResult Addtemplate(string accessTokenOrAppId, string template_id_short, int timeOut = Config.TIME_OUT)
+        public static AddtemplateJsonResult Addtemplate(string accessTokenOrAppId, string template_id_short, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -199,7 +199,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="timeOut"></param>
         /// <returns></returns>
 
-        public static GetPrivateTemplateJsonResult GetPrivateTemplate(string accessTokenOrAppId, int timeOut = Config.TIME_OUT)
+        public static GetPrivateTemplateJsonResult GetPrivateTemplate(string accessTokenOrAppId, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -215,7 +215,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="template_id">公众帐号下模板消息ID</param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static WxJsonResult DelPrivateTemplate(string accessTokenOrAppId, string template_id, int timeOut = Config.TIME_OUT)
+        public static WxJsonResult DelPrivateTemplate(string accessTokenOrAppId, string template_id, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -242,7 +242,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="url">点击消息跳转的链接，需要有ICP备案</param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static WxJsonResult Subscribe(string accessTokenOrAppId, string toUserOpenId, string templateId, int scene, string title, object data, string url = null, int timeOut = Config.TIME_OUT)
+        public static WxJsonResult Subscribe(string accessTokenOrAppId, string toUserOpenId, string templateId, int scene, string title, object data, string url = null, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -278,7 +278,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="miniProgram">跳小程序所需数据，不需跳小程序可不用传该数据</param>
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
-        public static async Task<SendTemplateMessageResult> SendTemplateMessageAsync(string accessTokenOrAppId, string openId, string templateId, string url, object data, TempleteModel_MiniProgram miniProgram = null, int timeOut = Config.TIME_OUT)
+        public static async Task<SendTemplateMessageResult> SendTemplateMessageAsync(string accessTokenOrAppId, string openId, string templateId, string url, object data, TempleteModel_MiniProgram miniProgram = null, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -307,7 +307,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="templateMessageData"></param>
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
-        public static async Task<SendTemplateMessageResult> SendTemplateMessageAsync(string accessTokenOrAppId, string openId, ITemplateMessageBase templateMessageData, TempleteModel_MiniProgram miniProgram = null, int timeOut = Config.TIME_OUT)
+        public static async Task<SendTemplateMessageResult> SendTemplateMessageAsync(string accessTokenOrAppId, string openId, ITemplateMessageBase templateMessageData, TempleteModel_MiniProgram miniProgram = null, int timeOut = Config.TimeOut)
         {
             return await SendTemplateMessageAsync(accessTokenOrAppId, openId, templateMessageData.TemplateId,
                 templateMessageData.Url, templateMessageData, miniProgram, timeOut);
@@ -322,7 +322,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="timeOut"></param>
         /// <returns></returns>
 
-        public static async Task<WxJsonResult> SetIndustryAsync(string accessTokenOrAppId, IndustryCode industry_id1, IndustryCode industry_id2, int timeOut = Config.TIME_OUT)
+        public static async Task<WxJsonResult> SetIndustryAsync(string accessTokenOrAppId, IndustryCode industry_id1, IndustryCode industry_id2, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -344,7 +344,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="timeOut"></param>
         /// <returns></returns>
 
-        public static async Task<GetIndustryJsonResult> GetIndustryAsync(string accessTokenOrAppId, int timeOut = Config.TIME_OUT)
+        public static async Task<GetIndustryJsonResult> GetIndustryAsync(string accessTokenOrAppId, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -360,7 +360,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="template_id_short">模板库中模板的编号，有“TM**”和“OPENTMTM**”等形式</param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static async Task<AddtemplateJsonResult> AddtemplateAsync(string accessTokenOrAppId, string template_id_short, int timeOut = Config.TIME_OUT)
+        public static async Task<AddtemplateJsonResult> AddtemplateAsync(string accessTokenOrAppId, string template_id_short, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -381,7 +381,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="timeOut"></param>
         /// <returns></returns>
 
-        public static async Task<GetPrivateTemplateJsonResult> GetPrivateTemplateAsync(string accessTokenOrAppId, int timeOut = Config.TIME_OUT)
+        public static async Task<GetPrivateTemplateJsonResult> GetPrivateTemplateAsync(string accessTokenOrAppId, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -397,7 +397,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="template_id">公众帐号下模板消息ID</param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static async Task<WxJsonResult> DelPrivateTemplateAsync(string accessTokenOrAppId, string template_id, int timeOut = Config.TIME_OUT)
+        public static async Task<WxJsonResult> DelPrivateTemplateAsync(string accessTokenOrAppId, string template_id, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -424,7 +424,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="url">点击消息跳转的链接，需要有ICP备案</param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static async Task<WxJsonResult> SubscribeAsync(string accessTokenOrAppId, string toUserOpenId, string templateId, int scene, string title, object data, string url = null, int timeOut = Config.TIME_OUT)
+        public static async Task<WxJsonResult> SubscribeAsync(string accessTokenOrAppId, string toUserOpenId, string templateId, int scene, string title, object data, string url = null, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {

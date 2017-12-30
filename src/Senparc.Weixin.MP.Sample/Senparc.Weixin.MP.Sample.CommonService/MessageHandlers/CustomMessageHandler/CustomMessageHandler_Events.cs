@@ -23,8 +23,7 @@ using Senparc.Weixin.MP.Helpers;
 using Senparc.Weixin.MP.MessageHandlers;
 using Senparc.Weixin.MP.Sample.CommonService.Download;
 using Senparc.Weixin.MP.Sample.CommonService.Utilities;
-
-
+using Senparc.Weixin.Utilities;
 #if NET45
 using System.Web;
 #else
@@ -575,7 +574,7 @@ MsgId：{1}
             }
             catch (Exception e)
             {
-                Senparc.Weixin.WeixinTrace.SendCustomLog("模板消息发送失败", e.ToString());
+                WeixinTrace.SendCustomLog("模板消息发送失败", e.ToString());
             }
 
 

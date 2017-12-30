@@ -57,7 +57,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Senparc.Weixin.Entities;
 using Senparc.Weixin.Exceptions;
-
+using Senparc.Weixin.Utilities;
 #if NET35 || NET40 || NET45
 using System.Web.Script.Serialization;
 #endif
@@ -130,7 +130,7 @@ namespace Senparc.Weixin.HttpUtility
         /// <param name="fileDictionary"></param>
         /// <param name="postDataDictionary"></param>
         /// <returns></returns>
-        public static T PostFileGetJson<T>(string url, CookieContainer cookieContainer = null, Dictionary<string, string> fileDictionary = null, Dictionary<string, string> postDataDictionary = null, Encoding encoding = null, X509Certificate2 cer = null, bool useAjax = false, int timeOut = Config.TIME_OUT)
+        public static T PostFileGetJson<T>(string url, CookieContainer cookieContainer = null, Dictionary<string, string> fileDictionary = null, Dictionary<string, string> postDataDictionary = null, Encoding encoding = null, X509Certificate2 cer = null, bool useAjax = false, int timeOut = Config.TimeOut)
         {
             using (MemoryStream ms = new MemoryStream())
             {
@@ -154,7 +154,7 @@ namespace Senparc.Weixin.HttpUtility
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <param name="checkValidationResult">验证服务器证书回调自动验证</param>
         /// <returns></returns>
-        public static T PostGetJson<T>(string url, CookieContainer cookieContainer = null, Stream fileStream = null, Encoding encoding = null, X509Certificate2 cer = null, bool useAjax = false, int timeOut = Config.TIME_OUT, bool checkValidationResult = false)
+        public static T PostGetJson<T>(string url, CookieContainer cookieContainer = null, Stream fileStream = null, Encoding encoding = null, X509Certificate2 cer = null, bool useAjax = false, int timeOut = Config.TimeOut, bool checkValidationResult = false)
         {
             string returnText = RequestUtility.HttpPost(url, cookieContainer, fileStream, null, null, encoding, cer, useAjax, timeOut, checkValidationResult);
 
@@ -176,7 +176,7 @@ namespace Senparc.Weixin.HttpUtility
         /// <param name="timeOut"></param>
         /// <typeparam name="T"></typeparam>
         /// <returns></returns>
-        public static T PostGetJson<T>(string url, CookieContainer cookieContainer = null, Dictionary<string, string> formData = null, Encoding encoding = null, X509Certificate2 cer = null, bool useAjax = false, int timeOut = Config.TIME_OUT)
+        public static T PostGetJson<T>(string url, CookieContainer cookieContainer = null, Dictionary<string, string> formData = null, Encoding encoding = null, X509Certificate2 cer = null, bool useAjax = false, int timeOut = Config.TimeOut)
         {
             string returnText = RequestUtility.HttpPost(url, cookieContainer, formData, encoding, cer, useAjax, timeOut);
             var result = GetResult<T>(returnText);
@@ -231,7 +231,7 @@ namespace Senparc.Weixin.HttpUtility
         /// <param name="fileDictionary"></param>
         /// <param name="postDataDictionary"></param>
         /// <returns></returns>
-        public static async Task<T> PostFileGetJsonAsync<T>(string url, CookieContainer cookieContainer = null, Dictionary<string, string> fileDictionary = null, Dictionary<string, string> postDataDictionary = null, Encoding encoding = null, X509Certificate2 cer = null, bool useAjax = false, int timeOut = Config.TIME_OUT)
+        public static async Task<T> PostFileGetJsonAsync<T>(string url, CookieContainer cookieContainer = null, Dictionary<string, string> fileDictionary = null, Dictionary<string, string> postDataDictionary = null, Encoding encoding = null, X509Certificate2 cer = null, bool useAjax = false, int timeOut = Config.TimeOut)
         {
             using (MemoryStream ms = new MemoryStream())
             {
@@ -256,7 +256,7 @@ namespace Senparc.Weixin.HttpUtility
         /// <param name="timeOut"></param>
         /// <param name="checkValidationResult"></param>
         /// <returns></returns>
-        public static async Task<T> PostGetJsonAsync<T>(string url, CookieContainer cookieContainer = null, Stream fileStream = null, Encoding encoding = null, X509Certificate2 cer = null, bool useAjax = false, int timeOut = Config.TIME_OUT, bool checkValidationResult = false)
+        public static async Task<T> PostGetJsonAsync<T>(string url, CookieContainer cookieContainer = null, Stream fileStream = null, Encoding encoding = null, X509Certificate2 cer = null, bool useAjax = false, int timeOut = Config.TimeOut, bool checkValidationResult = false)
         {
             string returnText = await RequestUtility.HttpPostAsync(url, cookieContainer, fileStream, null, null, encoding, cer, useAjax, timeOut, checkValidationResult);
 
@@ -279,7 +279,7 @@ namespace Senparc.Weixin.HttpUtility
         /// <param name="useAjax">是否使用Ajax请求</param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static async Task<T> PostGetJsonAsync<T>(string url, CookieContainer cookieContainer = null, Dictionary<string, string> formData = null, Encoding encoding = null, X509Certificate2 cer = null, bool useAjax = false, int timeOut = Config.TIME_OUT)
+        public static async Task<T> PostGetJsonAsync<T>(string url, CookieContainer cookieContainer = null, Dictionary<string, string> formData = null, Encoding encoding = null, X509Certificate2 cer = null, bool useAjax = false, int timeOut = Config.TimeOut)
         {
             string returnText = await RequestUtility.HttpPostAsync(url, cookieContainer, formData, encoding, cer, useAjax, timeOut);
             var result = GetResult<T>(returnText);

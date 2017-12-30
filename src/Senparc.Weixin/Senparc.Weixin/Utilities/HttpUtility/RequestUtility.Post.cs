@@ -79,7 +79,7 @@ namespace Senparc.Weixin.HttpUtility
         /// <returns></returns>
         public static HttpWebRequest HttpPost_Common_Net45(string url, CookieContainer cookieContainer = null,
             Stream postStream = null, Dictionary<string, string> fileDictionary = null, string refererUrl = null,
-            Encoding encoding = null, X509Certificate2 cer = null, bool useAjax = false, int timeOut = Config.TIME_OUT,
+            Encoding encoding = null, X509Certificate2 cer = null, bool useAjax = false, int timeOut = Config.TimeOut,
             bool checkValidationResult = false)
         {
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
@@ -288,7 +288,7 @@ namespace Senparc.Weixin.HttpUtility
         /// 使用Post方法获取字符串结果，常规提交
         /// </summary>
         /// <returns></returns>
-        public static string HttpPost(string url, CookieContainer cookieContainer = null, Dictionary<string, string> formData = null, Encoding encoding = null, X509Certificate2 cer = null, bool useAjax = false, int timeOut = Config.TIME_OUT)
+        public static string HttpPost(string url, CookieContainer cookieContainer = null, Dictionary<string, string> formData = null, Encoding encoding = null, X509Certificate2 cer = null, bool useAjax = false, int timeOut = Config.TimeOut)
         {
             MemoryStream ms = new MemoryStream();
             formData.FillFormDataStream(ms);//填充formData
@@ -309,7 +309,7 @@ namespace Senparc.Weixin.HttpUtility
         /// <param name="checkValidationResult">验证服务器证书回调自动验证</param>
         /// <param name="refererUrl"></param>
         /// <returns></returns>
-        public static string HttpPost(string url, CookieContainer cookieContainer = null, Stream postStream = null, Dictionary<string, string> fileDictionary = null, string refererUrl = null, Encoding encoding = null, X509Certificate2 cer = null, bool useAjax = false, int timeOut = Config.TIME_OUT, bool checkValidationResult = false)
+        public static string HttpPost(string url, CookieContainer cookieContainer = null, Stream postStream = null, Dictionary<string, string> fileDictionary = null, string refererUrl = null, Encoding encoding = null, X509Certificate2 cer = null, bool useAjax = false, int timeOut = Config.TimeOut, bool checkValidationResult = false)
         {
             if (cookieContainer == null)
             {
@@ -401,7 +401,7 @@ namespace Senparc.Weixin.HttpUtility
 
         public static SenparcHttpResponse HttpResponsePost(string url, CookieContainer cookieContainer = null, Stream postStream = null,
             Dictionary<string, string> fileDictionary = null, string refererUrl = null, Encoding encoding = null,
-            X509Certificate2 cer = null, bool useAjax = false, int timeOut = Config.TIME_OUT,
+            X509Certificate2 cer = null, bool useAjax = false, int timeOut = Config.TimeOut,
             bool checkValidationResult = false)
         {
             if (cookieContainer == null)
@@ -457,7 +457,7 @@ namespace Senparc.Weixin.HttpUtility
         /// 使用Post方法获取字符串结果，常规提交
         /// </summary>
         /// <returns></returns>
-        public static async Task<string> HttpPostAsync(string url, CookieContainer cookieContainer = null, Dictionary<string, string> formData = null, Encoding encoding = null, X509Certificate2 cer = null, bool useAjax = false, int timeOut = Config.TIME_OUT)
+        public static async Task<string> HttpPostAsync(string url, CookieContainer cookieContainer = null, Dictionary<string, string> formData = null, Encoding encoding = null, X509Certificate2 cer = null, bool useAjax = false, int timeOut = Config.TimeOut)
         {
             MemoryStream ms = new MemoryStream();
             await formData.FillFormDataStreamAsync(ms);//填充formData
@@ -481,7 +481,7 @@ namespace Senparc.Weixin.HttpUtility
         /// <param name="encoding"></param>
         /// <returns></returns>
         public static async Task<string> HttpPostAsync(string url, CookieContainer cookieContainer = null, Stream postStream = null, Dictionary<string, string> fileDictionary = null, string refererUrl = null, Encoding encoding = null, X509Certificate2 cer = null,
-            bool useAjax = false, int timeOut = Config.TIME_OUT, bool checkValidationResult = false)
+            bool useAjax = false, int timeOut = Config.TimeOut, bool checkValidationResult = false)
         {
             if (cookieContainer == null)
             {

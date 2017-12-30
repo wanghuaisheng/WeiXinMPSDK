@@ -56,7 +56,7 @@ namespace Senparc.Weixin.Work.AdvancedAPIs
         /// <param name="media">form-data中媒体文件标识，有filename、filelength、content-type等信息</param>
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
-        public static UploadTemporaryResultJson Upload(string accessTokenOrAppKey, UploadMediaFileType type, string media, int timeOut = Config.TIME_OUT)
+        public static UploadTemporaryResultJson Upload(string accessTokenOrAppKey, UploadMediaFileType type, string media, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -115,7 +115,7 @@ namespace Senparc.Weixin.Work.AdvancedAPIs
         /// <param name="timeOut"></param>
         /// <param name="mpNewsArticles"></param>
         /// <returns></returns>
-        public static UploadForeverResultJson AddMpNews(string accessTokenOrAppKey, int agentId, int timeOut = Config.TIME_OUT, params MpNewsArticle[] mpNewsArticles)
+        public static UploadForeverResultJson AddMpNews(string accessTokenOrAppKey, int agentId, int timeOut = Config.TimeOut, params MpNewsArticle[] mpNewsArticles)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -146,7 +146,7 @@ namespace Senparc.Weixin.Work.AdvancedAPIs
         /// <param name="media"></param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static UploadForeverResultJson AddMaterial(string accessTokenOrAppKey, UploadMediaFileType type, int agentId, string media, int timeOut = Config.TIME_OUT)
+        public static UploadForeverResultJson AddMaterial(string accessTokenOrAppKey, UploadMediaFileType type, int agentId, string media, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -233,7 +233,7 @@ namespace Senparc.Weixin.Work.AdvancedAPIs
         /// <param name="timeOut"></param>
         /// <param name="mpNewsArticles"></param>
         /// <returns></returns>
-        public static UploadForeverResultJson UpdateMpNews(string accessTokenOrAppKey, string mediaId, int agentId, int timeOut = Config.TIME_OUT, params MpNewsArticle[] mpNewsArticles)
+        public static UploadForeverResultJson UpdateMpNews(string accessTokenOrAppKey, string mediaId, int agentId, int timeOut = Config.TimeOut, params MpNewsArticle[] mpNewsArticles)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -285,7 +285,7 @@ namespace Senparc.Weixin.Work.AdvancedAPIs
         /// <param name="count"></param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static BatchGetMaterialResult BatchGetMaterial(string accessTokenOrAppKey, UploadMediaFileType type, int agentId, int offset, int count, int timeOut = Config.TIME_OUT)
+        public static BatchGetMaterialResult BatchGetMaterial(string accessTokenOrAppKey, UploadMediaFileType type, int agentId, int offset, int count, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -312,7 +312,7 @@ namespace Senparc.Weixin.Work.AdvancedAPIs
         /// <param name="media"></param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static UploadimgMediaResult UploadimgMedia(string accessTokenOrAppKey, string media, int timeOut = Config.TIME_OUT)
+        public static UploadimgMediaResult UploadimgMedia(string accessTokenOrAppKey, string media, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -342,7 +342,7 @@ namespace Senparc.Weixin.Work.AdvancedAPIs
         /// <param name="media">form-data中媒体文件标识，有filename、filelength、content-type等信息</param>
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
-        public static async Task<UploadTemporaryResultJson> UploadAsync(string accessTokenOrAppKey, UploadMediaFileType type, string media, int timeOut = Config.TIME_OUT)
+        public static async Task<UploadTemporaryResultJson> UploadAsync(string accessTokenOrAppKey, UploadMediaFileType type, string media, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -382,7 +382,7 @@ namespace Senparc.Weixin.Work.AdvancedAPIs
         /// <param name="timeOut"></param>
         /// <param name="mpNewsArticles"></param>
         /// <returns></returns>
-        public static async Task<UploadForeverResultJson> AddMpNewsAsync(string accessTokenOrAppKey, int agentId, int timeOut = Config.TIME_OUT, params MpNewsArticle[] mpNewsArticles)
+        public static async Task<UploadForeverResultJson> AddMpNewsAsync(string accessTokenOrAppKey, int agentId, int timeOut = Config.TimeOut, params MpNewsArticle[] mpNewsArticles)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -413,7 +413,7 @@ namespace Senparc.Weixin.Work.AdvancedAPIs
         /// <param name="media"></param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static async Task<UploadForeverResultJson> AddMaterialAsync(string accessTokenOrAppKey, UploadMediaFileType type, int agentId, string media, int timeOut = Config.TIME_OUT)
+        public static async Task<UploadForeverResultJson> AddMaterialAsync(string accessTokenOrAppKey, UploadMediaFileType type, int agentId, string media, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -502,7 +502,7 @@ namespace Senparc.Weixin.Work.AdvancedAPIs
         /// <param name="timeOut"></param>
         /// <param name="mpNewsArticles"></param>
         /// <returns></returns>
-        public static async Task<UploadForeverResultJson> UpdateMpNewsAsync(string accessTokenOrAppKey, string mediaId, int agentId, int timeOut = Config.TIME_OUT, params MpNewsArticle[] mpNewsArticles)
+        public static async Task<UploadForeverResultJson> UpdateMpNewsAsync(string accessTokenOrAppKey, string mediaId, int agentId, int timeOut = Config.TimeOut, params MpNewsArticle[] mpNewsArticles)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -554,7 +554,7 @@ namespace Senparc.Weixin.Work.AdvancedAPIs
         /// <param name="count"></param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static async Task<BatchGetMaterialResult> BatchGetMaterialAsync(string accessTokenOrAppKey, UploadMediaFileType type, int agentId, int offset, int count, int timeOut = Config.TIME_OUT)
+        public static async Task<BatchGetMaterialResult> BatchGetMaterialAsync(string accessTokenOrAppKey, UploadMediaFileType type, int agentId, int offset, int count, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -586,7 +586,7 @@ namespace Senparc.Weixin.Work.AdvancedAPIs
         /// <param name="timeOut"></param>
         /// <returns></returns>
 
-        public static async Task<UploadimgMediaResult> UploadimgMediaAsync(string accessTokenOrAppKey, string media, int timeOut = Config.TIME_OUT)
+        public static async Task<UploadimgMediaResult> UploadimgMediaAsync(string accessTokenOrAppKey, string media, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {

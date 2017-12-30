@@ -48,7 +48,7 @@ namespace Senparc.Weixin.Open.ComponentAPIs
         /// <param name="componentVerifyTicket">微信后台推送的ticket，此ticket会定时推送，具体请见本页末尾的推送说明</param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static ComponentAccessTokenResult GetComponentAccessToken(string componentAppId, string componentAppSecret, string componentVerifyTicket, int timeOut = Config.TIME_OUT)
+        public static ComponentAccessTokenResult GetComponentAccessToken(string componentAppId, string componentAppSecret, string componentVerifyTicket, int timeOut = Config.TimeOut)
         {
             var url = Config.ApiMpHost + "/cgi-bin/component/api_component_token";
 
@@ -69,7 +69,7 @@ namespace Senparc.Weixin.Open.ComponentAPIs
         /// <param name="componentAccessToken"></param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static PreAuthCodeResult GetPreAuthCode(string componentAppId, string componentAccessToken, int timeOut = Config.TIME_OUT)
+        public static PreAuthCodeResult GetPreAuthCode(string componentAppId, string componentAccessToken, int timeOut = Config.TimeOut)
         {
             var url =
                 string.Format(
@@ -114,7 +114,7 @@ namespace Senparc.Weixin.Open.ComponentAPIs
         /// <param name="authorizationCode">授权code,会在授权成功时返回给第三方平台，详见第三方平台授权流程说明</param>
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
-        public static QueryAuthResult QueryAuth(string componentAccessToken, string componentAppId, string authorizationCode, int timeOut = Config.TIME_OUT)
+        public static QueryAuthResult QueryAuth(string componentAccessToken, string componentAppId, string authorizationCode, int timeOut = Config.TimeOut)
         {
             var url =
                 string.Format(
@@ -139,7 +139,7 @@ namespace Senparc.Weixin.Open.ComponentAPIs
         /// <param name="confirmValue">服务开发方的access_token</param>
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
-        public static WxJsonResult ApiConfirmAuth(string componentAccessToken, string componentAppId, string authorizerAppid, int funscopeCategoryId, int confirmValue, int timeOut = Config.TIME_OUT)
+        public static WxJsonResult ApiConfirmAuth(string componentAccessToken, string componentAppId, string authorizerAppid, int funscopeCategoryId, int confirmValue, int timeOut = Config.TimeOut)
         {
             var url =
                 string.Format(
@@ -167,7 +167,7 @@ namespace Senparc.Weixin.Open.ComponentAPIs
         /// <param name="authorizerRefreshToken"></param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static RefreshAuthorizerTokenResult ApiAuthorizerToken(string componentAccessToken, string componentAppId, string authorizerAppId, string authorizerRefreshToken = null, int timeOut = Config.TIME_OUT)
+        public static RefreshAuthorizerTokenResult ApiAuthorizerToken(string componentAccessToken, string componentAppId, string authorizerAppId, string authorizerRefreshToken = null, int timeOut = Config.TimeOut)
         {
             var url =
                 string.Format(
@@ -193,7 +193,7 @@ namespace Senparc.Weixin.Open.ComponentAPIs
         /// <param name="authorizerAppId"></param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static GetAuthorizerInfoResult GetAuthorizerInfo(string componentAccessToken, string componentAppId, string authorizerAppId, int timeOut = Config.TIME_OUT)
+        public static GetAuthorizerInfoResult GetAuthorizerInfo(string componentAccessToken, string componentAppId, string authorizerAppId, int timeOut = Config.TimeOut)
         {
             var url =
                 string.Format(
@@ -218,7 +218,7 @@ namespace Senparc.Weixin.Open.ComponentAPIs
         /// <param name="optionName">选项名称</param>
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
-        public static AuthorizerOptionResult GetAuthorizerOption(string componentAccessToken, string componentAppId, string authorizerAppId, OptionName optionName, int timeOut = Config.TIME_OUT)
+        public static AuthorizerOptionResult GetAuthorizerOption(string componentAccessToken, string componentAppId, string authorizerAppId, OptionName optionName, int timeOut = Config.TimeOut)
         {
             var url =
                 string.Format(
@@ -245,7 +245,7 @@ namespace Senparc.Weixin.Open.ComponentAPIs
         /// <param name="optionValue">设置的选项值</param>
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
-        public static WxJsonResult SetAuthorizerOption(string componentAccessToken, string componentAppId, string authorizerAppId, OptionName optionName, int optionValue, int timeOut = Config.TIME_OUT)
+        public static WxJsonResult SetAuthorizerOption(string componentAccessToken, string componentAppId, string authorizerAppId, OptionName optionName, int optionValue, int timeOut = Config.TimeOut)
         {
             var url =
                 string.Format(
@@ -292,7 +292,7 @@ namespace Senparc.Weixin.Open.ComponentAPIs
         /// <param name="componentVerifyTicket">微信后台推送的ticket，此ticket会定时推送，具体请见本页末尾的推送说明</param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static async Task<ComponentAccessTokenResult> GetComponentAccessTokenAsync(string componentAppId, string componentAppSecret, string componentVerifyTicket, int timeOut = Config.TIME_OUT)
+        public static async Task<ComponentAccessTokenResult> GetComponentAccessTokenAsync(string componentAppId, string componentAppSecret, string componentVerifyTicket, int timeOut = Config.TimeOut)
         {
             var url = Config.ApiMpHost + "/cgi-bin/component/api_component_token";
 
@@ -313,7 +313,7 @@ namespace Senparc.Weixin.Open.ComponentAPIs
         /// <param name="componentAccessToken"></param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static async Task<PreAuthCodeResult> GetPreAuthCodeAsync(string componentAppId, string componentAccessToken, int timeOut = Config.TIME_OUT)
+        public static async Task<PreAuthCodeResult> GetPreAuthCodeAsync(string componentAppId, string componentAccessToken, int timeOut = Config.TimeOut)
         {
             var url =
                 string.Format(
@@ -339,7 +339,7 @@ namespace Senparc.Weixin.Open.ComponentAPIs
         /// <param name="authorizationCode">授权code,会在授权成功时返回给第三方平台，详见第三方平台授权流程说明</param>
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
-        public static async Task<QueryAuthResult> QueryAuthAsync(string componentAccessToken, string componentAppId, string authorizationCode, int timeOut = Config.TIME_OUT)
+        public static async Task<QueryAuthResult> QueryAuthAsync(string componentAccessToken, string componentAppId, string authorizationCode, int timeOut = Config.TimeOut)
         {
             var url =
                 string.Format(
@@ -364,7 +364,7 @@ namespace Senparc.Weixin.Open.ComponentAPIs
         /// <param name="confirmValue">服务开发方的access_token</param>
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
-        public static async Task<WxJsonResult> ApiConfirmAuthAsync(string componentAccessToken, string componentAppId, string authorizerAppid, int funscopeCategoryId, int confirmValue, int timeOut = Config.TIME_OUT)
+        public static async Task<WxJsonResult> ApiConfirmAuthAsync(string componentAccessToken, string componentAppId, string authorizerAppid, int funscopeCategoryId, int confirmValue, int timeOut = Config.TimeOut)
         {
             var url =
                 string.Format(
@@ -392,7 +392,7 @@ namespace Senparc.Weixin.Open.ComponentAPIs
         /// <param name="authorizerRefreshToken"></param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static async Task<RefreshAuthorizerTokenResult> ApiAuthorizerTokenAsync(string componentAccessToken, string componentAppId, string authorizerAppId, string authorizerRefreshToken = null, int timeOut = Config.TIME_OUT)
+        public static async Task<RefreshAuthorizerTokenResult> ApiAuthorizerTokenAsync(string componentAccessToken, string componentAppId, string authorizerAppId, string authorizerRefreshToken = null, int timeOut = Config.TimeOut)
         {
             var url =
                 string.Format(
@@ -418,7 +418,7 @@ namespace Senparc.Weixin.Open.ComponentAPIs
         /// <param name="authorizerAppId"></param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static async Task<GetAuthorizerInfoResult> GetAuthorizerInfoAsync(string componentAccessToken, string componentAppId, string authorizerAppId, int timeOut = Config.TIME_OUT)
+        public static async Task<GetAuthorizerInfoResult> GetAuthorizerInfoAsync(string componentAccessToken, string componentAppId, string authorizerAppId, int timeOut = Config.TimeOut)
         {
             var url =
                 string.Format(
@@ -443,7 +443,7 @@ namespace Senparc.Weixin.Open.ComponentAPIs
         /// <param name="optionName">选项名称</param>
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
-        public static async Task<AuthorizerOptionResult> GetAuthorizerOptionAsync(string componentAccessToken, string componentAppId, string authorizerAppId, OptionName optionName, int timeOut = Config.TIME_OUT)
+        public static async Task<AuthorizerOptionResult> GetAuthorizerOptionAsync(string componentAccessToken, string componentAppId, string authorizerAppId, OptionName optionName, int timeOut = Config.TimeOut)
         {
             var url =
                 string.Format(
@@ -470,7 +470,7 @@ namespace Senparc.Weixin.Open.ComponentAPIs
         /// <param name="optionValue">设置的选项值</param>
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <returns></returns>
-        public static async Task<WxJsonResult> SetAuthorizerOptionAsync(string componentAccessToken, string componentAppId, string authorizerAppId, OptionName optionName, int optionValue, int timeOut = Config.TIME_OUT)
+        public static async Task<WxJsonResult> SetAuthorizerOptionAsync(string componentAccessToken, string componentAppId, string authorizerAppId, OptionName optionName, int optionValue, int timeOut = Config.TimeOut)
         {
             var url =
                 string.Format(

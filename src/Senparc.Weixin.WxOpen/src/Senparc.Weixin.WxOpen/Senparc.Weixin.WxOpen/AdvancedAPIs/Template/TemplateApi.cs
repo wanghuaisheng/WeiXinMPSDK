@@ -68,7 +68,7 @@ namespace Senparc.Weixin.WxOpen.AdvancedAPIs.Template
         /// <param name="page">点击模板查看详情跳转页面，不填则模板无跳转（非必填）</param>
         /// <returns></returns>
         public static WxJsonResult SendTemplateMessage(string accessTokenOrAppId, string openId, string templateId,
-            object data, string formId, string page = null, string emphasisKeyword = null, string color = null, int timeOut = Config.TIME_OUT)
+            object data, string formId, string page = null, string emphasisKeyword = null, string color = null, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -137,7 +137,7 @@ namespace Senparc.Weixin.WxOpen.AdvancedAPIs.Template
         /// <param name="formId">表单提交场景下，为 submit 事件带上的 formId；支付场景下，为本次支付的 prepay_id</param>
         /// <param name="page">点击模板查看详情跳转页面，不填则模板无跳转（非必填）</param>
         /// <returns></returns>
-        public static async Task<WxJsonResult> SendTemplateMessageAsync(string accessTokenOrAppId, string openId, string templateId, object data, string formId, string page = null, string emphasisKeyword = null, string color = null, int timeOut = Config.TIME_OUT)
+        public static async Task<WxJsonResult> SendTemplateMessageAsync(string accessTokenOrAppId, string openId, string templateId, object data, string formId, string page = null, string emphasisKeyword = null, string color = null, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {

@@ -70,12 +70,12 @@ namespace Senparc.Weixin.WxOpen.Helpers
                         case "Int64":
                         case "Double":
                         case "Nullable`1": //可为空对象
-                            EntityUtility.EntityUtility.FillSystemType(entity, prop, root.Element(propName).Value);
+                            EntityUtility.FillSystemType(entity, prop, root.Element(propName).Value);
                             break;
                         case "Boolean":
                             if (propName == "FuncFlag")
                             {
-                                EntityUtility.EntityUtility.FillSystemType(entity, prop, root.Element(propName).Value == "1");
+                                EntityUtility.FillSystemType(entity, prop, root.Element(propName).Value == "1");
                             }
                             else
                             {

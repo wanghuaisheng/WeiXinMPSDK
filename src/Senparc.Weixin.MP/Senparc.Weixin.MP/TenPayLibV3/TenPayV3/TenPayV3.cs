@@ -115,7 +115,7 @@ namespace Senparc.Weixin.MP.TenPayLibV3
         /// <param name="data">数据</param>
         /// <param name="url">Url</param>
         /// <returns></returns>
-        private static string CertPost(string cert, string certPassword, string data, string url, int timeOut = Config.TIME_OUT)
+        private static string CertPost(string cert, string certPassword, string data, string url, int timeOut = Config.TimeOut)
         {
             string password = certPassword;
             var dataBytes = Encoding.UTF8.GetBytes(data);
@@ -143,7 +143,7 @@ namespace Senparc.Weixin.MP.TenPayLibV3
         /// <param name="data">数据</param>
         /// <param name="url">Url</param>
         /// <returns></returns>
-        private static async Task<string> CertPostAsync(string cert, string certPassword, string data, string url, int timeOut = Config.TIME_OUT)
+        private static async Task<string> CertPostAsync(string cert, string certPassword, string data, string url, int timeOut = Config.TimeOut)
         {
             string password = certPassword;
             var dataBytes = Encoding.UTF8.GetBytes(data);
@@ -183,7 +183,7 @@ namespace Senparc.Weixin.MP.TenPayLibV3
         /// <param name="timeOut"></param>
         /// <returns></returns>
         [Obsolete("此方法已过期，建议使用 Unifiedorder(TenPayV3XmlDataInfo dataInfo, int timeOut = Config.TIME_OUT)")]
-        public static string Unifiedorder(string data, int timeOut = Config.TIME_OUT)
+        public static string Unifiedorder(string data, int timeOut = Config.TimeOut)
         {
             var urlFormat = ReurnPayApiUrl("https://api.mch.weixin.qq.com/{0}pay/unifiedorder");
 
@@ -201,7 +201,7 @@ namespace Senparc.Weixin.MP.TenPayLibV3
         /// <param name="dataInfo">微信支付需要post的Data数据</param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static UnifiedorderResult Unifiedorder(TenPayV3UnifiedorderRequestData dataInfo, int timeOut = Config.TIME_OUT)
+        public static UnifiedorderResult Unifiedorder(TenPayV3UnifiedorderRequestData dataInfo, int timeOut = Config.TimeOut)
         {
             var urlFormat = ReurnPayApiUrl("https://api.mch.weixin.qq.com/{0}pay/unifiedorder");
             var data = dataInfo.PackageRequestHandler.ParseXML();//获取XML
@@ -221,7 +221,7 @@ namespace Senparc.Weixin.MP.TenPayLibV3
         /// <param name="dataInfo">微信支付需要post的Data数据，TradeType将会强制赋值为TenPayV3Type.MWEB</param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static UnifiedorderResult Html5Order(TenPayV3UnifiedorderRequestData dataInfo, int timeOut = Config.TIME_OUT)
+        public static UnifiedorderResult Html5Order(TenPayV3UnifiedorderRequestData dataInfo, int timeOut = Config.TimeOut)
         {
 
             var urlFormat = ReurnPayApiUrl("https://api.mch.weixin.qq.com/{0}pay/unifiedorder");
@@ -391,7 +391,7 @@ namespace Senparc.Weixin.MP.TenPayLibV3
         /// <param name="certPassword">证书密码</param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static ReverseResult Reverse(TenPayV3ReverseRequestData dataInfo, string cert, string certPassword, int timeOut = Config.TIME_OUT)
+        public static ReverseResult Reverse(TenPayV3ReverseRequestData dataInfo, string cert, string certPassword, int timeOut = Config.TimeOut)
         {
             var urlFormat = ReurnPayApiUrl("https://api.mch.weixin.qq.com/{0}secapi/pay/reverse");
             var data = dataInfo.PackageRequestHandler.ParseXML();
@@ -420,7 +420,7 @@ namespace Senparc.Weixin.MP.TenPayLibV3
         /// <param name="cert">证书绝对路径，如@"F:\apiclient_cert.p12"</param>
         /// <param name="certPassword">证书密码</param>
         /// <returns></returns>
-        public static RefundResult Refund(TenPayV3RefundRequestData dataInfo, string cert, string certPassword, int timeOut = Config.TIME_OUT)
+        public static RefundResult Refund(TenPayV3RefundRequestData dataInfo, string cert, string certPassword, int timeOut = Config.TimeOut)
         {
             //退款接口地址
             var url = ReurnPayApiUrl("https://api.mch.weixin.qq.com/{0}secapi/pay/refund");
@@ -571,7 +571,7 @@ namespace Senparc.Weixin.MP.TenPayLibV3
         /// <param name="timeOut"></param>
         /// <returns></returns>
         [Obsolete("此方法已过期，建议使用 Transfers(TenPayV3TransfersRequestData dataInfo, int timeOut = Config.TIME_OUT)")]
-        public static string Transfers(string data, int timeOut = Config.TIME_OUT)
+        public static string Transfers(string data, int timeOut = Config.TimeOut)
         {
             var urlFormat = ReurnPayApiUrl("https://api.mch.weixin.qq.com/{0}mmpaymkttransfers/promotion/transfers");
 
@@ -590,7 +590,7 @@ namespace Senparc.Weixin.MP.TenPayLibV3
         /// <param name="dataInfo">微信支付需要post的xml数据</param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static TransfersResult Transfers(TenPayV3TransfersRequestData dataInfo, string cert, string certPassword, int timeOut = Config.TIME_OUT)
+        public static TransfersResult Transfers(TenPayV3TransfersRequestData dataInfo, string cert, string certPassword, int timeOut = Config.TimeOut)
         {
             var url = ReurnPayApiUrl("https://api.mch.weixin.qq.com/{0}mmpaymkttransfers/promotion/transfers");
             var data = dataInfo.PackageRequestHandler.ParseXML();
@@ -606,7 +606,7 @@ namespace Senparc.Weixin.MP.TenPayLibV3
         /// <param name="timeOut"></param>
         /// <returns></returns>
         [Obsolete("此方法已过期，建议使用 GetTransferInfo(TenPayV3GetTransferInfoRequestData dataInfo, int timeOut = Config.TIME_OUT)")]
-        public static string GetTransferInfo(string data, int timeOut = Config.TIME_OUT)
+        public static string GetTransferInfo(string data, int timeOut = Config.TimeOut)
         {
             var urlFormat = ReurnPayApiUrl("https://api.mch.weixin.qq.com/{0}mmpaymkttransfers/gettransferinfo");
 
@@ -624,7 +624,7 @@ namespace Senparc.Weixin.MP.TenPayLibV3
         /// <param name="dataInfo"></param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static GetTransferInfoResult GetTransferInfo(TenPayV3GetTransferInfoRequestData dataInfo, int timeOut = Config.TIME_OUT)
+        public static GetTransferInfoResult GetTransferInfo(TenPayV3GetTransferInfoRequestData dataInfo, int timeOut = Config.TimeOut)
         {
             var urlFormat = ReurnPayApiUrl("https://api.mch.weixin.qq.com/{0}mmpaymkttransfers/gettransferinfo");
 
@@ -669,7 +669,7 @@ namespace Senparc.Weixin.MP.TenPayLibV3
         /// <param name="timeOut"></param>
         /// <returns></returns>
         [Obsolete("此方法已过期，建议使用 Unifiedorder(TenPayV3XmlDataInfo dataInfo, int timeOut = Config.TIME_OUT)")]
-        public static async Task<string> UnifiedorderAsync(string data, int timeOut = Config.TIME_OUT)
+        public static async Task<string> UnifiedorderAsync(string data, int timeOut = Config.TimeOut)
         {
             var urlFormat = ReurnPayApiUrl("https://api.mch.weixin.qq.com/{0}pay/unifiedorder");
 
@@ -688,7 +688,7 @@ namespace Senparc.Weixin.MP.TenPayLibV3
         /// <param name="dataInfo">微信支付需要post的xml数据</param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static async Task<UnifiedorderResult> UnifiedorderAsync(TenPayV3UnifiedorderRequestData dataInfo, int timeOut = Config.TIME_OUT)
+        public static async Task<UnifiedorderResult> UnifiedorderAsync(TenPayV3UnifiedorderRequestData dataInfo, int timeOut = Config.TimeOut)
         {
             var urlFormat = ReurnPayApiUrl("https://api.mch.weixin.qq.com/{0}pay/unifiedorder");
             var data = dataInfo.PackageRequestHandler.ParseXML();//获取XML
@@ -706,7 +706,7 @@ namespace Senparc.Weixin.MP.TenPayLibV3
         /// <param name="dataInfo">微信支付需要post的Data数据，TradeType将会强制赋值为TenPayV3Type.MWEB</param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static async Task<UnifiedorderResult> Html5OrderAsync(TenPayV3UnifiedorderRequestData dataInfo, int timeOut = Config.TIME_OUT)
+        public static async Task<UnifiedorderResult> Html5OrderAsync(TenPayV3UnifiedorderRequestData dataInfo, int timeOut = Config.TimeOut)
         {
             var urlFormat = ReurnPayApiUrl("https://api.mch.weixin.qq.com/{0}pay/unifiedorder");
             dataInfo.TradeType = TenPayV3Type.MWEB;
@@ -861,7 +861,7 @@ namespace Senparc.Weixin.MP.TenPayLibV3
         /// <param name="certPassword">证书密码</param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static async Task<ReverseResult> ReverseAsync(TenPayV3ReverseRequestData dataInfo, string cert, string certPassword, int timeOut = Config.TIME_OUT)
+        public static async Task<ReverseResult> ReverseAsync(TenPayV3ReverseRequestData dataInfo, string cert, string certPassword, int timeOut = Config.TimeOut)
         {
             var urlFormat = ReurnPayApiUrl("https://api.mch.weixin.qq.com/{0}secapi/pay/reverse");
             var data = dataInfo.PackageRequestHandler.ParseXML();
@@ -1019,7 +1019,7 @@ namespace Senparc.Weixin.MP.TenPayLibV3
         /// <param name="timeOut"></param>
         /// <returns></returns>
         [Obsolete("此方法已过期，建议使用  TransfersAsync(TenPayV3TransfersRequestData dataInfo, int timeOut = Config.TIME_OUT)")]
-        public static async Task<string> TransfersAsync(string data, int timeOut = Config.TIME_OUT)
+        public static async Task<string> TransfersAsync(string data, int timeOut = Config.TimeOut)
         {
             var urlFormat = ReurnPayApiUrl("https://api.mch.weixin.qq.com/{0}mmpaymkttransfers/promotion/transfers");
 
@@ -1037,7 +1037,7 @@ namespace Senparc.Weixin.MP.TenPayLibV3
         /// <param name="dataInfo">微信支付需要post的xml数据</param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static async Task<TransfersResult> TransfersAsync(TenPayV3TransfersRequestData dataInfo, string cert, string certPassword, int timeOut = Config.TIME_OUT)
+        public static async Task<TransfersResult> TransfersAsync(TenPayV3TransfersRequestData dataInfo, string cert, string certPassword, int timeOut = Config.TimeOut)
         {
             var url = ReurnPayApiUrl("https://api.mch.weixin.qq.com/{0}mmpaymkttransfers/promotion/transfers");
             var data = dataInfo.PackageRequestHandler.ParseXML();
@@ -1052,7 +1052,7 @@ namespace Senparc.Weixin.MP.TenPayLibV3
         /// <param name="timeOut"></param>
         /// <returns></returns>
         [Obsolete("此方法已过期，建议使用GetTransferInfoAsync(TenPayV3GetTransferInfoRequestData dataInfo, int timeOut = Config.TIME_OUT)")]
-        public static async Task<string> GetTransferInfoAsync(string data, int timeOut = Config.TIME_OUT)
+        public static async Task<string> GetTransferInfoAsync(string data, int timeOut = Config.TimeOut)
         {
             var urlFormat = ReurnPayApiUrl("https://api.mch.weixin.qq.com/{0}mmpaymkttransfers/gettransferinfo");
 
@@ -1069,7 +1069,7 @@ namespace Senparc.Weixin.MP.TenPayLibV3
         /// <param name="dataInfo"></param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static async Task<GetTransferInfoResult> GetTransferInfoAsync(TenPayV3GetTransferInfoRequestData dataInfo, int timeOut = Config.TIME_OUT)
+        public static async Task<GetTransferInfoResult> GetTransferInfoAsync(TenPayV3GetTransferInfoRequestData dataInfo, int timeOut = Config.TimeOut)
         {
             var urlFormat = ReurnPayApiUrl("https://api.mch.weixin.qq.com/{0}mmpaymkttransfers/gettransferinfo");
             var data = dataInfo.PackageRequestHandler.ParseXML();

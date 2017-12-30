@@ -23,6 +23,7 @@ using System.Threading;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Senparc.Weixin;
 using Senparc.Weixin.MessageQueue;
+using Senparc.Weixin.Utilities;
 
 namespace Senparc.WeixinTests.MessageQueue
 {

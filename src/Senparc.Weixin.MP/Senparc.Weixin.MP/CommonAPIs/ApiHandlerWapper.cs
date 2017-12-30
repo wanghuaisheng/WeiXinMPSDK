@@ -46,7 +46,6 @@ using Senparc.Weixin.Entities;
 using Senparc.Weixin.Exceptions;
 using Senparc.Weixin.MP.CommonAPIs;
 using Senparc.Weixin.MP.Containers;
-using Senparc.Weixin.Utilities.WeixinUtility;
 using Senparc.Weixin.CommonAPIs;
 using Senparc.Weixin.CommonAPIs.ApiHandlerWapper;
 

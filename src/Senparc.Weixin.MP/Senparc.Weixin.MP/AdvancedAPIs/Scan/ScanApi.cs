@@ -70,7 +70,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="accessTokenOrAppId">AccessToken或AppId（推荐使用AppId，需要先注册）</param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static MerchantInfoGetResultJson MerchantInfoGet(string accessTokenOrAppId, int timeOut = Config.TIME_OUT)
+        public static MerchantInfoGetResultJson MerchantInfoGet(string accessTokenOrAppId, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -88,7 +88,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <pram name="baseInfo">商品的基本信息。</pram>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static ProductCreateResultJson ProductCreate(string accessTokenOrAppId, string keyStandard, string keyStr, BrandInfo brandInfo, int timeOut = Config.TIME_OUT)
+        public static ProductCreateResultJson ProductCreate(string accessTokenOrAppId, string keyStandard, string keyStr, BrandInfo brandInfo, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
           {
@@ -114,7 +114,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="status">设置发布状态。on为提交审核，off为取消发布。</param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static WxJsonResult ModStatus(string accessTokenOrAppId, string keyStandard, string keyStr, string status, int timeOut = Config.TIME_OUT)
+        public static WxJsonResult ModStatus(string accessTokenOrAppId, string keyStandard, string keyStr, string status, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -136,7 +136,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="userName">测试人员的微信号列表。</param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static WxJsonResult TestWhiteListSet(string accessTokenOrAppId, string openId, string userName, int timeOut = Config.TIME_OUT)
+        public static WxJsonResult TestWhiteListSet(string accessTokenOrAppId, string openId, string userName, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -180,7 +180,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="status">商品编码内容。</param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static ProductGetListJsonResult ProductGetList(string accessTokenOrAppId, int offset, int limit, string status, int timeOut = Config.TIME_OUT)
+        public static ProductGetListJsonResult ProductGetList(string accessTokenOrAppId, int offset, int limit, string status, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -203,7 +203,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
 
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static WxJsonResult ProductClear(string accessTokenOrAppId, int keyStandard, string keyStr, int timeOut = Config.TIME_OUT)
+        public static WxJsonResult ProductClear(string accessTokenOrAppId, int keyStandard, string keyStr, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -226,7 +226,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
 
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static ScanTicketCheckJsonResult ScanTicketCheck(string accessTokenOrAppId, string ticket, int timeOut = Config.TIME_OUT)
+        public static ScanTicketCheckJsonResult ScanTicketCheck(string accessTokenOrAppId, string ticket, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -252,7 +252,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="qrcode_size">二维码的尺寸（整型），数值代表边长像素数，默认为100</param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static ProductGetQrCodeJsonResult GetQrCode(string accessTokenOrAppId, string keystr, string extinfo = null, string keystandard = "ean13", int qrcode_size = 100, int timeOut = Config.TIME_OUT)
+        public static ProductGetQrCodeJsonResult GetQrCode(string accessTokenOrAppId, string keystr, string extinfo = null, string keystandard = "ean13", int qrcode_size = 100, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -279,7 +279,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="accessTokenOrAppId">AccessToken或AppId（推荐使用AppId，需要先注册）</param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static async Task<MerchantInfoGetResultJson> MerchantInfoGetAsync(string accessTokenOrAppId, int timeOut = Config.TIME_OUT)
+        public static async Task<MerchantInfoGetResultJson> MerchantInfoGetAsync(string accessTokenOrAppId, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -297,7 +297,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <pram name="baseInfo">商品的基本信息。</pram>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static async Task<ProductCreateResultJson> ProductCreateAsync(string accessTokenOrAppId, string keyStandard, string keyStr, BrandInfo brandInfo, int timeOut = Config.TIME_OUT)
+        public static async Task<ProductCreateResultJson> ProductCreateAsync(string accessTokenOrAppId, string keyStandard, string keyStr, BrandInfo brandInfo, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
           {
@@ -323,7 +323,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="status">设置发布状态。on为提交审核，off为取消发布。</param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static async Task<WxJsonResult> ModStatusAsync(string accessTokenOrAppId, string keyStandard, string keyStr, string status, int timeOut = Config.TIME_OUT)
+        public static async Task<WxJsonResult> ModStatusAsync(string accessTokenOrAppId, string keyStandard, string keyStr, string status, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -345,7 +345,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="userName">测试人员的微信号列表。</param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static async Task<WxJsonResult> TestWhiteListSetAsync(string accessTokenOrAppId, string openId, string userName, int timeOut = Config.TIME_OUT)
+        public static async Task<WxJsonResult> TestWhiteListSetAsync(string accessTokenOrAppId, string openId, string userName, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -389,7 +389,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="status">商品编码内容。</param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static async Task<ProductGetListJsonResult> ProductGetListAsync(string accessTokenOrAppId, int offset, int limit, string status, int timeOut = Config.TIME_OUT)
+        public static async Task<ProductGetListJsonResult> ProductGetListAsync(string accessTokenOrAppId, int offset, int limit, string status, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -412,7 +412,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
 
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static async Task<WxJsonResult> ProductClearAsync(string accessTokenOrAppId, int keyStandard, string keyStr, int timeOut = Config.TIME_OUT)
+        public static async Task<WxJsonResult> ProductClearAsync(string accessTokenOrAppId, int keyStandard, string keyStr, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -435,7 +435,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
 
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static async Task<ScanTicketCheckJsonResult> ScanTicketCheckAsync(string accessTokenOrAppId, string ticket, int timeOut = Config.TIME_OUT)
+        public static async Task<ScanTicketCheckJsonResult> ScanTicketCheckAsync(string accessTokenOrAppId, string ticket, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
@@ -461,7 +461,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="qrcode_size">二维码的尺寸（整型），数值代表边长像素数，默认为100</param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static async Task<ProductGetQrCodeJsonResult> GetQrCodeAsync(string accessTokenOrAppId, string keystr, string extinfo = null, string keystandard = "ean13", int qrcode_size = 100, int timeOut = Config.TIME_OUT)
+        public static async Task<ProductGetQrCodeJsonResult> GetQrCodeAsync(string accessTokenOrAppId, string keystr, string extinfo = null, string keystandard = "ean13", int qrcode_size = 100, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {

@@ -30,15 +30,11 @@ Detail: https://github.com/JeffreySu/WeiXinMPSDK/blob/master/license.md
 ----------------------------------------------------------------*/
 
 using System;
-using System.Collections.Generic;
 using System.Globalization;
-using System.Linq;
 using System.Reflection;
-using System.Text;
-using Senparc.Weixin.Entities;
 using Senparc.Weixin.Helpers;
 
-namespace Senparc.Weixin.EntityUtility
+namespace Senparc.Weixin.Utilities
 {
     /// <summary>
     /// 实体工具类

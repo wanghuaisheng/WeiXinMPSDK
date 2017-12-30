@@ -19,6 +19,7 @@
 using System;
 using System.Threading;
 using Enyim.Caching.Memcached;
+using Senparc.Weixin.Utilities;
 
 namespace Senparc.Weixin.Cache.Memcached
 {

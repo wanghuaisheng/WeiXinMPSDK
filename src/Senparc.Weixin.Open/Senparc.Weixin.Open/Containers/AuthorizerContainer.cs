@@ -51,12 +51,11 @@
 using System;
 using System.Threading.Tasks;
 using Senparc.Weixin.Cache;
-using Senparc.Weixin.CacheUtility;
 using Senparc.Weixin.Containers;
 using Senparc.Weixin.Open.ComponentAPIs;
 using Senparc.Weixin.Open.Entities;
 using Senparc.Weixin.Open.Exceptions;
-using Senparc.Weixin.Utilities.WeixinUtility;
+using Senparc.Weixin.Utilities;
 
 namespace Senparc.Weixin.Open.Containers
 {

@@ -87,7 +87,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="kfAccount">客服</param>
         /// <returns></returns>
         public static WxJsonResult SendText(string accessTokenOrAppId, string openId, string content,
-            int timeOut = Config.TIME_OUT, string kfAccount = "")
+            int timeOut = Config.TimeOut, string kfAccount = "")
         {
             object data = null;
             if (kfAccount.IsNullOrWhiteSpace())
@@ -136,7 +136,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <param name="kfAccount">客服</param>
         /// <returns></returns>
-        public static WxJsonResult SendImage(string accessTokenOrAppId, string openId, string mediaId, int timeOut = Config.TIME_OUT, string kfAccount = "")
+        public static WxJsonResult SendImage(string accessTokenOrAppId, string openId, string mediaId, int timeOut = Config.TimeOut, string kfAccount = "")
         {
 
             object data = null;
@@ -185,7 +185,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <param name="kfAccount"></param>
         /// <returns></returns>
-        public static WxJsonResult SendVoice(string accessTokenOrAppId, string openId, string mediaId, int timeOut = Config.TIME_OUT, string kfAccount = "")
+        public static WxJsonResult SendVoice(string accessTokenOrAppId, string openId, string mediaId, int timeOut = Config.TimeOut, string kfAccount = "")
         {
             object data = null;
             if (kfAccount.IsNullOrWhiteSpace())
@@ -238,7 +238,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="kfAccount">客服</param>
         /// <param name="thumb_media_id"></param>
         /// <returns></returns>
-        public static WxJsonResult SendVideo(string accessTokenOrAppId, string openId, string mediaId, string title, string description, int timeOut = Config.TIME_OUT, string kfAccount = "", string thumb_media_id = "")
+        public static WxJsonResult SendVideo(string accessTokenOrAppId, string openId, string mediaId, string title, string description, int timeOut = Config.TimeOut, string kfAccount = "", string thumb_media_id = "")
         {
             object data = null;
             if (kfAccount.IsNullOrWhiteSpace())
@@ -296,7 +296,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="kfAccount">客服</param>
         /// <returns></returns>
         public static WxJsonResult SendMusic(string accessTokenOrAppId, string openId, string title, string description,
-                                    string musicUrl, string hqMusicUrl, string thumbMediaId, int timeOut = Config.TIME_OUT, string kfAccount = "")
+                                    string musicUrl, string hqMusicUrl, string thumbMediaId, int timeOut = Config.TimeOut, string kfAccount = "")
         {
             object data = null;
             if (kfAccount.IsNullOrWhiteSpace())
@@ -353,7 +353,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <param name="kfAccount">客服</param>
         /// <returns></returns>
-        public static WxJsonResult SendNews(string accessTokenOrAppId, string openId, List<Article> articles, int timeOut = Config.TIME_OUT, string kfAccount = "")
+        public static WxJsonResult SendNews(string accessTokenOrAppId, string openId, List<Article> articles, int timeOut = Config.TimeOut, string kfAccount = "")
         {
             object data = null;
             if (kfAccount.IsNullOrWhiteSpace())
@@ -414,7 +414,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="timeOut"></param>
         /// <param name="kfAccount">客服</param>
         /// <returns></returns>
-        public static WxJsonResult SendMpNews(string accessTokenOrAppId, string openId, string mediaId, int timeOut = Config.TIME_OUT, string kfAccount = "")
+        public static WxJsonResult SendMpNews(string accessTokenOrAppId, string openId, string mediaId, int timeOut = Config.TimeOut, string kfAccount = "")
         {
             object data = null;
             if (kfAccount.IsNullOrWhiteSpace())
@@ -462,7 +462,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="cardExt"></param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static WxJsonResult SendCard(string accessTokenOrAppId, string openId, string cardId, CardExt cardExt, int timeOut = Config.TIME_OUT)
+        public static WxJsonResult SendCard(string accessTokenOrAppId, string openId, string cardId, CardExt cardExt, int timeOut = Config.TimeOut)
         {
             return ApiHandlerWapper.TryCommonApi(accessToken =>
             {
@@ -500,7 +500,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <param name="kfAccount">客服</param>
         /// <returns></returns>
-        public static async Task<WxJsonResult> SendTextAsync(string accessTokenOrAppId, string openId, string content, int timeOut = Config.TIME_OUT, string kfAccount = "")
+        public static async Task<WxJsonResult> SendTextAsync(string accessTokenOrAppId, string openId, string content, int timeOut = Config.TimeOut, string kfAccount = "")
         {
             object data = null;
             if (string.IsNullOrEmpty(kfAccount))
@@ -552,7 +552,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <param name="kfAccount">客服</param>
         /// <returns></returns>
-        public static async Task<WxJsonResult> SendImageAsync(string accessTokenOrAppId, string openId, string mediaId, int timeOut = Config.TIME_OUT, string kfAccount = "")
+        public static async Task<WxJsonResult> SendImageAsync(string accessTokenOrAppId, string openId, string mediaId, int timeOut = Config.TimeOut, string kfAccount = "")
         {
             object data = null;
             if (kfAccount.IsNullOrWhiteSpace())
@@ -600,7 +600,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <param name="kfAccount"></param>
         /// <returns></returns>
-        public static async Task<WxJsonResult> SendVoiceAsync(string accessTokenOrAppId, string openId, string mediaId, int timeOut = Config.TIME_OUT, string kfAccount = "")
+        public static async Task<WxJsonResult> SendVoiceAsync(string accessTokenOrAppId, string openId, string mediaId, int timeOut = Config.TimeOut, string kfAccount = "")
         {
             object data = null;
             if (kfAccount.IsNullOrWhiteSpace())
@@ -651,7 +651,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="kfAccount">客服</param>
         /// <param name="thumb_media_id"></param>
         /// <returns></returns>
-        public static async Task<WxJsonResult> SendVideoAsync(string accessTokenOrAppId, string openId, string mediaId, string title, string description, int timeOut = Config.TIME_OUT, string kfAccount = "", string thumb_media_id = "")
+        public static async Task<WxJsonResult> SendVideoAsync(string accessTokenOrAppId, string openId, string mediaId, string title, string description, int timeOut = Config.TimeOut, string kfAccount = "", string thumb_media_id = "")
         {
             object data = null;
             if (kfAccount.IsNullOrWhiteSpace())
@@ -708,7 +708,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="kfAccount">客服</param>
         /// <returns></returns>
         public static async Task<WxJsonResult> SendMusicAsync(string accessTokenOrAppId, string openId, string title, string description,
-                                    string musicUrl, string hqMusicUrl, string thumbMediaId, int timeOut = Config.TIME_OUT, string kfAccount = "")
+                                    string musicUrl, string hqMusicUrl, string thumbMediaId, int timeOut = Config.TimeOut, string kfAccount = "")
         {
             object data = null;
             if (kfAccount.IsNullOrWhiteSpace())
@@ -766,7 +766,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="timeOut">代理请求超时时间（毫秒）</param>
         /// <param name="kfAccount">客服</param>
         /// <returns></returns>
-        public static async Task<WxJsonResult> SendNewsAsync(string accessTokenOrAppId, string openId, List<Article> articles, int timeOut = Config.TIME_OUT, string kfAccount = "")
+        public static async Task<WxJsonResult> SendNewsAsync(string accessTokenOrAppId, string openId, List<Article> articles, int timeOut = Config.TimeOut, string kfAccount = "")
         {
             object data = null;
             if (kfAccount.IsNullOrWhiteSpace())
@@ -830,7 +830,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="timeOut"></param>
         /// <param name="kfAccount">客服</param>
         /// <returns></returns>
-        public static async Task<WxJsonResult> SendMpNewsAsync(string accessTokenOrAppId, string openId, string mediaId, int timeOut = Config.TIME_OUT, string kfAccount = "")
+        public static async Task<WxJsonResult> SendMpNewsAsync(string accessTokenOrAppId, string openId, string mediaId, int timeOut = Config.TimeOut, string kfAccount = "")
         {
             object data = null;
             if (kfAccount.IsNullOrWhiteSpace())
@@ -878,7 +878,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         /// <param name="cardExt"></param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static async Task<WxJsonResult> SendCardAsync(string accessTokenOrAppId, string openId, string cardId, CardExt cardExt, int timeOut = Config.TIME_OUT)
+        public static async Task<WxJsonResult> SendCardAsync(string accessTokenOrAppId, string openId, string cardId, CardExt cardExt, int timeOut = Config.TimeOut)
         {
             return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
