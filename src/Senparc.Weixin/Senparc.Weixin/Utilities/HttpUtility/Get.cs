@@ -83,38 +83,31 @@ namespace Senparc.Weixin.HttpUtility
 
             WeixinTrace.SendApiLog(url, returnText);
 
-#if NET35 || NET40 || NET45
             JavaScriptSerializer js = new JavaScriptSerializer();
             if (maxJsonLength.HasValue)
             {
                 js.MaxJsonLength = maxJsonLength.Value;
             }
-#endif
 
             if (returnText.Contains("errcode"))
             {
                 //可能发生错误
 
-#if NET35 || NET40 || NET45
                 WxJsonResult errorResult = js.Deserialize<WxJsonResult>(returnText);
-#else
-                WxJsonResult errorResult =
-                    Newtonsoft.Json.JsonConvert.DeserializeObject<WxJsonResult>(returnText);
-#endif
+                //WxJsonResult errorResult =
+                //    Newtonsoft.Json.JsonConvert.DeserializeObject<WxJsonResult>(returnText);
 
                 if (errorResult.errcode != ReturnCodeMp.请求成功)
                 {
                     //发生错误
                     throw new ErrorJsonResultException(
-                        string.Format("微信请求发生错误！错误代码：{0}，说明：{1}",
-                                        (int)errorResult.errcode, errorResult.errmsg), null, errorResult, url);
+                        $"微信请求发生错误！错误代码：{(int)errorResult.errcode}，说明：{errorResult.errmsg}", null, errorResult, url);
                 }
             }
-#if NET35 || NET40 || NET45
             T result = js.Deserialize<T>(returnText);
-#else
-            T result = Newtonsoft.Json.JsonConvert.DeserializeObject<T>(returnText);
-#endif
+
+            //T result = Newtonsoft.Json.JsonConvert.DeserializeObject<T>(returnText);
+
 
             return result;
         }
@@ -126,24 +119,9 @@ namespace Senparc.Weixin.HttpUtility
         /// <param name="stream"></param>
         public static void Download(string url, Stream stream)
         {
-#if NET35 || NET40 || NET45
-            //ServicePointManager.SecurityProtocol = SecurityProtocolType.Ssl3
-            //ServicePointManager.ServerCertificateValidationCallback = new RemoteCertificateValidationCallback(CheckValidationResult);
-
             WebClient wc = new WebClient();
             var data = wc.DownloadData(url);
             stream.Write(data, 0, data.Length);
-            //foreach (var b in data)
-            //{
-            //    stream.WriteByte(b);
-            //}
-#else
-            HttpClient httpClient = new HttpClient();
-            var t = httpClient.GetByteArrayAsync(url);
-            t.Wait();
-            var data = t.Result;
-            stream.Write(data, 0, data.Length);
-#endif
         }
 
         //#if !NET35 && !NET40
@@ -157,22 +135,6 @@ namespace Senparc.Weixin.HttpUtility
         {
             var dir = Path.GetDirectoryName(filePathName) ?? "/";
             Directory.CreateDirectory(dir);
-
-#if NET35 || NET40
-            WebClient wc = new WebClient();
-            var data = wc.DownloadData(url);
-            using (var fs = File.Open(filePathName, FileMode.OpenOrCreate))
-            {
-                using (var sw = new BinaryWriter(fs))
-                {
-                    sw.Write(data);
-                    sw.Flush();
-                    fs.Flush();
-                    return filePathName;
-                }
-            }
-#else
-
             System.Net.Http.HttpClient httpClient = new HttpClient();
             using (var responseMessage = httpClient.GetAsync(url).Result)
             {
@@ -193,12 +155,10 @@ namespace Senparc.Weixin.HttpUtility
                     return null;
                 }
             }
-#endif
         }
         //#endif
         #endregion
 
-#if !NET35 && !NET40
         #region 异步方法
 
         /// <summary>
@@ -214,39 +174,28 @@ namespace Senparc.Weixin.HttpUtility
         {
             string returnText = await RequestUtility.HttpGetAsync(url, encoding);
 
-#if NET35 || NET40 || NET45
             JavaScriptSerializer js = new JavaScriptSerializer();
             if (maxJsonLength.HasValue)
             {
                 js.MaxJsonLength = maxJsonLength.Value;
             }
-#endif
 
             if (returnText.Contains("errcode"))
             {
                 //可能发生错误
-
-#if NET35 || NET40 || NET45
                 WxJsonResult errorResult = js.Deserialize<WxJsonResult>(returnText);
-#else
-                WxJsonResult errorResult =
-                    Newtonsoft.Json.JsonConvert.DeserializeObject<WxJsonResult>(returnText);
-#endif
+                //WxJsonResult errorResult =
+                //    Newtonsoft.Json.JsonConvert.DeserializeObject<WxJsonResult>(returnText);
 
                 if (errorResult.errcode != ReturnCodeMp.请求成功)
                 {
                     //发生错误
                     throw new ErrorJsonResultException(
-                        string.Format("微信请求发生错误！错误代码：{0}，说明：{1}",
-                                        (int)errorResult.errcode, errorResult.errmsg), null, errorResult, url);
+                        $"微信请求发生错误！错误代码：{(int)errorResult.errcode}，说明：{errorResult.errmsg}", null, errorResult, url);
                 }
             }
-#if NET35 || NET40 || NET45
             T result = js.Deserialize<T>(returnText);
-#else
-            T result = Newtonsoft.Json.JsonConvert.DeserializeObject<T>(returnText);
-#endif
-
+            //T result = Newtonsoft.Json.JsonConvert.DeserializeObject<T>(returnText);
             return result;
         }
 
@@ -258,23 +207,9 @@ namespace Senparc.Weixin.HttpUtility
         /// <returns></returns>
         public static async Task DownloadAsync(string url, Stream stream)
         {
-#if NET35 || NET40 || NET45
-            //ServicePointManager.SecurityProtocol = SecurityProtocolType.Ssl3
-            //ServicePointManager.ServerCertificateValidationCallback = new RemoteCertificateValidationCallback(CheckValidationResult);
-
             WebClient wc = new WebClient();
             var data = await wc.DownloadDataTaskAsync(url);
             await stream.WriteAsync(data, 0, data.Length);
-            //foreach (var b in data)
-            //{
-            //    stream.WriteAsync(b);
-            //}
-#else
-            HttpClient httpClient = new HttpClient();
-            var data = await httpClient.GetByteArrayAsync(url);
-            await stream.WriteAsync(data, 0, data.Length);
-#endif
-
         }
 
         /// <summary>
@@ -310,7 +245,6 @@ namespace Senparc.Weixin.HttpUtility
             }
         }
         #endregion
-#endif
 
     }
 }

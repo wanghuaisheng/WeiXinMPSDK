@@ -59,15 +59,12 @@ namespace Senparc.Weixin.EntityUtility
             }
             
             var t = typeof(T);
-#if NET35 || NET40 || NET45
             if (t.IsGenericType)
-#else
-            if (t.GetTypeInfo().IsGenericType)
-#endif
             {
                 if (t.GetGenericTypeDefinition() != typeof(Nullable<>))
                 {
-                    throw new InvalidCastException(string.Format("Invalid cast from type \"{0}\" to type \"{1}\".", convertibleValue.GetType().FullName, typeof(T).FullName));
+                    throw new InvalidCastException(
+                        $"Invalid cast from type \"{convertibleValue.GetType().FullName}\" to type \"{typeof(T).FullName}\".");
                 }
 
                 t = Nullable.GetUnderlyingType(t);

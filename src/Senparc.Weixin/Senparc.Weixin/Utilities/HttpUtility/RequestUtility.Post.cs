@@ -451,7 +451,6 @@ namespace Senparc.Weixin.HttpUtility
 
         #endregion
 
-#if !NET35 && !NET40
         #region 异步方法
 
         /// <summary>
@@ -460,15 +459,9 @@ namespace Senparc.Weixin.HttpUtility
         /// <returns></returns>
         public static async Task<string> HttpPostAsync(string url, CookieContainer cookieContainer = null, Dictionary<string, string> formData = null, Encoding encoding = null, X509Certificate2 cer = null, bool useAjax = false, int timeOut = Config.TIME_OUT)
         {
-#if NET35 || NET40 || NET45
             MemoryStream ms = new MemoryStream();
             await formData.FillFormDataStreamAsync(ms);//填充formData
             return await HttpPostAsync(url, cookieContainer, ms, null, null, encoding, cer, useAjax, timeOut);
-#else
-            MemoryStream ms = new MemoryStream();
-            await formData.FillFormDataStreamAsync(ms);//填充formData
-            return await HttpPostAsync(url, cookieContainer, ms, null, null, encoding, cer, useAjax, timeOut);
-#endif
 
         }
 
@@ -494,11 +487,9 @@ namespace Senparc.Weixin.HttpUtility
             {
                 cookieContainer = new CookieContainer();
             }
-
-#if NET35 || NET40 || NET45
             var request = HttpPost_Common_Net45(url, cookieContainer, postStream, fileDictionary, refererUrl, encoding, cer, useAjax, timeOut, checkValidationResult);
 
-        #region 输入二进制流
+            #region 输入二进制流
             if (postStream != null)
             {
                 postStream.Position = 0;
@@ -521,7 +512,7 @@ namespace Senparc.Weixin.HttpUtility
 
                 postStream.Close();//关闭文件访问
             }
-        #endregion
+            #endregion
 
             HttpWebResponse response = (HttpWebResponse)(await request.GetResponseAsync());
 
@@ -538,25 +529,9 @@ namespace Senparc.Weixin.HttpUtility
                     return retString;
                 }
             }
-#else
-            HttpContent hc;
-            var client = HttpPost_Common_NetCore(url, out hc, cookieContainer, postStream, fileDictionary, refererUrl, encoding, cer, useAjax, timeOut, checkValidationResult);
-
-            var r = await client.PostAsync(url, hc);
-
-            if (r.Content.Headers.ContentType.CharSet != null &&
-                r.Content.Headers.ContentType.CharSet.ToLower().Contains("utf8"))
-            {
-                r.Content.Headers.ContentType.CharSet = "utf-8";
-            }
-
-            return await r.Content.ReadAsStringAsync();
-#endif
         }
 
 
         #endregion
-#endif
-
     }
 }

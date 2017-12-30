@@ -100,7 +100,7 @@ namespace Senparc.Weixin
                 }
 
                 var logFile = Path.Combine(logDir, $"SenparcWeixinTrace-{DateTime.Now:yyyyMMdd}.log");
-var logWriter = new StreamWriter(logFile, true);
+                var logWriter = new StreamWriter(logFile, true);
                 _traceListener = new TextWriterTraceListener(logWriter);
                 Trace.Listeners.Add(_traceListener);
                 Trace.AutoFlush = true;

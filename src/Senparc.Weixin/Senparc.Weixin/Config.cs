@@ -72,15 +72,6 @@ namespace Senparc.Weixin
             set
             {
                 _isDebug = value;
-
-                //if (_isDebug)
-                //{
-                //    WeixinTrace.Open();
-                //}
-                //else
-                //{
-                //    WeixinTrace.Close();
-                //}
             }
         }
 

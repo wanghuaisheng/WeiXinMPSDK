@@ -34,10 +34,6 @@ Detail: https://github.com/JeffreySu/WeiXinMPSDK/blob/master/license.md
     修改描述：v4.11.2 修改SideInWeixinBrowser判断逻辑
 
 ----------------------------------------------------------------*/
-
-
-#if NET35 || NET40 || NET45
-
 using System.Web;
 
 namespace Senparc.Weixin.BrowserUtility
@@ -53,11 +49,7 @@ namespace Senparc.Weixin.BrowserUtility
         /// </summary>
         /// <param name="httpContext">HttpContextBase对象</param>
         /// <returns>true：在微信内置浏览器内。false：不在微信内置浏览器内。</returns>
-#if NET35
-        public static bool SideInWeixinBrowser(this HttpContext httpContext)
-#else
         public static bool SideInWeixinBrowser(this HttpContextBase httpContext)
-#endif
         {
             var userAgent = httpContext.Request.UserAgent;
             if (userAgent != null 
@@ -72,4 +64,3 @@ namespace Senparc.Weixin.BrowserUtility
         }
     }
 }
-#endif
