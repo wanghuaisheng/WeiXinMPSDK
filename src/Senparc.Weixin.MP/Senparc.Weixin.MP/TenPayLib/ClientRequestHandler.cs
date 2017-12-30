@@ -21,7 +21,7 @@ Detail: https://github.com/JeffreySu/WeiXinMPSDK/blob/master/license.md
 using System;
 using System.Collections;
 using System.Text;
-using Senparc.Weixin.Helpers.StringHelper;
+using Senparc.Weixin.Comparers;
 using Senparc.Weixin.MP.Helpers;
 
 #if NET35 || NET40 || NET45 || NET461
@@ -121,7 +121,7 @@ namespace Senparc.Weixin.MP.TenPayLib
 
             StringBuilder sb = new StringBuilder();
             ArrayList akeys = new ArrayList(Parameters.Keys);
-            akeys.Sort(ASCIISort.Create());
+            akeys.Sort(AsciiSort.Create());
             foreach (string k in akeys)
             {
                 string v = (string)Parameters[k];
@@ -153,7 +153,7 @@ namespace Senparc.Weixin.MP.TenPayLib
             StringBuilder sb = new StringBuilder();
 
             ArrayList akeys = new ArrayList(Parameters.Keys);
-            akeys.Sort(ASCIISort.Create());
+            akeys.Sort(AsciiSort.Create());
 
             foreach (string k in akeys)
             {

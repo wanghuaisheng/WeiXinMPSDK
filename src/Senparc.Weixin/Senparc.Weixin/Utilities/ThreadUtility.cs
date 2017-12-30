@@ -30,14 +30,12 @@ Detail: https://github.com/JeffreySu/WeiXinMPSDK/blob/master/license.md
 ----------------------------------------------------------------*/
 
 
-
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading;
+using Senparc.Weixin.MessageQueue;
 
-namespace Senparc.Weixin.Threads
+namespace Senparc.Weixin.Utilities
 {
     /// <summary>
     /// 线程处理类

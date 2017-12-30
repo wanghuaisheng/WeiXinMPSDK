@@ -133,24 +133,23 @@
     <Compile Include="Exceptions\UnRegisterAppIdException.cs" />
     <Compile Include="Exceptions\WeixinNullReferenceException.cs" />
     <Compile Include="Exceptions\WeixinMenuException.cs" />
-    <Compile Include="Helpers\Containers\ContainerHelper.cs" />
-    <Compile Include="Helpers\Conventers\ExpandoJsonConverter.cs" />
+    <Compile Include="Helpers\ContainerHelper.cs" />
+    <Compile Include="Conventers\ExpandoJsonConverter.cs" />
     <Compile Include="Helpers\DateTimeHelper.cs" />
     <Compile Include="Helpers\EncryptHelper.cs" />
-    <Compile Include="Helpers\Entity\EntityHelper.cs" />
-    <Compile Include="Helpers\Extensions\ObjectExtensions.cs" />
+    <Compile Include="Extensions\ObjectExtensions.cs" />
     <Compile Include="Helpers\FileHelper.cs" />
-    <Compile Include="Helpers\Extensions\IDictionaryExtensions.cs" />
+    <Compile Include="Extensions\IDictionaryExtensions.cs" />
     <Compile Include="Helpers\ReflectionHelper.cs" />
     <Compile Include="Helpers\SerializerHelper.cs" />
-    <Compile Include="Helpers\Conventers\WeixinJsonConventer.cs" />
-    <Compile Include="Helpers\StringHelper\ASCIISort.cs" />
-    <Compile Include="Helpers\Test\MutipleCacheTestHelper.cs" />
+    <Compile Include="Conventers\WeixinJsonConventer.cs" />
+    <Compile Include="Comparers\ASCIISort.cs" />
+    <Compile Include="Helpers\MutipleCacheTestHelper.cs" />
     <Compile Include="MessageQueue\SenparcMessageQueue.cs" />
     <Compile Include="MessageQueue\SenparcMessageQueueItem.cs" />
-    <Compile Include="Threads\SenparcMessageQueueThreadUtility.cs" />
+    <Compile Include="MessageQueue\SenparcMessageQueueThreadUtility.cs" />
     <Compile Include="Properties\Annotations.cs" />
-    <Compile Include="Threads\ThreadUtility.cs" />
+    <Compile Include="Utilities\ThreadUtility.cs" />
     <Compile Include="Utilities\BrowserUtility.cs" />
     <Compile Include="CommonAPIs\CommonJsonSend.cs" />
     <Compile Include="Utilities\FlushCache.cs" />
@@ -177,7 +176,9 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Threads\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Senparc.Weixin.Comparers;
 
 namespace Senparc.Weixin.Helpers.StringHelper.Tests
 {
@@ -20,7 +21,7 @@ namespace Senparc.Weixin.Helpers.StringHelper.Tests
                 var str2 = "otMXytwcamKAa3JmUoQ0N7OGDFuA";
 
                 ArrayList arrayList = new ArrayList();
-                ASCIISort asciiSort = new ASCIISort();
+                AsciiSort asciiSort = new AsciiSort();
                 arrayList.Add(str1);
                 arrayList.Add(str2);
                 arrayList.Sort(asciiSort);
@@ -31,7 +32,7 @@ namespace Senparc.Weixin.Helpers.StringHelper.Tests
                 var str1 = "PK00003977572";
                 var str2 = "PK0000397757";
                 ArrayList arrayList = new ArrayList();
-                ASCIISort asciiSort = new ASCIISort();
+                AsciiSort asciiSort = new AsciiSort();
                 arrayList.Add(str1);
                 arrayList.Add(str2);
                 arrayList.Sort(asciiSort);
@@ -42,7 +43,7 @@ namespace Senparc.Weixin.Helpers.StringHelper.Tests
                 var str1 = "PK0000397757";
                 var str2 = "PK0000397757";
                 ArrayList arrayList = new ArrayList();
-                ASCIISort asciiSort = new ASCIISort();
+                AsciiSort asciiSort = new AsciiSort();
                 arrayList.Add(str1);
                 arrayList.Add(str2);
                 arrayList.Sort(asciiSort);
@@ -53,7 +54,7 @@ namespace Senparc.Weixin.Helpers.StringHelper.Tests
                 var str1 = "otMXytwcamKAa3JmUoQ0N7OGDFuA";
                 var str2 = "PK0000397757";
                 ArrayList arrayList = new ArrayList();
-                ASCIISort asciiSort = new ASCIISort();
+                AsciiSort asciiSort = new AsciiSort();
                 arrayList.Add(str1);
                 arrayList.Add(str2);
                 arrayList.Sort(asciiSort);

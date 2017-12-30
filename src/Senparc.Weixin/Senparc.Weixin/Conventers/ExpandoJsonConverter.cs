@@ -36,6 +36,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Dynamic;
 using System.Web.Script.Serialization;
+using Senparc.Weixin.Extensions;
 
 namespace Senparc.Weixin.Helpers
 {

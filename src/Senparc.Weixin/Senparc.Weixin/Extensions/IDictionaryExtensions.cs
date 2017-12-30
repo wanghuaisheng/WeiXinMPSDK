@@ -24,7 +24,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Dynamic;
 
-namespace Senparc.Weixin.Helpers
+namespace Senparc.Weixin.Extensions
 {
     /// <summary>
     /// IDictionary扩展方法

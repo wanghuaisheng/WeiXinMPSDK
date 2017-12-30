@@ -59,8 +59,8 @@ using System.Linq;
 using System.Collections;
 using System.Text;
 using System.Threading.Tasks;
+using Senparc.Weixin.Comparers;
 using Senparc.Weixin.Helpers;
-using Senparc.Weixin.Helpers.StringHelper;
 using Senparc.Weixin.MP.CommonAPIs;
 using Senparc.Weixin.MP.Containers;
 
@@ -100,7 +100,7 @@ namespace Senparc.Weixin.MP.Helpers
         {
             var sb = new StringBuilder();
             var akeys = new ArrayList(parameters.Keys);
-            akeys.Sort(ASCIISort.Create());
+            akeys.Sort(AsciiSort.Create());
 
             foreach (var k in akeys)
             {
@@ -129,7 +129,7 @@ namespace Senparc.Weixin.MP.Helpers
         {
             var sb = new StringBuilder();
             var akeys = new ArrayList(parameters.Keys);
-            akeys.Sort(ASCIISort.Create());
+            akeys.Sort(AsciiSort.Create());
 
             foreach (var k in akeys)
             {
@@ -153,7 +153,7 @@ namespace Senparc.Weixin.MP.Helpers
         {
             var sb = new StringBuilder();
             var aValues = new ArrayList(parameters.Values);
-            aValues.Sort(ASCIISort.Create());
+            aValues.Sort(AsciiSort.Create());
             foreach (var v in aValues)
             {
                 sb.Append(v);

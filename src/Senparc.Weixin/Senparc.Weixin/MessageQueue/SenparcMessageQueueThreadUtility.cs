@@ -30,9 +30,8 @@ Detail: https://github.com/JeffreySu/WeiXinMPSDK/blob/master/license.md
 ----------------------------------------------------------------*/
 using System;
 using System.Threading;
-using Senparc.Weixin.MessageQueue;
 
-namespace Senparc.Weixin.Threads
+namespace Senparc.Weixin.MessageQueue
 {
     /// <summary>
     /// SenparcMessageQueue线程自动处理

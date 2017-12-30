@@ -18,7 +18,7 @@ using System.Web;
 using System.Web.Mvc;
 using Senparc.Weixin.Entities;
 using Senparc.Weixin.Exceptions;
-using Senparc.Weixin.Helpers.Extensions;
+using Senparc.Weixin.Extensions;
 using Senparc.Weixin.HttpUtilities;
 using Senparc.Weixin.MP.CommonAPIs;
 using Senparc.Weixin.MP.Entities;

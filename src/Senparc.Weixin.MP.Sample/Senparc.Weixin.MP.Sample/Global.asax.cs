@@ -19,7 +19,6 @@ using Senparc.Weixin.MP.TenPayLib;
 using Senparc.Weixin.MP.TenPayLibV3;
 using Senparc.Weixin.Open.ComponentAPIs;
 using Senparc.Weixin.Open.Containers;
-using Senparc.Weixin.Threads;
 using Senparc.Weixin.Utilities;
 
 namespace Senparc.Weixin.MP.Sample
